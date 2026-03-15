@@ -1,1 +1,16 @@
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
 
+.vs/
+.idea/
+*.sln
+*.suo
+*.db
+*.opendb
+*.xcworkspace
+
+.DS_Store
+Thumbs.db
