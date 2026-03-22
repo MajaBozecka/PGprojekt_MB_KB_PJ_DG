@@ -26,7 +26,6 @@ public class CanvasController : MonoBehaviour
     void Start()
     {
         setUIMode(EUIMode.BUTTONS);
-       // setSkippingIconVisibility(false);
     }
     public void setUIMode(EUIMode mode)
     {

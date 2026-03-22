@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Text;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -29,10 +30,7 @@ public class DataFlowController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SKIP!=canvasCtrl.isSkippingIconVisible)
-        {
-            canvasCtrl.setSkippingIconVisibility(SKIP);
-        }
+        SkippingVisibility();
     }
 
 
@@ -63,6 +61,14 @@ public class DataFlowController : MonoBehaviour
         }
         SKIP = false;
     }
+
+    private void SkippingVisibility()
+    {
+        if (SKIP != canvasCtrl.isSkippingIconVisible)
+        {
+            canvasCtrl.setSkippingIconVisibility(SKIP);
+        }
+    }
     public void OnButtonTest(int index)
     {
         StopAllCoroutines();
@@ -84,7 +90,7 @@ public class DataFlowController : MonoBehaviour
                 yield return null;
             }
         }
-        SKIP = false;
         canvasCtrl.setUIMode(EUIMode.BUTTONS);
+        SKIP = false;
     }
 }
