@@ -1,25 +1,32 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 public class CanvasController : MonoBehaviour
 {
     [SerializeField]
-    Button testButton;
+    GameObject buttonPanel;
     [SerializeField]
     GameObject dialoguePanel;
     [SerializeField]
+    Button testButton;
+    [SerializeField]
     TMP_Text dialogueText;
+    [SerializeField]
+    GameObject skippingIcon;
     public EUIMode UIMode;
+    public bool isSkippingIconVisible
+    {
+        get
+        {
+            return skippingIcon.activeSelf;
+        }
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         setUIMode(EUIMode.BUTTONS);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+       // setSkippingIconVisibility(false);
     }
     public void setUIMode(EUIMode mode)
     {
@@ -29,19 +36,20 @@ public class CanvasController : MonoBehaviour
         {
             case EUIMode.NOTHING:
                 {
-                    testButton.gameObject.SetActive(false);
+                    buttonPanel.gameObject.SetActive(false);
                     dialoguePanel.gameObject.SetActive(false);
                     break;
                 }
             case EUIMode.BUTTONS:
                 {
-                    testButton.gameObject.SetActive(true);
+                    buttonPanel.gameObject.SetActive(true);
                     dialoguePanel.gameObject.SetActive(false);
+                    testButton.Select();
                     break;
                 }
             case EUIMode.DIALOGUE:
                 {
-                    testButton.gameObject.SetActive(false);
+                    buttonPanel.gameObject.SetActive(false);
                     dialoguePanel.gameObject.SetActive(true);
                     break;
                 }
@@ -52,6 +60,30 @@ public class CanvasController : MonoBehaviour
     {
         dialogueText.text = s;
     }
+    public void setSelect()
+    {
+        switch (UIMode)
+        {
+            case EUIMode.NOTHING:
+                {
+                    break;
+                }
+            case EUIMode.BUTTONS:
+                {
+                    testButton.Select();
+                    break;
+                }
+            case EUIMode.DIALOGUE:
+                { 
+                    break;
+                }
+        }
+    }
+    public void setSkippingIconVisibility(bool skip)
+    {
+        skippingIcon.SetActive(skip);
+    }
+
 }
 public enum EUIMode : byte
 {
