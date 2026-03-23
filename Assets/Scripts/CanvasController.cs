@@ -8,8 +8,10 @@ public class CanvasController : MonoBehaviour
     GameObject buttonPanel;
     [SerializeField]
     GameObject dialoguePanel;
-    [SerializeField]
-    Button testButton;
+    public
+    DialogueButton testButton0;
+    public
+    DialogueButton testButton1;
     [SerializeField]
     TMP_Text dialogueText;
     [SerializeField]
@@ -26,6 +28,7 @@ public class CanvasController : MonoBehaviour
     void Start()
     {
         setUIMode(EUIMode.BUTTONS);
+        flushButtonsNotRead();
     }
     public void setUIMode(EUIMode mode)
     {
@@ -43,7 +46,7 @@ public class CanvasController : MonoBehaviour
                 {
                     buttonPanel.gameObject.SetActive(true);
                     dialoguePanel.gameObject.SetActive(false);
-                    testButton.Select();
+                    testButton0.Button.Select();
                     break;
                 }
             case EUIMode.DIALOGUE:
@@ -59,6 +62,12 @@ public class CanvasController : MonoBehaviour
     {
         dialogueText.text = s;
     }
+
+    public void flushButtonsNotRead()
+    {
+        testButton0.setRead(false);
+        testButton1.setRead(false);
+    }
     public void setSelect()
     {
         switch (UIMode)
@@ -69,7 +78,7 @@ public class CanvasController : MonoBehaviour
                 }
             case EUIMode.BUTTONS:
                 {
-                    testButton.Select();
+                    testButton0.Button.Select();
                     break;
                 }
             case EUIMode.DIALOGUE:

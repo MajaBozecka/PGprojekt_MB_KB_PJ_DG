@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Text;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,8 +6,6 @@ public class DataFlowController : MonoBehaviour
 {
     public DataFlowSO data;
     public CanvasController canvasCtrl;
-    public float defaultTimeTillNextText = 3f;
-    public float defaultTimeTillTextSkippable = 0.5f;
     private bool SKIP
     {
         get
@@ -20,11 +17,20 @@ public class DataFlowController : MonoBehaviour
             data.skipping = value;
         }
     }
+    private float tillNextText
+    {
+        get { return data.defaultTimeTillNextText; }
+    }
+    private float tillSkippable
+    {
+        get { return data.defaultTimeTillTextSkippable; }
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         InputSystem.actions.FindAction("Submit").performed += OnSubmitPerformed;
         InputSystem.actions.FindAction("Submit").canceled += OnSubmitCancel;
+        populateCanvasWithButtons();
     }
 
     // Update is called once per frame
@@ -69,21 +75,35 @@ public class DataFlowController : MonoBehaviour
             canvasCtrl.setSkippingIconVisibility(SKIP);
         }
     }
+
+    private void populateCanvasWithButtons()
+    {
+        canvasCtrl.testButton0.Button.onClick.AddListener(delegate { OnButtonTest(0); });
+        canvasCtrl.testButton1.Button.onClick.AddListener(delegate { OnButtonTest(1); });
+    }
     public void OnButtonTest(int index)
     {
         StopAllCoroutines();
         canvasCtrl.setUIMode(EUIMode.DIALOGUE);
-        StartCoroutine(DialogueFlow());
+        if(index == 1)
+        {
+            canvasCtrl.testButton1.setRead(true);
+        }
+        else
+        {
+            canvasCtrl.testButton0.setRead(true);
+        }
+        StartCoroutine(DialogueFlow(index));
     }
 
-    IEnumerator DialogueFlow()
+    IEnumerator DialogueFlow(int index)
     {
-        foreach (string item in data.testStrings)
+        foreach (DialogueLine line in data.seq[index].lines)
         {
-            canvasCtrl.setDialogueText(item);
-            yield return new WaitForSeconds(defaultTimeTillTextSkippable);
-            float i = defaultTimeTillTextSkippable;
-            while (i < defaultTimeTillNextText)
+            canvasCtrl.setDialogueText(line.halfLine[0].halfline);
+            yield return new WaitForSeconds(tillSkippable);
+            float i = tillSkippable;
+            while (i < tillNextText)
             {
                 if (SKIP) break;
                 i += Time.unscaledDeltaTime;

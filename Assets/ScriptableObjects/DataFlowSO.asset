@@ -12,3 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2189ae279e8274ebdc0cc67a8a331c, type: 3}
   m_Name: DataFlowSO
   m_EditorClassIdentifier: Assembly-CSharp::DataFlowSO
+  seq:
+  - lines:
+    - halfLine:
+      - time: 0
+        halfline: TestMsg1 Has been passed
+      lingering: 0
+    - halfLine:
+      - time: 0
+        halfline: TestMsg1 Congratulations
+      lingering: 0
+  - lines:
+    - halfLine:
+      - time: 0
+        halfline: TestMsg2 Has been passed
+      lingering: 0
+    - halfLine:
+      - time: 0
+        halfline: TestMsg2 Congratulations
+      lingering: 0
+  skipping: 0
+  defaultTimeTillNextText: 3
+  defaultTimeTillTextSkippable: 0.5
