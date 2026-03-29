@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 /// <summary>
 /// We store all dialogue lines in the sequence
@@ -17,10 +16,10 @@ public class DialogueSequence
 public class DialogueLine
 {
     /// <summary>
-    /// We store the time it takes for the line to be said and how long the line is.
+    /// We store the timeForSingleCharDisplay it takes for the line to be said and how long the line is.
     /// We can insert empty strings, this way we will insert a pause, that we can detect.
     /// </summary>
-    public List<halfDialogueLine> halfLine = new List<halfDialogueLine>();
+    public List<SubDialogueLine> subLines = new List<SubDialogueLine>();
     /// <summary>
     /// how long should the text remain seen after it is finished
     /// negative values can be used to claim it's meant to be confirmed
@@ -28,8 +27,13 @@ public class DialogueLine
     public float lingering;
 }
 [System.Serializable]
-public struct halfDialogueLine
+public struct SubDialogueLine
 {
-    public float time;
-    public string halfline;
+    public float timeForSingleCharDisplay;
+    public string subline;
+    public SubDialogueLine(string s)
+    {
+        timeForSingleCharDisplay = 0.01f;
+        subline = s;
+    }
 }

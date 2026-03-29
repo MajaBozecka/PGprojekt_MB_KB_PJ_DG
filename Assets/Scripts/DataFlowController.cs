@@ -6,6 +6,7 @@ public class DataFlowController : MonoBehaviour
 {
     public DataFlowSO data;
     public CanvasController canvasCtrl;
+    private bool confirmNextLine;
     private bool SKIP
     {
         get
@@ -17,10 +18,6 @@ public class DataFlowController : MonoBehaviour
             data.skipping = value;
         }
     }
-    private float tillNextText
-    {
-        get { return data.defaultTimeTillNextText; }
-    }
     private float tillSkippable
     {
         get { return data.defaultTimeTillTextSkippable; }
@@ -28,8 +25,11 @@ public class DataFlowController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InputSystem.actions.FindAction("Submit").performed += OnSubmitPerformed;
-        InputSystem.actions.FindAction("Submit").canceled += OnSubmitCancel;
+        InputAction skip = InputSystem.actions.FindAction("SKIP");
+        skip.performed += OnSkipPerformed;
+        skip.canceled += OnSkipCanceled;
+        InputAction confirm = InputSystem.actions.FindAction("Submit");
+        confirm.canceled += OnSubmitCancel;
         populateCanvasWithButtons();
     }
 
@@ -40,7 +40,7 @@ public class DataFlowController : MonoBehaviour
     }
 
 
-    private void OnSubmitPerformed(InputAction.CallbackContext context)
+    private void OnSkipPerformed(InputAction.CallbackContext context)
     {
         switch (canvasCtrl.UIMode)
         {
@@ -50,6 +50,10 @@ public class DataFlowController : MonoBehaviour
                     break;
                 }
         }
+    }
+    private void OnSkipCanceled(InputAction.CallbackContext context)
+    {
+        SKIP = false;
     }
     private void OnSubmitCancel(InputAction.CallbackContext context)
     {
@@ -62,6 +66,7 @@ public class DataFlowController : MonoBehaviour
                 }
             case EUIMode.DIALOGUE:
                 {
+                    confirmNextLine = true;
                     break;
                 }
         }
@@ -98,19 +103,59 @@ public class DataFlowController : MonoBehaviour
 
     IEnumerator DialogueFlow(int index)
     {
-        foreach (DialogueLine line in data.seq[index].lines)
+        foreach (DialogueLine fullDialogueLine in data.seq[index].lines)
         {
-            canvasCtrl.setDialogueText(line.halfLine[0].halfline);
-            yield return new WaitForSeconds(tillSkippable);
-            float i = tillSkippable;
-            while (i < tillNextText)
+            float timeLineIterator = 0;
+            string stringPreviousSubLines = "";
+            Debug.Log("started with first dialogue line in the sequence");
+            foreach (SubDialogueLine partLine in fullDialogueLine.subLines)
             {
-                if (SKIP) break;
-                i += Time.unscaledDeltaTime;
+                canvasCtrl.setDialogueText(stringPreviousSubLines);
+                float timePartLineIterator = 0;
+                int partLineDisplayedLength = -1;
+                Debug.Log($"Handling \"{partLine.subline}\"");
+                do
+                {
+                    timeLineIterator += Time.unscaledDeltaTime;
+                    timePartLineIterator += Time.unscaledDeltaTime;
+                    int newLength = (int)(timePartLineIterator / partLine.timeForSingleCharDisplay);
+                    bool updateDisplay = partLineDisplayedLength != newLength;
+                    partLineDisplayedLength = newLength;
+                    Debug.Log($"tli \"{timeLineIterator}\"tpli \"{timePartLineIterator}\",\npartLineDisplayedLength {partLineDisplayedLength}");
+                    if (updateDisplay&(partLineDisplayedLength > 0 & partLineDisplayedLength <= partLine.subline.Length))
+                    {
+                        Debug.Log($"Should display {stringPreviousSubLines + partLine.subline[..(partLineDisplayedLength)]}");
+                        canvasCtrl.setDialogueText(stringPreviousSubLines+partLine.subline[..(partLineDisplayedLength)]);
+                    }
+                    yield return null;
+                } while (!(canSkipNow(timeLineIterator) || isItTimeForNextSubLine(partLine, partLineDisplayedLength)));
+                stringPreviousSubLines += partLine.subline;
+                Debug.Log($"previousSubLines \"{stringPreviousSubLines}\"");
+                confirmNextLine = false;
+            }
+            float lingerIterator = 0;
+            canvasCtrl.setDialogueText(stringPreviousSubLines);
+            while (!(canSkipNow(timeLineIterator) || isItTimeForNextLine(fullDialogueLine, lingerIterator)))
+            {
+                timeLineIterator += Time.unscaledDeltaTime;
+                lingerIterator += Time.unscaledDeltaTime;
                 yield return null;
             }
+            confirmNextLine = false;
         }
         canvasCtrl.setUIMode(EUIMode.BUTTONS);
         SKIP = false;
+        bool isItTimeForNextSubLine(SubDialogueLine partLine, int partLineDisplayedLength)
+        {
+            return confirmNextLine || partLineDisplayedLength > partLine.subline.Length;
+        }
+        bool isItTimeForNextLine(DialogueLine line, float lingerIterator)
+        {
+            return line.lingering<0 ? confirmNextLine : lingerIterator >= line.lingering;
+        }
+        bool canSkipNow(float timeLineIterator)
+        {
+            return SKIP & timeLineIterator > tillSkippable;
+        }
     }
 }

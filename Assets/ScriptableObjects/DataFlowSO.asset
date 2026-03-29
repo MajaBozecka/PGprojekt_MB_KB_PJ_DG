@@ -14,23 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataFlowSO
   seq:
   - lines:
-    - halfLine:
-      - time: 0
-        halfline: TestMsg1 Has been passed
-      lingering: 0
-    - halfLine:
-      - time: 0
-        halfline: TestMsg1 Congratulations
-      lingering: 0
+    - subLines:
+      - timeForSingleCharDisplay: 0.1
+        subline: "Wiadomo\u015B\u0107 testowa 1."
+      - timeForSingleCharDisplay: 1
+        subline: 
+      - timeForSingleCharDisplay: 0.1
+        subline: " Przerwa powinna by\u0142a by\u0107 przez chwil\u0119."
+      lingering: 1
   - lines:
-    - halfLine:
-      - time: 0
-        halfline: TestMsg2 Has been passed
-      lingering: 0
-    - halfLine:
-      - time: 0
-        halfline: TestMsg2 Congratulations
-      lingering: 0
+    - subLines:
+      - timeForSingleCharDisplay: 0.1
+        subline: "Wiadomo\u015B\u0107 testowa 2."
+      - timeForSingleCharDisplay: 1
+        subline: 
+      - timeForSingleCharDisplay: 0.1
+        subline: " Przerwa powinna by\u0142a by\u0107 przez chwil\u0119."
+      lingering: 1
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: Press Enter to continue.
+      lingering: -1
   skipping: 0
-  defaultTimeTillNextText: 3
   defaultTimeTillTextSkippable: 0.5

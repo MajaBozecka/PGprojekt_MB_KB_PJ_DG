@@ -1001,17 +1001,6 @@
                 },
                 {
                     "name": "",
-                    "id": "43a78ff1-0d80-4c1b-abd2-5a55f98c85f6",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SKIP",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "3e600a2b-9b4e-4bef-b04c-f0ac908c3897",
                     "path": "<Keyboard>/space",
                     "interactions": "",
