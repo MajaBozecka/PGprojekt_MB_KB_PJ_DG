@@ -7,7 +7,7 @@ public class CanvasController : MonoBehaviour
     [SerializeField]
     GameObject buttonPanel;
     [SerializeField]
-    GameObject dialoguePanel;
+    DialoguePanelController dialoguePanel;
     public
     DialogueButton testButton0;
     public
@@ -90,6 +90,11 @@ public class CanvasController : MonoBehaviour
     public void setSkippingIconVisibility(bool skip)
     {
         skippingIcon.SetActive(skip);
+    }
+
+    public void setProceedIconVisibility(bool proceedable)
+    {
+        dialoguePanel.proceedIcon.SetActive(proceedable);
     }
 
 }

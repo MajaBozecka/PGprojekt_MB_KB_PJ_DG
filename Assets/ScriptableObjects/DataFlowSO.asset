@@ -36,4 +36,5 @@ MonoBehaviour:
         subline: Press Enter to continue.
       lingering: -1
   skipping: 0
-  defaultTimeTillTextSkippable: 0.5
+  defaultTimeTillTextSkippable: 0.9
+  defaultTimeTillSubTextSkippable: 0.2

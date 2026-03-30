@@ -18,9 +18,13 @@ public class DataFlowController : MonoBehaviour
             data.skipping = value;
         }
     }
-    private float tillSkippable
+    private float tillDialogueLineSkippable
     {
         get { return data.defaultTimeTillTextSkippable; }
+    }
+    private float tillSubDialogueLineSkippable
+    {
+        get { return data.defaultTimeTillSubTextSkippable; }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -107,6 +111,7 @@ public class DataFlowController : MonoBehaviour
         {
             float timeLineIterator = 0;
             string stringPreviousSubLines = "";
+            canvasCtrl.setProceedIconVisibility(false);
             Debug.Log("started with first dialogue line in the sequence");
             foreach (SubDialogueLine partLine in fullDialogueLine.subLines)
             {
@@ -128,17 +133,18 @@ public class DataFlowController : MonoBehaviour
                         canvasCtrl.setDialogueText(stringPreviousSubLines+partLine.subline[..(partLineDisplayedLength)]);
                     }
                     yield return null;
-                } while (!(canSkipNow(timeLineIterator) || isItTimeForNextSubLine(partLine, partLineDisplayedLength)));
+                } while (!(canSkipNow(timePartLineIterator,tillSubDialogueLineSkippable) || isItTimeForNextSubLine(partLine, partLineDisplayedLength)));
                 stringPreviousSubLines += partLine.subline;
                 Debug.Log($"previousSubLines \"{stringPreviousSubLines}\"");
                 confirmNextLine = false;
             }
             float lingerIterator = 0;
             canvasCtrl.setDialogueText(stringPreviousSubLines);
-            while (!(canSkipNow(timeLineIterator) || isItTimeForNextLine(fullDialogueLine, lingerIterator)))
+            while (!(canSkipNow(timeLineIterator,tillDialogueLineSkippable) || isItTimeForNextLine(fullDialogueLine, lingerIterator)))
             {
                 timeLineIterator += Time.unscaledDeltaTime;
                 lingerIterator += Time.unscaledDeltaTime;
+                canvasCtrl.setProceedIconVisibility(true);
                 yield return null;
             }
             confirmNextLine = false;
@@ -151,11 +157,11 @@ public class DataFlowController : MonoBehaviour
         }
         bool isItTimeForNextLine(DialogueLine line, float lingerIterator)
         {
-            return line.lingering<0 ? confirmNextLine : lingerIterator >= line.lingering;
+            return confirmNextLine || (line.lingering<0 & lingerIterator >= line.lingering);
         }
-        bool canSkipNow(float timeLineIterator)
+        bool canSkipNow(float timeLineIterator, float tillWhat)
         {
-            return SKIP & timeLineIterator > tillSkippable;
+            return SKIP & timeLineIterator > tillWhat;
         }
     }
 }
