@@ -35,6 +35,11 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0.05
         subline: Press Enter to continue.
       lingering: -1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0.1
+        subline: Interakcja z obiektem Sprite'a
+      lingering: -1
   skipping: 0
   defaultTimeTillTextSkippable: 0.9
   defaultTimeTillSubTextSkippable: 0.2

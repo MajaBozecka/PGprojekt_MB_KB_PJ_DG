@@ -157,7 +157,7 @@ public class DataFlowController : MonoBehaviour
         }
         bool isItTimeForNextLine(DialogueLine line, float lingerIterator)
         {
-            return confirmNextLine || (line.lingering<0 & lingerIterator >= line.lingering);
+            return confirmNextLine || (line.lingering>=0 & lingerIterator >= line.lingering);
         }
         bool canSkipNow(float timeLineIterator, float tillWhat)
         {
