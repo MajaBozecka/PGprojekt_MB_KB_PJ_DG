@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
 
 public class CursorController : MonoBehaviour
 {
@@ -26,9 +25,9 @@ public class CursorController : MonoBehaviour
     {
         raycastHit2D = Physics2D.Raycast(mouseray.origin, mouseray.direction);
         spriteDialogue = raycastHit2D ? raycastHit2D.collider.GetComponent<SpriteDialogue>() : null;
-        if(spriteDialogue)
+        if(spriteDialogue && dataFlow.canvasCtrl.UIMode != EUIMode.DIALOGUE)
         {
-            dataFlow.OnButtonTest(spriteDialogue.dialogueSequenceId);
+            dataFlow.StartDialogueSequence(spriteDialogue.dialogueSequenceId);
         }
     }
 

@@ -1,24 +1,15 @@
+using TMPro;
 using UnityEngine;
 
 public class DialoguePanelController : MonoBehaviour
 {
     public GameObject proceedIcon;
+    public TMP_Text dialogueText;
     public GameObject panel
     {
         get
         {
             return gameObject;
         }
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

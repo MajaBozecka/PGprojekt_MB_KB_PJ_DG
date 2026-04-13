@@ -22,6 +22,8 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0.1
         subline: " Przerwa powinna by\u0142a by\u0107 przez chwil\u0119."
       lingering: 1
+      speakerID: 0
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0.1
@@ -31,15 +33,23 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0.1
         subline: " Przerwa powinna by\u0142a by\u0107 przez chwil\u0119."
       lingering: 1
+      speakerID: 0
     - subLines:
       - timeForSingleCharDisplay: 0.05
         subline: Press Enter to continue.
       lingering: -1
+      speakerID: 0
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0.1
         subline: Interakcja z obiektem Sprite'a
       lingering: -1
+      speakerID: 0
+    runnedAlready: 0
+  speakers:
+  - SpeakerA
+  - SpeakerB
   skipping: 0
   defaultTimeTillTextSkippable: 0.9
   defaultTimeTillSubTextSkippable: 0.2

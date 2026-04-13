@@ -35,6 +35,12 @@ public class DataFlowController : MonoBehaviour
         InputAction confirm = InputSystem.actions.FindAction("Submit");
         confirm.canceled += OnSubmitCancel;
         populateCanvasWithButtons();
+        ////////////////////////////////////////////////////////
+        ///This one to make sure for testing those were not yet read. In the future we need to think how to register on savefile which were and which were not read
+        foreach (var item in data.seq)
+        {
+            item.runnedAlready = false;
+        }
     }
 
     // Update is called once per frame
@@ -87,20 +93,25 @@ public class DataFlowController : MonoBehaviour
 
     private void populateCanvasWithButtons()
     {
-        canvasCtrl.testButton0.Button.onClick.AddListener(delegate { OnButtonTest(0); });
-        canvasCtrl.testButton1.Button.onClick.AddListener(delegate { OnButtonTest(1); });
+        for (int i = 0; i < 2; i++)
+        {
+            int ii = i;
+            canvasCtrl.testButtons[i].Button.onClick.AddListener(delegate { StartDialogueSequence(ii); });//I hate lambda expressions
+        }
     }
-    public void OnButtonTest(int index)
+    public void StartDialogueSequence(int index)
     {
         StopAllCoroutines();
         canvasCtrl.setUIMode(EUIMode.DIALOGUE);
-        if(index == 1)
+        if (!data.seq[index].runnedAlready)
         {
-            canvasCtrl.testButton1.setRead(true);
-        }
-        else
-        {
-            canvasCtrl.testButton0.setRead(true);
+            foreach (DialogueButton butt in canvasCtrl.testButtons)
+            {
+                if (butt.dialogueSequenceId == index)
+                {
+                    butt.setRead(true);
+                }
+            }
         }
         StartCoroutine(DialogueFlow(index));
     }
@@ -148,6 +159,11 @@ public class DataFlowController : MonoBehaviour
                 yield return null;
             }
             confirmNextLine = false;
+        }
+        if (!data.seq[index].runnedAlready)
+        {
+            data.seq[index].runnedAlready = true;
+            canvasCtrl.dialogueHistoryUpdate(data.seq[index]);
         }
         canvasCtrl.setUIMode(EUIMode.BUTTONS);
         SKIP = false;

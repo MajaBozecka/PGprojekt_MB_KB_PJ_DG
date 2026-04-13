@@ -8,6 +8,7 @@ using System.Collections.Generic;
 public class DialogueSequence
 {
     public List<DialogueLine> lines = new List<DialogueLine>();
+    public bool runnedAlready = false;
 }
 [System.Serializable]
 /// <summary>
@@ -25,6 +26,16 @@ public class DialogueLine
     /// negative values can be used to claim it's meant to be confirmed
     /// </summary>
     public float lingering;
+    public short speakerID;
+    public string dumpWholeLine()
+    {
+        string ret = "";
+        foreach (SubDialogueLine subLine in subLines)
+        {
+            ret += subLine.subline;
+        }
+        return ret;
+    }
 }
 [System.Serializable]
 public struct SubDialogueLine
