@@ -6,6 +6,10 @@ public class DataFlowController : MonoBehaviour
 {
     public DataFlowSO data;
     public CanvasController canvasCtrl;
+    [SerializeField]
+    private bool pause=false;
+    private bool historyLook=false;
+   
     private bool confirmNextLine;
     private bool SKIP
     {
@@ -34,7 +38,15 @@ public class DataFlowController : MonoBehaviour
         skip.canceled += OnSkipCanceled;
         InputAction confirm = InputSystem.actions.FindAction("Submit");
         confirm.canceled += OnSubmitCancel;
+        InputAction history = InputSystem.actions.FindAction("History");
+        history.started += OnHistoryLookUp;
         populateCanvasWithButtons();
+        ////////////////////////////////////////////////////////
+        ///This one to make sure for testing those were not yet read. In the future we need to think how to register on savefile which were and which were not read
+        foreach (var item in data.seq)
+        {
+            item.runnedAlready = false;
+        }
     }
 
     // Update is called once per frame
@@ -77,6 +89,27 @@ public class DataFlowController : MonoBehaviour
         SKIP = false;
     }
 
+
+    private void OnHistoryLookUp(InputAction.CallbackContext context)
+    {
+        historyLook = !historyLook;
+        pauseGameTime();
+        canvasCtrl.lookUpHistory(historyLook);
+    }
+
+    private void pauseGameTime()
+    {
+        if(historyLook || pause)
+        {
+            Time.timeScale = 0;
+        }else
+        {
+            if(!pause & !historyLook)
+            {
+                Time.timeScale = 1;
+            }
+        }
+    }
     private void SkippingVisibility()
     {
         if (SKIP != canvasCtrl.isSkippingIconVisible)
@@ -87,20 +120,26 @@ public class DataFlowController : MonoBehaviour
 
     private void populateCanvasWithButtons()
     {
-        canvasCtrl.testButton0.Button.onClick.AddListener(delegate { OnButtonTest(0); });
-        canvasCtrl.testButton1.Button.onClick.AddListener(delegate { OnButtonTest(1); });
+        for (int i = 0; i < 2; i++)
+        {
+            int ii = i;
+            canvasCtrl.testButtons[i].Button.onClick.AddListener(delegate { StartDialogueSequence(ii); });//I hate lambda expressions
+        }
     }
-    public void OnButtonTest(int index)
+
+    public void StartDialogueSequence(int index)
     {
         StopAllCoroutines();
-        canvasCtrl.setUIMode(EUIMode.DIALOGUE);
-        if(index == 1)
+        canvasCtrl.UIMode = EUIMode.DIALOGUE;
+        if (!data.seq[index].runnedAlready)
         {
-            canvasCtrl.testButton1.setRead(true);
-        }
-        else
-        {
-            canvasCtrl.testButton0.setRead(true);
+            foreach (DialogueButton butt in canvasCtrl.testButtons)
+            {
+                if (butt.dialogueSequenceId == index)
+                {
+                    butt.setRead(true);
+                }
+            }
         }
         StartCoroutine(DialogueFlow(index));
     }
@@ -110,46 +149,50 @@ public class DataFlowController : MonoBehaviour
         foreach (DialogueLine fullDialogueLine in data.seq[index].lines)
         {
             float timeLineIterator = 0;
-            string stringPreviousSubLines = "";
+            int compoundLength = 0;
+            canvasCtrl.setDialogueText(fullDialogueLine.dumpWholeLine());
+            canvasCtrl.showDialogueText(0);
             canvasCtrl.setProceedIconVisibility(false);
-            Debug.Log("started with first dialogue line in the sequence");
             foreach (SubDialogueLine partLine in fullDialogueLine.subLines)
             {
-                canvasCtrl.setDialogueText(stringPreviousSubLines);
                 float timePartLineIterator = 0;
-                int partLineDisplayedLength = -1;
-                Debug.Log($"Handling \"{partLine.subline}\"");
+                int partLineDisplayedLength = 0;
                 do
                 {
-                    timeLineIterator += Time.unscaledDeltaTime;
-                    timePartLineIterator += Time.unscaledDeltaTime;
+                    timeLineIterator += Time.deltaTime;
+                    timePartLineIterator += Time.deltaTime;
                     int newLength = (int)(timePartLineIterator / partLine.timeForSingleCharDisplay);
                     bool updateDisplay = partLineDisplayedLength != newLength;
                     partLineDisplayedLength = newLength;
-                    Debug.Log($"tli \"{timeLineIterator}\"tpli \"{timePartLineIterator}\",\npartLineDisplayedLength {partLineDisplayedLength}");
                     if (updateDisplay&(partLineDisplayedLength > 0 & partLineDisplayedLength <= partLine.subline.Length))
                     {
-                        Debug.Log($"Should display {stringPreviousSubLines + partLine.subline[..(partLineDisplayedLength)]}");
-                        canvasCtrl.setDialogueText(stringPreviousSubLines+partLine.subline[..(partLineDisplayedLength)]);
+                        canvasCtrl.showDialogueText(compoundLength + partLineDisplayedLength);
                     }
                     yield return null;
                 } while (!(canSkipNow(timePartLineIterator,tillSubDialogueLineSkippable) || isItTimeForNextSubLine(partLine, partLineDisplayedLength)));
-                stringPreviousSubLines += partLine.subline;
-                Debug.Log($"previousSubLines \"{stringPreviousSubLines}\"");
+                compoundLength += partLine.subline.Length;
                 confirmNextLine = false;
             }
             float lingerIterator = 0;
-            canvasCtrl.setDialogueText(stringPreviousSubLines);
+            canvasCtrl.showDialogueText(-1);
+            if (!data.seq[index].runnedAlready)
+            {
+                canvasCtrl.dialogueHistoryUpdate(data.seq[index], fullDialogueLine);
+            }
             while (!(canSkipNow(timeLineIterator,tillDialogueLineSkippable) || isItTimeForNextLine(fullDialogueLine, lingerIterator)))
             {
-                timeLineIterator += Time.unscaledDeltaTime;
-                lingerIterator += Time.unscaledDeltaTime;
+                timeLineIterator += Time.deltaTime;
+                lingerIterator += Time.deltaTime;
                 canvasCtrl.setProceedIconVisibility(true);
                 yield return null;
             }
             confirmNextLine = false;
         }
-        canvasCtrl.setUIMode(EUIMode.BUTTONS);
+        if (!data.seq[index].runnedAlready)
+        {
+            data.seq[index].runnedAlready = true;
+        }
+        canvasCtrl.UIMode = EUIMode.BUTTONS;
         SKIP = false;
         bool isItTimeForNextSubLine(SubDialogueLine partLine, int partLineDisplayedLength)
         {

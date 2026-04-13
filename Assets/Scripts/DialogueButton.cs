@@ -10,6 +10,7 @@ public class DialogueButton : MonoBehaviour
     GameObject readIcon;
     [SerializeField]
     Button selfButton;
+    public int dialogueSequenceId;
     public Button Button { get { return selfButton; } }
     /*private void Start()
     {

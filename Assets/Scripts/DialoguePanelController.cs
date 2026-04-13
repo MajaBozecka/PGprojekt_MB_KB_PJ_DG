@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class DialoguePanelController : MonoBehaviour
@@ -10,15 +11,19 @@ public class DialoguePanelController : MonoBehaviour
             return gameObject;
         }
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    private TMP_Text dialogueText;
+    public string textToShowInDialogueField;
+    public void fillDialogueField(int n)
     {
-        
+        if(n<0)
+        {
+            dialogueText.text = textToShowInDialogueField;
+        }
+        else
+        {
+            dialogueText.text = textToShowInDialogueField[..(n)];
+        }
     }
 }
