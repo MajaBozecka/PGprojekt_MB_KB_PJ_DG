@@ -157,11 +157,18 @@ public class DataFlowController : MonoBehaviour
             {
                 float timePartLineIterator = 0;
                 int partLineDisplayedLength = 0;
+                int newLength;
                 do
                 {
                     timeLineIterator += Time.deltaTime;
                     timePartLineIterator += Time.deltaTime;
-                    int newLength = (int)(timePartLineIterator / partLine.timeForSingleCharDisplay);
+                    if(partLine.timeForSingleCharDisplay <= 0)
+                    {
+                        newLength = partLine.subline.Length;
+                    }else
+                    {
+                        newLength = (int)(timePartLineIterator / partLine.timeForSingleCharDisplay);
+                    }
                     bool updateDisplay = partLineDisplayedLength != newLength;
                     partLineDisplayedLength = newLength;
                     if (updateDisplay&(partLineDisplayedLength > 0 & partLineDisplayedLength <= partLine.subline.Length))
@@ -196,7 +203,7 @@ public class DataFlowController : MonoBehaviour
         SKIP = false;
         bool isItTimeForNextSubLine(SubDialogueLine partLine, int partLineDisplayedLength)
         {
-            return confirmNextLine || partLineDisplayedLength > partLine.subline.Length;
+            return confirmNextLine || partLineDisplayedLength >= partLine.subline.Length;
         }
         bool isItTimeForNextLine(DialogueLine line, float lingerIterator)
         {

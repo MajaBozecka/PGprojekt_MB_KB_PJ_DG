@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.000061035156}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &4746818
@@ -328,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   proceedIcon: {fileID: 395612625}
   dialogueText: {fileID: 794535348}
+  textToShowInDialogueField: 
 --- !u!1 &189848987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,10 +1069,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7104e4cdd836d1a489a9cd0c67fa71b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  content: {fileID: 4746817}
-  data: {fileID: 11400000, guid: 53de329adcbd02542bc7d392e5622935, type: 2}
+  data: {fileID: 11400000, guid: defcd117a7d601b48b00271bb46ff77d, type: 2}
   sequencePrefab: {fileID: 8361127587818558086, guid: ce9be1008c8c104449344f8176d842a8, type: 3}
-  linePrefab: {fileID: 234996287510706651, guid: 15e7826011fdd5946a7cebea1ab27ee9, type: 3}
+  linePrefab: {fileID: 8773942470714473137, guid: 15e7826011fdd5946a7cebea1ab27ee9, type: 3}
+  content: {fileID: 4746817}
+  seqTransform: {fileID: 0}
+  lastSeq:
+    lines: []
+    runnedAlready: 0
+  tempEntry: {fileID: 0}
+  lastSpeakerId: 0
 --- !u!1 &794535346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,7 +1341,7 @@ MonoBehaviour:
   - {fileID: 528606940}
   - {fileID: 1745070406}
   skippingIcon: {fileID: 321168842}
-  UIMode: 0
+  m_UIMode: 0
 --- !u!1 &1105934434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,8 +1758,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc4c73ffd2e895449b7d7aaa8e3b350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  data: {fileID: 11400000, guid: 53de329adcbd02542bc7d392e5622935, type: 2}
+  data: {fileID: 11400000, guid: defcd117a7d601b48b00271bb46ff77d, type: 2}
   canvasCtrl: {fileID: 889839342}
+  pause: 0
 --- !u!4 &1607564801
 Transform:
   m_ObjectHideFlags: 0

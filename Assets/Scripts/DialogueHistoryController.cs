@@ -5,8 +5,6 @@ public class DialogueHistoryController : MonoBehaviour
 {
     [Header("Prefabs and SO")]
     [SerializeField]
-    Transform content;
-    [SerializeField]
     public DataFlowSO data;
     [SerializeField]
     GameObject sequencePrefab;
