@@ -15,41 +15,35 @@ MonoBehaviour:
   seq:
   - lines:
     - subLines:
-      - timeForSingleCharDisplay: 0.1
-        subline: "Wiadomo\u015B\u0107 testowa 1."
-      - timeForSingleCharDisplay: 1
-        subline: 
-      - timeForSingleCharDisplay: 0.1
-        subline: " Przerwa powinna by\u0142a by\u0107 przez chwil\u0119."
-      lingering: 1
-      speakerID: 0
-    runnedAlready: 1
-  - lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0.1
-        subline: "Wiadomo\u015B\u0107 testowa 2."
-      - timeForSingleCharDisplay: 1
-        subline: 
-      - timeForSingleCharDisplay: 0.1
-        subline: " Przerwa powinna by\u0142a by\u0107 przez chwil\u0119."
-      lingering: 1
-      speakerID: 1
-    - subLines:
+      - timeForSingleCharDisplay: 0.02
+        subline: TestMsg1.
       - timeForSingleCharDisplay: 0.05
-        subline: Press Enter to continue.
-      lingering: -1
+        subline: ' All good.'
+      lingering: 1
       speakerID: 0
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
-      - timeForSingleCharDisplay: 0.1
-        subline: Interakcja z obiektem Sprite'a
-      lingering: -1
+      - timeForSingleCharDisplay: 0
+        subline: TestMsg2.
+      lingering: 1
       speakerID: 0
-    runnedAlready: 1
+    - subLines:
+      - timeForSingleCharDisplay: 0.5
+        subline: OK.
+      lingering: -1
+      speakerID: 1
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0.03
+        subline: SpriteMsg
+      lingering: 3
+      speakerID: 1
+    runnedAlready: 0
   speakers:
   - SpeakerA
   - SpeakerB
   skipping: 0
-  defaultTimeTillTextSkippable: 0.9
+  defaultTimeTillTextSkippable: 0.7
   defaultTimeTillSubTextSkippable: 0.2
