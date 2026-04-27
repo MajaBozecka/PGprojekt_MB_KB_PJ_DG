@@ -1,16 +1,22 @@
+using System;
 using System.Collections.Generic;
 
 /// <summary>
 /// We store all dialogue lines in the sequence
 /// Some dialogue lines might be autoskip, while others need confirmation
 /// </summary>
-[System.Serializable]
+[Serializable]
 public class DialogueSequence
 {
     public List<DialogueLine> lines = new List<DialogueLine>();
+    public string identifier;
     public bool runnedAlready = false;
+    public override int GetHashCode()
+    {
+        return identifier.GetHashCode();
+    }
 }
-[System.Serializable]
+[Serializable]
 /// <summary>
 /// Idividual dialogue lines can be partial for dramatic pause
 /// </summary>
@@ -26,7 +32,7 @@ public class DialogueLine
     /// negative values can be used to claim it's meant to be confirmed
     /// </summary>
     public float lingering;
-    public short speakerID;
+    public string speakerID;
     public string dumpWholeLine()
     {
         string ret = "";
@@ -37,7 +43,7 @@ public class DialogueLine
         return ret;
     }
 }
-[System.Serializable]
+[Serializable]
 public struct SubDialogueLine
 {
     public float timeForSingleCharDisplay;
@@ -47,4 +53,15 @@ public struct SubDialogueLine
         timeForSingleCharDisplay = 0.01f;
         subline = s;
     }
+}
+/// <summary>
+/// Class that sores and controls dialogue sequences that were read, by keeping their read order.
+/// The field 'progrssInLastRead' is meant to show which line we reached last time.
+/// Right now the list is meant to store whole objects. But later I might use it to store identifiers of dialogue sequences.
+/// Because if I serialize this, there would be multiple instances of the same objects really.
+/// </summary>
+public class DialogueHistory
+{
+    public List<DialogueSequence> dialogueSequenceList = new ();
+    public int progressInLastRead = -1;
 }

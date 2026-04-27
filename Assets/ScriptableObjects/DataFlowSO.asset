@@ -21,6 +21,7 @@ MonoBehaviour:
         subline: ' All good.'
       lingering: 1
       speakerID: 0
+    identifier: 
     runnedAlready: 0
   - lines:
     - subLines:
@@ -33,6 +34,7 @@ MonoBehaviour:
         subline: OK.
       lingering: -1
       speakerID: 1
+    identifier: 
     runnedAlready: 0
   - lines:
     - subLines:
@@ -40,10 +42,12 @@ MonoBehaviour:
         subline: SpriteMsg
       lingering: 3
       speakerID: 1
+    identifier: 
     runnedAlready: 0
-  speakers:
+  speakersList:
   - SpeakerA
   - SpeakerB
+  - SpeakerC
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
   defaultTimeTillSubTextSkippable: 0.2
