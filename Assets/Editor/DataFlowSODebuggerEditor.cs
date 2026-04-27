@@ -51,10 +51,10 @@ public class DialogueSequencePropertyDrawer : PropertyDrawer
     {
         if (setup)
         {
-            if (l_lines == null)
-            {
-                l_lines = property.FindPropertyRelative("lines");
-            }
+        if (l_lines == null)
+        {
+            l_lines = property.FindPropertyRelative("lines");
+        }
             if (s_identifier == null)
             {
                 s_identifier = property.FindPropertyRelative("identifier");
@@ -76,6 +76,7 @@ public class DialogueSequencePropertyDrawer : PropertyDrawer
             {
                 height += EditorGUI.GetPropertyHeight(l_lines.GetArrayElementAtIndex(i),true);
             }
+            // height += EditorGUI.GetPropertyHeight(l_lines);
         }
         setProperties(property, false);
         return height;
@@ -117,15 +118,15 @@ public class DialogueLinePropertyDrawer : PropertyDrawer
     private void setProperties(SerializedProperty property, bool setup = true)
     {
         if (setup)
+    {
+        if (l_sublines == null)
         {
-            if (l_sublines == null)
-            {
-                l_sublines = property.FindPropertyRelative("subLines");
-            }
-            if (s_speakerID == null)
-            {
-                s_speakerID = property.FindPropertyRelative("speakerID");
-            }
+            l_sublines = property.FindPropertyRelative("subLines");
+        }
+        if (s_speakerID == null)
+        {
+            s_speakerID = property.FindPropertyRelative("speakerID");
+        }
         }
         else
         {
@@ -145,6 +146,7 @@ public class DialogueLinePropertyDrawer : PropertyDrawer
             }
             height += speakerID() >= 0 ? 0 : FOLDOUT_HEIGHT;
             height += EditorGUI.GetPropertyHeight(s_speakerID);
+            height += speakerID() >= 0 ? 0 : FOLDOUT_HEIGHT;
         }
         setProperties(property, false);
         return height;
