@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEditor.Search.SearchColumn;
 
 public class DialogueHistoryController : MonoBehaviour
 {
@@ -20,12 +19,12 @@ public class DialogueHistoryController : MonoBehaviour
     [SerializeField]
     HistoryEntryDialogueLine tempEntry;
     [SerializeField]
-    int lastSpeakerId;
+    string lastSpeakerId;
     public void addNewEntryWholeSequence(DialogueSequence dialSeq)
     {
         seqTransform = Instantiate(sequencePrefab, content).transform;
         tempEntry = null;
-        lastSpeakerId = -1;
+        lastSpeakerId = "";
         foreach (DialogueLine line in dialSeq.lines)
         {
             if(lastSpeakerId == line.speakerID)
@@ -56,7 +55,7 @@ public class DialogueHistoryController : MonoBehaviour
         {
             seqTransform = Instantiate(sequencePrefab, content).transform;
             tempEntry = null;
-            lastSpeakerId = -1;
+            lastSpeakerId = "";
             lastSeq = seq;
         }
         if (lastSpeakerId == line.speakerID)
