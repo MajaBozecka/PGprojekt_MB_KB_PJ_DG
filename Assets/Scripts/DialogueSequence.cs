@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// Some dialogue lines might be autoskip, while others need confirmation
 /// </summary>
 [Serializable]
-public class DialogueSequence
+public class DialogueSequence : IComparable<DialogueSequence>, IComparer<DialogueSequence>
 {
     public List<DialogueLine> lines = new List<DialogueLine>();
     public string identifier;
@@ -15,6 +15,21 @@ public class DialogueSequence
     {
         return identifier.GetHashCode();
     }
+
+    public int CompareTo(DialogueSequence other)
+    {
+        if (other == null)
+            return -1;
+        return String.Compare(identifier, other.identifier);
+    }
+
+    public int Compare(DialogueSequence x, DialogueSequence y)
+    {
+        return x.CompareTo(y);
+    }
+
+    public DialogueSequence() { }
+    public DialogueSequence(string id) { identifier = id; }
 }
 [Serializable]
 /// <summary>
@@ -54,6 +69,7 @@ public struct SubDialogueLine
         subline = s;
     }
 }
+[Serializable]
 /// <summary>
 /// Class that sores and controls dialogue sequences that were read, by keeping their read order.
 /// The field 'progrssInLastRead' is meant to show which line we reached last time.

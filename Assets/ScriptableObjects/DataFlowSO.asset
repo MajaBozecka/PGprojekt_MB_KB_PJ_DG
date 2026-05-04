@@ -12,42 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2189ae279e8274ebdc0cc67a8a331c, type: 3}
   m_Name: DataFlowSO
   m_EditorClassIdentifier: Assembly-CSharp::DataFlowSO
-  seq:
-  - lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0.02
-        subline: TestMsg1.
-      - timeForSingleCharDisplay: 0.05
-        subline: ' All good.'
-      lingering: 1
-      speakerID: 0
-    identifier: 
-    runnedAlready: 0
-  - lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: TestMsg2.
-      lingering: 1
-      speakerID: 0
-    - subLines:
-      - timeForSingleCharDisplay: 0.5
-        subline: OK.
-      lingering: -1
-      speakerID: 1
-    identifier: 
-    runnedAlready: 0
-  - lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0.03
-        subline: SpriteMsg
-      lingering: 3
-      speakerID: 1
-    identifier: 
-    runnedAlready: 0
   speakersList:
   - SpeakerA
   - SpeakerB
   - SpeakerC
+  history:
+    dialogueSequenceList: []
+    progressInLastRead: -1
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
   defaultTimeTillSubTextSkippable: 0.2
+  analisedSequence:
+    lines: []
+    identifier: 
+    runnedAlready: 0
+  placeholderSequence:
+    lines: []
+    identifier: 
+    runnedAlready: 0
+  serDialogueSequenceList: []
+  seqIds: []

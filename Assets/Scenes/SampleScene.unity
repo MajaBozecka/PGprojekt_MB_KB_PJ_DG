@@ -1076,6 +1076,7 @@ MonoBehaviour:
   seqTransform: {fileID: 0}
   lastSeq:
     lines: []
+    identifier: 
     runnedAlready: 0
   tempEntry: {fileID: 0}
   lastSpeakerId: 0

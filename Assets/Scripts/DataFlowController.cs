@@ -43,7 +43,7 @@ public class DataFlowController : MonoBehaviour
         populateCanvasWithButtons();
         ////////////////////////////////////////////////////////
         ///This one to make sure for testing those were not yet read. In the future we need to think how to register on savefile which were and which were not read
-        foreach (var item in data.seq)
+        foreach (var item in data.dialogueSequenceHashSet)
         {
             item.runnedAlready = false;
         }
@@ -122,85 +122,90 @@ public class DataFlowController : MonoBehaviour
     {
         for (int i = 0; i < 2; i++)
         {
-            int ii = i;
-            canvasCtrl.testButtons[i].Button.onClick.AddListener(delegate { StartDialogueSequence(ii); });//I hate lambda expressions
+           // int ii = i;
+           // canvasCtrl.testButtons[i].Button.onClick.AddListener(delegate { StartDialogueSequence(ii); });//I hate lambda expressions
         }
     }
 
-    public void StartDialogueSequence(int index)
+    public void StartDialogueSequence(string identifier)
     {
         StopAllCoroutines();
         canvasCtrl.UIMode = EUIMode.DIALOGUE;
-        if (!data.seq[index].runnedAlready)
+        if (!data.getDialogueSequence(identifier).runnedAlready)
         {
             foreach (DialogueButton butt in canvasCtrl.testButtons)
             {
-                if (butt.dialogueSequenceId == index)
+                if (butt.dialogueSequenceId == identifier)
                 {
                     butt.setRead(true);
                 }
             }
         }
-        StartCoroutine(DialogueFlow(index));
+        StartCoroutine(DialogueFlow(identifier));
     }
 
-    IEnumerator DialogueFlow(int index)
+    IEnumerator DialogueFlow(string index)
     {
-        foreach (DialogueLine fullDialogueLine in data.seq[index].lines)
+        DialogueSequence TestedDialogueSequence = data.getDialogueSequence(index);
+        if (TestedDialogueSequence is not null)
         {
-            float timeLineIterator = 0;
-            int compoundLength = 0;
-            canvasCtrl.setDialogueText(fullDialogueLine.dumpWholeLine());
-            canvasCtrl.showDialogueText(0);
-            canvasCtrl.setProceedIconVisibility(false);
-            foreach (SubDialogueLine partLine in fullDialogueLine.subLines)
+            foreach (DialogueLine fullDialogueLine in data.getDialogueSequence(index).lines)
             {
-                float timePartLineIterator = 0;
-                int partLineDisplayedLength = 0;
-                int newLength;
-                do
+                float timeLineIterator = 0;
+                int compoundLength = 0;
+                canvasCtrl.setDialogueText(fullDialogueLine.dumpWholeLine());
+                canvasCtrl.showDialogueText(0);
+                canvasCtrl.setProceedIconVisibility(false);
+                foreach (SubDialogueLine partLine in fullDialogueLine.subLines)
+                {
+                    float timePartLineIterator = 0;
+                    int partLineDisplayedLength = 0;
+                    int newLength;
+                    do
+                    {
+                        timeLineIterator += Time.deltaTime;
+                        timePartLineIterator += Time.deltaTime;
+                        if (partLine.timeForSingleCharDisplay <= 0)
+                        {
+                            newLength = partLine.subline.Length;
+                        }
+                        else
+                        {
+                            newLength = (int)(timePartLineIterator / partLine.timeForSingleCharDisplay);
+                        }
+                        bool updateDisplay = partLineDisplayedLength != newLength;
+                        partLineDisplayedLength = newLength;
+                        if (updateDisplay & (partLineDisplayedLength > 0 & partLineDisplayedLength <= partLine.subline.Length))
+                        {
+                            canvasCtrl.showDialogueText(compoundLength + partLineDisplayedLength);
+                        }
+                        yield return null;
+                    } while (!(canSkipNow(timePartLineIterator, tillSubDialogueLineSkippable) || isItTimeForNextSubLine(partLine, partLineDisplayedLength)));
+                    compoundLength += partLine.subline.Length;
+                    confirmNextLine = false;
+                }
+                float lingerIterator = 0;
+                canvasCtrl.showDialogueText(-1);
+                if (!TestedDialogueSequence.runnedAlready)
+                {
+                    canvasCtrl.dialogueHistoryUpdate(TestedDialogueSequence, fullDialogueLine);
+                }
+                while (!(canSkipNow(timeLineIterator, tillDialogueLineSkippable) || isItTimeForNextLine(fullDialogueLine, lingerIterator)))
                 {
                     timeLineIterator += Time.deltaTime;
-                    timePartLineIterator += Time.deltaTime;
-                    if(partLine.timeForSingleCharDisplay <= 0)
-                    {
-                        newLength = partLine.subline.Length;
-                    }else
-                    {
-                        newLength = (int)(timePartLineIterator / partLine.timeForSingleCharDisplay);
-                    }
-                    bool updateDisplay = partLineDisplayedLength != newLength;
-                    partLineDisplayedLength = newLength;
-                    if (updateDisplay&(partLineDisplayedLength > 0 & partLineDisplayedLength <= partLine.subline.Length))
-                    {
-                        canvasCtrl.showDialogueText(compoundLength + partLineDisplayedLength);
-                    }
+                    lingerIterator += Time.deltaTime;
+                    canvasCtrl.setProceedIconVisibility(true);
                     yield return null;
-                } while (!(canSkipNow(timePartLineIterator,tillSubDialogueLineSkippable) || isItTimeForNextSubLine(partLine, partLineDisplayedLength)));
-                compoundLength += partLine.subline.Length;
+                }
                 confirmNextLine = false;
             }
-            float lingerIterator = 0;
-            canvasCtrl.showDialogueText(-1);
-            if (!data.seq[index].runnedAlready)
+            if (!data.getDialogueSequence(index).runnedAlready)
             {
-                canvasCtrl.dialogueHistoryUpdate(data.seq[index], fullDialogueLine);
+                TestedDialogueSequence.runnedAlready = true;
             }
-            while (!(canSkipNow(timeLineIterator,tillDialogueLineSkippable) || isItTimeForNextLine(fullDialogueLine, lingerIterator)))
-            {
-                timeLineIterator += Time.deltaTime;
-                lingerIterator += Time.deltaTime;
-                canvasCtrl.setProceedIconVisibility(true);
-                yield return null;
-            }
-            confirmNextLine = false;
+            canvasCtrl.UIMode = EUIMode.BUTTONS;
+            SKIP = false;
         }
-        if (!data.seq[index].runnedAlready)
-        {
-            data.seq[index].runnedAlready = true;
-        }
-        canvasCtrl.UIMode = EUIMode.BUTTONS;
-        SKIP = false;
         bool isItTimeForNextSubLine(SubDialogueLine partLine, int partLineDisplayedLength)
         {
             return confirmNextLine || partLineDisplayedLength >= partLine.subline.Length;
