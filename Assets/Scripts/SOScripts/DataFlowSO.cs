@@ -25,7 +25,7 @@ public class DataFlowSO : ScriptableObject, ISerializationCallbackReceiver
     [Header("GlobalData")]
     [SerializeField]
     List<string> speakersList = new();
-    public DialogueHistory history = new();
+    public HistoryLogs history = new();
     public string sequencePack;
     public bool skipping;
     public float defaultTimeTillTextSkippable;

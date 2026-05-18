@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueButton : MonoBehaviour
+public class ButtonDialogueSequence : MonoBehaviour
 {
     [SerializeField]
     TMP_Text dispalyedText;

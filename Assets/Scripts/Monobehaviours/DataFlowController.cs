@@ -133,7 +133,7 @@ public class DataFlowController : MonoBehaviour
         canvasCtrl.UIMode = EUIMode.DIALOGUE;
         if (!data.getDialogueSequence(identifier).runnedAlready)
         {
-            foreach (DialogueButton butt in canvasCtrl.testButtons)
+            foreach (ButtonDialogueSequence butt in canvasCtrl.testButtons)
             {
                 if (butt.dialogueSequenceId == identifier)
                 {
@@ -180,10 +180,7 @@ public class DataFlowController : MonoBehaviour
                 }
                 float lingerIterator = 0;
                 canvasCtrl.showDialogueText(-1);
-                if (!TestedDialogueSequence.runnedAlready)
-                {
-                    canvasCtrl.dialogueHistoryUpdate(TestedDialogueSequence, fullDialogueLine);
-                }
+                UpdateDialogueHistory(TestedDialogueSequence, fullDialogueLine);
                 while (!(canSkipNow(timeLineIterator, tillDialogueLineSkippable) || isItTimeForNextLine(fullDialogueLine, lingerIterator)))
                 {
                     timeLineIterator += Time.deltaTime;
@@ -211,6 +208,22 @@ public class DataFlowController : MonoBehaviour
         bool canSkipNow(float timeLineIterator, float tillWhat)
         {
             return SKIP & timeLineIterator > tillWhat;
+        }
+    }
+    private void UpdateDialogueHistory(DialogueSequence dialSeq, DialogueLine dialLine)
+    {
+        if (!dialSeq.runnedAlready)
+        {
+            if (!data.history.dialogueSequenceIdentifiersList.Contains(dialSeq.identifier))
+            {
+                data.history.progressInLastRead = 0;
+                data.history.dialogueSequenceIdentifiersList.Add(dialSeq.identifier);
+            }
+            else
+            {
+                data.history.progressInLastRead++;
+            }
+            canvasCtrl.dialogueHistoryUpdate(dialSeq, dialLine);
         }
     }
 }

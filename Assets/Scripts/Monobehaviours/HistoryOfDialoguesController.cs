@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueHistoryController : MonoBehaviour
+public class HistoryOfDialoguesController : MonoBehaviour
 {
     [Header("Prefabs and SO")]
     [SerializeField]
@@ -11,18 +12,25 @@ public class DialogueHistoryController : MonoBehaviour
     HistoryEntryDialogueLine linePrefab;
     [Header("Transform handles and seq")]
     [SerializeField]
-    Transform content;
+    Transform contentTransform;
     [SerializeField]
     Transform seqTransform;
+    [SerializeField]
+    List<Transform> seqTransformList = new();
     [SerializeField]
     DialogueSequence lastSeq;
     [SerializeField]
     HistoryEntryDialogueLine tempEntry;
     [SerializeField]
     string lastSpeakerId;
+    /// <summary>
+    /// This method is prepared in case I need to fill it up anew;
+    /// IE when oppening new session and need to fill up empty page.
+    /// </summary>
+    /// <param name="dialSeq"></param>
     public void addNewEntryWholeSequence(DialogueSequence dialSeq)
     {
-        seqTransform = Instantiate(sequencePrefab, content).transform;
+        seqTransform = Instantiate(sequencePrefab, contentTransform).transform;
         tempEntry = null;
         lastSpeakerId = "";
         foreach (DialogueLine line in dialSeq.lines)
@@ -42,18 +50,11 @@ public class DialogueHistoryController : MonoBehaviour
             }
         }
     }
-    private HistoryEntryDialogueLine addNewLineEntry(DialogueLine dialogueLine)
-    {
-        HistoryEntryDialogueLine lineEntry = Instantiate(linePrefab.gameObject, seqTransform).GetComponent<HistoryEntryDialogueLine>();
-        lineEntry.prep(data.speaker(dialogueLine.speakerID));
-        return lineEntry;
-    }
-
-    public void addNewEntry(DialogueSequence seq, DialogueLine line)
+    public void addNewEntryPartialSeq(DialogueSequence seq, DialogueLine line)
     {
         if(lastSeq!=seq)
         {
-            seqTransform = Instantiate(sequencePrefab, content).transform;
+            seqTransform = Instantiate(sequencePrefab, contentTransform).transform;
             tempEntry = null;
             lastSpeakerId = "";
             lastSeq = seq;
@@ -73,4 +74,11 @@ public class DialogueHistoryController : MonoBehaviour
             tempEntry.appendLine(line.dumpWholeLine());
         }
     }
+    private HistoryEntryDialogueLine addNewLineEntry(DialogueLine dialogueLine)
+    {
+        HistoryEntryDialogueLine lineEntry = Instantiate(linePrefab.gameObject, seqTransform).GetComponent<HistoryEntryDialogueLine>();
+        lineEntry.prepareSpeakerAndEmptyLine(data.speaker(dialogueLine.speakerID));
+        return lineEntry;
+    }
+
 }

@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class DialoguePanelController : MonoBehaviour
+public class PanelDialogueSequenceController : MonoBehaviour
 {
     public GameObject proceedIcon;
     public GameObject panel
