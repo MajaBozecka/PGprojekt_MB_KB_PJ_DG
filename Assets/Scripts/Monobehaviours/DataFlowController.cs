@@ -133,13 +133,7 @@ public class DataFlowController : MonoBehaviour
         canvasCtrl.UIMode = EUIMode.DIALOGUE;
         if (!data.getDialogueSequence(identifier).runnedAlready)
         {
-            foreach (ButtonDialogueSequence butt in canvasCtrl.testButtons)
-            {
-                if (butt.dialogueSequenceId == identifier)
-                {
-                    butt.setRead(true);
-                }
-            }
+            canvasCtrl.SetDialogueOptionRead(identifier);
         }
         StartCoroutine(DialogueFlow(identifier));
     }

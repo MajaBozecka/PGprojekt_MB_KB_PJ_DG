@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 [CreateAssetMenu(fileName = "DataFlowSO", menuName = "Scriptable Objects/DataFlowSO")]
-public class DataFlowSO : ScriptableObject, ISerializationCallbackReceiver
+public class DataFlowSO : ScriptableObject
 {
     #region singleton
     static DataFlowSO singleton;
@@ -25,20 +26,19 @@ public class DataFlowSO : ScriptableObject, ISerializationCallbackReceiver
     [Header("GlobalData")]
     [SerializeField]
     List<string> speakersList = new();
-    public HistoryLogs history = new();
+    public History history = new();
     public string sequencePack;
     public bool skipping;
     public float defaultTimeTillTextSkippable;
     public float defaultTimeTillSubTextSkippable;
     #region DialogueSequenceControl
-    [SerializeField]
     public HashSet<DialogueSequence> dialogueSequenceHashSet = new();//still dont know if hash or sorted
+    [HideInInspector]
+    public List<DialogueSequence> dialogueSequenceList = new();
     //[HideInInspector]
     public DialogueSequence serializedAnalisedSequence;
     //[HideInInspector]
     public DialogueSequence serializedPlaceholderSequence;
-    [HideInInspector]
-    public List<DialogueSequence> serDialogueSequenceList;
     [HideInInspector]
     public string[] seqIdTab;
     [HideInInspector]
@@ -99,77 +99,85 @@ public class DataFlowSO : ScriptableObject, ISerializationCallbackReceiver
     {
         get
         {
-            if(serDialogueSequenceList!=null & (analisedIndex >= 0)&(analisedIndex<serDialogueSequenceList.Count))
+            if(dialogueSequenceList!=null & (analisedIndex >= 0)&(analisedIndex<dialogueSequenceList.Count))
             {
-                return serDialogueSequenceList[analisedIndex];
+                return dialogueSequenceList[analisedIndex];
             }
             return null;
         }
     }
 
-    public void swapBufferedSequences(bool toPlaceholder)
+    public void pushPlaceholderToAnalised()
     {
-        if (toPlaceholder)
+        serializedPlaceholderSequence.CopyTo(serializedAnalisedSequence);
+        analisedIdentifier = placeholdIdentifier;
+        analisedIndex = tryGetIndexOfAnalisedSequence;
+        serializedPlaceholderSequence = null;
+        placeholdIdentifier = "";
+    }
+
+    public void pushAnalisedToPlaceholder()
+    {
+        serializedAnalisedSequence.CopyTo(serializedPlaceholderSequence);
+        placeholdIdentifier = analisedIdentifier;
+        serializedAnalisedSequence = null;
+        analisedIdentifier = "";
+        analisedIndex = -1;
+    }
+    public void updateDialogueSequenceCollections()
+    {
+        dialogueSequenceHashSet.Clear();
+        foreach (DialogueSequence item in dialogueSequenceList)
         {
-            serializedAnalisedSequence.CopyTo(serializedPlaceholderSequence);
-            placeholdIdentifier = analisedIdentifier;
-            serializedAnalisedSequence = null;
-            analisedIdentifier = "";
-            analisedIndex = -1;
+            dialogueSequenceHashSet.Add(item);
+        }
+        if (seqIdTab.Length != dialogueSequenceList.Count)
+            seqIdTab = new string[dialogueSequenceList.Count];
+        for (int i = 0; i < dialogueSequenceList.Count; i++)
+        {
+            seqIdTab[i] = dialogueSequenceList[i].identifier;
+        }
+    }
+
+    public void easeUpMemoryByFreeingListCollection()
+    {
+        if(dialogueSequenceList.Count > 0)
+        {
+            updateDialogueSequenceCollections();
+            dialogueSequenceList.Clear();
+            //idk what else? GarbageCollector?
+        }
+    }
+    public void rebuildDialogueSequenceList()
+    {
+        dialogueSequenceList.Clear();
+        foreach (DialogueSequence item in dialogueSequenceHashSet)
+        {
+            dialogueSequenceList.Add(item);
+        }
+        dialogueSequenceList.Sort();
+    }
+
+    public void SaveToJSON()
+    {
+        Debug.Log(pathToSave);
+        string json = JsonUtility.ToJson(this);
+        File.WriteAllText(pathToSave, json);
+    }
+    public void LoadFromJSON()
+    {
+        //C:/Users/User/AppData/LocalLow/DefaultCompany/../savefile.json
+        if (File.Exists(pathToSave))
+        {
+            string json = File.ReadAllText(pathToSave);
+            JsonUtility.FromJsonOverwrite(json, this);
+            updateDialogueSequenceCollections();
         }
         else
         {
-            serializedPlaceholderSequence.CopyTo(serializedAnalisedSequence);
-            analisedIdentifier = placeholdIdentifier;
-            analisedIndex = tryGetIndexOfAnalisedSequence;
-            serializedPlaceholderSequence = null;
-            placeholdIdentifier = "";
+            Debug.Log($"File: '{pathToSave}' missing.");
         }
-    }
 
-    public void OnBeforeSerialize()
-    {
-        if (serDialogueSequenceList == null)
-            serDialogueSequenceList = new();
-        if (serDialogueSequenceList.Count != dialogueSequenceHashSet.Count)
-        {
-            serDialogueSequenceList.Clear();
-            foreach (DialogueSequence item in dialogueSequenceHashSet)
-            {
-                serDialogueSequenceList.Add(item);
-            }
-            serDialogueSequenceList.Sort();
-            fillSeqIdsTab();
-        }
     }
-
-    public void OnAfterDeserialize()
-    {
-        if (dialogueSequenceHashSet == null)
-            dialogueSequenceHashSet = new();
-        if (serDialogueSequenceList != null)
-        {
-            DialogueSequence analisedTarget = TryGetAnalisedSequenceFromIndex;
-            if (analisedTarget != null & serializedAnalisedSequence != null)
-            {
-                if (analisedIdentifier == analisedTarget.identifier)
-                    serializedAnalisedSequence.CopyTo(analisedTarget);
-            }
-            dialogueSequenceHashSet.Clear();
-            foreach (DialogueSequence item in serDialogueSequenceList)
-            {
-                dialogueSequenceHashSet.Add(item);
-            }
-            serDialogueSequenceList.Clear();
-        }
-    }
-
-    public void fillSeqIdsTab()
-    {
-        seqIdTab = new string[serDialogueSequenceList.Count];
-        for (int i = 0; i < serDialogueSequenceList.Count; i++)
-        {
-            seqIdTab[i] = serDialogueSequenceList[i].identifier;
-        }
-    }
+    private string pathToSave { get { return Application.persistentDataPath + "/" + sequencePack + ".json"; } }
 }

@@ -1,5 +1,4 @@
 #if UNITY_EDITOR
-using System.IO;
 using UnityEditor;
 using UnityEngine;
 /// <summary>
@@ -14,23 +13,14 @@ public class DataFlowSOEditor : Editor
     static bool defaultInsp = false;
     static bool isOtherDataFoldout = false;
     static bool isDSCFoldout = true;
-    bool isAnalisisFoldout;
-    bool forceAnalisedFoldout;
-    bool isPlaceholderFoldout;
-    bool holdingNewPlaceholderSeq;
+    bool showPlaceholderSeq;
     bool insertFailed;
     bool insertFailReasonDecideder;
     private void OnEnable()
     {
         dataSO = (DataFlowSO)target;
-        setFoldouts();
         insertFailed = false;
-        holdingNewPlaceholderSeq = false;
-    }
-    private void setFoldouts()
-    {
-        isAnalisisFoldout = dataSO.analisedIndex >= 0 | forceAnalisedFoldout;
-        isPlaceholderFoldout = holdingNewPlaceholderSeq;
+        showPlaceholderSeq = false;
     }
     public override void OnInspectorGUI()
     {
@@ -62,38 +52,43 @@ public class DataFlowSOEditor : Editor
                 EditorGUILayout.Space();
                 DrawPlaceholderSequence();
                 EditorGUI.indentLevel--;
+                EditorGUILayout.Space();
+                EditorGUILayout.Space();
+                EditorGUILayout.LabelField("Saving/Loading with JSON");
                 EditorGUILayout.BeginHorizontal();
                 if (GUILayout.Button("SaveToJson"))
                 {
-                    SaveToJSON();
+                    dataSO.SaveToJSON();
                 }
                 if (GUILayout.Button("LoadFromJson"))
                 {
-                    LoadFromJSON();
+                    dataSO.LoadFromJSON();
                 }
                 EditorGUILayout.EndHorizontal();
-/*                if (GUILayout.Button("Debug"))
+                EditorGUILayout.Space();
+                EditorGUILayout.Space();
+                EditorGUILayout.LabelField("Debugging buttons:");
+                if (GUILayout.Button("Debug"))
                 {
                     Debug.Log($"hash count:{dataSO.dialogueSequenceHashSet.Count}");
-                    Debug.Log($"ser count:{dataSO.serDialogueSequenceList.Count}");
-                    for (int i = 0; i < dataSO.serDialogueSequenceList.Count; i++)
+                    Debug.Log($"ser count:{dataSO.dialogueSequenceList.Count}");
+                    for (int i = 0; i < dataSO.dialogueSequenceList.Count; i++)
                     {
-                        Debug.Log($"ser{i} id:{dataSO.serDialogueSequenceList[i].identifier}");
-                        Debug.Log($"ser{i} runned:{dataSO.serDialogueSequenceList[i].runnedAlready}");
-                        Debug.Log($"ser{i} count:{dataSO.serDialogueSequenceList[i].lines.Count}");
+                        Debug.Log($"ser{i} id:{dataSO.dialogueSequenceList[i].identifier}");
+                        Debug.Log($"ser{i} runned:{dataSO.dialogueSequenceList[i].runnedAlready}");
+                        Debug.Log($"ser{i} count:{dataSO.dialogueSequenceList[i].lines.Count}");
                     }
                 }
                 if (GUILayout.Button("cleanslate"))
                 {
-                    dataSO.serDialogueSequenceList.Clear();
-                    dataSO.fillSeqIdsTab();
-                    dataSO.OnAfterDeserialize();
+                    dataSO.dialogueSequenceList.Clear();
+                    dataSO.updateDialogueSequenceCollections();
                     Debug.Log($"hash count:{dataSO.dialogueSequenceHashSet.Count}");
-                    Debug.Log($"ser count:{dataSO.serDialogueSequenceList.Count}");
-                }*/
+                    Debug.Log($"ser count:{dataSO.dialogueSequenceList.Count}");
+                }
                 if (EditorGUI.EndChangeCheck())
                 {
-                    dataSO.OnAfterDeserialize();
+                    //dataSO.OnAfterDeserialize();
                 }
             }
         }
@@ -111,28 +106,20 @@ public class DataFlowSOEditor : Editor
         }
         else
         {
-            isAnalisisFoldout = EditorGUILayout.Foldout(isAnalisisFoldout, "Analised sequence:");
-        }
-        if (popupReturnedId >= 0 & popupReturnedId < dataSO.seqIdTab.Length)
-        {
-            if (match != popupReturnedId | forceAnalisedFoldout)
+            if (popupReturnedId >= 0 & popupReturnedId < dataSO.seqIdTab.Length)
             {
-                dataSO.analisedIndex = popupReturnedId;
-                dataSO.analisedIdentifier = dataSO.seqIdTab[popupReturnedId];
-                DialogueSequence tgasfi =dataSO.TryGetAnalisedSequenceFromIndex;
-                if (tgasfi is not null)
+                EditorGUILayout.Space();
+                EditorGUILayout.LabelField("Analised sequence:");
+                if (match != popupReturnedId)
                 {
-                    tgasfi.CopyTo(dataSO.serializedAnalisedSequence);
-                    isAnalisisFoldout = true;
+                    dataSO.analisedIndex = popupReturnedId;
+                    dataSO.analisedIdentifier = dataSO.seqIdTab[popupReturnedId];
+                    DialogueSequence tgasfi = dataSO.TryGetAnalisedSequenceFromIndex;
+                    if (tgasfi is not null)
+                    {
+                        tgasfi.CopyTo(dataSO.serializedAnalisedSequence);
+                    }
                 }
-                else
-                {
-                    isAnalisisFoldout = false;
-                }
-                forceAnalisedFoldout = false;
-            }
-            if (isAnalisisFoldout)
-            {
                 EditorGUI.indentLevel++;
                 EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.HelpBox("Deleting a sequence moves copy to placeholder", MessageType.None);
@@ -144,24 +131,24 @@ public class DataFlowSOEditor : Editor
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("serializedAnalisedSequence"), true);
                 EditorGUI.indentLevel--;
             }
+            else
+            {
+                EditorGUILayout.HelpBox("Please choose valid id, to show DialogueSequenceContent", MessageType.Info);
+            }
         }
     }
     private void DrawPlaceholderSequence()
     {
-        if (!isPlaceholderFoldout)
+        if (!showPlaceholderSeq)
         {
             if (GUILayout.Button("Add"))
             {
-                AddSequence();
+                showPlaceholderSeq = true;
             }
-            EditorGUILayout.Space();
         }
         else
         {
-            isPlaceholderFoldout = EditorGUILayout.Foldout(isPlaceholderFoldout, "Placeholder");
-        }
-        if (isPlaceholderFoldout)
-        {
+            showPlaceholderSeq = EditorGUILayout.Foldout(showPlaceholderSeq, "Placeholder");
             EditorGUI.indentLevel++;
             EditorGUILayout.PropertyField(holdSeq, true);
             if (insertFailed)
@@ -174,19 +161,8 @@ public class DataFlowSOEditor : Editor
             {
                 InsertSequence();
             }
-            EditorGUILayout.Space();
             EditorGUI.indentLevel--;
         }
-        EditorGUILayout.Space();
-    }
-    private void AddSequence()
-    {
-        if (dataSO.serializedPlaceholderSequence is null)
-        {
-            dataSO.serializedPlaceholderSequence = new DialogueSequence();
-        }
-        holdingNewPlaceholderSeq = true;
-        setFoldouts();
     }
     private void DeleteSequence()
     {
@@ -196,14 +172,11 @@ public class DataFlowSOEditor : Editor
             if (tried is not null)
             {
                 tried.CopyTo(dataSO.serializedAnalisedSequence);
-                if (dataSO.serDialogueSequenceList.Remove(tried))
+                if (dataSO.dialogueSequenceList.Remove(tried))
                 {
-                    dataSO.fillSeqIdsTab();
-                    dataSO.swapBufferedSequences(true);
-                    dataSO.OnAfterDeserialize();
-                    forceAnalisedFoldout = true;
-                    holdingNewPlaceholderSeq = true;
-                    setFoldouts();
+                    dataSO.updateDialogueSequenceCollections();
+                    dataSO.pushAnalisedToPlaceholder();
+                    showPlaceholderSeq = true;
                     serializedObject.Update();
                 }
             }
@@ -212,7 +185,7 @@ public class DataFlowSOEditor : Editor
     private void InsertSequence()
     {
         dataSO.serializedPlaceholderSequence.identifier = holdSeq.FindPropertyRelative("identifier").stringValue;
-        insertFailReasonDecideder = dataSO.serDialogueSequenceList.BinarySearch(dataSO.serializedPlaceholderSequence) >= 0;
+        insertFailReasonDecideder = dataSO.dialogueSequenceList.BinarySearch(dataSO.serializedPlaceholderSequence) >= 0;
         dataSO.placeholdIdentifier = dataSO.serializedPlaceholderSequence.identifier;
         insertFailed = insertFailReasonDecideder | string.IsNullOrEmpty(dataSO.placeholdIdentifier);
         if (insertFailed)
@@ -221,43 +194,18 @@ public class DataFlowSOEditor : Editor
         }
         else
         {
-            Debug.Log($"Inserting new sequence; Count before: {dataSO.serDialogueSequenceList.Count}");
-            dataSO.serDialogueSequenceList.Add(dataSO.serializedPlaceholderSequence);
-            dataSO.serDialogueSequenceList.Sort();
-            dataSO.fillSeqIdsTab();
-            dataSO.swapBufferedSequences(false);
-            dataSO.OnAfterDeserialize();
-            holdingNewPlaceholderSeq = true;
-            setFoldouts();
+            Debug.Log($"Inserting new sequence; Count before: {dataSO.dialogueSequenceList.Count}");
+            dataSO.dialogueSequenceList.Add(dataSO.serializedPlaceholderSequence);
+            dataSO.dialogueSequenceList.Sort();
+            dataSO.updateDialogueSequenceCollections();
+            dataSO.pushPlaceholderToAnalised();
+            showPlaceholderSeq = true;
             Debug.Log($"Inserted new sequence; Count after: {dataSO.dialogueSequenceHashSet.Count}");
             serializedObject.Update();
         }
     }
     private string indexErrorMsg { get { return insertFailReasonDecideder ? $"Cannot add existing index({dataSO.serializedPlaceholderSequence.identifier})!" : $"Index in placeholder is empty!"; } }
 
-    private void SaveToJSON()
-    {
-        Debug.Log(pathToSave);
-        dataSO.OnBeforeSerialize();
-        string json = JsonUtility.ToJson(dataSO);
-        File.WriteAllText(pathToSave, json);
-    }
-    private void LoadFromJSON()
-    {
-        //C:/Users/User/AppData/LocalLow/DefaultCompany/../savefile.json
-        if (File.Exists(pathToSave))
-        {
-            string json = File.ReadAllText(pathToSave);
-            JsonUtility.FromJsonOverwrite(json, dataSO);
-            dataSO.OnAfterDeserialize();
-        }
-        else
-        {
-            Debug.Log($"File: '{pathToSave}' missing.");
-        }
-
-    }
-    private string pathToSave { get { return Application.persistentDataPath + "/" + dataSO.sequencePack + ".json"; } }
 }
 
 #endif

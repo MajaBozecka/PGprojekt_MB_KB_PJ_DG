@@ -40,14 +40,14 @@ public class DialogueSequence : IComparable<DialogueSequence>, IComparer<Dialogu
         target.runnedAlready = runnedAlready;
     }
 
-/*    public override bool Equals(object other)
+    public override bool Equals(object other)
     {
         if (other is DialogueSequence t)
         {
             return t.identifier == this.identifier;
         }
         return false;
-    }*/
+    }
 }
 [Serializable]
 /// <summary>

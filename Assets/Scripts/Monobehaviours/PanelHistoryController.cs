@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HistoryDialoguesController : MonoBehaviour
+public class PanelHistoryController : MonoBehaviour
 {
     [Header("Prefabs and SO")]
-    [SerializeField]
     public DataFlowSO data;
     [SerializeField]
     GameObject sequencePrefab;
@@ -14,9 +13,9 @@ public class HistoryDialoguesController : MonoBehaviour
     [SerializeField]
     Transform contentTransform;
     [SerializeField]
-    Transform seqTransform;
+    Transform lastSeqEntryTransform;
     [SerializeField]
-    List<Transform> seqTransformList = new();
+    List<GameObject> sequenceEntryList = new();
     [SerializeField]
     DialogueSequence lastSeq;
     [SerializeField]
@@ -30,9 +29,12 @@ public class HistoryDialoguesController : MonoBehaviour
     /// <param name="dialSeq"></param>
     public void addNewEntryWholeSequence(DialogueSequence dialSeq)
     {
-        seqTransform = Instantiate(sequencePrefab, contentTransform).transform;
-        tempEntry = null;
-        lastSpeakerId = "";
+        if(dialSeq == null)
+        {
+            Debug.Log("PanelHistoryController attempt to add whole sequence found NULL");
+            return;
+        }
+        addNewSequenceEntry();
         foreach (DialogueLine line in dialSeq.lines)
         {
             if(lastSpeakerId == line.speakerID)
@@ -54,9 +56,7 @@ public class HistoryDialoguesController : MonoBehaviour
     {
         if(lastSeq!=seq)
         {
-            seqTransform = Instantiate(sequencePrefab, contentTransform).transform;
-            tempEntry = null;
-            lastSpeakerId = "";
+            addNewSequenceEntry();
             lastSeq = seq;
         }
         if (lastSpeakerId == line.speakerID)
@@ -74,11 +74,35 @@ public class HistoryDialoguesController : MonoBehaviour
             tempEntry.appendLine(line.dumpWholeLine());
         }
     }
+    private void addNewSequenceEntry()
+    {
+        lastSeqEntryTransform = Instantiate(sequencePrefab, contentTransform).transform;
+        sequenceEntryList.Add(lastSeqEntryTransform.gameObject);
+        tempEntry = null;
+        lastSpeakerId = "";
+    }
     private HistoryEntryDialogueLine addNewLineEntry(DialogueLine dialogueLine)
     {
-        HistoryEntryDialogueLine lineEntry = Instantiate(linePrefab.gameObject, seqTransform).GetComponent<HistoryEntryDialogueLine>();
+        HistoryEntryDialogueLine lineEntry = Instantiate(linePrefab.gameObject, lastSeqEntryTransform).GetComponent<HistoryEntryDialogueLine>();
         lineEntry.prepareSpeakerAndEmptyLine(data.speaker(dialogueLine.speakerID));
         return lineEntry;
+    }
+
+    public void RewriteHistory()
+    {
+        if(sequenceEntryList.Count>0)
+        {
+            foreach (GameObject entry in sequenceEntryList)
+            {
+                Destroy(entry);
+            }
+            foreach (string histId in data.history.dialogueSequenceIdentifiersList)
+            {
+                DialogueSequence tempSeq = new DialogueSequence(histId);
+                data.dialogueSequenceHashSet.TryGetValue(tempSeq,out tempSeq);
+                addNewEntryWholeSequence(tempSeq);
+            }
+        }
     }
 
 }

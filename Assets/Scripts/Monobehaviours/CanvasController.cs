@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Identifiers;
 public class CanvasController : MonoBehaviour
 {
     [SerializeField]
-    GameObject buttonPanel;
+    PanelDialogueSequenceController dialogueSequencePanel;
     [SerializeField]
-    PanelDialogueSequenceController dialoguePanel;
+    PanelDialogueOptions dialogueOptionsPanel;
     [SerializeField]
-    HistoryDialoguesController historyPanel;
-    public List<ButtonDialogueSequence> testButtons = new();
+    PanelHistoryController historyPanel;
     [SerializeField]
     GameObject skippingIcon;
     [SerializeField]
@@ -20,8 +20,8 @@ public class CanvasController : MonoBehaviour
         {
             if (value == m_UIMode) return;
             m_UIMode = value;
-            buttonPanel.gameObject.SetActive(false);
-            dialoguePanel.gameObject.SetActive(false);
+            dialogueOptionsPanel.gameObject.SetActive(false);
+            dialogueSequencePanel.gameObject.SetActive(false);
             historyPanel.gameObject.SetActive(false);
             switch (m_UIMode)
             {
@@ -31,14 +31,14 @@ public class CanvasController : MonoBehaviour
                     }
                 case EUIMode.BUTTONS:
                     {
-                        buttonPanel.gameObject.SetActive(true);
-                        if (testButtons.Count > 0)
-                            testButtons[0].Button.Select();
+                        dialogueOptionsPanel.gameObject.SetActive(true);
+                        if (dialogueOptionsPanel.buttonList.Count > 0)
+                            dialogueOptionsPanel.buttonList[0].Button.Select();
                         break;
                     }
                 case EUIMode.DIALOGUE:
                     {
-                        dialoguePanel.gameObject.SetActive(true);
+                        dialogueSequencePanel.gameObject.SetActive(true);
                         break;
                     }
                 case EUIMode.HISTORY:
@@ -60,16 +60,16 @@ public class CanvasController : MonoBehaviour
     void Start()
     {
         UIMode = EUIMode.BUTTONS;
-        flushButtonsNotRead();
+        dialogueOptionsPanel.flushButtonsNotRead();
     }
 
     public void setDialogueText(string s)
     {
-        dialoguePanel.textToShowInDialogueField = s;
+        dialogueSequencePanel.textToShowInDialogueField = s;
     }
     public void showDialogueText(int n)
     {
-        dialoguePanel.fillDialogueField(n);
+        dialogueSequencePanel.fillDialogueField(n);
     }
     public void lookUpHistory(bool history)
     {
@@ -89,13 +89,6 @@ public class CanvasController : MonoBehaviour
         historyPanel.addNewEntryPartialSeq(dial,line);
     }
 
-    public void flushButtonsNotRead()
-    {
-        foreach (ButtonDialogueSequence butt in testButtons)
-        {
-            butt.setRead(false);
-        }
-    }
     public void setSelect()
     {
         switch (m_UIMode)
@@ -106,8 +99,8 @@ public class CanvasController : MonoBehaviour
                 }
             case EUIMode.BUTTONS:
                 {
-                    if (testButtons.Count > 0)
-                        testButtons[0].Button.Select();
+                    if (!dialogueOptionsPanel.SelectFirst())
+                        Debug.Log("Failed to select first dialogue option button");
                     break;
                 }
             case EUIMode.DIALOGUE:
@@ -123,9 +116,13 @@ public class CanvasController : MonoBehaviour
 
     public void setProceedIconVisibility(bool proceedable)
     {
-        dialoguePanel.proceedIcon.SetActive(proceedable);
+        dialogueSequencePanel.proceedIcon.SetActive(proceedable);
     }
 
+    public void SetDialogueOptionRead(string identifier)
+    {
+        dialogueOptionsPanel.SetDialogueOptionRead(identifier);
+    }
 }
 public enum EUIMode : byte
 {
