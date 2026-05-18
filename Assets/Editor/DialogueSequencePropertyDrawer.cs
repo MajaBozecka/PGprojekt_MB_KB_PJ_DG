@@ -41,7 +41,6 @@ public class DialogueSequencePropertyDrawer : PropertyDrawer
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
         EditorGUI.BeginProperty(position, label, property);
-        // property.serializedObject.Update();
         EditorGUI.DrawRect(new Rect(position.x, position.y, position.width, GetPropertyHeight(property, label)), drawerColor);
         setProperties(property, true);
         Rect rect = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
@@ -55,7 +54,6 @@ public class DialogueSequencePropertyDrawer : PropertyDrawer
             EditorGUI.PropertyField(rect, l_lines, true);
             EditorGUI.indentLevel--;
         }
-        //property.serializedObject.ApplyModifiedProperties();
         setProperties(property, false);
         EditorGUI.EndProperty();
     }
