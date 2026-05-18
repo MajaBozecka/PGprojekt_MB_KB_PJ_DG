@@ -17,6 +17,8 @@ public class PanelHistoryController : MonoBehaviour
     [SerializeField]
     List<GameObject> sequenceEntryList = new();
     [SerializeField]
+    List<Transform> seqTransformList = new();
+    [SerializeField]
     DialogueSequence lastSeq;
     [SerializeField]
     HistoryEntryDialogueLine tempEntry;
@@ -104,5 +106,4 @@ public class PanelHistoryController : MonoBehaviour
             }
         }
     }
-
 }
