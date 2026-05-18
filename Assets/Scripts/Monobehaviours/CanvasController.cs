@@ -5,10 +5,10 @@ public class CanvasController : MonoBehaviour
     [SerializeField]
     GameObject buttonPanel;
     [SerializeField]
-    DialoguePanelController dialoguePanel;
+    PanelDialogueSequenceController dialoguePanel;
     [SerializeField]
-    DialogueHistoryController historyPanel;
-    public List<DialogueButton> testButtons = new();
+    HistoryDialoguesController historyPanel;
+    public List<ButtonDialogueSequence> testButtons = new();
     [SerializeField]
     GameObject skippingIcon;
     [SerializeField]
@@ -86,12 +86,12 @@ public class CanvasController : MonoBehaviour
     }
     public void dialogueHistoryUpdate(DialogueSequence dial, DialogueLine line)
     {
-        historyPanel.addNewEntry(dial,line);
+        historyPanel.addNewEntryPartialSeq(dial,line);
     }
 
     public void flushButtonsNotRead()
     {
-        foreach (DialogueButton butt in testButtons)
+        foreach (ButtonDialogueSequence butt in testButtons)
         {
             butt.setRead(false);
         }

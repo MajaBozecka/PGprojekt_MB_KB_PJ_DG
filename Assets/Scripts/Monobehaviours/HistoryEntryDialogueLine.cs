@@ -6,7 +6,7 @@ public class HistoryEntryDialogueLine : MonoBehaviour
     [SerializeField] TMP_Text speaker;
     [SerializeField] TMP_Text line;
 
-    public void prep(string speakerName)
+    public void prepareSpeakerAndEmptyLine(string speakerName)
     {
         speaker.text = speakerName;
         line.text = "";

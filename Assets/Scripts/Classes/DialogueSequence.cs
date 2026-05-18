@@ -83,19 +83,7 @@ public struct SubDialogueLine
     public string subline;
     public SubDialogueLine(string s)
     {
-        timeForSingleCharDisplay = 0.01f;
+        timeForSingleCharDisplay = -1;
         subline = s;
     }
-}
-[Serializable]
-/// <summary>
-/// Class that sores and controls dialogue sequences that were read, by keeping their read order.
-/// The field 'progrssInLastRead' is meant to show which line we reached last time.
-/// Right now the list is meant to store whole objects. But later I might use it to store identifiers of dialogue sequences.
-/// Because if I serialize this, there would be multiple instances of the same objects really.
-/// </summary>
-public class DialogueHistory
-{
-    public List<DialogueSequence> dialogueSequenceList = new ();
-    public int progressInLastRead = -1;
 }
