@@ -1,5 +1,4 @@
 using UnityEditor;
-using UnityEditorInternal;
 using UnityEngine;
 
 #if UNITY_EDITOR
@@ -10,134 +9,230 @@ using UnityEngine;
 public class DataFlowSODebuggerEditor : Editor
 {
     DataFlowSO dataSO;
-    SerializedProperty analSeq;
     SerializedProperty holdSeq;
+    SerializedProperty holdSeqlId;
+    static bool defaultInsp = false;
+    static bool isOtherDataFoldout = false;
+    static bool isDSCFoldout = true;
     bool isAnalisisFoldout;
-    int analId;
+    bool forceAnalisedFoldout;
     bool isPlaceholderFoldout;
+    bool holdingNewPlaceholderSeq;
     bool insertFailed;
-    bool defaultInsp;
+    bool insertFailReasonDecideder;
     private void OnEnable()
     {
         dataSO = (DataFlowSO)target;
-        setProperties(true);
+        setFoldouts();
         insertFailed = false;
-        isAnalisisFoldout = dataSO.analisedSequence != null;
-        isPlaceholderFoldout = dataSO.placeholderSequence != null;
-        analId = -1;
+        holdingNewPlaceholderSeq = false;
     }
-    private void OnDisable()
+    private void setFoldouts()
     {
-        setProperties(false);
-    }
-    private void setProperties(bool setup = true)
-    {
-        if (setup)
-        {
-            if (analSeq == null)
-            {
-                analSeq = serializedObject.FindProperty("analisedSequence");
-            }
-            if (holdSeq == null)
-            {
-                holdSeq = serializedObject.FindProperty("placeholderSequence");
-            }
-        }
-        else
-        {
-            analSeq = null;
-            holdSeq = null;
-        }
+        isAnalisisFoldout = dataSO.analisedIndex >= 0 | forceAnalisedFoldout;
+        isPlaceholderFoldout = holdingNewPlaceholderSeq;
     }
     public override void OnInspectorGUI()
     {
+        serializedObject.Update();
         if(defaultInsp = EditorGUILayout.Foldout(defaultInsp, "DefaultInspector"))
         { DrawDefaultInspector(); }
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("speakersList"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("history"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("skipping"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillTextSkippable"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillSubTextSkippable"));
-        isAnalisisFoldout = EditorGUILayout.Foldout(isAnalisisFoldout, "DialogueSequenceAnalysis");
-        if (isAnalisisFoldout)
+        else
         {
-            EditorGUI.indentLevel++;
-            EditorGUILayout.BeginHorizontal();
-            if (GUILayout.Button("Add"))
+            isOtherDataFoldout = EditorGUILayout.Foldout(isOtherDataFoldout, "OtherData");
+            if (isOtherDataFoldout)
             {
-                if (dataSO.placeholderSequence is null)
-                    dataSO.placeholderSequence = new DialogueSequence();
+                EditorGUI.indentLevel++;
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("speakersList"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("history"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("skipping"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillTextSkippable"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillSubTextSkippable"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("serializedAnalisedSequence"));
+                EditorGUI.indentLevel--;
             }
-            if (GUILayout.Button("Delete"))
+            isDSCFoldout = EditorGUILayout.Foldout(isDSCFoldout, "DialogueSequenceAnalysis");
+            if (isDSCFoldout)
             {
-                if (dataSO.analisedSequence is not null)
+                holdSeq = serializedObject.FindProperty("serializedPlaceholderSequence");
+                holdSeqlId = holdSeq.FindPropertyRelative("identifier");
+                EditorGUI.BeginChangeCheck();
+                EditorGUI.indentLevel++;
+                DrawAnalisedSequence();
+                EditorGUILayout.Space();
+                DrawPlaceholderSequence();
+                EditorGUI.indentLevel--;
+                if (GUILayout.Button("SaveToJson"))
                 {
-                    dataSO.placeholderSequence = dataSO.analisedSequence;
-                    dataSO.analisedSequence = null;
-                    dataSO.analisedIdentifier = "";
+                    SaveToJSON();
+                }
+                if (GUILayout.Button("Debug"))
+                {
+                    Debug.Log($"hash count:{dataSO.dialogueSequenceHashSet.Count}");
+                    Debug.Log($"ser count:{dataSO.serDialogueSequenceList.Count}");
+                    for (int i = 0; i < dataSO.serDialogueSequenceList.Count; i++)
+                    {
+                        Debug.Log($"ser{i} id:{dataSO.serDialogueSequenceList[i].identifier}");
+                        Debug.Log($"ser{i} runned:{dataSO.serDialogueSequenceList[i].runnedAlready}");
+                        Debug.Log($"ser{i} count:{dataSO.serDialogueSequenceList[i].lines.Count}");
+                    }
+                }
+                if (GUILayout.Button("cleanslate"))
+                {
+                    dataSO.serDialogueSequenceList.Clear();
+                    dataSO.fillSeqIdsTab();
+                    dataSO.OnAfterDeserialize();
+                    Debug.Log($"hash count:{dataSO.dialogueSequenceHashSet.Count}");
+                    Debug.Log($"ser count:{dataSO.serDialogueSequenceList.Count}");
+                }
+                if (EditorGUI.EndChangeCheck())
+                {
+                    dataSO.OnAfterDeserialize();
                 }
             }
-            EditorGUILayout.EndHorizontal();
-            AnalisedSequence();
-            EditorGUILayout.Space();
-            PlaceholderSequence();
-            EditorGUI.indentLevel--;
         }
-        //C:/Users/User/AppData/LocalLow/DefaultCompany/../savefile.json
-        if (GUILayout.Button("SaveToJson"))
-        {
-            Debug.Log($"hash count:{dataSO.dialogueSequenceHashSet.Count}");
-            Debug.Log($"ser count:{dataSO.serDialogueSequenceList.Count}");
-            Debug.Log($"anal null:{dataSO.analisedSequence == null}");
-            Debug.Log($"place null:{dataSO.placeholderSequence == null}");
-        }
+        if(serializedObject.hasModifiedProperties)
+            serializedObject.ApplyModifiedProperties();
     }
 
-    private void AnalisedSequence()
+    private void DrawAnalisedSequence()
     {
-        analId = EditorGUILayout.Popup("PickAnalysedSequence", dataSO.matchId, dataSO.seqIds.ToArray());
-        if (analId >= 0 & analId < dataSO.seqIds.Count)
+        int match = dataSO.tryGetIndexOfAnalisedSequence;
+        int popupReturnedId = EditorGUILayout.Popup("PickAnalysedSequence", match, dataSO.seqIdTab);
+        if (dataSO.seqIdTab.Length == 0)
         {
-            dataSO.analisedIndex = analId;
-            dataSO.analisedIdentifier = dataSO.seqIds[analId];
-            dataSO.analisedSequence = dataSO.GetAnalisedSequence;
-            EditorGUILayout.PropertyField(analSeq, new GUIContent("Analised Seq:"), true);
+            EditorGUILayout.HelpBox("There is no DialogueSequence in collection.\nPlease insert new sequences.", MessageType.Info);
+        }
+        else
+        {
+            isAnalisisFoldout = EditorGUILayout.Foldout(isAnalisisFoldout, "Analised sequence:");
+        }
+        if (popupReturnedId >= 0 & popupReturnedId < dataSO.seqIdTab.Length)
+        {
+            if (match != popupReturnedId | forceAnalisedFoldout)
+            {
+                dataSO.analisedIndex = popupReturnedId;
+                dataSO.analisedIdentifier = dataSO.seqIdTab[popupReturnedId];
+                dataSO.TryGetAnalisedSequenceFromIndex.CopyTo(dataSO.serializedAnalisedSequence);
+                isAnalisisFoldout = true;
+                forceAnalisedFoldout = false;
+            }
+            if (isAnalisisFoldout)
+            {
+                EditorGUI.indentLevel++;
+                EditorGUILayout.BeginHorizontal();
+                EditorGUILayout.HelpBox("Deleting a sequence moves copy to placeholder", MessageType.None);
+                if (GUILayout.Button("Delete"))
+                {
+                    DeleteSequence();
+                }
+                EditorGUILayout.EndHorizontal();
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("serializedAnalisedSequence"), true);
+                EditorGUI.indentLevel--;
+            }
         }
     }
-    private void PlaceholderSequence()
+    private void DrawPlaceholderSequence()
     {
-        isPlaceholderFoldout = EditorGUILayout.Foldout(isPlaceholderFoldout, "Placeholder");
-        if (isPlaceholderFoldout)
+        if (!isPlaceholderFoldout)
         {
-            EditorGUILayout.PropertyField(holdSeq, new GUIContent("Proposed Seq:"), true);
-            if (insertFailed)
+            if (GUILayout.Button("Add"))
             {
-                EditorGUILayout.HelpBox("Failed to insert new Sequence. Repeating index.", MessageType.Warning);
-            }
-            if (GUILayout.Button("Insert"))
-            {
-                insertFailed = dataSO.serDialogueSequenceList.Contains(dataSO.placeholderSequence);
-                if (insertFailed)
-                {
-                    Debug.LogWarning("Failed to insert new Sequence. Repeating index.");
-                }
-                else
-                {
-                    dataSO.serDialogueSequenceList.Add(dataSO.placeholderSequence);
-                    Debug.LogWarning($"It should have added. ser:{dataSO.serDialogueSequenceList.Count}");
-                }
+                AddSequence();
             }
             EditorGUILayout.Space();
         }
+        else
+        {
+            isPlaceholderFoldout = EditorGUILayout.Foldout(isPlaceholderFoldout, "Placeholder");
+        }
+        if (isPlaceholderFoldout)
+        {
+            EditorGUI.indentLevel++;
+            EditorGUILayout.PropertyField(holdSeq, true);
+            if (insertFailed)
+            {
+                EditorGUILayout.HelpBox(indexErrorMsg, MessageType.Warning);
+            }
+            holdSeqlId.stringValue = EditorGUILayout.DelayedTextField("New Identifier:", holdSeqlId.stringValue);
+            dataSO.serializedPlaceholderSequence.identifier = holdSeqlId.stringValue;
+            if (GUILayout.Button("Insert"))
+            {
+                InsertSequence();
+            }
+            EditorGUILayout.Space();
+            EditorGUI.indentLevel--;
+        }
+        EditorGUILayout.Space();
+    }
+    private void AddSequence()
+    {
+        if (dataSO.serializedPlaceholderSequence is null)
+        {
+            dataSO.serializedPlaceholderSequence = new DialogueSequence();
+        }
+        holdingNewPlaceholderSeq = true;
+        setFoldouts();
+    }
+    private void DeleteSequence()
+    {
+        if (dataSO.serializedAnalisedSequence is not null)
+        {
+            DialogueSequence tried = dataSO.TryGetAnalisedSequenceFromIndex;
+            if(tried is not null)
+            {
+                tried.CopyTo(dataSO.serializedAnalisedSequence);
+                if (dataSO.serDialogueSequenceList.Remove(tried))
+                {
+                    dataSO.fillSeqIdsTab();
+                    dataSO.swapBufferedSequences(true);
+                    dataSO.OnAfterDeserialize();
+                    forceAnalisedFoldout = true;
+                    holdingNewPlaceholderSeq = true;
+                    setFoldouts();
+                    serializedObject.Update();
+                }
+            }
+        }
+    }
+    private void InsertSequence()
+    {
+        dataSO.serializedPlaceholderSequence.identifier=holdSeq.FindPropertyRelative("identifier").stringValue;
+        insertFailReasonDecideder= dataSO.serDialogueSequenceList.BinarySearch(dataSO.serializedPlaceholderSequence) >= 0;
+        dataSO.placeholdIdentifier=dataSO.serializedPlaceholderSequence.identifier;
+        insertFailed = insertFailReasonDecideder | string.IsNullOrEmpty(dataSO.placeholdIdentifier);
+        if (insertFailed)
+        {
+            Debug.LogWarning(indexErrorMsg);
+        }
+        else
+        {
+            Debug.Log($"Inserting new sequence; Count before: {dataSO.serDialogueSequenceList.Count}");
+            dataSO.serDialogueSequenceList.Add(dataSO.serializedPlaceholderSequence);
+            dataSO.serDialogueSequenceList.Sort();
+            dataSO.fillSeqIdsTab();
+            dataSO.swapBufferedSequences(false);
+            dataSO.OnAfterDeserialize();
+            holdingNewPlaceholderSeq = true;
+            setFoldouts();
+            Debug.Log($"Inserted new sequence; Count after: {dataSO.dialogueSequenceHashSet.Count}");
+            serializedObject.Update();
+        }
+    }
+    private string indexErrorMsg { get { return insertFailReasonDecideder ? $"Cannot add existing index({dataSO.serializedPlaceholderSequence.identifier})!" : $"Index in placeholder is empty!"; } }
+
+    private void SaveToJSON()
+    {
+        //C:/Users/User/AppData/LocalLow/DefaultCompany/../savefile.json
     }
 }
 
-/*[CustomPropertyDrawer(typeof(DialogueSequence), true)]
+[CustomPropertyDrawer(typeof(DialogueSequence), true)]
 public class DialogueSequencePropertyDrawer : PropertyDrawer
 {
     private SerializedProperty l_lines;
     private SerializedProperty s_identifier;
-
+    static Color drawerColor = Color.darkSlateGray;
     private void setProperties(SerializedProperty property, bool setup = true)
     {
         if (setup)
@@ -163,10 +258,8 @@ public class DialogueSequencePropertyDrawer : PropertyDrawer
         float height = EditorGUIUtility.singleLineHeight;
         if (property.isExpanded)
         {
-            for (int i = 0; i < l_lines.arraySize; i++)
-            {
-                height += EditorGUI.GetPropertyHeight(l_lines.GetArrayElementAtIndex(i), true);
-            }
+            height += EditorGUI.GetPropertyHeight(l_lines, true);
+            height += EditorGUI.GetPropertyHeight(s_identifier, true);
         }
         setProperties(property, false);
         return height;
@@ -174,38 +267,33 @@ public class DialogueSequencePropertyDrawer : PropertyDrawer
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
         EditorGUI.BeginProperty(position, label, property);
+       // property.serializedObject.Update();
+        EditorGUI.DrawRect(new Rect(position.x, position.y, position.width, GetPropertyHeight(property, label)), drawerColor);
         setProperties(property, true);
-        Rect foldoutRect = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
-        property.isExpanded = EditorGUI.Foldout(foldoutRect, property.isExpanded, label);
-        //property.isExpanded = EditorGUI.BeginFoldoutHeaderGroup(foldoutRect, property.isExpanded, label);
-        float addY = EditorGUIUtility.singleLineHeight;
+        Rect rect = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
+        property.isExpanded = EditorGUI.Foldout(rect, property.isExpanded, label);
         if (property.isExpanded)
         {
             EditorGUI.indentLevel++;
-            for (int i = 0; i < l_lines.arraySize; i++)
-            {
-                Rect rect = new Rect(position.x, position.y + addY, position.width, EditorGUI.GetPropertyHeight(l_lines.GetArrayElementAtIndex(i)));
-                rect = EditorGUI.IndentedRect(rect);
-                addY += rect.height;
-                EditorGUI.PropertyField(rect, l_lines.GetArrayElementAtIndex(i), new GUIContent($"Line({i}):"), true);
-            }
+            rect = new Rect(rect.x, rect.y + EditorGUIUtility.singleLineHeight, rect.width, EditorGUI.GetPropertyHeight(s_identifier));
+            EditorGUI.LabelField(rect, "Identifier:", "\'" + s_identifier.stringValue + "\'");
+            rect = new Rect(rect.x, rect.y + EditorGUIUtility.singleLineHeight, rect.width, EditorGUI.GetPropertyHeight(l_lines));
+            EditorGUI.PropertyField(rect, l_lines, true);
             EditorGUI.indentLevel--;
         }
-        //EditorGUI.EndFoldoutHeaderGroup();
+        //property.serializedObject.ApplyModifiedProperties();
         setProperties(property, false);
         EditorGUI.EndProperty();
     }
 }
 
-
 [CustomPropertyDrawer(typeof(DialogueLine), true)]
 public class DialogueLinePropertyDrawer : PropertyDrawer
 {
-    private const float FOLDOUT_HEIGHT = 16f;
     private SerializedProperty l_sublines;
     private SerializedProperty f_lingering;
     private SerializedProperty s_speakerID;
-
+    static Color color = Color.black;
     private void setProperties(SerializedProperty property, bool setup = true)
     {
         if (setup)
@@ -228,14 +316,11 @@ public class DialogueLinePropertyDrawer : PropertyDrawer
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
         setProperties(property, true);
-        float height = FOLDOUT_HEIGHT;
+        float height = EditorGUIUtility.singleLineHeight;
         if (property.isExpanded)
         {
-            for (int i = 0; i < l_sublines.arraySize; i++)
-            {
-                height += EditorGUI.GetPropertyHeight(l_sublines.GetArrayElementAtIndex(i), true);
-            }
-            height += speakerID() >= 0 ? 0 : FOLDOUT_HEIGHT;
+            height += EditorGUI.GetPropertyHeight(l_sublines);
+            height += speakerID() >= 0 ? 0 : EditorGUIUtility.singleLineHeight;
             height += EditorGUI.GetPropertyHeight(s_speakerID);
         }
         setProperties(property, false);
@@ -244,27 +329,22 @@ public class DialogueLinePropertyDrawer : PropertyDrawer
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
         EditorGUI.BeginProperty(position, label, property);
-        Rect rect;
-        Rect foldoutRect = new Rect(position.x, position.y, position.width, FOLDOUT_HEIGHT);
-        EditorGUI.DrawRect(new Rect(position.x, position.y, position.width, GetPropertyHeight(property, label)), Color.black);
+       // property.serializedObject.Update();
+        Rect rect = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
+        EditorGUI.DrawRect(new Rect(position.x, position.y, position.width, GetPropertyHeight(property, label)), color);
         setProperties(property, true);
-        property.isExpanded = EditorGUI.Foldout(foldoutRect, property.isExpanded, label);
-        float addY = FOLDOUT_HEIGHT;
+        property.isExpanded = EditorGUI.Foldout(rect, property.isExpanded, label);
         if (property.isExpanded)
         {
             EditorGUI.indentLevel++;
-            for (int i = 0; i < l_sublines.arraySize; i++)
-            {
-                rect = new Rect(position.x, position.y + addY, position.width, EditorGUI.GetPropertyHeight(l_sublines.GetArrayElementAtIndex(i), true));
-                addY += rect.height;
-                EditorGUI.PropertyField(rect, l_sublines.GetArrayElementAtIndex(i), new GUIContent($"SubLine({i}):"), true);
-            }
+            rect = new Rect(rect.x, rect.y + EditorGUIUtility.singleLineHeight, rect.width, EditorGUI.GetPropertyHeight(l_sublines));
+            EditorGUI.PropertyField(rect, l_sublines, true);
             EditorGUI.indentLevel--;
-            rect = new Rect(position.x, position.y + addY, position.width, EditorGUI.GetPropertyHeight(s_speakerID));
-            addY += rect.height;
+            rect.y += rect.height;
+            rect.height = EditorGUI.GetPropertyHeight(s_speakerID);
             speakerPopup(rect);
         }
-        property.serializedObject.ApplyModifiedProperties();
+       // property.serializedObject.ApplyModifiedProperties();
         setProperties(property, false);
         EditorGUI.EndProperty();
     }
@@ -286,5 +366,6 @@ public class DialogueLinePropertyDrawer : PropertyDrawer
     {
         return DataFlowSO.get.getSpeakerId(DataFlowSO.get.speaker(s_speakerID.stringValue));
     }
-}*/
+}
+
 #endif

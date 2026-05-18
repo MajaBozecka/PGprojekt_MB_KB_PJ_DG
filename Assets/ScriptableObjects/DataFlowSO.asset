@@ -22,13 +22,19 @@ MonoBehaviour:
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
   defaultTimeTillSubTextSkippable: 0.2
-  analisedSequence:
-    lines: []
-    identifier: 
+  serializedAnalisedSequence:
+    lines:
+    - subLines: []
+      lingering: 0
+      speakerID: SpeakerA
+    identifier: seq3
     runnedAlready: 0
-  placeholderSequence:
+  serializedPlaceholderSequence:
     lines: []
     identifier: 
     runnedAlready: 0
   serDialogueSequenceList: []
-  seqIds: []
+  seqIdTab: []
+  analisedIdentifier: seq3
+  analisedIndex: 2
+  placeholdIdentifier: 
