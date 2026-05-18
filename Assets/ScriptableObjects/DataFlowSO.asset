@@ -17,36 +17,28 @@ MonoBehaviour:
   - SpeakerB
   - SpeakerC
   history:
-    dialogueSequenceIdentifiersList: []
+    dialogueSequenceList: []
     progressInLastRead: -1
   sequencePack: Test
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
   defaultTimeTillSubTextSkippable: 0.2
-  dialogueSequenceList:
-  - lines: []
-    identifier: seq1
-    runnedAlready: 0
-  - lines:
-    - subLines: []
-      lingering: 0
-      speakerID: SpeakerA
-    identifier: seq2
-    runnedAlready: 0
   serializedAnalisedSequence:
-    lines:
-    - subLines: []
-      lingering: 0
-      speakerID: SpeakerA
-    identifier: seq2
+    lines: []
+    identifier: seq3
     runnedAlready: 0
   serializedPlaceholderSequence:
-    lines: []
-    identifier: 
+    lines:
+    - subLines:
+      - timeForSingleCharDisplay: -1
+        subline: '"Msg seq1"'
+      lingering: 0
+      speakerID: 
+    identifier: seq1
     runnedAlready: 0
+  serDialogueSequenceList: []
   seqIdTab:
-  - seq1
-  - seq2
-  analisedIdentifier: seq2
-  analisedIndex: 1
+  - seq3
+  analisedIdentifier: seq3
+  analisedIndex: 0
   placeholdIdentifier: 

@@ -205,7 +205,5 @@ public class DataFlowSOEditor : Editor
         }
     }
     private string indexErrorMsg { get { return insertFailReasonDecideder ? $"Cannot add existing index({dataSO.serializedPlaceholderSequence.identifier})!" : $"Index in placeholder is empty!"; } }
-
 }
-
 #endif
