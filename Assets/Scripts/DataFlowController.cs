@@ -165,14 +165,8 @@ public class DataFlowController : MonoBehaviour
                     {
                         timeLineIterator += Time.deltaTime;
                         timePartLineIterator += Time.deltaTime;
-                        if (partLine.timeForSingleCharDisplay <= 0)
-                        {
-                            newLength = partLine.subline.Length;
-                        }
-                        else
-                        {
-                            newLength = (int)(timePartLineIterator / partLine.timeForSingleCharDisplay);
-                        }
+                        float f_timeForSingleCharDisplay = data.getTimeForSingleCharDisplayCorrected(fullDialogueLine, partLine);
+                        newLength = f_timeForSingleCharDisplay <= 0 ? partLine.subline.Length : (int)(timePartLineIterator / f_timeForSingleCharDisplay);
                         bool updateDisplay = partLineDisplayedLength != newLength;
                         partLineDisplayedLength = newLength;
                         if (updateDisplay & (partLineDisplayedLength > 0 & partLineDisplayedLength <= partLine.subline.Length))

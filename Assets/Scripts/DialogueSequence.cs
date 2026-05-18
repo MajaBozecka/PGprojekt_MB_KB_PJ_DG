@@ -30,6 +30,24 @@ public class DialogueSequence : IComparable<DialogueSequence>, IComparer<Dialogu
 
     public DialogueSequence() { }
     public DialogueSequence(string id) { identifier = id; }
+
+    public void CopyTo(DialogueSequence target)
+    {
+        if (target is null) return;
+        target.lines.Clear();
+        target.lines.AddRange(lines);
+        target.identifier = identifier;
+        target.runnedAlready = runnedAlready;
+    }
+
+/*    public override bool Equals(object other)
+    {
+        if (other is DialogueSequence t)
+        {
+            return t.identifier == this.identifier;
+        }
+        return false;
+    }*/
 }
 [Serializable]
 /// <summary>

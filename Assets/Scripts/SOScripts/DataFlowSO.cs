@@ -26,44 +26,29 @@ public class DataFlowSO : ScriptableObject, ISerializationCallbackReceiver
     [SerializeField]
     List<string> speakersList = new();
     public DialogueHistory history = new();
+    public string sequencePack;
     public bool skipping;
     public float defaultTimeTillTextSkippable;
     public float defaultTimeTillSubTextSkippable;
+    #region DialogueSequenceControl
     [SerializeField]
     public HashSet<DialogueSequence> dialogueSequenceHashSet = new();//still dont know if hash or sorted
-    //[Header("DialogueSequenceAnalysis")]
     //[HideInInspector]
-    public DialogueSequence analisedSequence;
+    public DialogueSequence serializedAnalisedSequence;
     //[HideInInspector]
-    public DialogueSequence placeholderSequence;
+    public DialogueSequence serializedPlaceholderSequence;
     [HideInInspector]
     public List<DialogueSequence> serDialogueSequenceList;
     [HideInInspector]
-    public List<string> seqIds;
-    private string m_lastStoredIdentifier;
-    private int m_lastStoredIdentifierIndex;
-    public string analisedIdentifier
-    {
-        get
-        {
-            return m_lastStoredIdentifier;
-        }
-        set
-        {
-            m_lastStoredIdentifier = value;
-        }
-    }
-    public int analisedIndex
-    {
-        get
-        {
-            return m_lastStoredIdentifierIndex;
-        }
-        set
-        {
-            m_lastStoredIdentifierIndex = value;
-        }
-    }
+    public string[] seqIdTab;
+    [HideInInspector]
+    public string analisedIdentifier;
+    [HideInInspector]
+    public int analisedIndex;
+    [HideInInspector]
+    public string placeholdIdentifier;
+    #endregion
+
     public string speaker(int i) { return (i >= 0 & i < speakersList.Count) ? speakersList[i] : "###"; }
     public string speaker(string s)
     {
@@ -81,6 +66,16 @@ public class DataFlowSO : ScriptableObject, ISerializationCallbackReceiver
         }
     }
 
+    public float getSpeakerUsusalYappingTime(DialogueLine line)
+    {
+        //temp solution
+        return 0.03f;
+    }
+    public float getTimeForSingleCharDisplayCorrected(DialogueLine line, SubDialogueLine sub)
+    {
+        return sub.timeForSingleCharDisplay >= 0 ? sub.timeForSingleCharDisplay : getSpeakerUsusalYappingTime(line);
+    }
+
     public DialogueSequence getDialogueSequence(string id)
     {
         DialogueSequence ret = null;
@@ -88,24 +83,19 @@ public class DataFlowSO : ScriptableObject, ISerializationCallbackReceiver
         return ret;
     }
 
-    public List<string> GetListOfDialogueSequenceId()
-    {
-        List<string> ret = new();
-        foreach (DialogueSequence seq in dialogueSequenceHashSet)
-        {
-            ret.Add(seq.identifier); 
-        }
-        return ret;
-    }
-
-    public int matchId
+    public int tryGetIndexOfAnalisedSequence
     {
         get
         {
-            return seqIds.IndexOf(analisedIdentifier);
+            if (string.IsNullOrEmpty(analisedIdentifier)) return -1;
+            for (int i = 0; i < seqIdTab.Length; i++)
+            {
+                if (seqIdTab[i] == analisedIdentifier) return i;
+            }
+            return -1;
         }
     }
-    public DialogueSequence GetAnalisedSequence
+    public DialogueSequence TryGetAnalisedSequenceFromIndex
     {
         get
         {
@@ -117,20 +107,39 @@ public class DataFlowSO : ScriptableObject, ISerializationCallbackReceiver
         }
     }
 
+    public void swapBufferedSequences(bool toPlaceholder)
+    {
+        if (toPlaceholder)
+        {
+            serializedAnalisedSequence.CopyTo(serializedPlaceholderSequence);
+            placeholdIdentifier = analisedIdentifier;
+            serializedAnalisedSequence = null;
+            analisedIdentifier = "";
+            analisedIndex = -1;
+        }
+        else
+        {
+            serializedPlaceholderSequence.CopyTo(serializedAnalisedSequence);
+            analisedIdentifier = placeholdIdentifier;
+            analisedIndex = tryGetIndexOfAnalisedSequence;
+            serializedPlaceholderSequence = null;
+            placeholdIdentifier = "";
+        }
+    }
+
     public void OnBeforeSerialize()
     {
         if (serDialogueSequenceList == null)
             serDialogueSequenceList = new();
-        serDialogueSequenceList.Clear();
-        foreach (DialogueSequence item in dialogueSequenceHashSet)
+        if (serDialogueSequenceList.Count != dialogueSequenceHashSet.Count)
         {
-            serDialogueSequenceList.Add(item);
-        }
-        serDialogueSequenceList.Sort();
-        seqIds.Clear();
-        foreach (DialogueSequence item in serDialogueSequenceList)
-        {
-            seqIds.Add(item.identifier);
+            serDialogueSequenceList.Clear();
+            foreach (DialogueSequence item in dialogueSequenceHashSet)
+            {
+                serDialogueSequenceList.Add(item);
+            }
+            serDialogueSequenceList.Sort();
+            fillSeqIdsTab();
         }
     }
 
@@ -140,12 +149,27 @@ public class DataFlowSO : ScriptableObject, ISerializationCallbackReceiver
             dialogueSequenceHashSet = new();
         if (serDialogueSequenceList != null)
         {
+            DialogueSequence analisedTarget = TryGetAnalisedSequenceFromIndex;
+            if (analisedTarget != null & serializedAnalisedSequence != null)
+            {
+                if (analisedIdentifier == analisedTarget.identifier)
+                    serializedAnalisedSequence.CopyTo(analisedTarget);
+            }
             dialogueSequenceHashSet.Clear();
             foreach (DialogueSequence item in serDialogueSequenceList)
             {
                 dialogueSequenceHashSet.Add(item);
             }
             serDialogueSequenceList.Clear();
+        }
+    }
+
+    public void fillSeqIdsTab()
+    {
+        seqIdTab = new string[serDialogueSequenceList.Count];
+        for (int i = 0; i < serDialogueSequenceList.Count; i++)
+        {
+            seqIdTab[i] = serDialogueSequenceList[i].identifier;
         }
     }
 }
