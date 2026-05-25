@@ -6,10 +6,10 @@ public class DataFlowController : MonoBehaviour
 {
     public DataFlowSO data;
     public CanvasController canvasCtrl;
+    [SerializeField] SpriteRenderer background;
     [SerializeField]
     private bool pause=false;
     private bool historyLook=false;
-   
     private bool confirmNextLine;
     private bool SKIP
     {
@@ -40,7 +40,10 @@ public class DataFlowController : MonoBehaviour
         confirm.canceled += OnSubmitCancel;
         InputAction history = InputSystem.actions.FindAction("History");
         history.started += OnHistoryLookUp;
+        data.LoadFromJSON();
+        data.easeUpMemoryByFreeingListCollection();
         populateCanvasWithButtons();
+        setBackgroundImage();
         ////////////////////////////////////////////////////////
         ///This one to make sure for testing those were not yet read. In the future we need to think how to register on savefile which were and which were not read
         foreach (var item in data.dialogueSequenceHashSet)
@@ -120,11 +123,12 @@ public class DataFlowController : MonoBehaviour
 
     private void populateCanvasWithButtons()
     {
-        for (int i = 0; i < 2; i++)
-        {
-           // int ii = i;
-           // canvasCtrl.testButtons[i].Button.onClick.AddListener(delegate { StartDialogueSequence(ii); });//I hate lambda expressions
-        }
+        canvasCtrl.setDialogueOptions(data.dialogueOptionsIdentifiers, StartDialogueSequence);
+    }
+
+    private void setBackgroundImage()
+    {
+        background.sprite = Resources.Load<Sprite>("Sprites/" + $"{data.backgroundImagePath}");
     }
 
     public void StartDialogueSequence(string identifier)
@@ -143,7 +147,7 @@ public class DataFlowController : MonoBehaviour
         DialogueSequence TestedDialogueSequence = data.getDialogueSequence(index);
         if (TestedDialogueSequence is not null)
         {
-            foreach (DialogueLine fullDialogueLine in data.getDialogueSequence(index).lines)
+            foreach (DialogueLine fullDialogueLine in TestedDialogueSequence.lines)
             {
                 float timeLineIterator = 0;
                 int compoundLength = 0;
@@ -184,10 +188,7 @@ public class DataFlowController : MonoBehaviour
                 }
                 confirmNextLine = false;
             }
-            if (!data.getDialogueSequence(index).runnedAlready)
-            {
-                TestedDialogueSequence.runnedAlready = true;
-            }
+            TestedDialogueSequence.runnedAlready = true;
             canvasCtrl.UIMode = EUIMode.BUTTONS;
             SKIP = false;
         }

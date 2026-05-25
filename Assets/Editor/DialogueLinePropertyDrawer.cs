@@ -18,6 +18,10 @@ public class DialogueLinePropertyDrawer : PropertyDrawer
             {
                 l_sublines = property.FindPropertyRelative("subLines");
             }
+            if (f_lingering == null)
+            {
+                f_lingering = property.FindPropertyRelative("lingering");
+            }
             if (s_speakerID == null)
             {
                 s_speakerID = property.FindPropertyRelative("speakerID");
@@ -27,6 +31,7 @@ public class DialogueLinePropertyDrawer : PropertyDrawer
         {
             l_sublines = null;
             s_speakerID = null;
+            f_lingering = null;
         }
     }
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
@@ -38,6 +43,7 @@ public class DialogueLinePropertyDrawer : PropertyDrawer
             height += EditorGUI.GetPropertyHeight(l_sublines);
             height += speakerID() >= 0 ? 0 : EditorGUIUtility.singleLineHeight;
             height += EditorGUI.GetPropertyHeight(s_speakerID);
+            height += EditorGUI.GetPropertyHeight(f_lingering);
         }
         setProperties(property, false);
         return height;
@@ -59,6 +65,9 @@ public class DialogueLinePropertyDrawer : PropertyDrawer
             rect.y += rect.height;
             rect.height = EditorGUI.GetPropertyHeight(s_speakerID);
             speakerPopup(rect);
+            rect.y += rect.height;
+            rect.height = EditorGUI.GetPropertyHeight(f_lingering);
+            EditorGUI.PropertyField(rect, f_lingering);
         }
         // property.serializedObject.ApplyModifiedProperties();
         setProperties(property, false);

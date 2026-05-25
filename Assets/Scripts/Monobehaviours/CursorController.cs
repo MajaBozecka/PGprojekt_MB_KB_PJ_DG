@@ -13,6 +13,19 @@ public class CursorController : MonoBehaviour
     private InputAction point;
     [SerializeField]
     private DataFlowController dataFlow;
+    [SerializeField]
+    private Texture2D defaultCursor;
+    [SerializeField]
+    private Vector2 defaultHotSpot;
+    [SerializeField]
+    private Texture2D NewItemCursor;
+    [SerializeField]
+    private Vector2 NewHotSpot;
+    [SerializeField]
+    private Texture2D readItemCursor;
+    [SerializeField]
+    private Vector2 readHotSpot;
+    public ECursorMode cursorMode;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,11 +36,10 @@ public class CursorController : MonoBehaviour
 
     private void attemptedInteraction(InputAction.CallbackContext obj)
     {
-        raycastHit2D = Physics2D.Raycast(mouseray.origin, mouseray.direction);
-        spriteDialogue = raycastHit2D ? raycastHit2D.collider.GetComponent<SpriteDialogue>() : null;
         if(spriteDialogue && dataFlow.canvasCtrl.UIMode != EUIMode.DIALOGUE)
         {
             dataFlow.StartDialogueSequence(spriteDialogue.dialogueSequenceId);
+            spriteDialogue.read = true;
         }
     }
 
@@ -36,5 +48,52 @@ public class CursorController : MonoBehaviour
     {
         mousePosition = point.ReadValue<Vector2>();
         mouseray = Camera.main.ScreenPointToRay(mousePosition);
+        raycastHit2D = Physics2D.Raycast(mouseray.origin, mouseray.direction);
+        spriteDialogue = raycastHit2D ? raycastHit2D.collider.GetComponent<SpriteDialogue>() : null;
+        switch (spriteDialogue)
+        {
+            case null:
+                {
+                    SetCursor(ECursorMode.DEFAULT);
+                    break;
+                }
+            default:
+                {
+                    SetCursor(spriteDialogue.read? ECursorMode.READINTERACTION : ECursorMode.NEWINTERACTION);
+                    break;
+                }
+        }
+    }
+
+    void SetCursor(ECursorMode mode)
+    {
+        if (mode != cursorMode)
+        {
+            cursorMode = mode;
+            switch(mode)
+            {
+                case ECursorMode.NEWINTERACTION:
+                    {
+                        Cursor.SetCursor(NewItemCursor, NewHotSpot, CursorMode.Auto);
+                        break;
+                    }
+                case ECursorMode.READINTERACTION:
+                    {
+                        Cursor.SetCursor(readItemCursor, readHotSpot, CursorMode.Auto);
+                        break;
+                    }
+                default:
+                    {
+                        Cursor.SetCursor(defaultCursor, defaultHotSpot, CursorMode.Auto);
+                        break;
+                    }
+            }
+        }
+    }
+    public enum ECursorMode:byte
+    {
+        DEFAULT,
+        NEWINTERACTION,
+        READINTERACTION
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 public class CanvasController : MonoBehaviour
@@ -59,7 +60,6 @@ public class CanvasController : MonoBehaviour
     void Start()
     {
         UIMode = EUIMode.BUTTONS;
-        dialogueOptionsPanel.flushButtonsNotRead();
     }
 
     public void setDialogueText(string s)
@@ -121,6 +121,11 @@ public class CanvasController : MonoBehaviour
     public void SetDialogueOptionRead(string identifier)
     {
         dialogueOptionsPanel.SetDialogueOptionRead(identifier);
+    }
+
+    public void setDialogueOptions(List<DialogueOptionData> dod, Action<string> onClickHandler)
+    {
+        dialogueOptionsPanel.SetButtons(dod,onClickHandler);
     }
 }
 public enum EUIMode : byte

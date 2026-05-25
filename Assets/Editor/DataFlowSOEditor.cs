@@ -39,6 +39,8 @@ public class DataFlowSOEditor : Editor
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillTextSkippable"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillSubTextSkippable"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("sequencePack"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("dialogueOptionsIdentifiers"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("backgroundImagePath"));
                 EditorGUI.indentLevel--;
             }
             isDSCFoldout = EditorGUILayout.Foldout(isDSCFoldout, "DialogueSequenceAnalysis");
@@ -110,11 +112,16 @@ public class DataFlowSOEditor : Editor
             {
                 EditorGUILayout.Space();
                 EditorGUILayout.LabelField("Analised sequence:");
+                DialogueSequence tgasfi = dataSO.TryGetAnalisedSequenceFromIndex;
+                if (dataSO.analisedIndex >= 0)
+                {
+                    dataSO.serializedAnalisedSequence.CopyTo(tgasfi);
+                }
                 if (match != popupReturnedId)
                 {
                     dataSO.analisedIndex = popupReturnedId;
                     dataSO.analisedIdentifier = dataSO.seqIdTab[popupReturnedId];
-                    DialogueSequence tgasfi = dataSO.TryGetAnalisedSequenceFromIndex;
+                    tgasfi = dataSO.TryGetAnalisedSequenceFromIndex;
                     if (tgasfi is not null)
                     {
                         tgasfi.CopyTo(dataSO.serializedAnalisedSequence);

@@ -31,9 +31,11 @@ public class DataFlowSO : ScriptableObject
     public bool skipping;
     public float defaultTimeTillTextSkippable;
     public float defaultTimeTillSubTextSkippable;
+    public List<DialogueOptionData> dialogueOptionsIdentifiers;
+    public string backgroundImagePath = "FF_wejœcie";
     #region DialogueSequenceControl
     public HashSet<DialogueSequence> dialogueSequenceHashSet = new();//still dont know if hash or sorted
-    [HideInInspector]
+    //[HideInInspector]
     public List<DialogueSequence> dialogueSequenceList = new();
     //[HideInInspector]
     public DialogueSequence serializedAnalisedSequence;
@@ -73,7 +75,7 @@ public class DataFlowSO : ScriptableObject
     }
     public float getTimeForSingleCharDisplayCorrected(DialogueLine line, SubDialogueLine sub)
     {
-        return sub.timeForSingleCharDisplay >= 0 ? sub.timeForSingleCharDisplay : getSpeakerUsusalYappingTime(line);
+        return sub.timeForSingleCharDisplay != 0 ? sub.timeForSingleCharDisplay : getSpeakerUsusalYappingTime(line);
     }
 
     public DialogueSequence getDialogueSequence(string id)
@@ -145,6 +147,7 @@ public class DataFlowSO : ScriptableObject
         {
             updateDialogueSequenceCollections();
             dialogueSequenceList.Clear();
+            seqIdTab = new string[0];
             //idk what else? GarbageCollector?
         }
     }
@@ -177,7 +180,7 @@ public class DataFlowSO : ScriptableObject
         {
             Debug.Log($"File: '{pathToSave}' missing.");
         }
-
+        pushAnalisedToPlaceholder();
     }
     private string pathToSave { get { return Application.persistentDataPath + "/" + sequencePack + ".json"; } }
 }

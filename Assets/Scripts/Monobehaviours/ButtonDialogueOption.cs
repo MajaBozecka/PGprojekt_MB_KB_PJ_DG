@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,12 +12,13 @@ public class ButtonDialogueOption : MonoBehaviour
     [SerializeField]
     Button selfButton;
     public string dialogueSequenceId;
+    public Action<string> onClick;
     public Button Button { get { return selfButton; } }
-    /*private void Start()
+    private void Start()
     {
-        dispalyedText = transform.Find("DisplayedText").GetComponent<TMP_Text>();
-        readIcon = transform.Find("AlreadyReadIcon").gameObject;
-    }*/
+        Button.onClick.AddListener(OnClicked);
+        setRead(false);
+    }
     public void setText(string s)
     {
         dispalyedText.text = s;
@@ -24,5 +26,14 @@ public class ButtonDialogueOption : MonoBehaviour
     public void setRead(bool read)
     {
         readIcon.SetActive(read);
+    }
+    private void OnClicked()
+    {
+        if(onClick is not null)
+            onClick.Invoke(dialogueSequenceId);
+        else
+        {
+            Debug.Log("Button '"+name+"' has no assigned action for OnClick");
+        }
     }
 }
