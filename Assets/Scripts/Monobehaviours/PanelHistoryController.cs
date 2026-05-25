@@ -86,7 +86,7 @@ public class PanelHistoryController : MonoBehaviour
     private HistoryEntryDialogueLine addNewLineEntry(DialogueLine dialogueLine)
     {
         HistoryEntryDialogueLine lineEntry = Instantiate(linePrefab.gameObject, lastSeqEntryTransform).GetComponent<HistoryEntryDialogueLine>();
-        lineEntry.prepareSpeakerAndEmptyLine(data.speaker(dialogueLine.speakerID));
+        lineEntry.prepareSpeakerAndEmptyLine(data.getSpeaker(dialogueLine.speakerID));
         return lineEntry;
     }
 

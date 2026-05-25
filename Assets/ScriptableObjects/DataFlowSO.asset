@@ -12,10 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2189ae279e8274ebdc0cc67a8a331c, type: 3}
   m_Name: DataFlowSO
   m_EditorClassIdentifier: Assembly-CSharp::DataFlowSO
-  speakersList:
-  - SpeakerA
-  - SpeakerB
-  - SpeakerC
+  speakerList:
+  - speakerId: Speaker1
+    speakerName: Adam
+    fontSize: 16
+    styles: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    timePerCharacterTalking: 0.05
+  - speakerId: Speaker2
+    speakerName: Bartek
+    fontSize: 16
+    styles: 1
+    color: {r: 1, g: 0.06132078, b: 0.06132078, a: 1}
+    timePerCharacterTalking: 0.01
   history:
     dialogueSequenceIdentifiersList:
     - seq1
@@ -25,11 +34,15 @@ MonoBehaviour:
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
   defaultTimeTillSubTextSkippable: 0.2
+  defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection: 0
   dialogueOptionsIdentifiers:
   - identifier: seq1
+    read: 1
     buttonText: Show seq1
   - identifier: seq2
+    read: 1
     buttonText: Show seq2
+  backgroundImagePath: "FF_wej\u015Bcie"
   dialogueSequenceList: []
   serializedAnalisedSequence:
     lines: []
@@ -39,18 +52,14 @@ MonoBehaviour:
     lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: TestLineB
-      - timeForSingleCharDisplay: 0
-        subline: TestLineB
+        subline: TestMsg2
       lingering: 1
-      speakerID: SpeakerC
+      speakerID: Speaker2
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: TestLineB
-      - timeForSingleCharDisplay: 0
-        subline: TestLineB
-      lingering: -1
-      speakerID: SpeakerB
+        subline: TestMsg2 Again.
+      lingering: 1
+      speakerID: Speaker2
     identifier: seq2
     runnedAlready: 0
   seqIdTab: []

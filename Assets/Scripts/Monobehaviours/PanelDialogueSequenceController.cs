@@ -26,4 +26,10 @@ public class PanelDialogueSequenceController : MonoBehaviour
             dialogueText.text = textToShowInDialogueField[..(n)];
         }
     }
+    public void SpeakerCustomization(Speaker s)
+    {
+        dialogueText.fontSize = s.fontSize;
+        dialogueText.fontStyle = s.styles;
+        dialogueText.color = s.color;
+    }
 }

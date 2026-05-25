@@ -11,7 +11,7 @@ public class ButtonDialogueOption : MonoBehaviour
     GameObject readIcon;
     [SerializeField]
     Button selfButton;
-    public string dialogueSequenceId;
+    public DialogueOptionData dialogueOptionData;
     public Action<string> onClick;
     public Button Button { get { return selfButton; } }
     private void Start()
@@ -25,12 +25,16 @@ public class ButtonDialogueOption : MonoBehaviour
     }
     public void setRead(bool read)
     {
-        readIcon.SetActive(read);
+        if(read)
+        {
+            dialogueOptionData.read = true;
+        }
+        readIcon.SetActive(dialogueOptionData.read);
     }
     private void OnClicked()
     {
         if(onClick is not null)
-            onClick.Invoke(dialogueSequenceId);
+            onClick.Invoke(dialogueOptionData.identifier);
         else
         {
             Debug.Log("Button '"+name+"' has no assigned action for OnClick");

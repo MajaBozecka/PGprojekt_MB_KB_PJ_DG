@@ -20,20 +20,14 @@ public class PanelDialogueOptions : MonoBehaviour
         {
             ButtonDialogueOption b = buttonList[i];
             b.gameObject.SetActive(true);
-            b.dialogueSequenceId = dod[i].identifier;
+            b.dialogueOptionData = dod[i];
             b.setText(dod[i].buttonText);
+            b.setRead(false);
             b.onClick = onClickHandler;
         }
         for (int i = buttonsCount; i < buttonList.Count; i++)
         {
             buttonList[i].gameObject.SetActive(false);
-        }
-    }
-    public void flushButtonsNotRead()///////////////////////////////////////////////////////////
-    {
-        foreach (ButtonDialogueOption butt in buttonList)
-        {
-            butt.setRead(false);
         }
     }
     public bool SelectFirst()
@@ -49,7 +43,7 @@ public class PanelDialogueOptions : MonoBehaviour
     {
         bool match(ButtonDialogueOption b)
         {
-            return b.dialogueSequenceId.Equals(identifier);
+            return b.dialogueOptionData.identifier.Equals(identifier);
         }
         int ind = buttonList.FindIndex(match);
         if (ind >= 0)

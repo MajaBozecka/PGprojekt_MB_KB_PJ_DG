@@ -151,7 +151,7 @@ public class DataFlowController : MonoBehaviour
             {
                 float timeLineIterator = 0;
                 int compoundLength = 0;
-                canvasCtrl.setDialogueText(fullDialogueLine.dumpWholeLine());
+                canvasCtrl.setDialogueSequence(fullDialogueLine.dumpWholeLine(),data.getSpeaker(fullDialogueLine.speakerID));
                 canvasCtrl.showDialogueText(0);
                 canvasCtrl.setProceedIconVisibility(false);
                 foreach (SubDialogueLine partLine in fullDialogueLine.subLines)

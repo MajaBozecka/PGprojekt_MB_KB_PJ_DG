@@ -33,11 +33,12 @@ public class DataFlowSOEditor : Editor
             if (isOtherDataFoldout)
             {
                 EditorGUI.indentLevel++;
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("speakersList"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("speakerList"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("history"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("skipping"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillTextSkippable"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillSubTextSkippable"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("sequencePack"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("dialogueOptionsIdentifiers"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("backgroundImagePath"));

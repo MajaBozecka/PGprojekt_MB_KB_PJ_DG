@@ -1,6 +1,7 @@
 using System.Collections.Generic;
-using UnityEngine;
 using System.IO;
+using UnityEngine;
+using UnityEngine.Identifiers;
 
 [CreateAssetMenu(fileName = "DataFlowSO", menuName = "Scriptable Objects/DataFlowSO")]
 public class DataFlowSO : ScriptableObject
@@ -25,12 +26,14 @@ public class DataFlowSO : ScriptableObject
     #endregion
     [Header("GlobalData")]
     [SerializeField]
-    List<string> speakersList = new();
+    List<Speaker> speakerList = new();
+    private string[] m_speakerIdArray = new string[0];
     public History history = new();
     public string sequencePack;
     public bool skipping;
     public float defaultTimeTillTextSkippable;
     public float defaultTimeTillSubTextSkippable;
+    public float defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
     public List<DialogueOptionData> dialogueOptionsIdentifiers;
     public string backgroundImagePath = "FF_wejœcie";
     #region DialogueSequenceControl
@@ -51,27 +54,49 @@ public class DataFlowSO : ScriptableObject
     public string placeholdIdentifier;
     #endregion
 
-    public string speaker(int i) { return (i >= 0 & i < speakersList.Count) ? speakersList[i] : "###"; }
-    public string speaker(string s)
-    {
-        return speakersList.Contains(s) ? s : "###";
-    }
     public int getSpeakerId(string s)
     {
-        return speakersList.IndexOf(s);
+        for (int i = 0; i < speakerList.Count; i++)
+        {
+            if (speakerList[i].CompareTo(s)==0)
+                return i;
+        }
+        return -1;
+    }
+    public Speaker getSpeaker(int i)
+    {
+        if (0 <= i & i < speakerList.Count)
+            return speakerList[i];
+        return null;
+    }
+    public Speaker getSpeaker(string s)
+    {
+        bool match(Speaker sp)
+        {
+            return sp.CompareTo(s)==0;
+        }
+        return speakerList.Find(match);
     }
     public string[] speakersTab
     {
         get
         {
-            return speakersList.ToArray();
+            if(m_speakerIdArray.Length!=speakerList.Count)
+            {
+                m_speakerIdArray = new string[speakerList.Count];
+            }
+            for (int i = 0; i < m_speakerIdArray.Length; i++)
+            {
+                m_speakerIdArray[i] = speakerList[i].speakerId;
+            }
+            return m_speakerIdArray;
         }
     }
 
     public float getSpeakerUsusalYappingTime(DialogueLine line)
     {
-        //temp solution
-        return 0.03f;
+        Speaker speak = getSpeaker(line.speakerID);
+        return speak != null ? speak.timePerCharacterTalking : defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
     }
     public float getTimeForSingleCharDisplayCorrected(DialogueLine line, SubDialogueLine sub)
     {
@@ -84,6 +109,7 @@ public class DataFlowSO : ScriptableObject
         dialogueSequenceHashSet.TryGetValue(new DialogueSequence(id),out ret);
         return ret;
     }
+   
 
     public int tryGetIndexOfAnalisedSequence
     {

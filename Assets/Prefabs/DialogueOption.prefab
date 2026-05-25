@@ -351,7 +351,10 @@ MonoBehaviour:
   dispalyedText: {fileID: 5743424871831628331}
   readIcon: {fileID: 741113873859033064}
   selfButton: {fileID: 1478288814920204692}
-  dialogueSequenceId: 
+  dialogueOptionData:
+    identifier: 
+    read: 0
+    buttonText: 
 --- !u!114 &5999758520418363926
 MonoBehaviour:
   m_ObjectHideFlags: 0
