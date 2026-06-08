@@ -92,26 +92,28 @@ public class DataFlowSO : ScriptableObject
     public List<PlotCheckpoint> listPlotCheckpoints;
     public bool skipping;
     #region DEFAULTVALUES
+    [Header("DefaultValues")]
+    public float defaultTimeTillTextSkippable;
+    public float defaultTimeTillSubTextSkippable;
+    public float defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
+    [System.Serializable]
+    private class SerializatorDefaultValues : SerializatorAbstract
+    {
         public float defaultTimeTillTextSkippable;
         public float defaultTimeTillSubTextSkippable;
         public float defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
-        [System.Serializable]
-        private class SerializatorDefaultValues : SerializatorAbstract
+        public SerializatorDefaultValues(DataFlowSO data) : base(data)
         {
-            public float defaultTimeTillTextSkippable;
-            public float defaultTimeTillSubTextSkippable;
-            public float defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
-            public SerializatorDefaultValues(DataFlowSO data) : base(data)
+            if(data is not null)
             {
-                if(data is not null)
-                {
-                    defaultTimeTillTextSkippable = data.defaultTimeTillTextSkippable;
-                    defaultTimeTillSubTextSkippable = data.defaultTimeTillSubTextSkippable;
-                    defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection = data.defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
-                }
+                defaultTimeTillTextSkippable = data.defaultTimeTillTextSkippable;
+                defaultTimeTillSubTextSkippable = data.defaultTimeTillSubTextSkippable;
+                defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection = data.defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
             }
         }
+    }
     #endregion
+    [Header("TBD")]
     public string backgroundImagePath = "FF_wejœcie";
     #region DIALOGUESEQUENCECONTROL
     public HashSet<DialogueSequence> dialogueSequenceHashSet = new();//still dont know if hash or sorted
@@ -227,7 +229,7 @@ public class DataFlowSO : ScriptableObject
     #endregion
 
     #region JSONSAVING&LOADING
-
+    [Header("Saving/Loading with JSON")]
     public string chapter;
     private string pathToSerializedDefaultValues { get { return Application.persistentDataPath + "/" + "DefaultValues" + ".json"; } }
     private string pathToSerializedSpeakers { get { return Application.persistentDataPath + "/Chapter"+ chapter + "/Speakers.json"; } }

@@ -119,14 +119,18 @@ public class CanvasController : MonoBehaviour
         dialogueSequencePanel.proceedIcon.SetActive(proceedable);
     }
 
-    public void SetDialogueOptionRead(string identifier)
+    public void SetDialogueOptionRead(DialogueOptionData DOD)
     {
-        dialogueOptionsPanel.SetDialogueOptionRead(identifier);
+        dialogueOptionsPanel.SetDialogueOptionRead(DOD);
     }
 
-    public void setDialogueOptions(List<DialogueOptionData> dod, Action<string> onClickHandler)
+    public void setDialogueOptions(List<DialogueOptionData> dod, Action<DialogueOptionData> onClickHandler)
     {
         dialogueOptionsPanel.SetButtons(dod,onClickHandler);
+    }
+    public void updateDialogueOptions(List<PlotCheckpoint> listPlotCheckpointControl)
+    {
+        dialogueOptionsPanel.UpdateDialogueOptionVisibilityBasedOncheckPointControl(listPlotCheckpointControl);
     }
 }
 public enum EUIMode : byte

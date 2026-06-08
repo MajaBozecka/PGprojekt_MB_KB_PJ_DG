@@ -35,12 +35,11 @@ public class DataFlowSOEditor : Editor
                 EditorGUI.indentLevel++;
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("speakerList"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("history"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("listPlotCheckpoints"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("skipping"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillTextSkippable"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillSubTextSkippable"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection"));
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("chapter"));
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("dialogueOptionsIdentifiers"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("backgroundImagePath"));
                 EditorGUI.indentLevel--;
             }
@@ -56,7 +55,7 @@ public class DataFlowSOEditor : Editor
                 EditorGUI.indentLevel--;
                 EditorGUILayout.Space();
                 EditorGUILayout.Space();
-                EditorGUILayout.LabelField("Saving/Loading with JSON");
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("chapter"));
                 EditorGUILayout.BeginHorizontal();
                 if (GUILayout.Button("SaveToJson"))
                 {

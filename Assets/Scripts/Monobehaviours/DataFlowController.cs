@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -125,6 +126,7 @@ public class DataFlowController : MonoBehaviour
     private void populateCanvasWithButtons()
     {
         canvasCtrl.setDialogueOptions(testedObjectWithDialogueInteraction.listOfDialogueOptions, StartDialogueSequence);
+        canvasCtrl.updateDialogueOptions(data.listPlotCheckpoints);
     }
 
     private void setBackgroundImage()
@@ -132,20 +134,17 @@ public class DataFlowController : MonoBehaviour
         background.sprite = Resources.Load<Sprite>("Sprites/" + $"{data.backgroundImagePath}");
     }
 
-    public void StartDialogueSequence(string identifier)
+    public void StartDialogueSequence(DialogueOptionData DOD)
     {
         StopAllCoroutines();
         canvasCtrl.UIMode = EUIMode.DIALOGUE;
-        if (!data.getDialogueSequence(identifier).runnedAlready)
-        {
-            canvasCtrl.SetDialogueOptionRead(identifier);
-        }
-        StartCoroutine(DialogueFlow(identifier));
+        canvasCtrl.SetDialogueOptionRead(DOD);
+        StartCoroutine(DialogueFlow(DOD));
     }
 
-    IEnumerator DialogueFlow(string identifier)
+    IEnumerator DialogueFlow(DialogueOptionData DOD)
     {
-        DialogueSequence TestedDialogueSequence = data.getDialogueSequence(identifier);
+        DialogueSequence TestedDialogueSequence = data.getDialogueSequence(DOD.identifier);
         if (TestedDialogueSequence is not null)
         {
             foreach (DialogueLine fullDialogueLine in TestedDialogueSequence.lines)
@@ -189,7 +188,21 @@ public class DataFlowController : MonoBehaviour
                 }
                 confirmNextLine = false;
             }
-            TestedDialogueSequence.runnedAlready = true;
+            if(!TestedDialogueSequence.runnedAlready)
+            {
+                foreach (PlotCheckpoint check in DOD.updatedCheckpointValues)
+                {
+                    int indexOfMatchedCheckpointFromControl = data.listPlotCheckpoints.BinarySearch(check);
+                    if (indexOfMatchedCheckpointFromControl < 0)
+                        continue;
+                    if (data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].checkpointField != check.checkpointField)
+                    {
+                        data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl] = check;
+                    }
+                }
+                canvasCtrl.updateDialogueOptions(data.listPlotCheckpoints);
+                TestedDialogueSequence.runnedAlready = true;
+            }
             canvasCtrl.UIMode = EUIMode.BUTTONS;
             SKIP = false;
         }

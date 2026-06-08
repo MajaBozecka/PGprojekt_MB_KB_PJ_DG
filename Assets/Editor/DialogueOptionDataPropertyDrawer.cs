@@ -9,6 +9,8 @@ public class DialogueOptionDataPropertyDrawer : PropertyDrawer
     private SerializedProperty s_identifier;
     private SerializedProperty s_text;
     private SerializedProperty b_read;
+    private SerializedProperty pc_req;
+    private SerializedProperty pc_upd;
     private void setProperties(SerializedProperty property, bool setup = true)
     {
         if (setup)
@@ -25,12 +27,22 @@ public class DialogueOptionDataPropertyDrawer : PropertyDrawer
             {
                 b_read = property.FindPropertyRelative("read");
             }
+            if (pc_req == null)
+            {
+                pc_req = property.FindPropertyRelative("requirements");
+            }
+            if (pc_upd == null)
+            {
+                pc_upd = property.FindPropertyRelative("updatedCheckpointValues");
+            }
         }
         else
         {
             s_identifier = null;
             s_text = null;
             b_read = null;
+            pc_req = null;
+            pc_upd = null;
         }
     }
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
@@ -41,6 +53,8 @@ public class DialogueOptionDataPropertyDrawer : PropertyDrawer
         {
             height += seqID() >= 0 ? 0 : 2 * EditorGUIUtility.singleLineHeight;
             height += 3 * EditorGUIUtility.singleLineHeight;
+            height += EditorGUI.GetPropertyHeight(pc_req);
+            height += EditorGUI.GetPropertyHeight(pc_upd);
         }
         setProperties(property, false);
         return height;
@@ -57,10 +71,17 @@ public class DialogueOptionDataPropertyDrawer : PropertyDrawer
             rect = seqIdPopup(rect);
             rect.y += rect.height;
             rect.height = EditorGUI.GetPropertyHeight(s_text);
-            EditorGUI.PropertyField(rect, property.FindPropertyRelative("buttonText"));
+            EditorGUI.PropertyField(rect, s_text);
             rect.y += rect.height;
             rect.height = EditorGUI.GetPropertyHeight(b_read);
-            EditorGUI.PropertyField(rect, property.FindPropertyRelative("read"));
+            EditorGUI.PropertyField(rect, b_read);
+            rect.y += rect.height;
+            rect.height = EditorGUI.GetPropertyHeight(pc_req);
+            EditorGUI.PropertyField(rect, pc_req);
+            rect.y += rect.height;
+            rect.height = EditorGUI.GetPropertyHeight(pc_upd);
+            EditorGUI.PropertyField(rect, pc_upd);
+
         }
         setProperties(property, false);
         EditorGUI.EndProperty();

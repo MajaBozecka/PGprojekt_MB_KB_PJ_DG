@@ -29,7 +29,11 @@ MonoBehaviour:
     dialogueSequenceIdentifiersList:
     - seq1
     - seq2
-    progressInLastRead: 0
+    - seq3
+    progressInLastRead: 5
+  listPlotCheckpoints:
+  - id: TestCheckPoint
+    checkpointField: 0
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
   defaultTimeTillSubTextSkippable: 0.2
@@ -52,12 +56,7 @@ MonoBehaviour:
       speakerID: Speaker2
     identifier: seq2
     runnedAlready: 0
-  serializedAnalisedSequence:
-    lines: []
-    identifier: 
-    runnedAlready: 0
-  serializedPlaceholderSequence:
-    lines:
+  - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Test for sprite.
@@ -65,9 +64,18 @@ MonoBehaviour:
       speakerID: Speaker2
     identifier: seq3
     runnedAlready: 0
+  serializedAnalisedSequence:
+    lines: []
+    identifier: 
+    runnedAlready: 0
+  serializedPlaceholderSequence:
+    lines: []
+    identifier: 
+    runnedAlready: 0
   seqIdTab:
   - seq1
   - seq2
+  - seq3
   analisedIdentifier: 
   analisedIndex: -1
   placeholdIdentifier: 

@@ -12,7 +12,7 @@ public class ButtonDialogueOption : MonoBehaviour
     [SerializeField]
     Button selfButton;
     public DialogueOptionData dialogueOptionData;
-    public Action<string> onClick;
+    public Action<DialogueOptionData> onClick;
     public Button Button { get { return selfButton; } }
     private void Start()
     {
@@ -34,7 +34,7 @@ public class ButtonDialogueOption : MonoBehaviour
     private void OnClicked()
     {
         if(onClick is not null)
-            onClick.Invoke(dialogueOptionData.identifier);
+            onClick.Invoke(dialogueOptionData);
         else
         {
             Debug.Log("Button '"+name+"' has no assigned action for OnClick");

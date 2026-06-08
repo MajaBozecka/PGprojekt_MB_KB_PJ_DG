@@ -1134,12 +1134,18 @@ MonoBehaviour:
   - identifier: seq1
     read: 0
     buttonText: Show seq1
-    requirements: []
-    updatedCheckpointValues: []
+    requirements:
+    - id: TestCheckPoint
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: TestCheckPoint
+      checkpointField: 1
   - identifier: seq2
     read: 0
     buttonText: Show seq2
-    requirements: []
+    requirements:
+    - id: TestCheckPoint
+      checkpointField: 1
     updatedCheckpointValues: []
 --- !u!4 &600873632
 Transform:

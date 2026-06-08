@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
+using UnityEngine.Identifiers;
 
 [System.Serializable]
-public struct PlotCheckpoint : IComparer<PlotCheckpoint>
+public struct PlotCheckpoint : IComparable<PlotCheckpoint>, IComparer<PlotCheckpoint>
 {
     public string id;
     public byte checkpointField;
@@ -13,5 +15,9 @@ public struct PlotCheckpoint : IComparer<PlotCheckpoint>
     public int Compare(PlotCheckpoint x, PlotCheckpoint y)
     {
         return string.Compare(x.id, y.id);
+    }
+    public int CompareTo(PlotCheckpoint other)
+    {
+        return Compare(this, other);
     }
 }

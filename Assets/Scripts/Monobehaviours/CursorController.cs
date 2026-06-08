@@ -38,7 +38,7 @@ public class CursorController : MonoBehaviour
     {
         if(spriteDialogue && dataFlow.canvasCtrl.UIMode != EUIMode.DIALOGUE)
         {
-            dataFlow.StartDialogueSequence(spriteDialogue.dialogueSequenceId);
+            dataFlow.StartDialogueSequence(spriteDialogue.getDOD);
             spriteDialogue.read = true;
         }
     }
