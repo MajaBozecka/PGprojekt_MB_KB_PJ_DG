@@ -39,7 +39,7 @@ public class DataFlowSOEditor : Editor
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillTextSkippable"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillSubTextSkippable"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection"));
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("sequencePack"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("chapter"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("dialogueOptionsIdentifiers"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("backgroundImagePath"));
                 EditorGUI.indentLevel--;
@@ -49,7 +49,6 @@ public class DataFlowSOEditor : Editor
             {
                 holdSeq = serializedObject.FindProperty("serializedPlaceholderSequence");
                 holdSeqlId = holdSeq.FindPropertyRelative("identifier");
-                EditorGUI.BeginChangeCheck();
                 EditorGUI.indentLevel++;
                 DrawAnalisedSequence();
                 EditorGUILayout.Space();
@@ -88,10 +87,6 @@ public class DataFlowSOEditor : Editor
                     dataSO.updateDialogueSequenceCollections();
                     Debug.Log($"hash count:{dataSO.dialogueSequenceHashSet.Count}");
                     Debug.Log($"ser count:{dataSO.dialogueSequenceList.Count}");
-                }
-                if (EditorGUI.EndChangeCheck())
-                {
-                    //dataSO.OnAfterDeserialize();
                 }
             }
         }

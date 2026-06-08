@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.Identifiers;
 
 [CreateAssetMenu(fileName = "DataFlowSO", menuName = "Scriptable Objects/DataFlowSO")]
 public class DataFlowSO : ScriptableObject
 {
-    #region singleton
+    #region SINGLETON
     static DataFlowSO singleton;
     public DataFlowSO()
     {
@@ -24,19 +23,97 @@ public class DataFlowSO : ScriptableObject
     }
     public static DataFlowSO get { get { return singleton; } }
     #endregion
+    #region SPEAKER
     [Header("GlobalData")]
     [SerializeField]
     List<Speaker> speakerList = new();
     private string[] m_speakerIdArray = new string[0];
+    [System.Serializable]
+    private class SerializatorSpeaker : SerializatorAbstract
+    {
+        List<Speaker> speakerList;
+        public SerializatorSpeaker(DataFlowSO data) : base(data)
+        {
+            if (data is not null)
+            {
+                speakerList = data.speakerList;
+            }
+        }
+    }
+    public int getSpeakerId(string s)
+    {
+        for (int i = 0; i < speakerList.Count; i++)
+        {
+            if (speakerList[i].CompareTo(s) == 0)
+                return i;
+        }
+        return -1;
+    }
+    public Speaker getSpeaker(int i)
+    {
+        if (0 <= i & i < speakerList.Count)
+            return speakerList[i];
+        return null;
+    }
+    public Speaker getSpeaker(string s)
+    {
+        bool match(Speaker sp)
+        {
+            return sp.CompareTo(s) == 0;
+        }
+        return speakerList.Find(match);
+    }
+    public string[] speakersTab
+    {
+        get
+        {
+            if (m_speakerIdArray.Length != speakerList.Count)
+            {
+                m_speakerIdArray = new string[speakerList.Count];
+            }
+            for (int i = 0; i < m_speakerIdArray.Length; i++)
+            {
+                m_speakerIdArray[i] = speakerList[i].speakerId;
+            }
+            return m_speakerIdArray;
+        }
+    }
+    public float getSpeakerUsusalYappingTime(DialogueLine line)
+    {
+        Speaker speak = getSpeaker(line.speakerID);
+        return speak != null ? speak.timePerCharacterTalking : defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
+    }
+    public float getTimeForSingleCharDisplayCorrected(DialogueLine line, SubDialogueLine sub)
+    {
+        return sub.timeForSingleCharDisplay != 0 ? sub.timeForSingleCharDisplay : getSpeakerUsusalYappingTime(line);
+    }
+    #endregion
     public History history = new();
-    public string sequencePack;
+    public List<PlotCheckpoint> listPlotCheckpoints;
     public bool skipping;
-    public float defaultTimeTillTextSkippable;
-    public float defaultTimeTillSubTextSkippable;
-    public float defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
-    public List<DialogueOptionData> dialogueOptionsIdentifiers;
+    #region DEFAULTVALUES
+        public float defaultTimeTillTextSkippable;
+        public float defaultTimeTillSubTextSkippable;
+        public float defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
+        [System.Serializable]
+        private class SerializatorDefaultValues : SerializatorAbstract
+        {
+            public float defaultTimeTillTextSkippable;
+            public float defaultTimeTillSubTextSkippable;
+            public float defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
+            public SerializatorDefaultValues(DataFlowSO data) : base(data)
+            {
+                if(data is not null)
+                {
+                    defaultTimeTillTextSkippable = data.defaultTimeTillTextSkippable;
+                    defaultTimeTillSubTextSkippable = data.defaultTimeTillSubTextSkippable;
+                    defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection = data.defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
+                }
+            }
+        }
+    #endregion
     public string backgroundImagePath = "FF_wejœcie";
-    #region DialogueSequenceControl
+    #region DIALOGUESEQUENCECONTROL
     public HashSet<DialogueSequence> dialogueSequenceHashSet = new();//still dont know if hash or sorted
     //[HideInInspector]
     public List<DialogueSequence> dialogueSequenceList = new();
@@ -52,64 +129,19 @@ public class DataFlowSO : ScriptableObject
     public int analisedIndex;
     [HideInInspector]
     public string placeholdIdentifier;
-    #endregion
-
-    public int getSpeakerId(string s)
+    [System.Serializable]
+    private class SerializatorDialogueSequenceCollection : SerializatorAbstract
     {
-        for (int i = 0; i < speakerList.Count; i++)
+        public List<DialogueSequence> dialogueSequenceList = new();
+        public SerializatorDialogueSequenceCollection(DataFlowSO data) : base(data)
         {
-            if (speakerList[i].CompareTo(s)==0)
-                return i;
-        }
-        return -1;
-    }
-    public Speaker getSpeaker(int i)
-    {
-        if (0 <= i & i < speakerList.Count)
-            return speakerList[i];
-        return null;
-    }
-    public Speaker getSpeaker(string s)
-    {
-        bool match(Speaker sp)
-        {
-            return sp.CompareTo(s)==0;
-        }
-        return speakerList.Find(match);
-    }
-    public string[] speakersTab
-    {
-        get
-        {
-            if(m_speakerIdArray.Length!=speakerList.Count)
+            if (data is not null)
             {
-                m_speakerIdArray = new string[speakerList.Count];
+                dialogueSequenceList = data.dialogueSequenceList;
             }
-            for (int i = 0; i < m_speakerIdArray.Length; i++)
-            {
-                m_speakerIdArray[i] = speakerList[i].speakerId;
-            }
-            return m_speakerIdArray;
         }
-    }
 
-    public float getSpeakerUsusalYappingTime(DialogueLine line)
-    {
-        Speaker speak = getSpeaker(line.speakerID);
-        return speak != null ? speak.timePerCharacterTalking : defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
     }
-    public float getTimeForSingleCharDisplayCorrected(DialogueLine line, SubDialogueLine sub)
-    {
-        return sub.timeForSingleCharDisplay != 0 ? sub.timeForSingleCharDisplay : getSpeakerUsusalYappingTime(line);
-    }
-
-    public DialogueSequence getDialogueSequence(string id)
-    {
-        DialogueSequence ret = null;
-        dialogueSequenceHashSet.TryGetValue(new DialogueSequence(id),out ret);
-        return ret;
-    }
-   
 
     public int tryGetIndexOfAnalisedSequence
     {
@@ -127,14 +159,13 @@ public class DataFlowSO : ScriptableObject
     {
         get
         {
-            if(dialogueSequenceList!=null & (analisedIndex >= 0)&(analisedIndex<dialogueSequenceList.Count))
+            if (dialogueSequenceList != null & (analisedIndex >= 0) & (analisedIndex < dialogueSequenceList.Count))
             {
                 return dialogueSequenceList[analisedIndex];
             }
             return null;
         }
     }
-
     public void pushPlaceholderToAnalised()
     {
         serializedPlaceholderSequence.CopyTo(serializedAnalisedSequence);
@@ -143,7 +174,6 @@ public class DataFlowSO : ScriptableObject
         serializedPlaceholderSequence = null;
         placeholdIdentifier = "";
     }
-
     public void pushAnalisedToPlaceholder()
     {
         serializedAnalisedSequence.CopyTo(serializedPlaceholderSequence);
@@ -152,6 +182,14 @@ public class DataFlowSO : ScriptableObject
         analisedIdentifier = "";
         analisedIndex = -1;
     }
+
+    public DialogueSequence getDialogueSequence(string id)
+    {
+        DialogueSequence ret = null;
+        dialogueSequenceHashSet.TryGetValue(new DialogueSequence(id), out ret);
+        return ret;
+    }
+
     public void updateDialogueSequenceCollections()
     {
         dialogueSequenceHashSet.Clear();
@@ -169,7 +207,7 @@ public class DataFlowSO : ScriptableObject
 
     public void easeUpMemoryByFreeingListCollection()
     {
-        if(dialogueSequenceList.Count > 0)
+        if (dialogueSequenceList.Count > 0)
         {
             updateDialogueSequenceCollections();
             dialogueSequenceList.Clear();
@@ -186,27 +224,74 @@ public class DataFlowSO : ScriptableObject
         }
         dialogueSequenceList.Sort();
     }
+    #endregion
 
+    #region JSONSAVING&LOADING
+
+    public string chapter;
+    private string pathToSerializedDefaultValues { get { return Application.persistentDataPath + "/" + "DefaultValues" + ".json"; } }
+    private string pathToSerializedSpeakers { get { return Application.persistentDataPath + "/Chapter"+ chapter + "/Speakers.json"; } }
+    private string pathToSerializedDialogueSequence { get { return Application.persistentDataPath + "/Chapter"+ chapter + "/Sequences.json"; } }
     public void SaveToJSON()
     {
-        Debug.Log(pathToSave);
-        string json = JsonUtility.ToJson(this);
-        File.WriteAllText(pathToSave, json);
+        if(Application.isEditor)
+        {
+            if(Application.isPlaying)
+            {
+                Debug.Log("Cannot make manual save while application is running. Serialized List is empty.");
+            }
+            else
+            {
+                string json;
+                //defaults
+                Debug.Log(pathToSerializedDefaultValues);
+                json = JsonUtility.ToJson(new SerializatorDefaultValues(this));
+                File.WriteAllText(pathToSerializedDefaultValues, json);
+                //Speaker
+                Debug.Log(pathToSerializedSpeakers);
+                json = JsonUtility.ToJson(new SerializatorSpeaker(this));
+                File.WriteAllText(pathToSerializedSpeakers, json);
+                //Dialogues
+                Debug.Log(pathToSerializedDialogueSequence);
+                json = JsonUtility.ToJson(new SerializatorDialogueSequenceCollection(this));
+                File.WriteAllText(pathToSerializedDialogueSequence, json);
+            }
+        }
     }
     public void LoadFromJSON()
     {
         //C:/Users/User/AppData/LocalLow/DefaultCompany/../savefile.json
-        if (File.Exists(pathToSave))
+        if (File.Exists(pathToSerializedDefaultValues))
         {
-            string json = File.ReadAllText(pathToSave);
+            string json = File.ReadAllText(pathToSerializedDefaultValues);
             JsonUtility.FromJsonOverwrite(json, this);
             updateDialogueSequenceCollections();
         }
         else
         {
-            Debug.Log($"File: '{pathToSave}' missing.");
+            Debug.Log($"File: '{pathToSerializedDefaultValues}' missing.");
+        }
+        if (File.Exists(pathToSerializedSpeakers))
+        {
+            string json = File.ReadAllText(pathToSerializedSpeakers);
+            JsonUtility.FromJsonOverwrite(json, this);
+            updateDialogueSequenceCollections();
+        }
+        else
+        {
+            Debug.Log($"File: '{pathToSerializedSpeakers}' missing.");
+        }
+        if (File.Exists(pathToSerializedDialogueSequence))
+        {
+            string json = File.ReadAllText(pathToSerializedDialogueSequence);
+            JsonUtility.FromJsonOverwrite(json, this);
+            updateDialogueSequenceCollections();
+        }
+        else
+        {
+            Debug.Log($"File: '{pathToSerializedDialogueSequence}' missing.");
         }
         pushAnalisedToPlaceholder();
     }
-    private string pathToSave { get { return Application.persistentDataPath + "/" + sequencePack + ".json"; } }
+    #endregion
 }

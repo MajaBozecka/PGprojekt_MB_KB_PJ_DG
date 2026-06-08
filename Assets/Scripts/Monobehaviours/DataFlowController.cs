@@ -7,6 +7,7 @@ public class DataFlowController : MonoBehaviour
     public DataFlowSO data;
     public CanvasController canvasCtrl;
     [SerializeField] SpriteRenderer background;
+    public ObjectWithDialogueInteraction testedObjectWithDialogueInteraction;
     [SerializeField]
     private bool pause=false;
     private bool historyLook=false;
@@ -123,7 +124,7 @@ public class DataFlowController : MonoBehaviour
 
     private void populateCanvasWithButtons()
     {
-        canvasCtrl.setDialogueOptions(data.dialogueOptionsIdentifiers, StartDialogueSequence);
+        canvasCtrl.setDialogueOptions(testedObjectWithDialogueInteraction.listOfDialogueOptions, StartDialogueSequence);
     }
 
     private void setBackgroundImage()
@@ -142,9 +143,9 @@ public class DataFlowController : MonoBehaviour
         StartCoroutine(DialogueFlow(identifier));
     }
 
-    IEnumerator DialogueFlow(string index)
+    IEnumerator DialogueFlow(string identifier)
     {
-        DialogueSequence TestedDialogueSequence = data.getDialogueSequence(index);
+        DialogueSequence TestedDialogueSequence = data.getDialogueSequence(identifier);
         if (TestedDialogueSequence is not null)
         {
             foreach (DialogueLine fullDialogueLine in TestedDialogueSequence.lines)

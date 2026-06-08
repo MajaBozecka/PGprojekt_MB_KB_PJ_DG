@@ -29,21 +29,29 @@ MonoBehaviour:
     dialogueSequenceIdentifiersList:
     - seq1
     - seq2
-    progressInLastRead: 1
-  sequencePack: Test
+    progressInLastRead: 0
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
   defaultTimeTillSubTextSkippable: 0.2
   defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection: 0
-  dialogueOptionsIdentifiers:
-  - identifier: seq1
-    read: 1
-    buttonText: Show seq1
-  - identifier: seq2
-    read: 1
-    buttonText: Show seq2
   backgroundImagePath: "FF_wej\u015Bcie"
-  dialogueSequenceList: []
+  dialogueSequenceList:
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Test1
+      lingering: 1
+      speakerID: Speaker1
+    identifier: seq1
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: Test2
+      lingering: -1
+      speakerID: Speaker2
+    identifier: seq2
+    runnedAlready: 0
   serializedAnalisedSequence:
     lines: []
     identifier: 
@@ -52,17 +60,15 @@ MonoBehaviour:
     lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: TestMsg2
-      lingering: 1
+        subline: Test for sprite.
+      lingering: -1
       speakerID: Speaker2
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: TestMsg2 Again.
-      lingering: 1
-      speakerID: Speaker2
-    identifier: seq2
+    identifier: seq3
     runnedAlready: 0
-  seqIdTab: []
+  seqIdTab:
+  - seq1
+  - seq2
   analisedIdentifier: 
   analisedIndex: -1
-  placeholdIdentifier: seq2
+  placeholdIdentifier: 
+  chapter: 0

@@ -755,8 +755,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueSequenceId: seq1
-  read: 0
+  listOfDialogueOptions:
+  - identifier: seq3
+    read: 0
+    buttonText: 
+    requirements: []
+    updatedCheckpointValues: []
 --- !u!1 &476957860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,6 +1101,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597034451}
   m_CullTransparentMesh: 1
+--- !u!1 &600873630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600873632}
+  - component: {fileID: 600873631}
+  m_Layer: 0
+  m_Name: TestObjectWithDialogueInteraction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &600873631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600873630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  listOfDialogueOptions:
+  - identifier: seq1
+    read: 0
+    buttonText: Show seq1
+    requirements: []
+    updatedCheckpointValues: []
+  - identifier: seq2
+    read: 0
+    buttonText: Show seq2
+    requirements: []
+    updatedCheckpointValues: []
+--- !u!4 &600873632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600873630}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &602651856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2296,6 +2355,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: defcd117a7d601b48b00271bb46ff77d, type: 2}
   canvasCtrl: {fileID: 889839342}
   background: {fileID: 237941159}
+  testedObjectWithDialogueInteraction: {fileID: 600873631}
   pause: 0
 --- !u!4 &1607564801
 Transform:
@@ -2403,3 +2463,4 @@ SceneRoots:
   - {fileID: 1607564801}
   - {fileID: 1105934436}
   - {fileID: 476231215}
+  - {fileID: 600873632}

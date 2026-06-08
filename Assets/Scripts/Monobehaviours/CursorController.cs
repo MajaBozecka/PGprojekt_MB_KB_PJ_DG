@@ -6,7 +6,7 @@ public class CursorController : MonoBehaviour
     public Vector2 mousePosition;
     public Ray mouseray;
     public RaycastHit2D raycastHit2D;
-    public SpriteDialogue spriteDialogue;
+    public ObjectWithDialogueInteraction spriteDialogue;
     [SerializeField]
     private InputAction click;
     [SerializeField]
@@ -49,7 +49,7 @@ public class CursorController : MonoBehaviour
         mousePosition = point.ReadValue<Vector2>();
         mouseray = Camera.main.ScreenPointToRay(mousePosition);
         raycastHit2D = Physics2D.Raycast(mouseray.origin, mouseray.direction);
-        spriteDialogue = raycastHit2D ? raycastHit2D.collider.GetComponent<SpriteDialogue>() : null;
+        spriteDialogue = raycastHit2D ? raycastHit2D.collider.GetComponent<ObjectWithDialogueInteraction>() : null;
         switch (spriteDialogue)
         {
             case null:
