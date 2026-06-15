@@ -66,6 +66,7 @@ public class DialogueLine
     /// </summary>
     public float lingering;
     public string speakerID;
+    public string speakerMod;
     public string dumpWholeLine()
     {
         string ret = "";

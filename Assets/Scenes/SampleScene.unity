@@ -759,7 +759,21 @@ MonoBehaviour:
   - identifier: seq3
     read: 0
     buttonText: 
-    requirements: []
+    requirements:
+    - id: TestCheckPoint
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: TestCheckPoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: seq2
+    read: 0
+    buttonText: 
+    requirements:
+    - id: TestCheckPoint
+      isAdditive: 0
+      checkpointField: 1
     updatedCheckpointValues: []
 --- !u!1 &476957860
 GameObject:
@@ -1136,17 +1150,23 @@ MonoBehaviour:
     buttonText: Show seq1
     requirements:
     - id: TestCheckPoint
+      isAdditive: 0
       checkpointField: 0
     updatedCheckpointValues:
     - id: TestCheckPoint
+      isAdditive: 0
       checkpointField: 1
   - identifier: seq2
     read: 0
     buttonText: Show seq2
     requirements:
     - id: TestCheckPoint
+      isAdditive: 1
       checkpointField: 1
-    updatedCheckpointValues: []
+    updatedCheckpointValues:
+    - id: TestCheckPoint
+      isAdditive: 0
+      checkpointField: 2
 --- !u!4 &600873632
 Transform:
   m_ObjectHideFlags: 0
@@ -1432,7 +1452,6 @@ MonoBehaviour:
   contentTransform: {fileID: 4746817}
   lastSeqEntryTransform: {fileID: 0}
   sequenceEntryList: []
-  seqTransformList: []
   lastSeq:
     lines: []
     identifier: 

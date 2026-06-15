@@ -3,36 +3,29 @@ using UnityEngine;
 
 public class ObjectWithDialogueInteraction : MonoBehaviour
 {
-    public string dialogueSequenceId
-    {
-        get
-        {
-            if (validateIndex())
-            {
-                return listOfDialogueOptions[lastUsedOptionIndex].identifier;
-            }
-            else
-                return "";
-        }
-    }
-
+    public List<DialogueOptionData> listOfDialogueOptions;
+    private byte lastUsedOptionIndex;
     public bool read
     {
         get
         {
-            return listOfDialogueOptions[lastUsedOptionIndex].read;
+            return validateIndex() ? listOfDialogueOptions[lastUsedOptionIndex].read:false;
         }
         set
         {
             listOfDialogueOptions[lastUsedOptionIndex].read = value;
         }
     }
-    public List<DialogueOptionData> listOfDialogueOptions;
-    private byte lastUsedOptionIndex;
-    public DialogueOptionData getDOD { get { return listOfDialogueOptions[lastUsedOptionIndex]; } }
+    public DialogueOptionData getDOD
+    {
+        get
+        {
+            return validateIndex()?listOfDialogueOptions[lastUsedOptionIndex]:null;
+        }
+    }
     private bool validateIndex()
     {
-        if(listOfDialogueOptions.Count > lastUsedOptionIndex)
+        if (listOfDialogueOptions.Count > lastUsedOptionIndex)
         {
             bool test;
             List<PlotCheckpoint> listPlotCheckpointControl = DataFlowSO.get.listPlotCheckpoints;
@@ -44,10 +37,21 @@ public class ObjectWithDialogueInteraction : MonoBehaviour
                     int indexOfMatchedCheckpointFromControl = listPlotCheckpointControl.BinarySearch(plotCheckpointOfCollection);
                     if (indexOfMatchedCheckpointFromControl < 0)
                         continue;
-                    if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField != plotCheckpointOfCollection.checkpointField)
+                    if(plotCheckpointOfCollection.isAdditive)
                     {
-                        test = false;
-                        break;
+                        if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField < plotCheckpointOfCollection.checkpointField)
+                        {
+                            test = false;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField != plotCheckpointOfCollection.checkpointField)
+                        {
+                            test = false;
+                            break;
+                        }
                     }
                 }
                 if (test)

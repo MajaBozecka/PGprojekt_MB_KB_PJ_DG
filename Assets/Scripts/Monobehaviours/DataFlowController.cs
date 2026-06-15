@@ -32,7 +32,7 @@ public class DataFlowController : MonoBehaviour
     {
         get { return data.defaultTimeTillSubTextSkippable; }
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution of UpdateCkeckpointFields after the MonoBehaviour is created
     void Start()
     {
         InputAction skip = InputSystem.actions.FindAction("SKIP");
@@ -46,6 +46,7 @@ public class DataFlowController : MonoBehaviour
         data.easeUpMemoryByFreeingListCollection();
         populateCanvasWithButtons();
         setBackgroundImage();
+        canvasCtrl.dialogueHistoryRewrite();
         ////////////////////////////////////////////////////////
         ///This one to make sure for testing those were not yet read. In the future we need to think how to register on savefile which were and which were not read
         foreach (var item in data.dialogueSequenceHashSet)
@@ -54,7 +55,7 @@ public class DataFlowController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    // UpdateCkeckpointFields is called once per frame
     void Update()
     {
         SkippingVisibility();
@@ -188,27 +189,22 @@ public class DataFlowController : MonoBehaviour
                 }
                 confirmNextLine = false;
             }
+            bool finishDetected = false;
             if(!TestedDialogueSequence.runnedAlready)
             {
-                foreach (PlotCheckpoint check in DOD.updatedCheckpointValues)
-                {
-                    int indexOfMatchedCheckpointFromControl = data.listPlotCheckpoints.BinarySearch(check);
-                    if (indexOfMatchedCheckpointFromControl < 0)
-                        continue;
-                    if (data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].checkpointField != check.checkpointField)
-                    {
-                        data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl] = check;
-                    }
-                }
+                updatePlotCheckpoints();
                 canvasCtrl.updateDialogueOptions(data.listPlotCheckpoints);
                 TestedDialogueSequence.runnedAlready = true;
+                finishDetected=data.PlotCheckpointCheckForChapterEnd();
             }
+            if(finishDetected)
+                Debug.Log("We should trigger chapter swap...somehow");
             canvasCtrl.UIMode = EUIMode.BUTTONS;
             SKIP = false;
         }
         bool isItTimeForNextSubLine(SubDialogueLine partLine, int partLineDisplayedLength)
         {
-            return confirmNextLine || partLineDisplayedLength >= partLine.subline.Length;
+            return confirmNextLine || partLineDisplayedLength > partLine.subline.Length;
         }
         bool isItTimeForNextLine(DialogueLine line, float lingerIterator)
         {
@@ -217,6 +213,27 @@ public class DataFlowController : MonoBehaviour
         bool canSkipNow(float timeLineIterator, float tillWhat)
         {
             return SKIP & timeLineIterator > tillWhat;
+        }
+        void updatePlotCheckpoints()
+        {
+            foreach (PlotCheckpoint check in DOD.updatedCheckpointValues)
+            {
+                int indexOfMatchedCheckpointFromControl = data.listPlotCheckpoints.BinarySearch(check);
+                if (indexOfMatchedCheckpointFromControl < 0)
+                    continue;
+                if(check.isAdditive)
+                {
+                    PlotCheckpoint tempDOD = new PlotCheckpoint(data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].checkpointField+1,check.id, data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].isAdditive);
+                    data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl] = tempDOD;
+                }
+                else
+                {
+                    if (data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].checkpointField != check.checkpointField)
+                    {
+                        data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl] = check;
+                    }
+                }
+            }
         }
     }
     private void UpdateDialogueHistory(DialogueSequence dialSeq, DialogueLine dialLine)

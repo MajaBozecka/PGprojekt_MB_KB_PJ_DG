@@ -56,7 +56,7 @@ public class CanvasController : MonoBehaviour
             return skippingIcon.activeSelf;
         }
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution of UpdateCkeckpointFields after the MonoBehaviour is created
     void Start()
     {
         UIMode = EUIMode.BUTTONS;
@@ -87,6 +87,10 @@ public class CanvasController : MonoBehaviour
     public void dialogueHistoryUpdate(DialogueSequence dial, DialogueLine line)
     {
         historyPanel.addNewEntryPartialSeq(dial,line);
+    }
+    public void dialogueHistoryRewrite()
+    {
+        historyPanel.RewriteHistory();
     }
 
     public void setSelect()

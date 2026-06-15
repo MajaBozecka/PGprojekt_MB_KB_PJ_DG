@@ -35,64 +35,72 @@ public class DataFlowSOEditor : Editor
                 EditorGUI.indentLevel++;
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("speakerList"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("history"));
+                DefaultDataSection();
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("listPlotCheckpoints"));
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("skipping"));
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillTextSkippable"));
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillSubTextSkippable"));
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection"));
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("backgroundImagePath"));
                 EditorGUI.indentLevel--;
             }
-            isDSCFoldout = EditorGUILayout.Foldout(isDSCFoldout, "DialogueSequenceAnalysis");
-            if (isDSCFoldout)
-            {
-                holdSeq = serializedObject.FindProperty("serializedPlaceholderSequence");
-                holdSeqlId = holdSeq.FindPropertyRelative("identifier");
-                EditorGUI.indentLevel++;
-                DrawAnalisedSequence();
-                EditorGUILayout.Space();
-                DrawPlaceholderSequence();
-                EditorGUI.indentLevel--;
-                EditorGUILayout.Space();
-                EditorGUILayout.Space();
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("chapter"));
-                EditorGUILayout.BeginHorizontal();
-                if (GUILayout.Button("SaveToJson"))
-                {
-                    dataSO.SaveToJSON();
-                }
-                if (GUILayout.Button("LoadFromJson"))
-                {
-                    dataSO.LoadFromJSON();
-                }
-                EditorGUILayout.EndHorizontal();
-                EditorGUILayout.Space();
-                EditorGUILayout.Space();
-                EditorGUILayout.LabelField("Debugging buttons:");
-                if (GUILayout.Button("Debug"))
-                {
-                    Debug.Log($"hash count:{dataSO.dialogueSequenceHashSet.Count}");
-                    Debug.Log($"ser count:{dataSO.dialogueSequenceList.Count}");
-                    for (int i = 0; i < dataSO.dialogueSequenceList.Count; i++)
-                    {
-                        Debug.Log($"ser{i} id:{dataSO.dialogueSequenceList[i].identifier}");
-                        Debug.Log($"ser{i} runned:{dataSO.dialogueSequenceList[i].runnedAlready}");
-                        Debug.Log($"ser{i} count:{dataSO.dialogueSequenceList[i].lines.Count}");
-                    }
-                }
-                if (GUILayout.Button("cleanslate"))
-                {
-                    dataSO.dialogueSequenceList.Clear();
-                    dataSO.updateDialogueSequenceCollections();
-                    Debug.Log($"hash count:{dataSO.dialogueSequenceHashSet.Count}");
-                    Debug.Log($"ser count:{dataSO.dialogueSequenceList.Count}");
-                }
-            }
+            DialogueSequenceSection();
         }
         if (serializedObject.hasModifiedProperties)
             serializedObject.ApplyModifiedProperties();
     }
+    private void DefaultDataSection()
+    {
 
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("skipping"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillTextSkippable"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimeTillSubTextSkippable"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection"));
+    }
+    private void DialogueSequenceSection()
+    {
+        isDSCFoldout = EditorGUILayout.Foldout(isDSCFoldout, "DialogueSequenceAnalysis");
+        if (isDSCFoldout)
+        {
+            holdSeq = serializedObject.FindProperty("serializedPlaceholderSequence");
+            holdSeqlId = holdSeq.FindPropertyRelative("identifier");
+            EditorGUI.indentLevel++;
+            DrawAnalisedSequence();
+            EditorGUILayout.Space();
+            DrawPlaceholderSequence();
+            EditorGUI.indentLevel--;
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("chapter"));
+            EditorGUILayout.BeginHorizontal();
+            if (GUILayout.Button("SaveToJson"))
+            {
+                dataSO.SaveToJSON();
+            }
+            if (GUILayout.Button("LoadFromJson"))
+            {
+                dataSO.LoadFromJSON();
+            }
+            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
+            EditorGUILayout.LabelField("Debugging buttons:");
+            if (GUILayout.Button("Debug"))
+            {
+                Debug.Log($"hash count:{dataSO.dialogueSequenceHashSet.Count}");
+                Debug.Log($"ser count:{dataSO.dialogueSequenceList.Count}");
+                for (int i = 0; i < dataSO.dialogueSequenceList.Count; i++)
+                {
+                    Debug.Log($"ser{i} id:{dataSO.dialogueSequenceList[i].identifier}");
+                    Debug.Log($"ser{i} runned:{dataSO.dialogueSequenceList[i].runnedAlready}");
+                    Debug.Log($"ser{i} count:{dataSO.dialogueSequenceList[i].lines.Count}");
+                }
+            }
+            if (GUILayout.Button("cleanslate"))
+            {
+                dataSO.dialogueSequenceList.Clear();
+                dataSO.updateDialogueSequenceCollections();
+                Debug.Log($"hash count:{dataSO.dialogueSequenceHashSet.Count}");
+                Debug.Log($"ser count:{dataSO.dialogueSequenceList.Count}");
+            }
+        }
+    }
     private void DrawAnalisedSequence()
     {
         int match = dataSO.tryGetIndexOfAnalisedSequence;
