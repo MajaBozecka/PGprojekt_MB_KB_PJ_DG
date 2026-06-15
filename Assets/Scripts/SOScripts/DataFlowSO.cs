@@ -29,10 +29,10 @@ public class DataFlowSO : ScriptableObject
     List<Speaker> speakerList = new();
     private string[] m_speakerIdArray = new string[0];
     [System.Serializable]
-    private class SerializatorSpeaker : SerializatorAbstract
+    private class SerializatorSpeaker
     {
         List<Speaker> speakerList;
-        public SerializatorSpeaker(DataFlowSO data) : base(data)
+        public SerializatorSpeaker(DataFlowSO data)
         {
             if (data is not null)
             {
@@ -88,8 +88,61 @@ public class DataFlowSO : ScriptableObject
         return sub.timeForSingleCharDisplay != 0 ? sub.timeForSingleCharDisplay : getSpeakerUsusalYappingTime(line);
     }
     #endregion
+    #region SAVEDATA
     public History history = new();
+    private class SerializatorSaveData
+    {
+        public History history = new();
+        public List<PlotCheckpoint> listPlotCheckpoints = new ();
+        public SerializatorSaveData(DataFlowSO data)
+        {
+            if (data is not null)
+            {
+                history = data.history;
+                listPlotCheckpoints = data.listPlotCheckpoints;
+            }
+        }
+        public SerializatorSaveData() { }
+    }
+    #endregion
+    #region PLOTCHECKPOINTS
     public List<PlotCheckpoint> listPlotCheckpoints;
+    public List<PlotCheckpoint> listPlotChekpointsEndChapter;
+    private class SerializatorPlotCheckpoint
+    {
+        public List<PlotCheckpoint> listPlotCheckpoints;
+        public List<PlotCheckpoint> listPlotChekpointsEndChapter;
+        public SerializatorPlotCheckpoint(DataFlowSO data)
+        {
+            if (data is not null)
+            {
+                listPlotCheckpoints = data.listPlotCheckpoints;
+                listPlotChekpointsEndChapter = data.listPlotChekpointsEndChapter;
+            }
+        }
+    }
+    public bool PlotCheckpointCheckForChapterEnd()
+    {
+        bool ret = true;
+        foreach (PlotCheckpoint check in listPlotChekpointsEndChapter)
+        {
+            foreach (PlotCheckpoint plotCheckpointOfCollection in listPlotChekpointsEndChapter)
+            {
+                int indexOfMatchedCheckpointFromControl = listPlotCheckpoints.BinarySearch(plotCheckpointOfCollection);
+                if (indexOfMatchedCheckpointFromControl < 0)
+                    continue;
+                if (listPlotCheckpoints[indexOfMatchedCheckpointFromControl].checkpointField != plotCheckpointOfCollection.checkpointField)
+                {
+                    ret = false;
+                    break;
+                }
+            }
+            if (!ret) break;
+        }
+        return ret;
+    }
+
+    #endregion
     public bool skipping;
     #region DEFAULTVALUES
     [Header("DefaultValues")]
@@ -97,12 +150,12 @@ public class DataFlowSO : ScriptableObject
     public float defaultTimeTillSubTextSkippable;
     public float defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
     [System.Serializable]
-    private class SerializatorDefaultValues : SerializatorAbstract
+    private class SerializatorDefaultValues
     {
         public float defaultTimeTillTextSkippable;
         public float defaultTimeTillSubTextSkippable;
         public float defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection;
-        public SerializatorDefaultValues(DataFlowSO data) : base(data)
+        public SerializatorDefaultValues(DataFlowSO data)
         {
             if(data is not null)
             {
@@ -132,10 +185,10 @@ public class DataFlowSO : ScriptableObject
     [HideInInspector]
     public string placeholdIdentifier;
     [System.Serializable]
-    private class SerializatorDialogueSequenceCollection : SerializatorAbstract
+    private class SerializatorDialogueSequenceCollection
     {
         public List<DialogueSequence> dialogueSequenceList = new();
-        public SerializatorDialogueSequenceCollection(DataFlowSO data) : base(data)
+        public SerializatorDialogueSequenceCollection(DataFlowSO data)
         {
             if (data is not null)
             {
@@ -234,12 +287,19 @@ public class DataFlowSO : ScriptableObject
     private string pathToSerializedDefaultValues { get { return Application.persistentDataPath + "/" + "DefaultValues" + ".json"; } }
     private string pathToSerializedSpeakers { get { return Application.persistentDataPath + "/Chapter"+ chapter + "/Speakers.json"; } }
     private string pathToSerializedDialogueSequence { get { return Application.persistentDataPath + "/Chapter"+ chapter + "/Sequences.json"; } }
+    private string pathToSerializedPlotCheckChapter { get { return Application.persistentDataPath + "/Chapter" + chapter + "/PlotCheck.json"; } }
+    private string pathToSerializedSaveData { get { return Application.persistentDataPath + "/" + "SaveData" + ".json"; } }
     public void SaveToJSON()
     {
         if(Application.isEditor)
         {
             if(Application.isPlaying)
             {
+                string json;
+                //SaveData
+                Debug.Log(pathToSerializedSaveData);
+                json = JsonUtility.ToJson(new SerializatorSaveData(this));
+                File.WriteAllText(pathToSerializedSaveData, json);
                 Debug.Log("Cannot make manual save while application is running. Serialized List is empty.");
             }
             else
@@ -257,6 +317,10 @@ public class DataFlowSO : ScriptableObject
                 Debug.Log(pathToSerializedDialogueSequence);
                 json = JsonUtility.ToJson(new SerializatorDialogueSequenceCollection(this));
                 File.WriteAllText(pathToSerializedDialogueSequence, json);
+                //PlotCheck
+                Debug.Log(pathToSerializedPlotCheckChapter);
+                json = JsonUtility.ToJson(new SerializatorPlotCheckpoint(this));
+                File.WriteAllText(pathToSerializedPlotCheckChapter, json);
             }
         }
     }
@@ -267,7 +331,6 @@ public class DataFlowSO : ScriptableObject
         {
             string json = File.ReadAllText(pathToSerializedDefaultValues);
             JsonUtility.FromJsonOverwrite(json, this);
-            updateDialogueSequenceCollections();
         }
         else
         {
@@ -277,7 +340,6 @@ public class DataFlowSO : ScriptableObject
         {
             string json = File.ReadAllText(pathToSerializedSpeakers);
             JsonUtility.FromJsonOverwrite(json, this);
-            updateDialogueSequenceCollections();
         }
         else
         {
@@ -287,13 +349,48 @@ public class DataFlowSO : ScriptableObject
         {
             string json = File.ReadAllText(pathToSerializedDialogueSequence);
             JsonUtility.FromJsonOverwrite(json, this);
-            updateDialogueSequenceCollections();
         }
         else
         {
             Debug.Log($"File: '{pathToSerializedDialogueSequence}' missing.");
         }
+        updateDialogueSequenceCollections();
         pushAnalisedToPlaceholder();
+        if (File.Exists(pathToSerializedPlotCheckChapter))
+        {
+            string json = File.ReadAllText(pathToSerializedPlotCheckChapter);
+            JsonUtility.FromJsonOverwrite(json, this);
+            this.listPlotCheckpoints.Sort();
+            this.listPlotChekpointsEndChapter.Sort();
+        }
+        else
+        {
+            Debug.Log($"File: '{pathToSerializedPlotCheckChapter}' missing.");
+        }
+        if (File.Exists(pathToSerializedSaveData))
+        {
+            string json = File.ReadAllText(pathToSerializedSaveData);
+            SerializatorSaveData sr = new SerializatorSaveData();
+            JsonUtility.FromJsonOverwrite(json, sr);
+            foreach (PlotCheckpoint item in sr.listPlotCheckpoints)
+            {
+                int i = this.listPlotCheckpoints.BinarySearch(item);
+                if (i >= 0)
+                {
+                    this.listPlotCheckpoints[i] = item;
+                }
+                else
+                {
+                    this.listPlotCheckpoints.Add(item);
+                    this.listPlotCheckpoints.Sort();
+                }
+            }
+
+        }
+        else
+        {
+            Debug.Log($"File: '{pathToSerializedSaveData}' missing.");
+        }
     }
     #endregion
 }

@@ -29,11 +29,12 @@ MonoBehaviour:
     dialogueSequenceIdentifiersList:
     - seq1
     - seq2
-    - seq3
-    progressInLastRead: 5
+    progressInLastRead: 9
   listPlotCheckpoints:
   - id: TestCheckPoint
-    checkpointField: 0
+    isAdditive: 0
+    checkpointField: 1
+  listPlotChekpointsEndChapter: []
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
   defaultTimeTillSubTextSkippable: 0.2
@@ -43,25 +44,34 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: Test1
+        subline: Test1.
+      - timeForSingleCharDisplay: 1
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: Test1.
       lingering: 1
+      speakerID: Speaker1
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Test1.
+      lingering: 0
       speakerID: Speaker1
     identifier: seq1
     runnedAlready: 0
   - lines:
     - subLines:
-      - timeForSingleCharDisplay: 0.05
-        subline: Test2
-      lingering: -1
+      - timeForSingleCharDisplay: 0
+        subline: Test2.4
+      lingering: 1
       speakerID: Speaker2
     identifier: seq2
     runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: Test for sprite.
+        subline: Test3
       lingering: -1
-      speakerID: Speaker2
+      speakerID: Speaker1
     identifier: seq3
     runnedAlready: 0
   serializedAnalisedSequence:

@@ -17,8 +17,6 @@ public class PanelHistoryController : MonoBehaviour
     [SerializeField]
     List<GameObject> sequenceEntryList = new();
     [SerializeField]
-    List<Transform> seqTransformList = new();
-    [SerializeField]
     DialogueSequence lastSeq;
     [SerializeField]
     HistoryEntryDialogueLine tempEntry;
@@ -92,18 +90,15 @@ public class PanelHistoryController : MonoBehaviour
 
     public void RewriteHistory()
     {
-        if(sequenceEntryList.Count>0)
+        foreach (GameObject entry in sequenceEntryList)
         {
-            foreach (GameObject entry in sequenceEntryList)
-            {
-                Destroy(entry);
-            }
-            foreach (string histId in data.history.dialogueSequenceIdentifiersList)
-            {
-                DialogueSequence tempSeq = new DialogueSequence(histId);
-                data.dialogueSequenceHashSet.TryGetValue(tempSeq,out tempSeq);
-                addNewEntryWholeSequence(tempSeq);
-            }
+            Destroy(entry);
+        }
+        foreach (string histId in data.history.dialogueSequenceIdentifiersList)
+        {
+            DialogueSequence tempSeq = new DialogueSequence(histId);
+            data.dialogueSequenceHashSet.TryGetValue(tempSeq,out tempSeq);
+            addNewEntryWholeSequence(tempSeq);
         }
     }
 }

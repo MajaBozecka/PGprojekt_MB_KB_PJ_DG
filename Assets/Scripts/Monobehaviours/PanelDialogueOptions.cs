@@ -61,39 +61,30 @@ public class PanelDialogueOptions : MonoBehaviour
                 int indexOfMatchedCheckpointFromControl = listPlotCheckpointControl.BinarySearch(plotCheckpointOfCollection);
                 if (indexOfMatchedCheckpointFromControl < 0)
                     continue;
-                if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField != plotCheckpointOfCollection.checkpointField)
+                if(plotCheckpointOfCollection.isAdditive)
                 {
-                    but.gameObject.SetActive(false);
-                    break;
+                    if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField < plotCheckpointOfCollection.checkpointField)
+                    {
+                        but.gameObject.SetActive(false);
+                        break;
+                    }
+                    else
+                        but.gameObject.SetActive(true);
                 }
                 else
                 {
-                    but.gameObject.SetActive(true);
+                    if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField != plotCheckpointOfCollection.checkpointField)
+                    {
+                        but.gameObject.SetActive(false);
+                        break;
+                    }
+                    else
+                    {
+                        but.gameObject.SetActive(true);
+                    }
                 }
             }
         }
-        /*bool test;
-            List<PlotCheckpoint> listPlotCheckpointControl = DataFlowSO.get.listPlotCheckpoints;
-            for (; lastUsedOptionIndex < listOfDialogueOptions.Count; lastUsedOptionIndex++)
-            {
-                test = true;
-                foreach (PlotCheckpoint plotCheckpointOfCollection in listOfDialogueOptions[lastUsedOptionIndex].requirements)
-                {
-                    int indexOfMatchedCheckpointFromControl = listPlotCheckpointControl.BinarySearch(plotCheckpointOfCollection);
-                    if (indexOfMatchedCheckpointFromControl < 0)
-                        continue;
-                    if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField != plotCheckpointOfCollection.checkpointField)
-                    {
-                        test = false;
-                        break;
-                    }
-                }
-                if (test)
-                {
-                    return true;
-                }
-            }
-            return false;*/
     }
 
 }

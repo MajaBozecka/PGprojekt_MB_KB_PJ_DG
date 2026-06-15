@@ -26,7 +26,7 @@ public class CursorController : MonoBehaviour
     [SerializeField]
     private Vector2 readHotSpot;
     public ECursorMode cursorMode;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution of UpdateCkeckpointFields after the MonoBehaviour is created
     void Start()
     {
         click=InputSystem.actions.FindAction("Click");
@@ -38,12 +38,19 @@ public class CursorController : MonoBehaviour
     {
         if(spriteDialogue && dataFlow.canvasCtrl.UIMode != EUIMode.DIALOGUE)
         {
-            dataFlow.StartDialogueSequence(spriteDialogue.getDOD);
-            spriteDialogue.read = true;
+            DialogueOptionData dod = spriteDialogue.getDOD;
+            if (dod is not null) {
+                dataFlow.StartDialogueSequence(spriteDialogue.getDOD);
+                spriteDialogue.read = true;
+            }
+            else
+            {
+                Debug.Log("Sprite object returned null instead of DOD.");
+            }
         }
     }
 
-    // Update is called once per frame
+    // UpdateCkeckpointFields is called once per frame
     void Update()
     {
         mousePosition = point.ReadValue<Vector2>();
