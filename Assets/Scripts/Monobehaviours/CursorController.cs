@@ -36,7 +36,16 @@ public class CursorController : MonoBehaviour
 
     private void attemptedInteraction(InputAction.CallbackContext obj)
     {
-        if(spriteDialogue && dataFlow.canvasCtrl.UIMode != EUIMode.DIALOGUE)
+        if (dataFlow.canvasCtrl.UIMode == EUIMode.DIALOGUE) return;
+
+        LocationChanger clickedDoor = raycastHit2D ? raycastHit2D.collider.GetComponent<LocationChanger>() : null;
+        if (clickedDoor != null)
+        {
+            FindFirstObjectByType<LocationManager>().ChangeLocation(clickedDoor.targetLocationId);
+            return; 
+        }
+
+        if (spriteDialogue && dataFlow.canvasCtrl.UIMode != EUIMode.DIALOGUE)
         {
             DialogueOptionData dod = spriteDialogue.getDOD;
             if (dod is not null) {
@@ -50,25 +59,28 @@ public class CursorController : MonoBehaviour
         }
     }
 
-    // UpdateCkeckpointFields is called once per frame
     void Update()
     {
         mousePosition = point.ReadValue<Vector2>();
         mouseray = Camera.main.ScreenPointToRay(mousePosition);
         raycastHit2D = Physics2D.Raycast(mouseray.origin, mouseray.direction);
+
+
         spriteDialogue = raycastHit2D ? raycastHit2D.collider.GetComponent<ObjectWithDialogueInteraction>() : null;
-        switch (spriteDialogue)
+
+        LocationChanger hoveredDoor = raycastHit2D ? raycastHit2D.collider.GetComponent<LocationChanger>() : null;
+
+        if (hoveredDoor != null)
         {
-            case null:
-                {
-                    SetCursor(ECursorMode.DEFAULT);
-                    break;
-                }
-            default:
-                {
-                    SetCursor(spriteDialogue.read? ECursorMode.READINTERACTION : ECursorMode.NEWINTERACTION);
-                    break;
-                }
+            SetCursor(ECursorMode.NEWINTERACTION); 
+        }
+        else if (spriteDialogue != null)
+        {
+            SetCursor(spriteDialogue.read ? ECursorMode.READINTERACTION : ECursorMode.NEWINTERACTION);
+        }
+        else
+        {
+            SetCursor(ECursorMode.DEFAULT);
         }
     }
 
