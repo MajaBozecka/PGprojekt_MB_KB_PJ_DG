@@ -26,6 +26,9 @@ public class CursorController : MonoBehaviour
     [SerializeField]
     private Vector2 readHotSpot;
     public ECursorMode cursorMode;
+    // Zmienne blokuj¹ce podwójne klikniêcie
+    private float lastInteractionTime = 0f;
+    private float interactionCooldown = 0.3f; // Pó³ sekundy blokady po klikniêciu
     // Start is called once before the first execution of UpdateCkeckpointFields after the MonoBehaviour is created
     void Start()
     {
@@ -36,11 +39,35 @@ public class CursorController : MonoBehaviour
 
     private void attemptedInteraction(InputAction.CallbackContext obj)
     {
-        if(spriteDialogue && dataFlow.canvasCtrl.UIMode != EUIMode.DIALOGUE)
+        // 1. Wracamy do 'performed', bo wiemy, ¿e u Ciebie dzia³a
+        if (!obj.performed) return;
+
+        // 2. NOWOŒÆ: Blokada czasowa (Cooldown)
+        // Jeœli od ostatniego klikniêcia minê³o mniej ni¿ 0.3 sekundy, ignorujemy akcjê
+        if (Time.time - lastInteractionTime < interactionCooldown) return;
+
+
+        if (dataFlow.canvasCtrl.UIMode == EUIMode.DIALOGUE) return;
+
+        LocationChanger clickedDoor = raycastHit2D ? raycastHit2D.collider.GetComponent<LocationChanger>() : null;
+        if (clickedDoor != null)
+        {
+            // Rejestrujemy udane klikniêcie w czasie
+            lastInteractionTime = Time.time;
+
+            FindFirstObjectByType<LocationManager>().ChangeLocation(clickedDoor.targetLocationId);
+            return;
+        }
+
+        if (spriteDialogue)
         {
             DialogueOptionData dod = spriteDialogue.getDOD;
-            if (dod is not null) {
-                dataFlow.StartDialogueSequence(spriteDialogue.getDOD);
+            if (dod is not null)
+            {
+                // Rejestrujemy udane klikniêcie w czasie
+                lastInteractionTime = Time.time;
+
+                dataFlow.StartDialogueSequence(dod);
                 spriteDialogue.read = true;
             }
             else
@@ -50,25 +77,28 @@ public class CursorController : MonoBehaviour
         }
     }
 
-    // UpdateCkeckpointFields is called once per frame
     void Update()
     {
         mousePosition = point.ReadValue<Vector2>();
         mouseray = Camera.main.ScreenPointToRay(mousePosition);
         raycastHit2D = Physics2D.Raycast(mouseray.origin, mouseray.direction);
+
+
         spriteDialogue = raycastHit2D ? raycastHit2D.collider.GetComponent<ObjectWithDialogueInteraction>() : null;
-        switch (spriteDialogue)
+
+        LocationChanger hoveredDoor = raycastHit2D ? raycastHit2D.collider.GetComponent<LocationChanger>() : null;
+
+        if (hoveredDoor != null)
         {
-            case null:
-                {
-                    SetCursor(ECursorMode.DEFAULT);
-                    break;
-                }
-            default:
-                {
-                    SetCursor(spriteDialogue.read? ECursorMode.READINTERACTION : ECursorMode.NEWINTERACTION);
-                    break;
-                }
+            SetCursor(ECursorMode.NEWINTERACTION); 
+        }
+        else if (spriteDialogue != null)
+        {
+            SetCursor(spriteDialogue.read ? ECursorMode.READINTERACTION : ECursorMode.NEWINTERACTION);
+        }
+        else
+        {
+            SetCursor(ECursorMode.DEFAULT);
         }
     }
 
