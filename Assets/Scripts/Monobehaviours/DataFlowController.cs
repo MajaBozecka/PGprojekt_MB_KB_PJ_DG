@@ -43,7 +43,7 @@ public class DataFlowController : MonoBehaviour
         InputAction history = InputSystem.actions.FindAction("History");
         history.started += OnHistoryLookUp;
         data.LoadFromJSON();
-        data.easeUpMemoryByFreeingListCollection();
+        //data.easeUpMemoryByFreeingListCollection();
         populateCanvasWithButtons();
         setBackgroundImage();
         canvasCtrl.dialogueHistoryRewrite();
