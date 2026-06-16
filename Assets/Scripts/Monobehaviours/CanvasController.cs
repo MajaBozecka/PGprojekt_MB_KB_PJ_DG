@@ -62,10 +62,10 @@ public class CanvasController : MonoBehaviour
         UIMode = EUIMode.BUTTONS;
     }
 
-    public void setDialogueSequence(string st, Speaker sp)
+    public void setDialogueSequence(string st, Speaker sp, string speakerMod)
     {
         dialogueSequencePanel.textToShowInDialogueField = st;
-        dialogueSequencePanel.SpeakerCustomization(sp);
+        dialogueSequencePanel.SpeakerCustomization(sp, speakerMod);
     }
     public void showDialogueText(int n)
     {
