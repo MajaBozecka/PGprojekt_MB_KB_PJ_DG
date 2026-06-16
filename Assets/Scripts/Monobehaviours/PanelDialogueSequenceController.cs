@@ -37,6 +37,12 @@ public class PanelDialogueSequenceController : MonoBehaviour
     }
     public void SpeakerCustomization(Speaker s, string speakerMod)
     {
+        if (s == null)
+        {
+            Debug.LogError("B³¹d: Próba wyœwietlenia dialogu dla postaci, której nie ma w DataFlowSO!");
+            return; 
+        }
+
         dialogueText.fontSize = s.fontSize;
         dialogueText.fontStyle = s.styles;
         dialogueText.color = s.color;

@@ -49,6 +49,11 @@ public class CursorController : MonoBehaviour
 
         if (dataFlow.canvasCtrl.UIMode == EUIMode.DIALOGUE) return;
 
+        if (raycastHit2D)
+        {
+            Debug.Log("Zarejestrowano klikniêcie w obiekt o nazwie: " + raycastHit2D.collider.gameObject.name);
+        }
+
         LocationChanger clickedDoor = raycastHit2D ? raycastHit2D.collider.GetComponent<LocationChanger>() : null;
         if (clickedDoor != null)
         {

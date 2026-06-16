@@ -44,8 +44,8 @@ public class DataFlowController : MonoBehaviour
         history.started += OnHistoryLookUp;
         data.LoadFromJSON();
         //data.easeUpMemoryByFreeingListCollection();
-        populateCanvasWithButtons();
-        setBackgroundImage();
+        //populateCanvasWithButtons();
+        //setBackgroundImage();
         canvasCtrl.dialogueHistoryRewrite();
         ////////////////////////////////////////////////////////
         ///This one to make sure for testing those were not yet read. In the future we need to think how to register on savefile which were and which were not read

@@ -532,10 +532,22 @@ MonoBehaviour:
     sprites:
     - modName: A1
       portrait: {fileID: 21300000, guid: da924fb533fde1b4eb24531b20c8b87b, type: 3}
+  - speakerId: Gracz
+    speakerName: Ania
+    fontSize: 16
+    styles: 0
+    color: {r: 1, g: 0.584222, b: 0.20188677, a: 1}
+    timePerCharacterTalking: 0.05
+    sprites: []
+  - speakerId: Narrator
+    speakerName: ---
+    fontSize: 16
+    styles: 0
+    color: {r: 0.3433962, g: 0.3433962, b: 0.3433962, a: 1}
+    timePerCharacterTalking: 0.05
+    sprites: []
   history:
-    dialogueSequenceIdentifiersList:
-    - seq1
-    - seq2
+    dialogueSequenceIdentifiersList: []
     progressInLastRead: 9
   listPlotCheckpoints:
   - id: TestCheckPoint
