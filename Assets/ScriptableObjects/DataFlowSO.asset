@@ -543,13 +543,14 @@ MonoBehaviour:
     speakerName: ---
     fontSize: 16
     styles: 0
-    color: {r: 0.3433962, g: 0.3433962, b: 0.3433962, a: 1}
+    color: {r: 0.11698109, g: 0.11698109, b: 0.11698109, a: 1}
     timePerCharacterTalking: 0.05
     sprites: []
   history:
     dialogueSequenceIdentifiersList:
     - seq1
-    progressInLastRead: 22
+    - Intro
+    progressInLastRead: 245
   listPlotCheckpoints:
   - id: TestCheckPoint
     isAdditive: 0
@@ -563,6 +564,68 @@ MonoBehaviour:
   dialogueSequenceList:
   - lines:
     - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "Szale\u0144cy. "
+      - timeForSingleCharDisplay: 0.05
+        subline: ' Dziwacy. '
+      - timeForSingleCharDisplay: 0.05
+        subline: 'Wyrzutki. '
+      - timeForSingleCharDisplay: 0.05
+        subline: 'Samotni, ale nie z wyboru. '
+      - timeForSingleCharDisplay: 0.05
+        subline: "Trudno jest im nawi\u0105za\u0107 g\u0142\u0119bokie relacje -
+          jednak my im pomo\u017Cemy."
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "Witamy w programie, w kt\xF3rym kilku wyj\u0105tkowych uczestnik\xF3w
+          zmierzy si\u0119 z trudnymi wyzwaniami i "
+      - timeForSingleCharDisplay: 0.05
+        subline: "- by\u0107 mo\u017Ce - "
+      - timeForSingleCharDisplay: 0.05
+        subline: "zdob\u0119dzie przyjaci\xF3\u0142 do grobowej deski."
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: Oto...
+      - timeForSingleCharDisplay: 0.05
+        subline: FriendlyFire.
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.01
+        subline: ' '
+      lingering: 0
+      speakerID: I
+      speakerMod: A2
+      changeLocationId: 1
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "Zebrali\u015Bmy sze\u015Bciu bardzo ciekawych ludzi, kt\xF3rzy
+          z jakiego\u015B powodu nie znale\u017Ali swoich bratnich dusz."
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "\u017BYWEGO MNIE NIE WE\u0179MIECIE!"
+      lingering: -1
+      speakerID: I
+      speakerMod: L1
+      changeLocationId: 
+    identifier: Intro
+    runnedAlready: 0
+  - lines:
+    - subLines:
       - timeForSingleCharDisplay: 0
         subline: ytdyt
       - timeForSingleCharDisplay: 0.5
@@ -572,14 +635,16 @@ MonoBehaviour:
       lingering: -1
       speakerID: A
       speakerMod: 
+      changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Test1.
       lingering: 0
       speakerID: A
       speakerMod: 
+      changeLocationId: 
     identifier: seq1
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -587,6 +652,7 @@ MonoBehaviour:
       lingering: 1
       speakerID: Speaker2
       speakerMod: 
+      changeLocationId: 
     identifier: seq2
     runnedAlready: 0
   - lines:
@@ -596,6 +662,7 @@ MonoBehaviour:
       lingering: -1
       speakerID: Speaker1
       speakerMod: 
+      changeLocationId: 
     identifier: seq3
     runnedAlready: 0
   serializedAnalisedSequence:
@@ -607,6 +674,7 @@ MonoBehaviour:
     identifier: 
     runnedAlready: 0
   seqIdTab:
+  - Intro
   - seq1
   - seq2
   - seq3

@@ -7,6 +7,7 @@ public class DataFlowController : MonoBehaviour
 {
     public DataFlowSO data;
     public CanvasController canvasCtrl;
+    public LocationManager locationManager;
     [SerializeField] SpriteRenderer background;
     public ObjectWithDialogueInteraction testedObjectWithDialogueInteraction;
     [SerializeField]
@@ -150,6 +151,10 @@ public class DataFlowController : MonoBehaviour
         {
             foreach (DialogueLine fullDialogueLine in TestedDialogueSequence.lines)
             {
+                if (locationManager != null && !string.IsNullOrEmpty(fullDialogueLine.changeLocationId))
+                {
+                    locationManager.ChangeLocation(fullDialogueLine.changeLocationId, false, false);
+                }
                 float timeLineIterator = 0;
                 int compoundLength = 0;
                 canvasCtrl.setDialogueSequence(fullDialogueLine.dumpWholeLine(), data.getSpeaker(fullDialogueLine.speakerID), fullDialogueLine.speakerMod);

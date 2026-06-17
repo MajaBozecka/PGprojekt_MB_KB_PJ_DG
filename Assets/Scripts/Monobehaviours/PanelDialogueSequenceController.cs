@@ -17,16 +17,20 @@ public class PanelDialogueSequenceController : MonoBehaviour
     [SerializeField]
     private TMP_Text dialogueText;
 
-    [Header("Miejsca na postacie (Scena)")]
+    [Header("Miejsca na postacie (Œwiat Gry)")]
     [SerializeField]
-    private Image[] characterSlots;
+    private SpriteRenderer[] characterSlots;
 
-    private Dictionary<string, Image> activeCharacters = new Dictionary<string, Image>();
+    [Header("Ustawienia Skali")]
+    public float characterScale = 1.0f;
+
+    private Dictionary<string, SpriteRenderer> activeCharacters = new Dictionary<string, SpriteRenderer>();
 
     public string textToShowInDialogueField;
+
     public void fillDialogueField(int n)
     {
-        if(n<0)
+        if (n < 0)
         {
             dialogueText.text = textToShowInDialogueField;
         }
@@ -35,17 +39,19 @@ public class PanelDialogueSequenceController : MonoBehaviour
             dialogueText.text = textToShowInDialogueField[..(n)];
         }
     }
+
     public void SpeakerCustomization(Speaker s, string speakerMod)
     {
         if (s == null)
         {
             Debug.LogError("B³¹d: Próba wyœwietlenia dialogu dla postaci, której nie ma w DataFlowSO!");
-            return; 
+            return;
         }
 
         dialogueText.fontSize = s.fontSize;
         dialogueText.fontStyle = s.styles;
         dialogueText.color = s.color;
+        if (string.IsNullOrEmpty(speakerMod)) return;
 
         if (s != null)
         {
@@ -58,42 +64,52 @@ public class PanelDialogueSequenceController : MonoBehaviour
                 }
                 return;
             }
-                
+
             Sprite foundSprite = s.GetSpriteByMod(speakerMod);
+            if (foundSprite == null) Debug.LogWarning($"UWAGA: Nie znalaz³em grafiki dla postaci '{s.speakerId}' z emocj¹ '{speakerMod}'!");
             if (foundSprite != null)
             {
+
                 if (activeCharacters.ContainsKey(s.speakerId))
                 {
-                    activeCharacters[s.speakerId].sprite = foundSprite;
+                    SpriteRenderer existingSlot = activeCharacters[s.speakerId];
+                    existingSlot.sprite = foundSprite;
+
+                    existingSlot.transform.localScale = new Vector3(characterScale, characterScale, 1f);
                 }
                 else
                 {
-                    Image freeSlot = GetFreeSlot();
-                    if(freeSlot != null)
+                    SpriteRenderer freeSlot = GetFreeSlot();
+                    if (freeSlot != null)
                     {
                         freeSlot.gameObject.SetActive(true);
                         activeCharacters.Add(s.speakerId, freeSlot);
+
+                        freeSlot.sprite = foundSprite;
+
+                        freeSlot.transform.localScale = new Vector3(characterScale, characterScale, 1f);
                     }
                     else
                     {
                         Debug.LogWarning("Brak wolnych miejsc na scenie");
                     }
                 }
-                   
             }
         }
     }
-    private Image GetFreeSlot()
+
+    private SpriteRenderer GetFreeSlot()
     {
-        foreach (Image slot in characterSlots)
+        foreach (SpriteRenderer slot in characterSlots)
         {
             if (!slot.gameObject.activeSelf) return slot;
         }
         return null;
     }
+
     public void ClearStage()
     {
-        foreach (Image slot in characterSlots)
+        foreach (SpriteRenderer slot in characterSlots)
         {
             slot.gameObject.SetActive(false);
         }
