@@ -12,12 +12,6 @@ public class LocationData : MonoBehaviour
 
     public void SetRoomActive(bool isActive)
     {
-        foreach (GameObject obj in interactableInRoom)
-        {
-            if(obj != null)
-            {
-                obj.SetActive(isActive);
-            }
-        }
+        gameObject.SetActive(isActive);
     }
 }
