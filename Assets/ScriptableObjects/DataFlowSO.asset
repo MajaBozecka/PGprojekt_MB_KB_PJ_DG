@@ -547,8 +547,9 @@ MonoBehaviour:
     timePerCharacterTalking: 0.05
     sprites: []
   history:
-    dialogueSequenceIdentifiersList: []
-    progressInLastRead: 9
+    dialogueSequenceIdentifiersList:
+    - seq1
+    progressInLastRead: 22
   listPlotCheckpoints:
   - id: TestCheckPoint
     isAdditive: 0
@@ -563,22 +564,22 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: Test1.
-      - timeForSingleCharDisplay: 1
-        subline: 
+        subline: ytdyt
+      - timeForSingleCharDisplay: 0.5
+        subline: e6rht7
       - timeForSingleCharDisplay: 0
         subline: Test1.
-      lingering: 1
-      speakerID: Speaker1
+      lingering: -1
+      speakerID: A
       speakerMod: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Test1.
       lingering: 0
-      speakerID: Speaker1
+      speakerID: A
       speakerMod: 
     identifier: seq1
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
