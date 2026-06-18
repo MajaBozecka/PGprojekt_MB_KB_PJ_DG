@@ -124,23 +124,23 @@ public class DataFlowSO : ScriptableObject
     public bool PlotCheckpointCheckForChapterEnd()
     {
         if (listPlotChekpointsEndChapter == null || listPlotChekpointsEndChapter.Count == 0) return false;
-        bool ret = true;
-        foreach (PlotCheckpoint check in listPlotChekpointsEndChapter)
+
+        foreach (PlotCheckpoint plotCheckpointOfCollection in listPlotChekpointsEndChapter)
         {
-            foreach (PlotCheckpoint plotCheckpointOfCollection in listPlotChekpointsEndChapter)
+            int indexOfMatchedCheckpointFromControl = listPlotCheckpoints.BinarySearch(plotCheckpointOfCollection);
+
+            if (indexOfMatchedCheckpointFromControl < 0)
             {
-                int indexOfMatchedCheckpointFromControl = listPlotCheckpoints.BinarySearch(plotCheckpointOfCollection);
-                if (indexOfMatchedCheckpointFromControl < 0)
-                    continue;
-                if (listPlotCheckpoints[indexOfMatchedCheckpointFromControl].checkpointField != plotCheckpointOfCollection.checkpointField)
-                {
-                    ret = false;
-                    break;
-                }
+                return false;
             }
-            if (!ret) break;
+
+            if (listPlotCheckpoints[indexOfMatchedCheckpointFromControl].checkpointField != plotCheckpointOfCollection.checkpointField)
+            {
+                return false;
+            }
         }
-        return ret;
+
+        return true;
     }
 
     #endregion

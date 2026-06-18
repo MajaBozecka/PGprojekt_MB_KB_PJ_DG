@@ -1,8 +1,7 @@
-using NUnit.Framework.Internal;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class DataFlowController : MonoBehaviour
 {
@@ -11,79 +10,33 @@ public class DataFlowController : MonoBehaviour
     public LocationManager locationManager;
     [SerializeField] SpriteRenderer background;
     public ObjectWithDialogueInteraction testedObjectWithDialogueInteraction;
+
     [SerializeField]
-    private bool pause=false;
-    private bool historyLook=false;
+    private bool pause = false;
+    private bool historyLook = false;
     private bool confirmNextLine;
 
-    [Header("Zakoñczenie Sekwencji")]
-    public SpriteRenderer endingSpriteRenderer;
+    [Header("Interfejs Dialogu")]
     public GameObject dialogueCanvas;
 
-    public float waitBeforeImage = 3f;
-    public float fadeDuration = 1.5f;
-    public float waitBeforeScene = 2f;
-    public string nextSceneName = "Chapter1";
-
-    public void FinishDialogueAndTransition()
-    {
-        StartCoroutine(TransitionToNewSceneRoutine());
-    }
-
-    private IEnumerator TransitionToNewSceneRoutine()
-    {
-        
-        if (dialogueCanvas != null)
-        {
-            dialogueCanvas.SetActive(false);
-        }
-
-        yield return new WaitForSeconds(waitBeforeImage);
-
-        if (endingSpriteRenderer != null)
-        {
-            Color spriteColor = endingSpriteRenderer.color;
-            spriteColor.a = 0f;
-            endingSpriteRenderer.color = spriteColor;
-            endingSpriteRenderer.gameObject.SetActive(true);
-
-            float elapsedTime = 0f;
-            while (elapsedTime < fadeDuration)
-            {
-                elapsedTime += Time.deltaTime;
-
-                spriteColor.a = Mathf.Clamp01(elapsedTime / fadeDuration);
-                endingSpriteRenderer.color = spriteColor;
-
-                yield return null;
-            }
-        }
-
-        yield return new WaitForSeconds(waitBeforeScene);
-
-        SceneManager.LoadScene(nextSceneName);
-    }
+    public static System.Action<string> OnSequenceEnded;
 
     private bool SKIP
     {
-        get
-        {
-            return data.skipping;
-        }
-        set 
-        {
-            data.skipping = value;
-        }
+        get { return data.skipping; }
+        set { data.skipping = value; }
     }
+
     private float tillDialogueLineSkippable
     {
         get { return data.defaultTimeTillTextSkippable; }
     }
+
     private float tillSubDialogueLineSkippable
     {
         get { return data.defaultTimeTillSubTextSkippable; }
     }
-    // Start is called once before the first execution of UpdateCkeckpointFields after the MonoBehaviour is created
+
     void Start()
     {
         InputAction skip = InputSystem.actions.FindAction("SKIP");
@@ -93,25 +46,20 @@ public class DataFlowController : MonoBehaviour
         confirm.canceled += OnSubmitCancel;
         InputAction history = InputSystem.actions.FindAction("History");
         history.started += OnHistoryLookUp;
+
         data.LoadFromJSON();
-        //data.easeUpMemoryByFreeingListCollection();
-        //populateCanvasWithButtons();
-        //setBackgroundImage();
         canvasCtrl.dialogueHistoryRewrite();
-        ////////////////////////////////////////////////////////
-        ///This one to make sure for testing those were not yet read. In the future we need to think how to register on savefile which were and which were not read
+
         foreach (var item in data.dialogueSequenceHashSet)
         {
             item.runnedAlready = false;
         }
     }
 
-    // UpdateCkeckpointFields is called once per frame
     void Update()
     {
         SkippingVisibility();
     }
-
 
     private void OnSkipPerformed(InputAction.CallbackContext context)
     {
@@ -124,10 +72,12 @@ public class DataFlowController : MonoBehaviour
                 }
         }
     }
+
     private void OnSkipCanceled(InputAction.CallbackContext context)
     {
         SKIP = false;
     }
+
     private void OnSubmitCancel(InputAction.CallbackContext context)
     {
         switch (canvasCtrl.UIMode)
@@ -146,7 +96,6 @@ public class DataFlowController : MonoBehaviour
         SKIP = false;
     }
 
-
     private void OnHistoryLookUp(InputAction.CallbackContext context)
     {
         historyLook = !historyLook;
@@ -156,17 +105,19 @@ public class DataFlowController : MonoBehaviour
 
     private void pauseGameTime()
     {
-        if(historyLook || pause)
+        if (historyLook || pause)
         {
             Time.timeScale = 0;
-        }else
+        }
+        else
         {
-            if(!pause & !historyLook)
+            if (!pause && !historyLook)
             {
                 Time.timeScale = 1;
             }
         }
     }
+
     private void SkippingVisibility()
     {
         if (SKIP != canvasCtrl.isSkippingIconVisible)
@@ -199,6 +150,7 @@ public class DataFlowController : MonoBehaviour
     IEnumerator DialogueFlow(DialogueOptionData DOD)
     {
         DialogueSequence TestedDialogueSequence = data.getDialogueSequence(DOD.identifier);
+
         if (TestedDialogueSequence is not null)
         {
             foreach (DialogueLine fullDialogueLine in TestedDialogueSequence.lines)
@@ -207,11 +159,14 @@ public class DataFlowController : MonoBehaviour
                 {
                     locationManager.ChangeLocation(fullDialogueLine.changeLocationId, false, false);
                 }
+
                 float timeLineIterator = 0;
                 int compoundLength = 0;
+
                 canvasCtrl.setDialogueSequence(fullDialogueLine.dumpWholeLine(), data.getSpeaker(fullDialogueLine.speakerID), fullDialogueLine.speakerMod);
                 canvasCtrl.showDialogueText(0);
                 canvasCtrl.setProceedIconVisibility(false);
+
                 foreach (SubDialogueLine partLine in fullDialogueLine.subLines)
                 {
                     float timePartLineIterator = 0;
@@ -225,18 +180,22 @@ public class DataFlowController : MonoBehaviour
                         newLength = f_timeForSingleCharDisplay <= 0 ? partLine.subline.Length : (int)(timePartLineIterator / f_timeForSingleCharDisplay);
                         bool updateDisplay = partLineDisplayedLength != newLength;
                         partLineDisplayedLength = newLength;
-                        if (updateDisplay & (partLineDisplayedLength > 0 & partLineDisplayedLength <= partLine.subline.Length))
+
+                        if (updateDisplay && (partLineDisplayedLength > 0 && partLineDisplayedLength <= partLine.subline.Length))
                         {
                             canvasCtrl.showDialogueText(compoundLength + partLineDisplayedLength);
                         }
                         yield return null;
                     } while (!(canSkipNow(timePartLineIterator, tillSubDialogueLineSkippable) || isItTimeForNextSubLine(partLine, partLineDisplayedLength)));
+
                     compoundLength += partLine.subline.Length;
                     confirmNextLine = false;
                 }
+
                 float lingerIterator = 0;
                 canvasCtrl.showDialogueText(-1);
                 UpdateDialogueHistory(TestedDialogueSequence, fullDialogueLine);
+
                 while (!(canSkipNow(timeLineIterator, tillDialogueLineSkippable) || isItTimeForNextLine(fullDialogueLine, lingerIterator)))
                 {
                     timeLineIterator += Time.deltaTime;
@@ -246,61 +205,65 @@ public class DataFlowController : MonoBehaviour
                 }
                 confirmNextLine = false;
             }
-            bool finishDetected = false;
-            if(!TestedDialogueSequence.runnedAlready)
+            Debug.Log("<color=cyan>[DIALOG]</color> Czy dialog by³ ju¿ wczeœniej odczytany? runnedAlready = " + TestedDialogueSequence.runnedAlready);
+
+            if (!TestedDialogueSequence.runnedAlready)
             {
                 updatePlotCheckpoints();
                 canvasCtrl.updateDialogueOptions(data.listPlotCheckpoints);
                 TestedDialogueSequence.runnedAlready = true;
-                finishDetected=data.PlotCheckpointCheckForChapterEnd();
             }
-            if (finishDetected)
+
+            OnSequenceEnded?.Invoke(TestedDialogueSequence.identifier);
+
+            if (locationManager != null) locationManager.SetDialogueState(false);
+
+            if (testedObjectWithDialogueInteraction != null &&
+                testedObjectWithDialogueInteraction.listOfDialogueOptions != null &&
+                testedObjectWithDialogueInteraction.listOfDialogueOptions.Count > 0)
             {
-                StartCoroutine(TransitionToNewSceneRoutine());
+                canvasCtrl.UIMode = EUIMode.BUTTONS;
             }
             else
             {
-                if (locationManager != null) locationManager.SetDialogueState(false);
-
-
-                if (testedObjectWithDialogueInteraction != null &&
-                    testedObjectWithDialogueInteraction.listOfDialogueOptions != null &&
-                    testedObjectWithDialogueInteraction.listOfDialogueOptions.Count > 0)
-                {
-                    canvasCtrl.UIMode = EUIMode.BUTTONS;
-                }
-                else
-                {
-
-                    if (dialogueCanvas != null) dialogueCanvas.SetActive(false);
-                    canvasCtrl.UIMode = EUIMode.NOTHING;
-
-                }
+                if (dialogueCanvas != null) dialogueCanvas.SetActive(false);
+                canvasCtrl.UIMode = EUIMode.NOTHING; 
             }
+
             SKIP = false;
         }
+
         bool isItTimeForNextSubLine(SubDialogueLine partLine, int partLineDisplayedLength)
         {
             return confirmNextLine || partLineDisplayedLength > partLine.subline.Length;
         }
+
         bool isItTimeForNextLine(DialogueLine line, float lingerIterator)
         {
-            return confirmNextLine || (line.lingering>=0 & lingerIterator >= line.lingering);
+            return confirmNextLine || (line.lingering >= 0 && lingerIterator >= line.lingering);
         }
+
         bool canSkipNow(float timeLineIterator, float tillWhat)
         {
-            return SKIP & timeLineIterator > tillWhat;
+            return SKIP && timeLineIterator > tillWhat;
         }
+
         void updatePlotCheckpoints()
         {
             foreach (PlotCheckpoint check in DOD.updatedCheckpointValues)
             {
-                int indexOfMatchedCheckpointFromControl = data.listPlotCheckpoints.BinarySearch(check);
+                int indexOfMatchedCheckpointFromControl = data.listPlotCheckpoints.FindIndex(x => x.id == check.id);
+
                 if (indexOfMatchedCheckpointFromControl < 0)
-                    continue;
-                if(check.isAdditive)
                 {
-                    PlotCheckpoint tempDOD = new PlotCheckpoint(data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].checkpointField+1,check.id, data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].isAdditive);
+                    data.listPlotCheckpoints.Add(check);
+                    data.listPlotCheckpoints.Sort();
+                    continue;
+                }
+
+                if (check.isAdditive)
+                {
+                    PlotCheckpoint tempDOD = new PlotCheckpoint(data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].checkpointField + 1, check.id, data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].isAdditive);
                     data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl] = tempDOD;
                 }
                 else
@@ -313,6 +276,7 @@ public class DataFlowController : MonoBehaviour
             }
         }
     }
+
     private void UpdateDialogueHistory(DialogueSequence dialSeq, DialogueLine dialLine)
     {
         if (!dialSeq.runnedAlready)
