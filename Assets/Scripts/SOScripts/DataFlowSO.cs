@@ -123,6 +123,7 @@ public class DataFlowSO : ScriptableObject
     }
     public bool PlotCheckpointCheckForChapterEnd()
     {
+        if (listPlotChekpointsEndChapter == null || listPlotChekpointsEndChapter.Count == 0) return false;
         bool ret = true;
         foreach (PlotCheckpoint check in listPlotChekpointsEndChapter)
         {

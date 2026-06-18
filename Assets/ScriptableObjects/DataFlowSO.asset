@@ -550,11 +550,12 @@ MonoBehaviour:
     dialogueSequenceIdentifiersList:
     - seq1
     - Intro
-    progressInLastRead: 744
+    - Chapter1_intro
+    progressInLastRead: 59
   listPlotCheckpoints:
   - id: Intro_finished
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
   listPlotChekpointsEndChapter: []
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
@@ -562,6 +563,93 @@ MonoBehaviour:
   defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection: 0
   backgroundImagePath: "FF_wej\u015Bcie"
   dialogueSequenceList:
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "20 czerwca o godzinie 1:32 w studio reality show \"Friendly Fire\"
+          jeden z uczestnik\xF3w, Oktawian \u0141askawca, zosta\u0142 zamordowany
+          przez uderzenie t\u0119pym przedmiotem z wyra\u017An\u0105 kraw\u0119dzi\u0105
+          w ty\u0142 g\u0142owy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 0
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Narz\u0119dzie zbrodni nie zosta\u0142o odnalezione."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Podejrzani s\u0105 wszyscy pozostali uczestnicy programu oraz organizatorzy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Studio zosta\u0142o zamkni\u0119te na czas \u015Bledztwa i nikt
+          nie mo\u017Ce go opu\u015Bci\u0107."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.1
+        subline: "Moim zadaniem jest rozwi\u0105zanie tej sprawy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pani Anna Nowak, dzie\u0144 dobry!"
+      - timeForSingleCharDisplay: 0
+        subline: "Policja uprzedzi\u0142a mnie, \u017Ce pani przyjdzie."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 1
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry. Pan Mizeria, mam racj\u0119?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Owszem.
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: " Zajmuj\u0119 si\u0119 przes\u0142uchiwaniem pracownik\xF3w, wi\u0119c
+          mo\u017Ce pani przej\u015B\u0107 si\u0119 po studio."
+      - timeForSingleCharDisplay: 0
+        subline: " Kiedy ju\u017C to pani zrobi, mo\u017Ce pani przepyta\u0107 uczestnik\xF3w."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Dobrze.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ad
+      speakerMod: Exit
+      changeLocationId: 
+    identifier: Chapter1_intro
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0.05
@@ -1024,7 +1112,7 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 0
     identifier: Intro
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1067,19 +1155,104 @@ MonoBehaviour:
     identifier: seq3
     runnedAlready: 0
   serializedAnalisedSequence:
-    lines: []
-    identifier: 
-    runnedAlready: 0
+    lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "20 czerwca o godzinie 1:32 w studio reality show \"Friendly Fire\"
+          jeden z uczestnik\xF3w, Oktawian \u0141askawca, zosta\u0142 zamordowany
+          przez uderzenie t\u0119pym przedmiotem z wyra\u017An\u0105 kraw\u0119dzi\u0105
+          w ty\u0142 g\u0142owy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 0
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Narz\u0119dzie zbrodni nie zosta\u0142o odnalezione."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Podejrzani s\u0105 wszyscy pozostali uczestnicy programu oraz organizatorzy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Studio zosta\u0142o zamkni\u0119te na czas \u015Bledztwa i nikt
+          nie mo\u017Ce go opu\u015Bci\u0107."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.1
+        subline: "Moim zadaniem jest rozwi\u0105zanie tej sprawy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pani Anna Nowak, dzie\u0144 dobry!"
+      - timeForSingleCharDisplay: 0
+        subline: "Policja uprzedzi\u0142a mnie, \u017Ce pani przyjdzie."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 1
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry. Pan Mizeria, mam racj\u0119?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Owszem.
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: " Zajmuj\u0119 si\u0119 przes\u0142uchiwaniem pracownik\xF3w, wi\u0119c
+          mo\u017Ce pani przej\u015B\u0107 si\u0119 po studio."
+      - timeForSingleCharDisplay: 0
+        subline: " Kiedy ju\u017C to pani zrobi, mo\u017Ce pani przepyta\u0107 uczestnik\xF3w."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Dobrze.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ad
+      speakerMod: Exit
+      changeLocationId: 
+    identifier: Chapter1_intro
+    runnedAlready: 1
   serializedPlaceholderSequence:
     lines: []
     identifier: 
     runnedAlready: 0
   seqIdTab:
+  - Chapter1_intro
   - Intro
   - seq1
   - seq2
   - seq3
-  analisedIdentifier: 
-  analisedIndex: -1
+  analisedIdentifier: Chapter1_intro
+  analisedIndex: 0
   placeholdIdentifier: 
   chapter: 0

@@ -13,6 +13,8 @@ public class LocationManager : MonoBehaviour
     [Header("UI Powrotu")]
     public GameObject backButtonObject; // Przeci¹gniesz tu przycisk z Canvasa
 
+    private bool isDialogueActive = false;
+
     // Stos pamiêtaj¹cy ID poprzednich pokoi
     private Stack<string> locationHistory = new Stack<string>();
 
@@ -27,6 +29,12 @@ public class LocationManager : MonoBehaviour
         {
             ChangeLocation(currentLocation.locationId, false, true); // true = start gry
         }
+    }
+
+    public void SetDialogueState(bool isActive)
+    {
+        isDialogueActive = isActive;
+        UpdateBackButtonVisibility(); // Odœwie¿amy widocznoœæ przycisku po zmianie stanu
     }
 
     // Zmieniona funkcja, która teraz wie, czy idziemy do przodu, czy wracamy
@@ -71,7 +79,7 @@ public class LocationManager : MonoBehaviour
     {
         if (backButtonObject != null)
         {
-            backButtonObject.SetActive(locationHistory.Count > 0);
+            backButtonObject.SetActive(locationHistory.Count > 0 && !isDialogueActive);
         }
     }
 }

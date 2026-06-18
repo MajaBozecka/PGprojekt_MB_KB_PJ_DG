@@ -188,7 +188,9 @@ public class DataFlowController : MonoBehaviour
 
     public void StartDialogueSequence(DialogueOptionData DOD)
     {
+        if (locationManager != null) locationManager.SetDialogueState(true);
         StopAllCoroutines();
+        if (dialogueCanvas != null) dialogueCanvas.SetActive(true);
         canvasCtrl.UIMode = EUIMode.DIALOGUE;
         canvasCtrl.SetDialogueOptionRead(DOD);
         StartCoroutine(DialogueFlow(DOD));
@@ -258,7 +260,22 @@ public class DataFlowController : MonoBehaviour
             }
             else
             {
-                canvasCtrl.UIMode = EUIMode.BUTTONS;
+                if (locationManager != null) locationManager.SetDialogueState(false);
+
+
+                if (testedObjectWithDialogueInteraction != null &&
+                    testedObjectWithDialogueInteraction.listOfDialogueOptions != null &&
+                    testedObjectWithDialogueInteraction.listOfDialogueOptions.Count > 0)
+                {
+                    canvasCtrl.UIMode = EUIMode.BUTTONS;
+                }
+                else
+                {
+
+                    if (dialogueCanvas != null) dialogueCanvas.SetActive(false);
+                    canvasCtrl.UIMode = EUIMode.NOTHING;
+
+                }
             }
             SKIP = false;
         }
