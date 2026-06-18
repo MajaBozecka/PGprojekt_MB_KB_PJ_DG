@@ -570,6 +570,16 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
+        subline: "Na pod\u0142odze nadal jest krew."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Blood_Floor
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
         subline: "20 czerwca o godzinie 1:32 w studio reality show \"Friendly Fire\"
           jeden z uczestnik\xF3w, Oktawian \u0141askawca, zosta\u0142 zamordowany
           przez uderzenie t\u0119pym przedmiotem z wyra\u017An\u0105 kraw\u0119dzi\u0105
@@ -1120,6 +1130,26 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
+        subline: "Nie b\u0119d\u0119 grzeba\u0142a w \u015Bmieciach."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Bin
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Kto\u015B postara\u0142 si\u0119 przestawi\u0107 kalendarz."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Calendar
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
         subline: "Ledwo si\u0119 trzyma..."
       lingering: -1
       speakerID: Gracz
@@ -1140,6 +1170,48 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
+        subline: "Wygl\u0105dam dobrze. "
+      - timeForSingleCharDisplay: 0
+        subline: Uwierz mi.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Mirror
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Niesamowite... jest papier!
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_PaperTowel
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Jaka ona pi\u0119kna. I ci\u0119\u017Cka..."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Sculpture
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Mmm... myd\u0142o pachnie bananami."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Sink
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
         subline: "Kto\u015B zostawi\u0142 kapcie. Tylko kto?"
       lingering: -1
       speakerID: Gracz
@@ -1150,62 +1222,54 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: ytdyt
-      - timeForSingleCharDisplay: 0.5
-        subline: e6rht7
-      - timeForSingleCharDisplay: 0
-        subline: Test1.
+        subline: "Wygl\u0105daj\u0105 na czyste."
       lingering: -1
-      speakerID: A
+      speakerID: Gracz
       speakerMod: 
       changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Test1.
-      lingering: 0
-      speakerID: A
-      speakerMod: 
-      changeLocationId: 
-    identifier: seq1
+    identifier: Item_Stall
     runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: Test2.4
-      lingering: 1
-      speakerID: Speaker2
-      speakerMod: 
-      changeLocationId: 
-    identifier: seq2
-    runnedAlready: 0
-  - lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Test3
+        subline: "Nie wchodz\u0119 tam. Niech Adam to zbada."
       lingering: -1
-      speakerID: Speaker1
+      speakerID: Gracz
       speakerMod: 
       changeLocationId: 
-    identifier: seq3
+    identifier: LockedBathroom
     runnedAlready: 0
   serializedAnalisedSequence:
-    lines: []
-    identifier: 
+    lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Jaka ona pi\u0119kna. I ci\u0119\u017Cka..."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Sculpture
     runnedAlready: 0
   serializedPlaceholderSequence:
     lines: []
     identifier: 
     runnedAlready: 0
   seqIdTab:
+  - Blood_Floor
   - Chapter1_intro
   - Intro
+  - Item_Bin
+  - Item_Calendar
   - Item_Hanger
   - Item_Lockers
+  - Item_Mirror
+  - Item_PaperTowel
+  - Item_Sculpture
+  - Item_Sink
   - Item_Slippers
-  - seq1
-  - seq2
-  - seq3
-  analisedIdentifier: 
-  analisedIndex: -1
+  - Item_Stall
+  - LockedBathroom
+  analisedIdentifier: Item_Sculpture
+  analisedIndex: 9
   placeholdIdentifier: 
   chapter: 0
