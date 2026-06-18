@@ -123,6 +123,7 @@ public class DataFlowSO : ScriptableObject
     }
     public bool PlotCheckpointCheckForChapterEnd()
     {
+        if (listPlotChekpointsEndChapter == null || listPlotChekpointsEndChapter.Count == 0) return false;
         bool ret = true;
         foreach (PlotCheckpoint check in listPlotChekpointsEndChapter)
         {
@@ -230,8 +231,12 @@ public class DataFlowSO : ScriptableObject
         placeholdIdentifier = "";
     }
     public void pushAnalisedToPlaceholder()
-    {
-        serializedAnalisedSequence.CopyTo(serializedPlaceholderSequence);
+    { 
+        if (serializedAnalisedSequence != null && serializedPlaceholderSequence != null)
+        {
+            serializedAnalisedSequence.CopyTo(serializedPlaceholderSequence);
+        }
+
         placeholdIdentifier = analisedIdentifier;
         serializedAnalisedSequence = null;
         analisedIdentifier = "";
@@ -284,94 +289,27 @@ public class DataFlowSO : ScriptableObject
     #region JSONSAVING&LOADING
     [Header("Saving/Loading with JSON")]
     public string chapter;
-    private string pathToSerializedDefaultValues { get { return Application.persistentDataPath + "/" + "DefaultValues" + ".json"; } }
-    private string pathToSerializedSpeakers { get { return Application.persistentDataPath + "/Chapter"+ chapter + "/Speakers.json"; } }
-    private string pathToSerializedDialogueSequence { get { return Application.persistentDataPath + "/Chapter"+ chapter + "/Sequences.json"; } }
-    private string pathToSerializedPlotCheckChapter { get { return Application.persistentDataPath + "/Chapter" + chapter + "/PlotCheck.json"; } }
     private string pathToSerializedSaveData { get { return Application.persistentDataPath + "/" + "SaveData" + ".json"; } }
+
     public void SaveToJSON()
     {
-        if(Application.isEditor)
-        {
-            if(Application.isPlaying)
-            {
-                string json;
-                //SaveData
-                Debug.Log(pathToSerializedSaveData);
-                json = JsonUtility.ToJson(new SerializatorSaveData(this));
-                File.WriteAllText(pathToSerializedSaveData, json);
-                Debug.Log("Cannot make manual save while application is running. Serialized List is empty.");
-            }
-            else
-            {
-                string json;
-                //defaults
-                Debug.Log(pathToSerializedDefaultValues);
-                json = JsonUtility.ToJson(new SerializatorDefaultValues(this));
-                File.WriteAllText(pathToSerializedDefaultValues, json);
-                //Speaker
-                Debug.Log(pathToSerializedSpeakers);
-                json = JsonUtility.ToJson(new SerializatorSpeaker(this));
-                File.WriteAllText(pathToSerializedSpeakers, json);
-                //Dialogues
-                Debug.Log(pathToSerializedDialogueSequence);
-                json = JsonUtility.ToJson(new SerializatorDialogueSequenceCollection(this));
-                File.WriteAllText(pathToSerializedDialogueSequence, json);
-                //PlotCheck
-                Debug.Log(pathToSerializedPlotCheckChapter);
-                json = JsonUtility.ToJson(new SerializatorPlotCheckpoint(this));
-                File.WriteAllText(pathToSerializedPlotCheckChapter, json);
-            }
-        }
+        string json = JsonUtility.ToJson(new SerializatorSaveData(this));
+        File.WriteAllText(pathToSerializedSaveData, json);
+        Debug.Log("Zapisano stan gry do: " + pathToSerializedSaveData);
     }
     public void LoadFromJSON()
     {
-        //C:/Users/User/AppData/LocalLow/DefaultCompany/../savefile.json
-        if (File.Exists(pathToSerializedDefaultValues))
-        {
-            string json = File.ReadAllText(pathToSerializedDefaultValues);
-            JsonUtility.FromJsonOverwrite(json, this);
-        }
-        else
-        {
-            Debug.Log($"File: '{pathToSerializedDefaultValues}' missing.");
-        }
-        if (File.Exists(pathToSerializedSpeakers))
-        {
-            string json = File.ReadAllText(pathToSerializedSpeakers);
-            JsonUtility.FromJsonOverwrite(json, this);
-        }
-        else
-        {
-            Debug.Log($"File: '{pathToSerializedSpeakers}' missing.");
-        }
-        if (File.Exists(pathToSerializedDialogueSequence))
-        {
-            string json = File.ReadAllText(pathToSerializedDialogueSequence);
-            JsonUtility.FromJsonOverwrite(json, this);
-        }
-        else
-        {
-            Debug.Log($"File: '{pathToSerializedDialogueSequence}' missing.");
-        }
         updateDialogueSequenceCollections();
         pushAnalisedToPlaceholder();
-        if (File.Exists(pathToSerializedPlotCheckChapter))
-        {
-            string json = File.ReadAllText(pathToSerializedPlotCheckChapter);
-            JsonUtility.FromJsonOverwrite(json, this);
-            this.listPlotCheckpoints.Sort();
-            this.listPlotChekpointsEndChapter.Sort();
-        }
-        else
-        {
-            Debug.Log($"File: '{pathToSerializedPlotCheckChapter}' missing.");
-        }
+        //C:/Users/User/AppData/LocalLow/DefaultCompany/../savefile.json
         if (File.Exists(pathToSerializedSaveData))
         {
             string json = File.ReadAllText(pathToSerializedSaveData);
             SerializatorSaveData sr = new SerializatorSaveData();
             JsonUtility.FromJsonOverwrite(json, sr);
+
+            this.history = sr.history;
+
             foreach (PlotCheckpoint item in sr.listPlotCheckpoints)
             {
                 int i = this.listPlotCheckpoints.BinarySearch(item);
@@ -385,11 +323,11 @@ public class DataFlowSO : ScriptableObject
                     this.listPlotCheckpoints.Sort();
                 }
             }
-
+            Debug.Log("Wczytano stan gry.");
         }
         else
         {
-            Debug.Log($"File: '{pathToSerializedSaveData}' missing.");
+            Debug.Log("Brak pliku zapisu, rozpoczynanie czystej gry.");
         }
     }
     #endregion

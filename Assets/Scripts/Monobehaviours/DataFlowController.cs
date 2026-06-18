@@ -2,17 +2,68 @@ using NUnit.Framework.Internal;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class DataFlowController : MonoBehaviour
 {
     public DataFlowSO data;
     public CanvasController canvasCtrl;
+    public LocationManager locationManager;
     [SerializeField] SpriteRenderer background;
     public ObjectWithDialogueInteraction testedObjectWithDialogueInteraction;
     [SerializeField]
     private bool pause=false;
     private bool historyLook=false;
     private bool confirmNextLine;
+
+    [Header("Zakoñczenie Sekwencji")]
+    public SpriteRenderer endingSpriteRenderer;
+    public GameObject dialogueCanvas;
+
+    public float waitBeforeImage = 3f;
+    public float fadeDuration = 1.5f;
+    public float waitBeforeScene = 2f;
+    public string nextSceneName = "Chapter1";
+
+    public void FinishDialogueAndTransition()
+    {
+        StartCoroutine(TransitionToNewSceneRoutine());
+    }
+
+    private IEnumerator TransitionToNewSceneRoutine()
+    {
+        
+        if (dialogueCanvas != null)
+        {
+            dialogueCanvas.SetActive(false);
+        }
+
+        yield return new WaitForSeconds(waitBeforeImage);
+
+        if (endingSpriteRenderer != null)
+        {
+            Color spriteColor = endingSpriteRenderer.color;
+            spriteColor.a = 0f;
+            endingSpriteRenderer.color = spriteColor;
+            endingSpriteRenderer.gameObject.SetActive(true);
+
+            float elapsedTime = 0f;
+            while (elapsedTime < fadeDuration)
+            {
+                elapsedTime += Time.deltaTime;
+
+                spriteColor.a = Mathf.Clamp01(elapsedTime / fadeDuration);
+                endingSpriteRenderer.color = spriteColor;
+
+                yield return null;
+            }
+        }
+
+        yield return new WaitForSeconds(waitBeforeScene);
+
+        SceneManager.LoadScene(nextSceneName);
+    }
+
     private bool SKIP
     {
         get
@@ -43,9 +94,9 @@ public class DataFlowController : MonoBehaviour
         InputAction history = InputSystem.actions.FindAction("History");
         history.started += OnHistoryLookUp;
         data.LoadFromJSON();
-        data.easeUpMemoryByFreeingListCollection();
-        populateCanvasWithButtons();
-        setBackgroundImage();
+        //data.easeUpMemoryByFreeingListCollection();
+        //populateCanvasWithButtons();
+        //setBackgroundImage();
         canvasCtrl.dialogueHistoryRewrite();
         ////////////////////////////////////////////////////////
         ///This one to make sure for testing those were not yet read. In the future we need to think how to register on savefile which were and which were not read
@@ -137,7 +188,9 @@ public class DataFlowController : MonoBehaviour
 
     public void StartDialogueSequence(DialogueOptionData DOD)
     {
+        if (locationManager != null) locationManager.SetDialogueState(true);
         StopAllCoroutines();
+        if (dialogueCanvas != null) dialogueCanvas.SetActive(true);
         canvasCtrl.UIMode = EUIMode.DIALOGUE;
         canvasCtrl.SetDialogueOptionRead(DOD);
         StartCoroutine(DialogueFlow(DOD));
@@ -150,9 +203,13 @@ public class DataFlowController : MonoBehaviour
         {
             foreach (DialogueLine fullDialogueLine in TestedDialogueSequence.lines)
             {
+                if (locationManager != null && !string.IsNullOrEmpty(fullDialogueLine.changeLocationId))
+                {
+                    locationManager.ChangeLocation(fullDialogueLine.changeLocationId, false, false);
+                }
                 float timeLineIterator = 0;
                 int compoundLength = 0;
-                canvasCtrl.setDialogueSequence(fullDialogueLine.dumpWholeLine(),data.getSpeaker(fullDialogueLine.speakerID));
+                canvasCtrl.setDialogueSequence(fullDialogueLine.dumpWholeLine(), data.getSpeaker(fullDialogueLine.speakerID), fullDialogueLine.speakerMod);
                 canvasCtrl.showDialogueText(0);
                 canvasCtrl.setProceedIconVisibility(false);
                 foreach (SubDialogueLine partLine in fullDialogueLine.subLines)
@@ -197,9 +254,29 @@ public class DataFlowController : MonoBehaviour
                 TestedDialogueSequence.runnedAlready = true;
                 finishDetected=data.PlotCheckpointCheckForChapterEnd();
             }
-            if(finishDetected)
-                Debug.Log("We should trigger chapter swap...somehow");
-            canvasCtrl.UIMode = EUIMode.BUTTONS;
+            if (finishDetected)
+            {
+                StartCoroutine(TransitionToNewSceneRoutine());
+            }
+            else
+            {
+                if (locationManager != null) locationManager.SetDialogueState(false);
+
+
+                if (testedObjectWithDialogueInteraction != null &&
+                    testedObjectWithDialogueInteraction.listOfDialogueOptions != null &&
+                    testedObjectWithDialogueInteraction.listOfDialogueOptions.Count > 0)
+                {
+                    canvasCtrl.UIMode = EUIMode.BUTTONS;
+                }
+                else
+                {
+
+                    if (dialogueCanvas != null) dialogueCanvas.SetActive(false);
+                    canvasCtrl.UIMode = EUIMode.NOTHING;
+
+                }
+            }
             SKIP = false;
         }
         bool isItTimeForNextSubLine(SubDialogueLine partLine, int partLineDisplayedLength)

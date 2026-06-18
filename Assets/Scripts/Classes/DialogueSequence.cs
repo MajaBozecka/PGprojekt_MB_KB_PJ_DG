@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// We store all dialogue lines in the sequence
@@ -67,6 +68,8 @@ public class DialogueLine
     public float lingering;
     public string speakerID;
     public string speakerMod;
+    [Tooltip("Wpisz ID pokoju (np. Void), aby zmieniæ t³o przy tej linijce. Zostaw puste, by t³o zosta³o stare.")]
+    public string changeLocationId;
     public string dumpWholeLine()
     {
         string ret = "";

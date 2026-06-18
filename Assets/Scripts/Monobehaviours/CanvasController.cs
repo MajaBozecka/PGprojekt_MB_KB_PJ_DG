@@ -59,13 +59,16 @@ public class CanvasController : MonoBehaviour
     // Start is called once before the first execution of UpdateCkeckpointFields after the MonoBehaviour is created
     void Start()
     {
-        UIMode = EUIMode.BUTTONS;
+        dialogueOptionsPanel.gameObject.SetActive(false);
+        dialogueSequencePanel.gameObject.SetActive(false);
+        historyPanel.gameObject.SetActive(false);
+        UIMode = EUIMode.NOTHING;
     }
 
-    public void setDialogueSequence(string st, Speaker sp)
+    public void setDialogueSequence(string st, Speaker sp, string speakerMod)
     {
         dialogueSequencePanel.textToShowInDialogueField = st;
-        dialogueSequencePanel.SpeakerCustomization(sp);
+        dialogueSequencePanel.SpeakerCustomization(sp, speakerMod);
     }
     public void showDialogueText(int n)
     {

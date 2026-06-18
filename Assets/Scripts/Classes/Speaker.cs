@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Identifiers;
+
+[System.Serializable]
+public struct SpeakerSprite
+{
+    public string modName;
+    public Sprite portrait;
+}
 [System.Serializable]
 public class Speaker : IComparable<string>, IComparer<Speaker>
 {
@@ -12,6 +19,7 @@ public class Speaker : IComparable<string>, IComparer<Speaker>
     public FontStyles styles;
     public Color color;
     public float timePerCharacterTalking;
+    public List<SpeakerSprite> sprites = new List<SpeakerSprite>();
     public int CompareTo(string other)
     {
         if (other == null)
@@ -22,6 +30,17 @@ public class Speaker : IComparable<string>, IComparer<Speaker>
     public int Compare(Speaker x, Speaker y)
     {
         return x.CompareTo(y.speakerId);
+    }
+
+    public Sprite GetSpriteByMod(string mod)
+    {
+        if (string.IsNullOrEmpty(mod)) mod = "Neutral"; // Domyœlna emocja
+
+        foreach (var sprite in sprites)
+        {
+            if (sprite.modName == mod) return sprite.portrait;
+        }
+        return null;
     }
 
 }

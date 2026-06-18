@@ -13,25 +13,547 @@ MonoBehaviour:
   m_Name: DataFlowSO
   m_EditorClassIdentifier: Assembly-CSharp::DataFlowSO
   speakerList:
-  - speakerId: Speaker1
+  - speakerId: O
+    speakerName: Oktawian
+    fontSize: 16
+    styles: 0
+    color: {r: 0.57169807, g: 0.5880228, b: 1, a: 1}
+    timePerCharacterTalking: 0.05
+    sprites:
+    - modName: A1
+      portrait: {fileID: 21300000, guid: 23bff945362054548b1ec2cbef31aa1b, type: 3}
+  - speakerId: A
+    speakerName: Antonina
+    fontSize: 16
+    styles: 0
+    color: {r: 1, g: 0.54905653, b: 0.87783605, a: 1}
+    timePerCharacterTalking: 0.03
+    sprites:
+    - modName: K1
+      portrait: {fileID: 21300000, guid: 5cf8c4dbc7981094dbf1300f75887176, type: 3}
+    - modName: C2
+      portrait: {fileID: 21300000, guid: a88144f4af6073046a555a2b7b74937e, type: 3}
+    - modName: C1
+      portrait: {fileID: 21300000, guid: 5660940f2b4de7241b19a6e0ce74e0db, type: 3}
+    - modName: A6
+      portrait: {fileID: 21300000, guid: 288d6f405dd964547b3f21187623cfa2, type: 3}
+    - modName: B6
+      portrait: {fileID: 21300000, guid: 5d138f870b2154f4ea481a5c5e5b5031, type: 3}
+    - modName: G4
+      portrait: {fileID: 21300000, guid: 4cbb27a0e3e617141862fcd2e764dbb0, type: 3}
+    - modName: G3
+      portrait: {fileID: 21300000, guid: 51c6ebefad444134fa3dc3da611ea318, type: 3}
+    - modName: G2
+      portrait: {fileID: 21300000, guid: f19cf779ae9d7804f9ee8ed53cded9e9, type: 3}
+    - modName: H5
+      portrait: {fileID: 21300000, guid: fb958ed0cb5f21d4383d662166c766e5, type: 3}
+    - modName: H4
+      portrait: {fileID: 21300000, guid: 1f82c15df7e847345bb879c361d5c250, type: 3}
+    - modName: E2
+      portrait: {fileID: 21300000, guid: 38d414ced1f079146b4fdc55336a666c, type: 3}
+    - modName: L2
+      portrait: {fileID: 21300000, guid: 490eca680b7e3f54a8478e63c6c74f97, type: 3}
+    - modName: L1
+      portrait: {fileID: 21300000, guid: 73415c03419dcee43b9bf2689d6f019a, type: 3}
+    - modName: D1
+      portrait: {fileID: 21300000, guid: 972cbb8af9e30e7479dd540d8d82d5ae, type: 3}
+    - modName: B9
+      portrait: {fileID: 21300000, guid: b4fd14b7bfc16ff48850964f387e9ff4, type: 3}
+    - modName: I3
+      portrait: {fileID: 21300000, guid: 1a04d33f5bbe13f4d948164770d8137f, type: 3}
+    - modName: I2
+      portrait: {fileID: 21300000, guid: d7cd8b35a6862044b8ee74f90c15f071, type: 3}
+    - modName: I1
+      portrait: {fileID: 21300000, guid: 82d3726cef0a9d74689f2b68d7620a5f, type: 3}
+    - modName: E6
+      portrait: {fileID: 21300000, guid: 98b98e6ab5e191c43be821e1e1b58eea, type: 3}
+    - modName: A15
+      portrait: {fileID: 21300000, guid: d3964e567ef326b4d8e53004fa7cba06, type: 3}
+    - modName: A10
+      portrait: {fileID: 21300000, guid: af7f2e611d680184f9683315bf7659fc, type: 3}
+    - modName: A8
+      portrait: {fileID: 21300000, guid: 66cc4c851b2221c40bb27ec7d256fdbe, type: 3}
+    - modName: B7
+      portrait: {fileID: 21300000, guid: dea8d5ea8ca396b4e85fecc5d233010a, type: 3}
+    - modName: B8
+      portrait: {fileID: 21300000, guid: 6b9e330e78e67d3458d6e48025d306de, type: 3}
+    - modName: A14
+      portrait: {fileID: 21300000, guid: 761429ead6640a342a1b6e2b1ecef4bd, type: 3}
+    - modName: A11
+      portrait: {fileID: 21300000, guid: f146bd488b4c8f842aec57d81576ece6, type: 3}
+    - modName: B11
+      portrait: {fileID: 21300000, guid: 0c603b878a4fd9543bf924918ba7e368, type: 3}
+    - modName: A1
+      portrait: {fileID: 21300000, guid: 0b94ce33ac2379a4ebec5fa0932b504c, type: 3}
+    - modName: B2
+      portrait: {fileID: 21300000, guid: b0b6a176fc3610b4c9c20326a893dffa, type: 3}
+    - modName: M4
+      portrait: {fileID: 21300000, guid: fb6d89860d09f03428430b9046818fe4, type: 3}
+    - modName: M3
+      portrait: {fileID: 21300000, guid: a2905c4543a7b0a4986a5df4ceb32620, type: 3}
+    - modName: M2
+      portrait: {fileID: 21300000, guid: 126781c513460434b818b329235861cb, type: 3}
+    - modName: M1
+      portrait: {fileID: 21300000, guid: 37202e91b7c5b054ba6966c088aeeb9d, type: 3}
+    - modName: A13
+      portrait: {fileID: 21300000, guid: ae36a24cadca66d4cb8b1f6343dae7e9, type: 3}
+    - modName: A12
+      portrait: {fileID: 21300000, guid: a17c1eb73d9958845af2135232960813, type: 3}
+    - modName: B10
+      portrait: {fileID: 21300000, guid: 909f720fd7735144ba826a7d353eb8cb, type: 3}
+    - modName: G1
+      portrait: {fileID: 21300000, guid: a124ee931e0bb0d4a85018d1b5c8e9d6, type: 3}
+    - modName: H1
+      portrait: {fileID: 21300000, guid: e9a96505abf232346a4e4f603429ed19, type: 3}
+    - modName: E8
+      portrait: {fileID: 21300000, guid: 4ac87537f298a734a9064ed1936b8908, type: 3}
+    - modName: E7
+      portrait: {fileID: 21300000, guid: ccd7c767840a638438d34cee4477de99, type: 3}
+    - modName: E4
+      portrait: {fileID: 21300000, guid: e56e125b92073334bb1870a7ef1661c1, type: 3}
+    - modName: E3
+      portrait: {fileID: 21300000, guid: 66f1255fecd195e428abd0cc734870be, type: 3}
+    - modName: A7
+      portrait: {fileID: 21300000, guid: b9026d2d56e45614c82b62237739e178, type: 3}
+    - modName: B4
+      portrait: {fileID: 21300000, guid: 25949995349c49a4ca9c0fc77fca9f98, type: 3}
+    - modName: F2
+      portrait: {fileID: 21300000, guid: 62a13c40e605e6e4199f7e8c02ceaa13, type: 3}
+    - modName: F1
+      portrait: {fileID: 21300000, guid: 158757ac6f8778d40a7d5e5498797ae9, type: 3}
+    - modName: H3
+      portrait: {fileID: 21300000, guid: 03a062c6a1c43004497ad15025b1fd2c, type: 3}
+    - modName: A4
+      portrait: {fileID: 21300000, guid: 6f4e17f868584e2429673a3b276b0e0f, type: 3}
+    - modName: A9
+      portrait: {fileID: 21300000, guid: f4785448cc01683439953fe63600d76d, type: 3}
+    - modName: A4
+      portrait: {fileID: 21300000, guid: aae341e4f97750242b724c700f977923, type: 3}
+    - modName: B1
+      portrait: {fileID: 21300000, guid: 060724cc36e18354d8a81a1713a19152, type: 3}
+    - modName: J3
+      portrait: {fileID: 21300000, guid: 2972a87a069390e47b8d0583cf0ae098, type: 3}
+    - modName: J2
+      portrait: {fileID: 21300000, guid: 2a1ed564aa7b7dd439c9f60a3e07f3e8, type: 3}
+    - modName: J1
+      portrait: {fileID: 21300000, guid: 44b3f605e8b330c4ea9401b39beb3b5d, type: 3}
+    - modName: E5
+      portrait: {fileID: 21300000, guid: fb3eb4ce88e4c3546b40c1efa7714eb6, type: 3}
+    - modName: E1
+      portrait: {fileID: 21300000, guid: ccd1ec73f5be91e45a0062ff54b271aa, type: 3}
+    - modName: H2
+      portrait: {fileID: 21300000, guid: 57aa3c7f5a89a134f84c3577275e14ec, type: 3}
+    - modName: I4
+      portrait: {fileID: 21300000, guid: dcb8ba32c4a624940a94919ec2e9f158, type: 3}
+    - modName: A5
+      portrait: {fileID: 21300000, guid: f251f46005be0e344b89408bd5955f2d, type: 3}
+    - modName: A3
+      portrait: {fileID: 21300000, guid: 94c41e3ba97a48f42a25e61762a2a2d2, type: 3}
+    - modName: A2
+      portrait: {fileID: 21300000, guid: c38343d02f9abb54295c1cbb52a141e3, type: 3}
+    - modName: B5
+      portrait: {fileID: 21300000, guid: 901317ab6f5ec634495f432e409fe029, type: 3}
+    - modName: B3
+      portrait: {fileID: 21300000, guid: 09934c232f36ee04489499842a7e61fc, type: 3}
+  - speakerId: Mz
+    speakerName: Mateusz
+    fontSize: 16
+    styles: 0
+    color: {r: 1, g: 0.29399306, b: 0.26981127, a: 1}
+    timePerCharacterTalking: 0.05
+    sprites:
+    - modName: F4
+      portrait: {fileID: 21300000, guid: fdc59a76570e82a4585dc0da8ddb8029, type: 3}
+    - modName: D2
+      portrait: {fileID: 21300000, guid: b1dec6e7a2c703c49bb198d26561d323, type: 3}
+    - modName: C4
+      portrait: {fileID: 21300000, guid: 2c475da9d315b404b972b9a5c895e56e, type: 3}
+    - modName: A5
+      portrait: {fileID: 21300000, guid: 1a3e23e62148f32478ffb2edac823c85, type: 3}
+    - modName: G3
+      portrait: {fileID: 21300000, guid: ccb95ca77e7c3254d85300f1489f81fc, type: 3}
+    - modName: B5
+      portrait: {fileID: 21300000, guid: 406fe934418e6024f8fe01299476fa5e, type: 3}
+    - modName: A3
+      portrait: {fileID: 21300000, guid: f42d256e8145e0b4d8d607c3414b19e7, type: 3}
+    - modName: F3
+      portrait: {fileID: 21300000, guid: c2e4a34cb0a69824281522e5390dc3c6, type: 3}
+    - modName: D3
+      portrait: {fileID: 21300000, guid: 34096dfca33a7264b8e3ac292bbb0a1e, type: 3}
+    - modName: B8
+      portrait: {fileID: 21300000, guid: 0a3ff585fe437e646b05eb5b763ee3fa, type: 3}
+    - modName: I2
+      portrait: {fileID: 21300000, guid: 508693c88b9b403459cc309e8536372f, type: 3}
+    - modName: I1
+      portrait: {fileID: 21300000, guid: 80b19ce723aa43c42abe9820e49bae73, type: 3}
+    - modName: F2
+      portrait: {fileID: 21300000, guid: 916348f3ca639124a960bfdf233314b8, type: 3}
+    - modName: C2
+      portrait: {fileID: 21300000, guid: b8df39ae331d9ad4a91ed42ad7172e7f, type: 3}
+    - modName: C1
+      portrait: {fileID: 21300000, guid: a748c6cb8d2aa214ba9ec16464a76b8d, type: 3}
+    - modName: A4
+      portrait: {fileID: 21300000, guid: 5d16b99f0a0d2f44487eab84f53c07a5, type: 3}
+    - modName: A2
+      portrait: {fileID: 21300000, guid: 13adf5485cb3e1b4787838465937bf45, type: 3}
+    - modName: B4
+      portrait: {fileID: 21300000, guid: a086ca6d14befb544ae370aa728b51aa, type: 3}
+    - modName: B13
+      portrait: {fileID: 21300000, guid: 39f19dc7a44cd994e96d4aa8e8d3ebea, type: 3}
+    - modName: B9
+      portrait: {fileID: 21300000, guid: 2a62fc21a931bc84892db4a5aab4e565, type: 3}
+    - modName: B10
+      portrait: {fileID: 21300000, guid: 16d816aea2c41624394e3c0bf8291a68, type: 3}
+    - modName: B11
+      portrait: {fileID: 21300000, guid: 565378e41c58f31498013ff329ed3ffe, type: 3}
+    - modName: C3
+      portrait: {fileID: 21300000, guid: 8c13c045855696a4883af638fd6ce4cc, type: 3}
+    - modName: B7
+      portrait: {fileID: 21300000, guid: 8775e853d01547f4dbc4c65357144bdb, type: 3}
+    - modName: B12
+      portrait: {fileID: 21300000, guid: 384e6a14bd97d514c8af1a4334fc92d6, type: 3}
+    - modName: E4
+      portrait: {fileID: 21300000, guid: dcccbadbdea7e544983827ffed580fba, type: 3}
+    - modName: E3
+      portrait: {fileID: 21300000, guid: 31e4a268513355245b2cea594293d756, type: 3}
+    - modName: E2
+      portrait: {fileID: 21300000, guid: f4814d59dc788e84e84c552dc692e59d, type: 3}
+    - modName: E1
+      portrait: {fileID: 21300000, guid: 0e18f2588ba3efb4080f5fc532d28e15, type: 3}
+    - modName: A1
+      portrait: {fileID: 21300000, guid: e43f3c0bd4b9e5c4082e7919f9670b8f, type: 3}
+    - modName: B1
+      portrait: {fileID: 21300000, guid: efd9f89ce2fd07e46b170d08ec38ba47, type: 3}
+    - modName: B3
+      portrait: {fileID: 21300000, guid: a4a713e3bbef7ef41bcc0fd2b3c0ce3a, type: 3}
+    - modName: H1
+      portrait: {fileID: 21300000, guid: 697ff97d14750f643828397243d50a27, type: 3}
+    - modName: G1
+      portrait: {fileID: 21300000, guid: b5b9a0fa08bfb6944bd20d763922a2ce, type: 3}
+    - modName: G2
+      portrait: {fileID: 21300000, guid: 7f3b09fc67fb1a84183bb2996361915f, type: 3}
+    - modName: F1
+      portrait: {fileID: 21300000, guid: 781e8df4cf1b92644bb3516f9e545095, type: 3}
+    - modName: B2
+      portrait: {fileID: 21300000, guid: 08e28822797cf044cb53d45ab8f984d1, type: 3}
+    - modName: D1
+      portrait: {fileID: 21300000, guid: 97d8257bf8c893c4aa4c42656753e56e, type: 3}
+    - modName: B6
+      portrait: {fileID: 21300000, guid: 695e7fc9135ef3f428fb37fb1b71378c, type: 3}
+  - speakerId: Ma
+    speakerName: Matylda
+    fontSize: 16
+    styles: 0
+    color: {r: 0.7050018, g: 0.17466003, b: 0.83396226, a: 1}
+    timePerCharacterTalking: 0.05
+    sprites:
+    - modName: E1
+      portrait: {fileID: 21300000, guid: d7c01d543dcf6c940b65364efaa57739, type: 3}
+    - modName: B2
+      portrait: {fileID: 21300000, guid: f19ba72e6fc0b254fb19a3dfda0708b5, type: 3}
+    - modName: B3
+      portrait: {fileID: 21300000, guid: 1d10bc2b2e3fc2e41ba8525245804235, type: 3}
+    - modName: F2
+      portrait: {fileID: 21300000, guid: d95f5fea74394ad4fa4b743924d0bb68, type: 3}
+    - modName: F1
+      portrait: {fileID: 21300000, guid: 45f6377d13472334690d1ba5b4709404, type: 3}
+    - modName: F10
+      portrait: {fileID: 21300000, guid: 05c0262dbad21b74eaf55f8d858158a8, type: 3}
+    - modName: F5
+      portrait: {fileID: 21300000, guid: 937cfa4787f3e4c4395581df21f0ec43, type: 3}
+    - modName: F4
+      portrait: {fileID: 21300000, guid: b66b4430b62145345a0f3b454fd88f3e, type: 3}
+    - modName: C4
+      portrait: {fileID: 21300000, guid: 4f6b89479f8128547b4171c700edae65, type: 3}
+    - modName: C3
+      portrait: {fileID: 21300000, guid: 9fcd110b1706eb145a1711beee7c62dd, type: 3}
+    - modName: A3
+      portrait: {fileID: 21300000, guid: 12cdfcdbc5682e04583c847b95aa1732, type: 3}
+    - modName: D4
+      portrait: {fileID: 21300000, guid: 676934254abc38d4689bb66987e6591f, type: 3}
+    - modName: F8
+      portrait: {fileID: 21300000, guid: e26b85e07b450604e823aed4c0573db6, type: 3}
+    - modName: A6
+      portrait: {fileID: 21300000, guid: 86b5e637eb24f984e9e7b2ffe8919691, type: 3}
+    - modName: F13
+      portrait: {fileID: 21300000, guid: 93809ac23aa1bc644b8feb5c119de917, type: 3}
+    - modName: A9
+      portrait: {fileID: 21300000, guid: ada90721c6633bf4691b09d29385a79c, type: 3}
+    - modName: C5
+      portrait: {fileID: 21300000, guid: fbae604ff735e0844ae83a2f21a2f0d6, type: 3}
+    - modName: A5
+      portrait: {fileID: 21300000, guid: 3700f7e65a73b4b43bb29e549aa58df8, type: 3}
+    - modName: F3
+      portrait: {fileID: 21300000, guid: d7298cd3c62791949b17e075151f34e4, type: 3}
+    - modName: C2
+      portrait: {fileID: 21300000, guid: f98902e4b0773e5499f287b52e7dd6e5, type: 3}
+    - modName: A2
+      portrait: {fileID: 21300000, guid: ba12e7b3093959a47956bf6948ba6baf, type: 3}
+    - modName: A1
+      portrait: {fileID: 21300000, guid: 94d8f1c4d0a0e894c95f03b1a80c502e, type: 3}
+    - modName: F9
+      portrait: {fileID: 21300000, guid: e64a55cfa25625245a0661f36a098552, type: 3}
+    - modName: A7
+      portrait: {fileID: 21300000, guid: 29f3c87b6d798564da58199f061c8a41, type: 3}
+    - modName: F12
+      portrait: {fileID: 21300000, guid: 9ce700412a166bf468deb07531cbaa6a, type: 3}
+    - modName: A8
+      portrait: {fileID: 21300000, guid: c714fd4b8b53e0b44a3c81b49a07b88b, type: 3}
+    - modName: F14
+      portrait: {fileID: 21300000, guid: f6d70c43fd297e443a247c90dbec8284, type: 3}
+    - modName: F11
+      portrait: {fileID: 21300000, guid: 4c55a2ba1db95fe44935699b2bd2c7d4, type: 3}
+    - modName: B4
+      portrait: {fileID: 21300000, guid: 3b5345fc34de9a54eb11d89007a11a65, type: 3}
+    - modName: F1
+      portrait: {fileID: 21300000, guid: 20af7e3f3e8843d4b9e07de9d1e5500a, type: 3}
+    - modName: A4
+      portrait: {fileID: 21300000, guid: f433005fb6c55aa438d3bf117d633e04, type: 3}
+    - modName: D3
+      portrait: {fileID: 21300000, guid: 48783c1380dab1e43836ee9a717bc53a, type: 3}
+    - modName: D2
+      portrait: {fileID: 21300000, guid: a36d130a1f89d814aa9c89c69c52a7f9, type: 3}
+    - modName: D1
+      portrait: {fileID: 21300000, guid: 274fb2ea14929dd47945129d89ad4639, type: 3}
+    - modName: B1
+      portrait: {fileID: 21300000, guid: 5e4c26221a26759409f7c5118e3eb7f0, type: 3}
+    - modName: F7
+      portrait: {fileID: 21300000, guid: fe75f10d532b66e4c8c3c2839f6b31a7, type: 3}
+    - modName: C6
+      portrait: {fileID: 21300000, guid: 443494b4b76efbf469b7db81a0fd53c5, type: 3}
+    - modName: B3
+      portrait: {fileID: 21300000, guid: d855a545967ad504a9f106261faacf37, type: 3}
+  - speakerId: I
+    speakerName: Krystian
+    fontSize: 16
+    styles: 0
+    color: {r: 1, g: 0.99378765, b: 0.6622641, a: 1}
+    timePerCharacterTalking: 0.05
+    sprites:
+    - modName: H20
+      portrait: {fileID: 21300000, guid: f6d9e7d9e9804e947a722fc25f8bb657, type: 3}
+    - modName: H19
+      portrait: {fileID: 21300000, guid: 146c67d36de50d142b8080e3514c09d1, type: 3}
+    - modName: H8
+      portrait: {fileID: 21300000, guid: 4e2be4de65ca6cc4eac850c8a0ab1289, type: 3}
+    - modName: A7
+      portrait: {fileID: 21300000, guid: 8e30dc153a8986642a580ba005379849, type: 3}
+    - modName: A6
+      portrait: {fileID: 21300000, guid: 2c7246fab2eca0541b3ba3ffca78b33e, type: 3}
+    - modName: A5
+      portrait: {fileID: 21300000, guid: bc4c31bbe9ba1314085b6ef7d85649e5, type: 3}
+    - modName: A1
+      portrait: {fileID: 21300000, guid: b988e635889ebb84691e09787ed56fe4, type: 3}
+    - modName: H12
+      portrait: {fileID: 21300000, guid: 2946a93442a14ed42a8a9b74c4b2c15c, type: 3}
+    - modName: A10
+      portrait: {fileID: 21300000, guid: ec73453f12ca57d4eb8fd71021946550, type: 3}
+    - modName: B5
+      portrait: {fileID: 21300000, guid: 790c53776eea5aa48a682534aeea97d3, type: 3}
+    - modName: B4
+      portrait: {fileID: 21300000, guid: 39b16b66cb98cd84ea0d49e25f669f11, type: 3}
+    - modName: H10
+      portrait: {fileID: 21300000, guid: 5ad74d8b5d759b8429bcee7e3f191396, type: 3}
+    - modName: H5
+      portrait: {fileID: 21300000, guid: 0742af407c56131448aaf74a4f409c3c, type: 3}
+    - modName: H4
+      portrait: {fileID: 21300000, guid: 50b0f43d25317444b9087414196e8c87, type: 3}
+    - modName: A4
+      portrait: {fileID: 21300000, guid: 61df49dde7e8cd34aaeb3f87e3393bcd, type: 3}
+    - modName: K2
+      portrait: {fileID: 21300000, guid: 2a2a231cf732f1b468ad59ac7fc6be51, type: 3}
+    - modName: K1
+      portrait: {fileID: 21300000, guid: eb16b9e2cc07ecb45a6253cca25fddd2, type: 3}
+    - modName: J1
+      portrait: {fileID: 21300000, guid: d0059b967559ad34d9cc065f982b4fd5, type: 3}
+    - modName: I1
+      portrait: {fileID: 21300000, guid: d847657e75bbcf74086fceb207f90333, type: 3}
+    - modName: F1
+      portrait: {fileID: 21300000, guid: 5d6e490bd59a8974aa2bdf31c88799fc, type: 3}
+    - modName: L1
+      portrait: {fileID: 21300000, guid: c785c3383810a2f43824ecb54c8175d1, type: 3}
+    - modName: H16
+      portrait: {fileID: 21300000, guid: 4ad759eb06e2bc3488015979009a301e, type: 3}
+    - modName: H15
+      portrait: {fileID: 21300000, guid: b1a66a5a07e83ae4d995bdf2aebb0007, type: 3}
+    - modName: H1
+      portrait: {fileID: 21300000, guid: 2cacea9973289f941b2ca515c7ca9630, type: 3}
+    - modName: A11
+      portrait: {fileID: 21300000, guid: ca3e76cb25969a340bdefc81745e85e5, type: 3}
+    - modName: B8
+      portrait: {fileID: 21300000, guid: be6c92c2b4468bf4f9878b55a4deeab2, type: 3}
+    - modName: B7
+      portrait: {fileID: 21300000, guid: e092024758f778b449788b474e723f56, type: 3}
+    - modName: B6
+      portrait: {fileID: 21300000, guid: 0c28790bc4344004cad1622bbd5ff641, type: 3}
+    - modName: D1
+      portrait: {fileID: 21300000, guid: b848e53c6c0809344acac2103851310a, type: 3}
+    - modName: H18
+      portrait: {fileID: 21300000, guid: 3371d8badbe7d764c9dfc1f87c5ab5dd, type: 3}
+    - modName: H17
+      portrait: {fileID: 21300000, guid: 8c74e8410c70460429502a214c6a9df0, type: 3}
+    - modName: H2
+      portrait: {fileID: 21300000, guid: 2dc27500dceabf6479171d930ee807db, type: 3}
+    - modName: E1
+      portrait: {fileID: 21300000, guid: 37cccbbcca0418947a25d59fe164433a, type: 3}
+    - modName: H9
+      portrait: {fileID: 21300000, guid: aa859f7da9fb78b45bb62c708fe1cc30, type: 3}
+    - modName: A2
+      portrait: {fileID: 21300000, guid: 235a86bdd4905c448bfcfc0e69a1a042, type: 3}
+    - modName: N2
+      portrait: {fileID: 21300000, guid: 98af52f13eee63347abc26f9e1c0c528, type: 3}
+    - modName: F4
+      portrait: {fileID: 21300000, guid: c24887388592eb940a44601548de5267, type: 3}
+    - modName: C2
+      portrait: {fileID: 21300000, guid: 01ecbd922ba4cde42b9c7b05a54038c0, type: 3}
+    - modName: C1
+      portrait: {fileID: 21300000, guid: 8984f8bb4d4dc02449882b4926586532, type: 3}
+    - modName: H14
+      portrait: {fileID: 21300000, guid: 2ad76d749041ac84199fe7079e5d6d95, type: 3}
+    - modName: H13
+      portrait: {fileID: 21300000, guid: 31fe71a184530d0459bda1cf9bf98440, type: 3}
+    - modName: H11
+      portrait: {fileID: 21300000, guid: 5af938d594139ed49a33e61b68f5217d, type: 3}
+    - modName: H6
+      portrait: {fileID: 21300000, guid: 485b0c9bac64c19428a399f812453d78, type: 3}
+    - modName: A9
+      portrait: {fileID: 21300000, guid: a5eeca67c915aef4f890a8df3600c2e3, type: 3}
+    - modName: A8
+      portrait: {fileID: 21300000, guid: 3d7318247c2ac8640ab3c7a69fa4456d, type: 3}
+    - modName: A3
+      portrait: {fileID: 21300000, guid: df5f0c7e052dfc94193f933638748477, type: 3}
+    - modName: B10
+      portrait: {fileID: 21300000, guid: 91a8299a18453a24ea9465c58d279fb7, type: 3}
+    - modName: B9
+      portrait: {fileID: 21300000, guid: 2ebb7e7d643a897459978b720d1854ce, type: 3}
+    - modName: B2
+      portrait: {fileID: 21300000, guid: cf39336e3a7d8784fbbaf21873bf00bf, type: 3}
+    - modName: H3
+      portrait: {fileID: 21300000, guid: cb17c9a80ae117246b947bf59c294c42, type: 3}
+    - modName: G1
+      portrait: {fileID: 21300000, guid: 6ae6b6ef8f05ee24392bb6ff62ae1690, type: 3}
+    - modName: B3
+      portrait: {fileID: 21300000, guid: f15e32324010d8f469085b20fccc7a2d, type: 3}
+    - modName: N1
+      portrait: {fileID: 21300000, guid: f00bc137aeb6ee34b8353215cd3b3b2e, type: 3}
+    - modName: O2
+      portrait: {fileID: 21300000, guid: 299cc290ef36be84cb82969ed1b5810e, type: 3}
+    - modName: O1
+      portrait: {fileID: 21300000, guid: e7eb2e48e065c3a48afb74446e048251, type: 3}
+    - modName: B1
+      portrait: {fileID: 21300000, guid: 9556a3607ae5d8d4f9f31527bd3c2a97, type: 3}
+    - modName: M1
+      portrait: {fileID: 21300000, guid: d58c1a757ea9e564f85ba5e41e05cc72, type: 3}
+    - modName: F5
+      portrait: {fileID: 21300000, guid: d05a65d3e657cc749bcb6d1b31995e1d, type: 3}
+    - modName: F3
+      portrait: {fileID: 21300000, guid: 9f37a7c63e66d6247a74281d3bf68608, type: 3}
+    - modName: F2
+      portrait: {fileID: 21300000, guid: cf4f7bb4638f50d4787a56678c286146, type: 3}
+    - modName: H7
+      portrait: {fileID: 21300000, guid: 10f02794a21bf274daf6649c6d32ba20, type: 3}
+    - modName: D2
+      portrait: {fileID: 21300000, guid: 4a83282d07cc66b48917e3e274713281, type: 3}
+  - speakerId: R
+    speakerName: "Rafa\u0142"
+    fontSize: 16
+    styles: 0
+    color: {r: 0.4604995, g: 0.8490566, b: 0.2995728, a: 1}
+    timePerCharacterTalking: 0.05
+    sprites:
+    - modName: C2
+      portrait: {fileID: 21300000, guid: 698c2de97526c9d488d2bee55235fb7b, type: 3}
+    - modName: C1
+      portrait: {fileID: 21300000, guid: 67288727206491f479ddf5325ebc9ed8, type: 3}
+    - modName: D10
+      portrait: {fileID: 21300000, guid: 81c9ab2367e8c414b8aba5e6e1c4aec9, type: 3}
+    - modName: A9
+      portrait: {fileID: 21300000, guid: e4e87996c7909b641bb7e4960bc0f45c, type: 3}
+    - modName: C4
+      portrait: {fileID: 21300000, guid: c91a781015367074bb952b736ef9c69d, type: 3}
+    - modName: C3
+      portrait: {fileID: 21300000, guid: bc97745ce02d48a4d8bf21050e735eb1, type: 3}
+    - modName: D8
+      portrait: {fileID: 21300000, guid: 063eb9871e43a8b4388bb6a1220ceca1, type: 3}
+    - modName: A7
+      portrait: {fileID: 21300000, guid: a10dcdfa3a85c3f4cbc2bea3e12e127f, type: 3}
+    - modName: A8
+      portrait: {fileID: 21300000, guid: 2c731db8ba7fc264dab8bcb434b9c9f0, type: 3}
+    - modName: F2
+      portrait: {fileID: 21300000, guid: 0f584a4a65bc13a42a0fc3c47d33b134, type: 3}
+    - modName: D4
+      portrait: {fileID: 21300000, guid: e82c671c0c699ff49827529ebc0b31d1, type: 3}
+    - modName: B1
+      portrait: {fileID: 21300000, guid: 07328b68659db504a853183c5aa65af8, type: 3}
+    - modName: A6
+      portrait: {fileID: 21300000, guid: d2da9c1259282e6478a1765c3cd39156, type: 3}
+    - modName: D3
+      portrait: {fileID: 21300000, guid: 1245aa88a3626a245bcafd2d8615d23e, type: 3}
+    - modName: B4
+      portrait: {fileID: 21300000, guid: c0e9f16afa65b6a4696be44762c64c94, type: 3}
+    - modName: A4
+      portrait: {fileID: 21300000, guid: 0325eb35e357bf3428f77fe88deaf834, type: 3}
+    - modName: C5
+      portrait: {fileID: 21300000, guid: c16041eb1b78c9a40bdab1abfb06dfde, type: 3}
+    - modName: D9
+      portrait: {fileID: 21300000, guid: fd5f590edf06e4b4bbf84ad62ed0d204, type: 3}
+    - modName: D7
+      portrait: {fileID: 21300000, guid: 59782fccc675e0c4ea71c64094be84a9, type: 3}
+    - modName: D6
+      portrait: {fileID: 21300000, guid: ae19d896f618c9c47bb934103e372643, type: 3}
+    - modName: B3
+      portrait: {fileID: 21300000, guid: ffd1eac1f42016f46a88cecbcd6a7183, type: 3}
+    - modName: B2
+      portrait: {fileID: 21300000, guid: 960d1cda3e74bb744b3e6e786973b973, type: 3}
+    - modName: A2
+      portrait: {fileID: 21300000, guid: a5e6ba5202ecbfc4bb65f910a17ce56a, type: 3}
+    - modName: A1
+      portrait: {fileID: 21300000, guid: 806a265debee67748ac32383941d23b8, type: 3}
+    - modName: D5
+      portrait: {fileID: 21300000, guid: 3d07be6c18130a14eba6126c38368460, type: 3}
+    - modName: A5
+      portrait: {fileID: 21300000, guid: 2a2bf50a559fcde4db4e659b4ef9eb9e, type: 3}
+    - modName: D2
+      portrait: {fileID: 21300000, guid: aa24076637258f64ab472d339acf75cd, type: 3}
+    - modName: A3
+      portrait: {fileID: 21300000, guid: 574efcf1613cb9244b53ec148aa3323b, type: 3}
+    - modName: F1
+      portrait: {fileID: 21300000, guid: 742a4dc5e402e50458d7c18175e1eae6, type: 3}
+    - modName: E1
+      portrait: {fileID: 21300000, guid: 97325cd188fd9824588cc994d5dc0cda, type: 3}
+    - modName: A10
+      portrait: {fileID: 21300000, guid: 4cd837184bd54e0418c73357e32d6930, type: 3}
+  - speakerId: Ad
     speakerName: Adam
     fontSize: 16
     styles: 0
-    color: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 0.13460304, g: 0.16481456, b: 0.3584906, a: 1}
     timePerCharacterTalking: 0.05
-  - speakerId: Speaker2
-    speakerName: Bartek
+    sprites:
+    - modName: A1
+      portrait: {fileID: 21300000, guid: da924fb533fde1b4eb24531b20c8b87b, type: 3}
+  - speakerId: Gracz
+    speakerName: Ania
     fontSize: 16
-    styles: 1
-    color: {r: 1, g: 0.06132078, b: 0.06132078, a: 1}
-    timePerCharacterTalking: 0.01
+    styles: 0
+    color: {r: 1, g: 0.584222, b: 0.20188677, a: 1}
+    timePerCharacterTalking: 0.05
+    sprites: []
+  - speakerId: Narrator
+    speakerName: ---
+    fontSize: 16
+    styles: 0
+    color: {r: 0.11698109, g: 0.11698109, b: 0.11698109, a: 1}
+    timePerCharacterTalking: 0.05
+    sprites: []
   history:
     dialogueSequenceIdentifiersList:
     - seq1
-    - seq2
-    progressInLastRead: 9
+    - Intro
+    - Chapter1_intro
+    progressInLastRead: 59
   listPlotCheckpoints:
-  - id: TestCheckPoint
+  - id: Intro_finished
     isAdditive: 0
     checkpointField: 1
   listPlotChekpointsEndChapter: []
@@ -44,18 +566,572 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: Test1.
-      - timeForSingleCharDisplay: 1
-        subline: 
+        subline: "20 czerwca o godzinie 1:32 w studio reality show \"Friendly Fire\"
+          jeden z uczestnik\xF3w, Oktawian \u0141askawca, zosta\u0142 zamordowany
+          przez uderzenie t\u0119pym przedmiotem z wyra\u017An\u0105 kraw\u0119dzi\u0105
+          w ty\u0142 g\u0142owy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 0
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Narz\u0119dzie zbrodni nie zosta\u0142o odnalezione."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Podejrzani s\u0105 wszyscy pozostali uczestnicy programu oraz organizatorzy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Studio zosta\u0142o zamkni\u0119te na czas \u015Bledztwa i nikt
+          nie mo\u017Ce go opu\u015Bci\u0107."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.1
+        subline: "Moim zadaniem jest rozwi\u0105zanie tej sprawy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pani Anna Nowak, dzie\u0144 dobry!"
+      - timeForSingleCharDisplay: 0
+        subline: "Policja uprzedzi\u0142a mnie, \u017Ce pani przyjdzie."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 1
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry. Pan Mizeria, mam racj\u0119?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Owszem.
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: " Zajmuj\u0119 si\u0119 przes\u0142uchiwaniem pracownik\xF3w, wi\u0119c
+          mo\u017Ce pani przej\u015B\u0107 si\u0119 po studio."
+      - timeForSingleCharDisplay: 0
+        subline: " Kiedy ju\u017C to pani zrobi, mo\u017Ce pani przepyta\u0107 uczestnik\xF3w."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Dobrze.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ad
+      speakerMod: Exit
+      changeLocationId: 
+    identifier: Chapter1_intro
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "Szale\u0144cy. "
+      - timeForSingleCharDisplay: 0.05
+        subline: ' Dziwacy. '
+      - timeForSingleCharDisplay: 0.05
+        subline: 'Wyrzutki. '
+      - timeForSingleCharDisplay: 0.05
+        subline: 'Samotni, ale nie z wyboru. '
+      - timeForSingleCharDisplay: 0.05
+        subline: "Trudno jest im nawi\u0105za\u0107 g\u0142\u0119bokie relacje -
+          jednak my im pomo\u017Cemy."
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "Witamy w programie, w kt\xF3rym kilku wyj\u0105tkowych uczestnik\xF3w
+          zmierzy si\u0119 z trudnymi wyzwaniami i "
+      - timeForSingleCharDisplay: 0.05
+        subline: "- by\u0107 mo\u017Ce - "
+      - timeForSingleCharDisplay: 0.05
+        subline: "zdob\u0119dzie przyjaci\xF3\u0142 do grobowej deski."
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: Oto...
+      - timeForSingleCharDisplay: 0.05
+        subline: FriendlyFire.
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.01
+        subline: ' '
+      lingering: 0
+      speakerID: I
+      speakerMod: A2
+      changeLocationId: 1
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "Zebrali\u015Bmy sze\u015Bciu bardzo ciekawych ludzi, kt\xF3rzy
+          z jakiego\u015B powodu nie znale\u017Ali swoich bratnich dusz."
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "\u017BYWEGO MNIE NIE WE\u0179MIECIE!"
+      lingering: -1
+      speakerID: I
+      speakerMod: L1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: Exit
+      changeLocationId: 10
+    - subLines: []
+      lingering: 0.05
+      speakerID: Ma
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "Zamierzamy odkry\u0107 to, co odstrasza od nich normalnych ludzi..."
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 2
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ma
+      speakerMod: Exit
+      changeLocationId: 8
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "... i postaramy si\u0119 odnale\u017A\u0107 spos\xF3b \u017Ceby
+          zamieni\u0107 to w co\u015B pozytywnego!"
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: Idealna impreza?
+      lingering: -1
+      speakerID: Mz
+      speakerMod: A2
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "W moim pokoju z pizz\u0105 i kocykiem... "
+      - timeForSingleCharDisplay: 0.02
+        subline: Haha!
+      lingering: -1
+      speakerID: Mz
+      speakerMod: A4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: Jestem bardzo samotny.
+      lingering: -1
+      speakerID: Mz
+      speakerMod: D3
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "Przez wykonywanie zada\u0144, nasi uczestnicy pozostan\u0105 zmuszeni
+          do interakcji spo\u0142ecznych, od kt\xF3rych nie b\u0119d\u0105 mogli
+          uciec! "
+      - timeForSingleCharDisplay: 0.05
+        subline: "Mo\u017Ce to sprawi, \u017Ce nawi\u0105\u017C\u0105 nowe znajomo\u015Bci?"
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: Exit
+      changeLocationId: 12
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "Nazywam si\u0119 Oktawian \u0141askawca. Jestem w tym programie,
+          poniewa\u017C nie mam z kim jecha\u0107 na wesele mojego kuzyna, kt\xF3re
+          odb\u0119dzie si\u0119 w Monako."
+      lingering: -1
+      speakerID: O
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: ...
+      lingering: -1
+      speakerID: O
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "I chyba nadal nie b\u0119d\u0119 mia\u0142."
+      lingering: -1
+      speakerID: O
+      speakerMod: A1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: O
+      speakerMod: Exit
+      changeLocationId: 9
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: I2
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Heej, jestem Antonina Wiercipi\u0119ta i jestem w tym programie,
+          poniewa\u017C brzmi to ciekawie i mo\u017Ce poznam jakich\u015B fajnych
+          ludzi."
+      lingering: -1
+      speakerID: A
+      speakerMod: I1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: " I b\u0119dziemy mogli robi\u0107 imprezy pi\u017Camowe i chodzi\u0107
+          do kina. I robi\u0107 bransoletki przyja\u017Ani, takie z koralik\xF3w,
+          z naszymi imionami!"
+      lingering: 0.3
+      speakerID: A
+      speakerMod: M2
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Oooo! Tak!
+      lingering: 0.5
+      speakerID: A
+      speakerMod: M4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "I kupowa\u0107 razem ubrania i gada\u0107 o ch\u0142opakach!"
+      lingering: 0
+      speakerID: A
+      speakerMod: L1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: " A mo\u017Ce poznam jakiego\u015B ch\u0142opaka i b\u0119dziemy
+          par\u0105??? A jak nie to nic, bo b\u0119d\u0119 mia\u0142a przyjaci\xF3\u0142
+          i opowiem im o wszystkich ciekawych pomys\u0142ach, kt\xF3re mam! Mam wiele
+          pomys\u0142\xF3w, naprawd\u0119, kiedy\u015B wam opowiem je\u015Bli b\u0119dziecie
+          chcieli zrobi\u0107 z nich program czy co\u015B!"
+      lingering: 0
+      speakerID: A
+      speakerMod: L2
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Mam taki pomys\u0142 na program, w kt\xF3rym jest dziewczyna i
+          ona ma zastawione oczy i s\u0105 inni uczestnicy."
+      lingering: 0
+      speakerID: A
+      speakerMod: L1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: I jakby eee...
+      lingering: 0
+      speakerID: A
+      speakerMod: M1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Ci inni uczestnicy udaj\u0105, \u017Ce s\u0105 jedn\u0105 osob\u0105."
+      lingering: 0
+      speakerID: A
+      speakerMod: L2
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: " Ale ta dziewczyna o tym nie wie. I- haha! - I zobaczymy ile jej
+          zajmie doj\u015Bcie do tego, \u017Ce randkuje z pi\u0119cioma r\xF3\u017Cnymi
+          facetami. To by\u0142oby mega \u015Bmieszne. Jakby- Jakby ja wiem, \u017Ce
+          to mo\u017Ce nie brzmi tak zabawnie, ale uwierzcie mi."
+      lingering: 0.3
+      speakerID: A
+      speakerMod: L2
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Mam wizj\u0119."
+      lingering: 0.5
+      speakerID: A
+      speakerMod: A8
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Tylko nie wiem jak mo\u017Cnaby by\u0142o przekona\u0107 dziewczyn\u0119
+          do udzia\u0142u w tym programie. "
+      lingering: 0
+      speakerID: A
+      speakerMod: I4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "A i, zapomnia\u0142am prawie, ci faceci nie b\u0119d\u0105 si\u0119
+          ze sob\u0105 komunikowa\u0107, wi\u0119c to b\u0119dzie taki du\u017Cy
+          mind game. Intrygi, spiski, troch\u0119 jak, troch\u0119 jak to detektywistyczne
+          anime ale bez u\u015Bmiercania ludzi notatnikiem."
+      lingering: 0
+      speakerID: A
+      speakerMod: L1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Taki mia\u0142am pomys\u0142."
+      lingering: 0.1
+      speakerID: A
+      speakerMod: A8
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "A, o czym ja m\xF3wi\u0142am w og\xF3le, bo chyba zboczy\u0142am
+          z tematu?"
+      lingering: 0
+      speakerID: A
+      speakerMod: L1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Hmmm...
+      lingering: 1
+      speakerID: A
+      speakerMod: I2
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "O. O i, i b\u0119dziemy je\u017Adzili samochodem na przygody i
+          \u015Bpiewali piosenki podczas drogi."
+      lingering: 0
+      speakerID: A
+      speakerMod: L2
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: " Uwielbiam \u015Bpiewa\u0107 piosenki, ale nie bardzo umiem."
+      lingering: 0
+      speakerID: A
+      speakerMod: I1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Ooo i b\u0119dziemy robili sobie warkoczyki i maseczki i siedzieli
+          wieczorami ze sob\u0105 i nie robili nawet nic konkretnego, ale w swojej
+          przestrzeni i to by\u0142oby takie mega."
+      lingering: 0
+      speakerID: A
+      speakerMod: M2
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "I spacerowaliby\u015Bmy mo\u017Ce noc\u0105 po lesie. I b\u0119dziemy
+          mieli inside joke'i, kt\xF3re b\u0119d\u0105 \u015Bmieszy\u0107 tylko nas
+          i my b\u0119dziemy je rozumie\u0107, ale dziewczyny z mojego liceum nie
+          b\u0119d\u0105 i b\u0119d\u0105 mi zazdro\u015Bci\u0107, \u017Ce mam najlepsz\u0105
+          grup\u0119 przyjaci\xF3\u0142 ever i b\u0119dziemy si\u0119 \u015Bwietnie
+          w tej grupie dogadywa\u0107 i skaka\u0107 przez p\u0142oty i robi\u0107
+          noce filmowe i -"
+      lingering: 0.2
+      speakerID: A
+      speakerMod: L2
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: Exit
+      changeLocationId: 8
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nazywam si\u0119 Mateusz Pomara\u0144cza..."
+      lingering: -1
+      speakerID: Mz
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: 'Jestem tu, bo bracia mnie zmusili... '
+      - timeForSingleCharDisplay: 0
+        subline: He.
+      lingering: -1
+      speakerID: Mz
+      speakerMod: F1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: Exit
+      changeLocationId: 2
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nazywam si\u0119 Matylda Mr\xF3z."
+      - timeForSingleCharDisplay: 0
+        subline: " Interesuj\u0119 si\u0119 chemi\u0105."
+      lingering: -1
+      speakerID: Ma
+      speakerMod: F3
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: " Zosta\u0142am tu wezwana przez G\u0142osy."
+      lingering: -1
+      speakerID: Ma
+      speakerMod: F3
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ma
+      speakerMod: Exit
+      changeLocationId: 1
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie wyrazi\u0142em zgody na udzia\u0142 w tym programie, nie by\u0142em
+          przy zdrowych zmys\u0142ach podczas podpisywania dokument\xF3w. "
+      lingering: -1
+      speakerID: I
+      speakerMod: H9
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Widz\u0119 wasze zagrywki, szczury."
+      lingering: -1
+      speakerID: I
+      speakerMod: A2
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Je\u015Bli nie wyjd\u0119 st\u0105d \u017Cywy, to wiedzcie, \u017Ce
+          zabili mnie Wielbiciele \u0141\u0105ki i \u017Ce chc\u0105 teraz przej\u0105\u0107
+          kontrol\u0119 nad \u015Bwiatem."
+      lingering: -1
+      speakerID: I
+      speakerMod: K1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ALE NIE DAM IM SATYSFAKCJI!
+      lingering: -1
+      speakerID: I
+      speakerMod: G1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: Exit
+      changeLocationId: 11
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: ...
+      lingering: -1
+      speakerID: R
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: ...
+      lingering: -1
+      speakerID: R
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: ...
+      lingering: -1
+      speakerID: R
+      speakerMod: A1
+      changeLocationId: 11
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Przedstaw si\u0119."
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: -1
+      speakerID: R
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Jestem Rafa\u0142."
+      lingering: -1
+      speakerID: R
+      speakerMod: B2
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: Exit
+      changeLocationId: 0
+    identifier: Intro
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ytdyt
+      - timeForSingleCharDisplay: 0.5
+        subline: e6rht7
       - timeForSingleCharDisplay: 0
         subline: Test1.
-      lingering: 1
-      speakerID: Speaker1
+      lingering: -1
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Test1.
       lingering: 0
-      speakerID: Speaker1
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
     identifier: seq1
     runnedAlready: 0
   - lines:
@@ -64,6 +1140,8 @@ MonoBehaviour:
         subline: Test2.4
       lingering: 1
       speakerID: Speaker2
+      speakerMod: 
+      changeLocationId: 
     identifier: seq2
     runnedAlready: 0
   - lines:
@@ -72,21 +1150,109 @@ MonoBehaviour:
         subline: Test3
       lingering: -1
       speakerID: Speaker1
+      speakerMod: 
+      changeLocationId: 
     identifier: seq3
     runnedAlready: 0
   serializedAnalisedSequence:
-    lines: []
-    identifier: 
-    runnedAlready: 0
+    lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "20 czerwca o godzinie 1:32 w studio reality show \"Friendly Fire\"
+          jeden z uczestnik\xF3w, Oktawian \u0141askawca, zosta\u0142 zamordowany
+          przez uderzenie t\u0119pym przedmiotem z wyra\u017An\u0105 kraw\u0119dzi\u0105
+          w ty\u0142 g\u0142owy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 0
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Narz\u0119dzie zbrodni nie zosta\u0142o odnalezione."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Podejrzani s\u0105 wszyscy pozostali uczestnicy programu oraz organizatorzy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Studio zosta\u0142o zamkni\u0119te na czas \u015Bledztwa i nikt
+          nie mo\u017Ce go opu\u015Bci\u0107."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.1
+        subline: "Moim zadaniem jest rozwi\u0105zanie tej sprawy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pani Anna Nowak, dzie\u0144 dobry!"
+      - timeForSingleCharDisplay: 0
+        subline: "Policja uprzedzi\u0142a mnie, \u017Ce pani przyjdzie."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 1
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry. Pan Mizeria, mam racj\u0119?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Owszem.
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: " Zajmuj\u0119 si\u0119 przes\u0142uchiwaniem pracownik\xF3w, wi\u0119c
+          mo\u017Ce pani przej\u015B\u0107 si\u0119 po studio."
+      - timeForSingleCharDisplay: 0
+        subline: " Kiedy ju\u017C to pani zrobi, mo\u017Ce pani przepyta\u0107 uczestnik\xF3w."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Dobrze.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ad
+      speakerMod: Exit
+      changeLocationId: 
+    identifier: Chapter1_intro
+    runnedAlready: 1
   serializedPlaceholderSequence:
     lines: []
     identifier: 
     runnedAlready: 0
   seqIdTab:
+  - Chapter1_intro
+  - Intro
   - seq1
   - seq2
   - seq3
-  analisedIdentifier: 
-  analisedIndex: -1
+  analisedIdentifier: Chapter1_intro
+  analisedIndex: 0
   placeholdIdentifier: 
   chapter: 0
