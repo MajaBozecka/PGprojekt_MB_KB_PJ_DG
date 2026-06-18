@@ -2,6 +2,7 @@ using NUnit.Framework.Internal;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class DataFlowController : MonoBehaviour
 {
@@ -14,6 +15,55 @@ public class DataFlowController : MonoBehaviour
     private bool pause=false;
     private bool historyLook=false;
     private bool confirmNextLine;
+
+    [Header("Zakoñczenie Sekwencji")]
+    public SpriteRenderer endingSpriteRenderer;
+    public GameObject dialogueCanvas;
+
+    public float waitBeforeImage = 3f;
+    public float fadeDuration = 1.5f;
+    public float waitBeforeScene = 2f;
+    public string nextSceneName = "Chapter1";
+
+    public void FinishDialogueAndTransition()
+    {
+        StartCoroutine(TransitionToNewSceneRoutine());
+    }
+
+    private IEnumerator TransitionToNewSceneRoutine()
+    {
+        
+        if (dialogueCanvas != null)
+        {
+            dialogueCanvas.SetActive(false);
+        }
+
+        yield return new WaitForSeconds(waitBeforeImage);
+
+        if (endingSpriteRenderer != null)
+        {
+            Color spriteColor = endingSpriteRenderer.color;
+            spriteColor.a = 0f;
+            endingSpriteRenderer.color = spriteColor;
+            endingSpriteRenderer.gameObject.SetActive(true);
+
+            float elapsedTime = 0f;
+            while (elapsedTime < fadeDuration)
+            {
+                elapsedTime += Time.deltaTime;
+
+                spriteColor.a = Mathf.Clamp01(elapsedTime / fadeDuration);
+                endingSpriteRenderer.color = spriteColor;
+
+                yield return null;
+            }
+        }
+
+        yield return new WaitForSeconds(waitBeforeScene);
+
+        SceneManager.LoadScene(nextSceneName);
+    }
+
     private bool SKIP
     {
         get
@@ -202,9 +252,14 @@ public class DataFlowController : MonoBehaviour
                 TestedDialogueSequence.runnedAlready = true;
                 finishDetected=data.PlotCheckpointCheckForChapterEnd();
             }
-            if(finishDetected)
-                Debug.Log("We should trigger chapter swap...somehow");
-            canvasCtrl.UIMode = EUIMode.BUTTONS;
+            if (finishDetected)
+            {
+                StartCoroutine(TransitionToNewSceneRoutine());
+            }
+            else
+            {
+                canvasCtrl.UIMode = EUIMode.BUTTONS;
+            }
             SKIP = false;
         }
         bool isItTimeForNextSubLine(SubDialogueLine partLine, int partLineDisplayedLength)

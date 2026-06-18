@@ -230,8 +230,12 @@ public class DataFlowSO : ScriptableObject
         placeholdIdentifier = "";
     }
     public void pushAnalisedToPlaceholder()
-    {
-        serializedAnalisedSequence.CopyTo(serializedPlaceholderSequence);
+    { 
+        if (serializedAnalisedSequence != null && serializedPlaceholderSequence != null)
+        {
+            serializedAnalisedSequence.CopyTo(serializedPlaceholderSequence);
+        }
+
         placeholdIdentifier = analisedIdentifier;
         serializedAnalisedSequence = null;
         analisedIdentifier = "";
