@@ -168,10 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 3
   backgroundSprite: {fileID: 21300000, guid: ead7267bdc1bc5144a5ef0ae93f6a856, type: 3}
-  interactableInRoom:
-  - {fileID: 1765760084}
-  - {fileID: 115005275}
-  - {fileID: 462121375}
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &93005924
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -264,6 +262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   proceedIcon: {fileID: 110725708}
   dialogueText: {fileID: 2115709012}
+  textboxBackgroundImage: {fileID: 93005926}
+  defaultTextboxGraphic: {fileID: 3991630449185002059, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   characterSlots:
   - {fileID: 1178747630}
   - {fileID: 1462106116}
@@ -620,8 +620,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 13
   backgroundSprite: {fileID: 21300000, guid: d49a640b38fd9d046be749a5f9f20f3a, type: 3}
-  interactableInRoom:
-  - {fileID: 1241485029}
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &150739681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,8 +1208,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 2
   backgroundSprite: {fileID: 21300000, guid: fb7c445f55d4aed46a8aacb6e646c3bf, type: 3}
-  interactableInRoom:
-  - {fileID: 1172288867}
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &402252705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,10 +1256,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 1
   backgroundSprite: {fileID: 21300000, guid: 5a7048a2f2cecdb49ac62e235e960715, type: 3}
-  interactableInRoom:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &410593306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1695,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &545428201
 GameObject:
@@ -2206,9 +2204,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 8
   backgroundSprite: {fileID: 21300000, guid: 7c82536fc1e8af54ba6c16120b5ce084, type: 3}
-  interactableInRoom:
-  - {fileID: 964566884}
-  - {fileID: 2001305159}
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &835712732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,7 +2252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 10
   backgroundSprite: {fileID: 21300000, guid: 91a44e6e4169441408f93045262d1397, type: 3}
-  interactableInRoom: []
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &918176533
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,7 +2379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 12
   backgroundSprite: {fileID: -1783489038731624645, guid: a568d12a551ad6a41bb1628c03e4a974, type: 3}
-  interactableInRoom: []
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &964566884
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,7 +2730,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 7
   backgroundSprite: {fileID: 21300000, guid: 11b8cf28cc488a64587c6b6dd0d13f7b, type: 3}
-  interactableInRoom: []
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!4 &1159639987
 Transform:
   m_ObjectHideFlags: 0
@@ -3120,7 +3120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 5
   backgroundSprite: {fileID: 6079163277985373157, guid: 9bda3ec4a6d58744fb3a044d607f763f, type: 3}
-  interactableInRoom: []
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &1424546706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3520,7 +3521,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 14
   backgroundSprite: {fileID: 21300000, guid: b1d8df36c3cc3914f9169cd869247c0c, type: 3}
-  interactableInRoom: []
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &1510291848
 GameObject:
   m_ObjectHideFlags: 0
@@ -4336,8 +4338,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 9
   backgroundSprite: {fileID: 21300000, guid: 5a33f44a21cc04f4f8457a1d8b1b77ac, type: 3}
-  interactableInRoom:
-  - {fileID: 447808364}
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &1841286933
 GameObject:
   m_ObjectHideFlags: 0
@@ -4459,7 +4461,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 6
   backgroundSprite: {fileID: -3210624206679247718, guid: 8d2202c2fe6bc8a4894ede3246f629eb, type: 3}
-  interactableInRoom: []
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &1866616051
 GameObject:
   m_ObjectHideFlags: 0
@@ -4779,9 +4782,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 11
   backgroundSprite: {fileID: 21300000, guid: 6cfd131e87f71bc46906498d9788ee0c, type: 3}
-  interactableInRoom:
-  - {fileID: 471688648}
-  - {fileID: 689987247}
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &1965579813
 GameObject:
   m_ObjectHideFlags: 0
@@ -5132,7 +5134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   locationId: 0
   backgroundSprite: {fileID: 1313942972730354439, guid: 23b9c3993d25b034bbb62746c398d6b4, type: 3}
-  interactableInRoom: []
+  allowReturnToThisRoom: 1
+  interactablesInRoom: []
 --- !u!1 &2115709011
 GameObject:
   m_ObjectHideFlags: 0
@@ -5267,8 +5270,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -60, y: -60}
+  m_AnchoredPosition: {x: 0, y: -10}
+  m_SizeDelta: {x: -60, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

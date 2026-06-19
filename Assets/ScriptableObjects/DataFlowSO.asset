@@ -22,6 +22,7 @@ MonoBehaviour:
     sprites:
     - modName: A1
       portrait: {fileID: 21300000, guid: 23bff945362054548b1ec2cbef31aa1b, type: 3}
+    customTextboxGraphic: {fileID: -2825977400356617734, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: A
     speakerName: Antonina
     fontSize: 16
@@ -155,6 +156,7 @@ MonoBehaviour:
       portrait: {fileID: 21300000, guid: 901317ab6f5ec634495f432e409fe029, type: 3}
     - modName: B3
       portrait: {fileID: 21300000, guid: 09934c232f36ee04489499842a7e61fc, type: 3}
+    customTextboxGraphic: {fileID: 5874822173669222814, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: Mz
     speakerName: Mateusz
     fontSize: 16
@@ -240,6 +242,7 @@ MonoBehaviour:
       portrait: {fileID: 21300000, guid: 97d8257bf8c893c4aa4c42656753e56e, type: 3}
     - modName: B6
       portrait: {fileID: 21300000, guid: 695e7fc9135ef3f428fb37fb1b71378c, type: 3}
+    customTextboxGraphic: {fileID: 637828700191138899, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: Ma
     speakerName: Matylda
     fontSize: 16
@@ -323,6 +326,7 @@ MonoBehaviour:
       portrait: {fileID: 21300000, guid: 443494b4b76efbf469b7db81a0fd53c5, type: 3}
     - modName: B3
       portrait: {fileID: 21300000, guid: d855a545967ad504a9f106261faacf37, type: 3}
+    customTextboxGraphic: {fileID: 4762532328301696617, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: I
     speakerName: Krystian
     fontSize: 16
@@ -454,6 +458,7 @@ MonoBehaviour:
       portrait: {fileID: 21300000, guid: 10f02794a21bf274daf6649c6d32ba20, type: 3}
     - modName: D2
       portrait: {fileID: 21300000, guid: 4a83282d07cc66b48917e3e274713281, type: 3}
+    customTextboxGraphic: {fileID: -7215321345092707722, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: R
     speakerName: "Rafa\u0142"
     fontSize: 16
@@ -523,6 +528,7 @@ MonoBehaviour:
       portrait: {fileID: 21300000, guid: 97325cd188fd9824588cc994d5dc0cda, type: 3}
     - modName: A10
       portrait: {fileID: 21300000, guid: 4cd837184bd54e0418c73357e32d6930, type: 3}
+    customTextboxGraphic: {fileID: 4478830644468881633, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: Ad
     speakerName: Adam
     fontSize: 16
@@ -532,6 +538,7 @@ MonoBehaviour:
     sprites:
     - modName: A1
       portrait: {fileID: 21300000, guid: da924fb533fde1b4eb24531b20c8b87b, type: 3}
+    customTextboxGraphic: {fileID: -7679190861611390107, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: Gracz
     speakerName: Ania
     fontSize: 16
@@ -539,13 +546,15 @@ MonoBehaviour:
     color: {r: 1, g: 0.584222, b: 0.20188677, a: 1}
     timePerCharacterTalking: 0.05
     sprites: []
+    customTextboxGraphic: {fileID: 1411459866887581016, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: Narrator
     speakerName: ---
     fontSize: 16
     styles: 0
-    color: {r: 0.11698109, g: 0.11698109, b: 0.11698109, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
     timePerCharacterTalking: 0.05
     sprites: []
+    customTextboxGraphic: {fileID: -6235000793139993612, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   history:
     dialogueSequenceIdentifiersList:
     - seq1
@@ -574,7 +583,7 @@ MonoBehaviour:
     - Item_CabinetInCorridor
     - Item_Picture
     - Item_Window
-    progressInLastRead: 0
+    progressInLastRead: 146
   listPlotCheckpoints:
   - id: 
     isAdditive: 0
@@ -622,7 +631,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Blood_Floor
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -729,7 +738,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: DirtOnCarpet
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -776,7 +785,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: GirlsRoom
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0.05
@@ -1249,7 +1258,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Apteczka
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1259,7 +1268,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Bin
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1289,7 +1298,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_CabinetInCorridor
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1299,7 +1308,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Calendar
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1319,7 +1328,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Cupboard
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1361,7 +1370,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Fridge
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1371,7 +1380,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Hanger
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1401,7 +1410,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Lockers
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1413,7 +1422,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Mirror
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1433,7 +1442,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Oven
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1443,7 +1452,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_PaperTowel
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1463,7 +1472,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Picture
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1533,7 +1542,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Sculpture
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1543,7 +1552,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Sink
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1553,7 +1562,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Slippers
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1563,7 +1572,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Stall
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1597,7 +1606,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Szuflada
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1626,7 +1635,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Water
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1655,7 +1664,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Window
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1665,7 +1674,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: LockedBathroom
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1679,33 +1688,12 @@ MonoBehaviour:
     identifier: Storage
     runnedAlready: 0
   serializedAnalisedSequence:
-    lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: To bardzo smutna kanapka.
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    identifier: Item_Sandwitch
+    lines: []
+    identifier: 
     runnedAlready: 0
   serializedPlaceholderSequence:
-    lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: AAH!
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Prawie zabi\u0142am si\u0119 o ten dywan!"
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    identifier: Enter_Corridor
+    lines: []
+    identifier: 
     runnedAlready: 0
   seqIdTab:
   - Blood_Floor
@@ -1744,7 +1732,7 @@ MonoBehaviour:
   - Item_Pillow
   - Item_Puddles
   - Item_Puddles2
-  - Item_Sandwich
+  - Item_Sandwitch
   - Item_Sculpture
   - Item_Sink
   - Item_Slippers
@@ -1757,7 +1745,7 @@ MonoBehaviour:
   - Item_Window
   - LockedBathroom
   - Storage
-  analisedIdentifier: Item_Sandwich
-  analisedIndex: 36
-  placeholdIdentifier: Enter_Corridor
+  analisedIdentifier: 
+  analisedIndex: -1
+  placeholdIdentifier: 
   chapter: 0

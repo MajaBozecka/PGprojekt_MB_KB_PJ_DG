@@ -16,6 +16,11 @@ public class PanelDialogueSequenceController : MonoBehaviour
 
     [SerializeField]
     private TMP_Text dialogueText;
+    [Header("Wygl¹d Textboxa")]
+    [SerializeField]
+    private Image textboxBackgroundImage;
+    [SerializeField]
+    private Sprite defaultTextboxGraphic;
 
     [Header("Miejsca na postacie (Œwiat Gry)")]
     [SerializeField]
@@ -51,6 +56,19 @@ public class PanelDialogueSequenceController : MonoBehaviour
         dialogueText.fontSize = s.fontSize;
         dialogueText.fontStyle = s.styles;
         dialogueText.color = s.color;
+
+        if (textboxBackgroundImage != null)
+        {
+            if (s.customTextboxGraphic != null)
+            {
+                textboxBackgroundImage.sprite = s.customTextboxGraphic;
+            }
+            else if (defaultTextboxGraphic != null)
+            {
+                textboxBackgroundImage.sprite = defaultTextboxGraphic; // Powrót do domyœlnego
+            }
+        }
+
         if (string.IsNullOrEmpty(speakerMod)) return;
 
         if (s != null)
