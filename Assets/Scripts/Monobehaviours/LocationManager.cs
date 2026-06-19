@@ -44,8 +44,7 @@ public class LocationManager : MonoBehaviour
 
         if (targetLocation != null)
         {
-            // Jeœli idziemy do nowego pokoju, zapamiêtujemy stary na stosie
-            if (!isGoingBack && !isGameStart && currentLocation != null)
+            if (!isGoingBack && !isGameStart && currentLocation != null && currentLocation.allowReturnToThisRoom)
             {
                 locationHistory.Push(currentLocation.locationId);
             }

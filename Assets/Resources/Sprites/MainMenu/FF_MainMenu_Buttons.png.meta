@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 6b081423e52ba294aaa976b403c45f38
+guid: 841d210b5d6c7904892cf3dcad29370c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9006986089024578935
-    second: "FF_wej\u015Bcie_0"
+      213: -1894604132903554831
+    second: FF_MainMenu_Buttons_0
+  - first:
+      213: 4679960218813606332
+    second: FF_MainMenu_Buttons_1
+  - first:
+      213: -1261674075115747874
+    second: FF_MainMenu_Buttons_2
+  - first:
+      213: -3030723444484710695
+    second: FF_MainMenu_Buttons_3
+  - first:
+      213: -4563552091118359181
+    second: FF_MainMenu_Buttons_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "FF_wej\u015Bcie_0"
+      name: FF_MainMenu_Buttons_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1200
+        x: 113
+        y: 1460
+        width: 880
+        height: 171
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 775e13d702e3ffc70800000000000000
-      internalID: 9006986089024578935
+      spriteID: 1f0fb44449305b5e0800000000000000
+      internalID: -1894604132903554831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FF_MainMenu_Buttons_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1264
+        width: 880
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb92855060f82f040800000000000000
+      internalID: 4679960218813606332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FF_MainMenu_Buttons_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 1065
+        width: 880
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed508620d12ad7ee0800000000000000
+      internalID: -1261674075115747874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FF_MainMenu_Buttons_3
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 876
+        width: 880
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de5a0fa515b0f5d0800000000000000
+      internalID: -3030723444484710695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FF_MainMenu_Buttons_4
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 681
+        width: 880
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d26e64d810ba0c0800000000000000
+      internalID: -4563552091118359181
       vertices: []
       indices: 
       edges: []
@@ -135,7 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "FF_wej\u015Bcie_0": 9006986089024578935
+      FF_MainMenu_Buttons_0: -1894604132903554831
+      FF_MainMenu_Buttons_1: 4679960218813606332
+      FF_MainMenu_Buttons_2: -1261674075115747874
+      FF_MainMenu_Buttons_3: -3030723444484710695
+      FF_MainMenu_Buttons_4: -4563552091118359181
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
