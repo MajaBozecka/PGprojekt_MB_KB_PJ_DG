@@ -583,7 +583,7 @@ MonoBehaviour:
     - Item_CabinetInCorridor
     - Item_Picture
     - Item_Window
-- Item_Boxes
+    - Item_Boxes
     - Item_DangerBottle
     - Item_StickNote
     - Item_WeirdBox
@@ -1887,7 +1887,7 @@ runnedAlready: 0
   - Item_WeirdBox
   - Item_Window
   - LockedBathroom
-- Storage
+  - Storage
   analisedIdentifier: Ch1AWstepA
   analisedIndex: 2
   placeholdIdentifier: 
