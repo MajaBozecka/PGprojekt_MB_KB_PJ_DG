@@ -583,14 +583,29 @@ MonoBehaviour:
     - Item_CabinetInCorridor
     - Item_Picture
     - Item_Window
-    progressInLastRead: 146
+- Item_Boxes
+    - Item_DangerBottle
+    - Item_StickNote
+    - Item_WeirdBox
+    - Cameras1
+    - Item_Puddles
+    - Item_Puddles2
+    - Enter_Bathroom
+    - Enter_Corridor
+    - Storage
+    - Item_Carpet
+    - Ch1AWstepB
+    progressInLastRead: 0
   listPlotCheckpoints:
   - id: 
     isAdditive: 0
     checkpointField: 1
   - id: Cameras1
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
+  - id: Ch1AWstepDone
+    isAdditive: 0
+    checkpointField: 1
   - id: Dirt_Checked
     isAdditive: 0
     checkpointField: 1
@@ -603,15 +618,15 @@ MonoBehaviour:
   - id: Iron_Checked
     isAdditive: 0
     checkpointField: 0
-  - id: Item_Slippers
-    isAdditive: 0
-    checkpointField: 0
   - id: Puddle_Checked
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
+  - id: Slippers_Checked
+    isAdditive: 0
+    checkpointField: 1
   - id: SN_Checked
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
   - id: TreeBlood_Checked
     isAdditive: 0
     checkpointField: 0
@@ -642,6 +657,85 @@ MonoBehaviour:
       changeLocationId: 
     identifier: Cameras1
     runnedAlready: 0
+  - lines:
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry, nazywam si\u0119 Anna Nowak, jestem detektywem. "
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pani Antonina Wiercipi\u0119ta, mam racj\u0119?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Tak.
+      lingering: -1
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "To by\u0142o straszne, nadal nie mog\u0119 si\u0119 otrz\u0105sn\u0105\u0107."
+      lingering: -1
+      speakerID: A
+      speakerMod: A7
+      changeLocationId: 
+    identifier: Ch1AWstepA
+    runnedAlready: 0
+  - lines:
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: (Ma na sobie kapcie...)
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry, nazywam si\u0119 Anna Nowak, jestem detektywem. "
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pani Antonina Wiercipi\u0119ta, mam racj\u0119?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Tak.
+      lingering: -1
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "To by\u0142o straszne, nadal nie mog\u0119 si\u0119 otrz\u0105sn\u0105\u0107."
+      lingering: -1
+      speakerID: A
+      speakerMod: A7
+      changeLocationId: 
+    identifier: Ch1AWstepB
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -740,6 +834,13 @@ MonoBehaviour:
     identifier: DirtOnCarpet
     runnedAlready: 0
   - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Na dywanie s\u0105 jakie\u015B plamy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Czy ma to co\u015B wsp\xF3lnego z ka\u0142u\u017Cami w Ogrodzie?"
@@ -1516,6 +1617,13 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
+        subline: "Wczoraj pada\u0142 deszcz."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
         subline: "Czy to ma zwi\u0105zek z brudnym dywanem przy sypialniach?"
       lingering: -1
       speakerID: Gracz
@@ -1619,7 +1727,7 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "Idealne miejsce na spe\u0142nianie czasu z przyjaci\xF3\u0142mi."
       - timeForSingleCharDisplay: 0
-        subline: Podobno.
+        subline: ' Podobno.'
       lingering: -1
       speakerID: Gracz
       speakerMod: 
@@ -1674,7 +1782,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: LockedBathroom
-    runnedAlready: 0
+runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1688,8 +1796,41 @@ MonoBehaviour:
     identifier: Storage
     runnedAlready: 0
   serializedAnalisedSequence:
-    lines: []
-    identifier: 
+    lines:
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry, nazywam si\u0119 Anna Nowak, jestem detektywem. "
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pani Antonina Wiercipi\u0119ta, mam racj\u0119?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Tak.
+      lingering: -1
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "To by\u0142o straszne, nadal nie mog\u0119 si\u0119 otrz\u0105sn\u0105\u0107."
+      lingering: -1
+      speakerID: A
+      speakerMod: A7
+      changeLocationId: 
+    identifier: Ch1AWstepA
     runnedAlready: 0
   serializedPlaceholderSequence:
     lines: []
@@ -1698,6 +1839,8 @@ MonoBehaviour:
   seqIdTab:
   - Blood_Floor
   - Cameras1
+  - Ch1AWstepA
+  - Ch1AWstepB
   - Chapter1_intro
   - DirtOnCarpet
   - DirtOnCarpet2
@@ -1744,8 +1887,8 @@ MonoBehaviour:
   - Item_WeirdBox
   - Item_Window
   - LockedBathroom
-  - Storage
-  analisedIdentifier: 
-  analisedIndex: -1
+- Storage
+  analisedIdentifier: Ch1AWstepA
+  analisedIndex: 2
   placeholdIdentifier: 
   chapter: 0
