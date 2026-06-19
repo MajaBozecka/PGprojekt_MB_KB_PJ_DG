@@ -552,12 +552,58 @@ MonoBehaviour:
     - Intro
     - Chapter1_intro
     - Item_Lockers
-    progressInLastRead: 766
+    - Item_Slippers
+    - Item_Hanger
+    - Item_Calendar
+    - Item_PaperTowel
+    - Item_Sculpture
+    - Item_Sink
+    - Item_Mirror
+    - Item_Stall
+    - Blood_Floor
+    - Item_Bin
+    - LockedBathroom
+    - Item_Water
+    - Item_Szuflada
+    - Item_Cupboard
+    - Item_Oven
+    - Item_Fridge
+    - Item_Apteczka
+    - DirtOnCarpet
+    - GirlsRoom
+    - Item_CabinetInCorridor
+    - Item_Picture
+    - Item_Window
+    progressInLastRead: 0
   listPlotCheckpoints:
+  - id: 
+    isAdditive: 0
+    checkpointField: 1
+  - id: Cameras1
+    isAdditive: 0
+    checkpointField: 0
+  - id: Dirt_Checked
+    isAdditive: 0
+    checkpointField: 1
+  - id: FA_Checked
+    isAdditive: 0
+    checkpointField: 1
   - id: Intro_finished
     isAdditive: 0
     checkpointField: 1
+  - id: Iron_Checked
+    isAdditive: 0
+    checkpointField: 0
   - id: Item_Slippers
+    isAdditive: 0
+    checkpointField: 0
+  - id: Puddle_Checked
+    isAdditive: 0
+    checkpointField: 0
+  - id: SN_Checked
+    isAdditive: 0
+    checkpointField: 0
+  - id: TreeBlood_Checked
     isAdditive: 0
     checkpointField: 0
   listPlotChekpointsEndChapter: []
@@ -576,6 +622,16 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Blood_Floor
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Tsk. Kto\u015B usun\u0105\u0142 nagrania z dzisiejszej nocy."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Cameras1
     runnedAlready: 0
   - lines:
     - subLines:
@@ -663,7 +719,64 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 
     identifier: Chapter1_intro
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Na dywanie jest b\u0142oto."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: DirtOnCarpet
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Czy ma to co\u015B wsp\xF3lnego z ka\u0142u\u017Cami w Ogrodzie?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: DirtOnCarpet2
     runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: To miejsce zbrodni.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Enter_Bathroom
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: AAH!
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Prawie zabi\u0142am si\u0119 o ten dywan!"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Enter_Corridor
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Zamkni\u0119te na klucz."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: GirlsRoom
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0.05
@@ -1126,6 +1239,16 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 0
     identifier: Intro
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Apteczka. Kto\u015B w niej grzeba\u0142..."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Apteczka
     runnedAlready: 1
   - lines:
     - subLines:
@@ -1136,7 +1259,37 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Bin
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Co to... czy to krew?
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_BloodTree
     runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pud\u0142a."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Boxes
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Hm... Po\u015Bciele, koce, prze\u015Bcierad\u0142a. "
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_CabinetInCorridor
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1146,7 +1299,69 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Calendar
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Powinni\u015Bmy do\u0142\u0105czy\u0107 ten dywan do podejrzanych."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Carpet
     runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Szklanki, Talerze... nic ciekawego.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Cupboard
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie mam poj\u0119cia co to jest. Nie dotkn\u0119 tego."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_DangerBottle
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Jakie brudne okno...
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_DirtyWindow
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Jakie \u015Bliczne kwiatki!"
+      - timeForSingleCharDisplay: 0
+        subline: "Nie maj\u0105 nic wsp\xF3lnego ze \u015Bledztwem."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Flowers
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "W \u015Brodku s\u0105 tylko og\xF3rki kiszone i ser."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Fridge
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1156,6 +1371,26 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Hanger
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dziwne miejsce na \u017Celazko..."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Iron
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: No lampka.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Light
     runnedAlready: 0
   - lines:
     - subLines:
@@ -1166,7 +1401,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Lockers
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1178,7 +1413,27 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Mirror
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Kto\u015B nie umy\u0142 po sobie kubka."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Mug
     runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Nic tu nie ma.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Oven
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1188,6 +1443,86 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_PaperTowel
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Aww... jakie \u015Bliczne kwiatki."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Pergola
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dobrze opisuje moje wn\u0119trze."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Picture
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Umm... co\u015B jest nie tak."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Picture_2
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Okej, to miejsce jest chyba nawiedzone.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Picture_3
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Kanapa. Wygl\u0105da na wygodn\u0105."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Pillow
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Wczoraj pada\u0142 deszcz."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Puddles
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Czy to ma zwi\u0105zek z brudnym dywanem przy sypialniach?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Puddles2
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: To bardzo smutna kanapka.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Sandwitch
     runnedAlready: 0
   - lines:
     - subLines:
@@ -1198,7 +1533,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Sculpture
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1208,7 +1543,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Sink
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1218,7 +1553,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Slippers
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1228,7 +1563,99 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Stall
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: 'Na stanowisku czwartym jest karteczka. '
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Na karteczce narysowane s\u0105 dziwne symbole."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Co one mog\u0105 znaczy\u0107?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_StickNote
     runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Maj\u0105 tu do\u015B\u0107 ostre no\u017Ce."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Szuflada
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: 'Telewizor. '
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Idealne miejsce na spe\u0142nianie czasu z przyjaci\xF3\u0142mi."
+      - timeForSingleCharDisplay: 0
+        subline: Podobno.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_TV
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Szklanka wody
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Water
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pod tym obrusem znajduje si\u0119 jaki\u015B tajny wynalazek."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Albo wi\u0119cej pude\u0142. "
+      - timeForSingleCharDisplay: 0
+        subline: Prawdopodobnie to drugie.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_WeirdBox
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie mam zamiaru skaka\u0107."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Item_Window
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1238,38 +1665,99 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: LockedBathroom
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Ani drgn\u0105. "
+      - timeForSingleCharDisplay: 0
+        subline: "Co\u015B blokuje drzwi od \u015Brodka."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Storage
     runnedAlready: 0
   serializedAnalisedSequence:
     lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "Jaka ona pi\u0119kna. I ci\u0119\u017Cka..."
+        subline: To bardzo smutna kanapka.
       lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
-    identifier: Item_Sculpture
+    identifier: Item_Sandwitch
     runnedAlready: 0
   serializedPlaceholderSequence:
-    lines: []
-    identifier: 
+    lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: AAH!
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Prawie zabi\u0142am si\u0119 o ten dywan!"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Enter_Corridor
     runnedAlready: 0
   seqIdTab:
   - Blood_Floor
+  - Cameras1
   - Chapter1_intro
+  - DirtOnCarpet
+  - DirtOnCarpet2
+  - Enter_Bathroom
+  - Enter_Corridor
+  - GirlsRoom
   - Intro
+  - Item_Apteczka
   - Item_Bin
+  - Item_BloodTree
+  - Item_Boxes
+  - Item_CabinetInCorridor
   - Item_Calendar
+  - Item_Carpet
+  - Item_Cupboard
+  - Item_DangerBottle
+  - Item_DirtyWindow
+  - Item_Flowers
+  - Item_Fridge
   - Item_Hanger
+  - Item_Iron
+  - Item_Light
   - Item_Lockers
   - Item_Mirror
+  - Item_Mug
+  - Item_Oven
   - Item_PaperTowel
+  - Item_Pergola
+  - Item_Picture
+  - Item_Picture_2
+  - Item_Picture_3
+  - Item_Pillow
+  - Item_Puddles
+  - Item_Puddles2
+  - Item_Sandwich
   - Item_Sculpture
   - Item_Sink
   - Item_Slippers
   - Item_Stall
+  - Item_StickNote
+  - Item_Szuflada
+  - Item_TV
+  - Item_Water
+  - Item_WeirdBox
+  - Item_Window
   - LockedBathroom
-  analisedIdentifier: Item_Sculpture
-  analisedIndex: 9
-  placeholdIdentifier: 
+  - Storage
+  analisedIdentifier: Item_Sandwich
+  analisedIndex: 36
+  placeholdIdentifier: Enter_Corridor
   chapter: 0
