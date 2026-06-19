@@ -42,10 +42,9 @@ public class CursorController : MonoBehaviour
         // 1. Wracamy do 'performed', bo wiemy, ¿e u Ciebie dzia³a
         if (!obj.performed) return;
 
-        // 2. NOWOŒÆ: Blokada czasowa (Cooldown)
+        // 2. Blokada czasowa (Cooldown)
         // Jeœli od ostatniego klikniêcia minê³o mniej ni¿ 0.3 sekundy, ignorujemy akcjê
         if (Time.time - lastInteractionTime < interactionCooldown) return;
-
 
         if (dataFlow.canvasCtrl.UIMode == EUIMode.DIALOGUE) return;
 
@@ -54,6 +53,7 @@ public class CursorController : MonoBehaviour
             Debug.Log("Zarejestrowano klikniêcie w obiekt o nazwie: " + raycastHit2D.collider.gameObject.name);
         }
 
+        // --- SPRAWDZANIE DRZWI ---
         LocationChanger clickedDoor = raycastHit2D ? raycastHit2D.collider.GetComponent<LocationChanger>() : null;
         if (clickedDoor != null)
         {
@@ -64,6 +64,18 @@ public class CursorController : MonoBehaviour
             return;
         }
 
+        // --- SPRAWDZANIE ZNAJDZIEK (TEGO BRAKOWA£O!) ---
+        CollectibleItem clickedCollectible = raycastHit2D ? raycastHit2D.collider.GetComponent<CollectibleItem>() : null;
+        if (clickedCollectible != null)
+        {
+            // Rejestrujemy udane klikniêcie w czasie
+            lastInteractionTime = Time.time;
+
+            clickedCollectible.Collect(); // Odpalamy funkcjê zbierania z kaczuszki
+            return; // Przerywamy dalsze sprawdzanie, bo obiekt zosta³ zebrany
+        }
+
+        // --- SPRAWDZANIE DIALOGÓW ---
         if (spriteDialogue)
         {
             DialogueOptionData dod = spriteDialogue.getDOD;
