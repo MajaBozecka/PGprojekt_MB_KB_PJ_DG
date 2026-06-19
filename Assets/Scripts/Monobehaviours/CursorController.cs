@@ -83,6 +83,7 @@ public class CursorController : MonoBehaviour
             {
                 // Rejestrujemy udane klikniêcie w czasie
                 lastInteractionTime = Time.time;
+                dataFlow.testedObjectWithDialogueInteraction = spriteDialogue;
 
                 dataFlow.StartDialogueSequence(dod);
                 spriteDialogue.read = true;

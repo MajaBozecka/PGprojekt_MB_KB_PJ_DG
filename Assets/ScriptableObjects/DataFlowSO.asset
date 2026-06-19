@@ -15,9 +15,9 @@ MonoBehaviour:
   speakerList:
   - speakerId: O
     speakerName: Oktawian
-    fontSize: 16
-    styles: 0
-    color: {r: 0.57169807, g: 0.5880228, b: 1, a: 1}
+    fontSize: 20
+    styles: 1
+    color: {r: 0.13671052, g: 0.1442953, b: 0.3433962, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
     - modName: A1
@@ -25,9 +25,9 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: -2825977400356617734, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: A
     speakerName: Antonina
-    fontSize: 16
-    styles: 0
-    color: {r: 1, g: 0.54905653, b: 0.87783605, a: 1}
+    fontSize: 20
+    styles: 1
+    color: {r: 0.5471698, g: 0.08155921, b: 0.42132908, a: 1}
     timePerCharacterTalking: 0.03
     sprites:
     - modName: K1
@@ -159,9 +159,9 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: 5874822173669222814, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: Mz
     speakerName: Mateusz
-    fontSize: 16
-    styles: 0
-    color: {r: 1, g: 0.29399306, b: 0.26981127, a: 1}
+    fontSize: 20
+    styles: 1
+    color: {r: 0.4490565, g: 0.06839089, b: 0.056767512, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
     - modName: F4
@@ -245,9 +245,9 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: 637828700191138899, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: Ma
     speakerName: Matylda
-    fontSize: 16
-    styles: 0
-    color: {r: 0.7050018, g: 0.17466003, b: 0.83396226, a: 1}
+    fontSize: 20
+    styles: 1
+    color: {r: 0.30494642, g: 0.085902445, b: 0.3584906, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
     - modName: E1
@@ -329,9 +329,9 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: 4762532328301696617, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: I
     speakerName: Krystian
-    fontSize: 16
-    styles: 0
-    color: {r: 1, g: 0.99378765, b: 0.6622641, a: 1}
+    fontSize: 20
+    styles: 1
+    color: {r: 1, g: 0.951999, b: 0.6924528, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
     - modName: H20
@@ -461,9 +461,9 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: -7215321345092707722, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: R
     speakerName: "Rafa\u0142"
-    fontSize: 16
-    styles: 0
-    color: {r: 0.4604995, g: 0.8490566, b: 0.2995728, a: 1}
+    fontSize: 20
+    styles: 1
+    color: {r: 0.15163428, g: 0.4566037, b: 0.026706986, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
     - modName: C2
@@ -531,9 +531,9 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: 4478830644468881633, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: Ad
     speakerName: Adam
-    fontSize: 16
-    styles: 0
-    color: {r: 0.13460304, g: 0.16481456, b: 0.3584906, a: 1}
+    fontSize: 20
+    styles: 1
+    color: {r: 0.03240299, g: 0.047451362, b: 0.13962269, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
     - modName: A1
@@ -541,15 +541,15 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: -7679190861611390107, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: Gracz
     speakerName: Ania
-    fontSize: 16
-    styles: 0
-    color: {r: 1, g: 0.584222, b: 0.20188677, a: 1}
+    fontSize: 20
+    styles: 1
+    color: {r: 0.18490559, g: 0.13606259, b: 0.061053712, a: 1}
     timePerCharacterTalking: 0.05
     sprites: []
     customTextboxGraphic: {fileID: 1411459866887581016, guid: 687fc60a3fdcaaa4bb2f262b7ae61b28, type: 3}
   - speakerId: Narrator
     speakerName: ---
-    fontSize: 16
+    fontSize: 20
     styles: 0
     color: {r: 1, g: 1, b: 1, a: 1}
     timePerCharacterTalking: 0.05
@@ -595,7 +595,7 @@ MonoBehaviour:
     - Storage
     - Item_Carpet
     - Ch1AWstepB
-    progressInLastRead: 0
+    progressInLastRead: 427
   listPlotCheckpoints:
   - id: 
     isAdditive: 0
@@ -630,6 +630,15 @@ MonoBehaviour:
   - id: TreeBlood_Checked
     isAdditive: 0
     checkpointField: 0
+  - id: Ch1AQAv
+    isAdditive: 0
+    checkpointField: 1
+  - id: Ch1AW1Asked
+    isAdditive: 0
+    checkpointField: 0
+  - id: Ch1AW2Asked
+    isAdditive: 0
+    checkpointField: 0
   listPlotChekpointsEndChapter: []
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
@@ -656,6 +665,28 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Cameras1
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0.1
+        subline: ...
+      - timeForSingleCharDisplay: 0
+        subline: "...Spa\u0142am?"
+      lingering: -1
+      speakerID: A
+      speakerMod: A3
+      changeLocationId: 
+    identifier: Ch1AW1
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Nie za dobrze.
+      lingering: -1
+      speakerID: A
+      speakerMod: E4
+      changeLocationId: 
+    identifier: Ch1AW2
     runnedAlready: 0
   - lines:
     - subLines: []
@@ -1782,55 +1813,19 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: LockedBathroom
-runnedAlready: 0
-  - lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Ani drgn\u0105. "
-      - timeForSingleCharDisplay: 0
-        subline: "Co\u015B blokuje drzwi od \u015Brodka."
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    identifier: Storage
     runnedAlready: 0
   serializedAnalisedSequence:
     lines:
-    - subLines: []
-      lingering: 0
-      speakerID: A
-      speakerMod: A1
-      changeLocationId: 
     - subLines:
+      - timeForSingleCharDisplay: 0.1
+        subline: ...
       - timeForSingleCharDisplay: 0
-        subline: "Dzie\u0144 dobry, nazywam si\u0119 Anna Nowak, jestem detektywem. "
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Pani Antonina Wiercipi\u0119ta, mam racj\u0119?"
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Tak.
+        subline: "...Spa\u0142am?"
       lingering: -1
       speakerID: A
-      speakerMod: A1
+      speakerMod: A3
       changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "To by\u0142o straszne, nadal nie mog\u0119 si\u0119 otrz\u0105sn\u0105\u0107."
-      lingering: -1
-      speakerID: A
-      speakerMod: A7
-      changeLocationId: 
-    identifier: Ch1AWstepA
+    identifier: Ch1AW1
     runnedAlready: 0
   serializedPlaceholderSequence:
     lines: []
@@ -1839,6 +1834,8 @@ runnedAlready: 0
   seqIdTab:
   - Blood_Floor
   - Cameras1
+  - Ch1AW1
+  - Ch1AW2
   - Ch1AWstepA
   - Ch1AWstepB
   - Chapter1_intro
@@ -1887,8 +1884,7 @@ runnedAlready: 0
   - Item_WeirdBox
   - Item_Window
   - LockedBathroom
-  - Storage
-  analisedIdentifier: Ch1AWstepA
+  analisedIdentifier: Ch1AW1
   analisedIndex: 2
   placeholdIdentifier: 
-  chapter: 0
+  chapter: 

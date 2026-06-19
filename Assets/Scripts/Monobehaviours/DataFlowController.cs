@@ -20,6 +20,7 @@ public class DataFlowController : MonoBehaviour
     public GameObject dialogueCanvas;
 
     public static System.Action<string> OnSequenceEnded;
+    public static System.Action OnSequenceStarted;
 
     private bool SKIP
     {
@@ -139,6 +140,7 @@ public class DataFlowController : MonoBehaviour
 
     public void StartDialogueSequence(DialogueOptionData DOD)
     {
+        OnSequenceStarted?.Invoke();
         if (locationManager != null) locationManager.SetDialogueState(true);
         StopAllCoroutines();
         if (dialogueCanvas != null) dialogueCanvas.SetActive(true);
@@ -219,9 +221,11 @@ public class DataFlowController : MonoBehaviour
             if (locationManager != null) locationManager.SetDialogueState(false);
 
             if (testedObjectWithDialogueInteraction != null &&
-                testedObjectWithDialogueInteraction.listOfDialogueOptions != null &&
-                testedObjectWithDialogueInteraction.listOfDialogueOptions.Count > 0)
+                            testedObjectWithDialogueInteraction.hasChoicesMenu && // Gra patrzy, czy zaznaczy³aœ checkbox!
+                            testedObjectWithDialogueInteraction.listOfDialogueOptions != null &&
+                            testedObjectWithDialogueInteraction.listOfDialogueOptions.Count > 0)
             {
+                populateCanvasWithButtons();
                 canvasCtrl.UIMode = EUIMode.BUTTONS;
             }
             else

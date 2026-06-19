@@ -387,6 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Sculpture
     read: 0
@@ -438,6 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_CabinetInCorridor
     read: 0
@@ -719,6 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_DangerBottle
     read: 0
@@ -972,6 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_PaperTowel
     read: 0
@@ -1215,6 +1219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Cupboard
     read: 0
@@ -1312,6 +1317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Window
     read: 0
@@ -1445,6 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Sink
     read: 0
@@ -1542,6 +1549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_TV
     read: 0
@@ -1788,6 +1796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Stall
     read: 0
@@ -2068,6 +2077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Oven
     read: 0
@@ -2222,6 +2232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Pillow
     read: 0
@@ -2319,6 +2330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Cameras1
     read: 0
@@ -2623,6 +2635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Flowers
     read: 0
@@ -2720,6 +2733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: GirlsRoom
     read: 0
@@ -2817,6 +2831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Flowers
     read: 0
@@ -2914,6 +2929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Flowers
     read: 0
@@ -3011,6 +3027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Puddles2
     read: 0
@@ -3282,6 +3299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Pergola
     read: 0
@@ -3485,6 +3503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Water
     read: 0
@@ -3536,6 +3555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Boxes
     read: 0
@@ -3710,6 +3730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Pillow
     read: 0
@@ -3977,6 +3998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Lockers
     read: 0
@@ -4074,6 +4096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Cupboard
     read: 0
@@ -4171,6 +4194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Pillow
     read: 0
@@ -4607,6 +4631,7 @@ GameObject:
   - component: {fileID: 586129995}
   - component: {fileID: 586129994}
   - component: {fileID: 586129996}
+  - component: {fileID: 586129997}
   m_Layer: 0
   m_Name: Antonina
   m_TagString: Untagged
@@ -4746,6 +4771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 1
   listOfDialogueOptions:
   - identifier: Ch1AWstepB
     read: 0
@@ -4758,14 +4784,60 @@ MonoBehaviour:
     - id: Ch1AWstepDone
       isAdditive: 0
       checkpointField: 1
+    - id: Ch1AQAv
+      isAdditive: 0
+      checkpointField: 1
   - identifier: Ch1AWstepA
     read: 0
     buttonText: 
     requirements: []
     updatedCheckpointValues:
+    - id: Ch1AQAv
+      isAdditive: 0
+      checkpointField: 1
     - id: Ch1AWstepDone
       isAdditive: 0
       checkpointField: 1
+  - identifier: Ch1AW1
+    read: 0
+    buttonText: "Co robi\u0142a pani dzisiaj w nocy?"
+    requirements:
+    - id: Ch1AQAv
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1AW1Asked
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: Ch1AW1Asked
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1AW2
+    read: 0
+    buttonText: "Czy zna\u0142a pani Oktawiana?"
+    requirements:
+    - id: Ch1AQAv
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1AW2Asked
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: Ch1AQAv
+      isAdditive: 0
+      checkpointField: 1
+--- !u!114 &586129997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586129992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5c189bf9374d4418bc12b3ebe43643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VisibilityControl
 --- !u!1 &597034451
 GameObject:
   m_ObjectHideFlags: 0
@@ -5355,6 +5427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Enter_Bathroom
     read: 0
@@ -5386,6 +5459,7 @@ GameObject:
   - component: {fileID: 705961416}
   - component: {fileID: 705961418}
   - component: {fileID: 705961417}
+  - component: {fileID: 705961419}
   m_Layer: 0
   m_Name: "Rafa\u0142"
   m_TagString: Untagged
@@ -5513,6 +5587,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &705961419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705961415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5c189bf9374d4418bc12b3ebe43643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VisibilityControl
 --- !u!1 &714028632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5558,6 +5644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Szuflada
     read: 0
@@ -5655,6 +5742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Puddles2
     read: 0
@@ -6006,6 +6094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: GirlsRoom
     read: 0
@@ -6377,6 +6466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Carpet
     read: 0
@@ -6474,6 +6564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Storage
     read: 0
@@ -6571,6 +6662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Puddles2
     read: 0
@@ -6865,6 +6957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Window
     read: 0
@@ -7068,6 +7161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Mug
     read: 0
@@ -7407,6 +7501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Sandwitch
     read: 0
@@ -7458,6 +7553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Puddles2
     read: 0
@@ -7750,6 +7846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Boxes
     read: 0
@@ -7907,6 +8004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Blood_Floor
     read: 0
@@ -8755,6 +8853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Iron
     read: 0
@@ -9054,6 +9153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Boxes
     read: 0
@@ -9117,6 +9217,7 @@ GameObject:
   - component: {fileID: 1139537749}
   - component: {fileID: 1139537751}
   - component: {fileID: 1139537750}
+  - component: {fileID: 1139537752}
   m_Layer: 0
   m_Name: Mateusz
   m_TagString: Untagged
@@ -9244,6 +9345,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1139537752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139537748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5c189bf9374d4418bc12b3ebe43643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VisibilityControl
 --- !u!1 &1160356621
 GameObject:
   m_ObjectHideFlags: 0
@@ -9381,6 +9494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Pillow
     read: 0
@@ -9816,6 +9930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_BloodTree
     read: 0
@@ -9917,6 +10032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: DirtOnCarpet2
     read: 0
@@ -10084,6 +10200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: LockedBathroom
     read: 0
@@ -10384,6 +10501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Enter_Corridor
     read: 0
@@ -10449,6 +10567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_DirtyWindow
     read: 0
@@ -10546,6 +10665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Hanger
     read: 0
@@ -10749,6 +10869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Apteczka
     read: 0
@@ -10909,6 +11030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Light
     read: 0
@@ -10960,6 +11082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Cupboard
     read: 0
@@ -11057,6 +11180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Flowers
     read: 0
@@ -11277,6 +11401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Picture
     read: 0
@@ -11328,6 +11453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Flowers
     read: 0
@@ -12117,6 +12243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Slippers
     read: 0
@@ -12222,6 +12349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Mirror
     read: 0
@@ -12410,6 +12538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Bin
     read: 0
@@ -12473,6 +12602,7 @@ GameObject:
   - component: {fileID: 1668206855}
   - component: {fileID: 1668206857}
   - component: {fileID: 1668206856}
+  - component: {fileID: 1668206858}
   m_Layer: 0
   m_Name: Matylda
   m_TagString: Untagged
@@ -12600,6 +12730,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1668206858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668206854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5c189bf9374d4418bc12b3ebe43643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VisibilityControl
 --- !u!1 &1696352540
 GameObject:
   m_ObjectHideFlags: 0
@@ -12880,6 +13022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Boxes
     read: 0
@@ -12943,6 +13086,7 @@ GameObject:
   - component: {fileID: 1804707034}
   - component: {fileID: 1804707036}
   - component: {fileID: 1804707035}
+  - component: {fileID: 1804707037}
   m_Layer: 0
   m_Name: Krystian
   m_TagString: Untagged
@@ -13070,6 +13214,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.1, y: 5.3}
   m_EdgeRadius: 0
+--- !u!114 &1804707037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804707033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5c189bf9374d4418bc12b3ebe43643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VisibilityControl
 --- !u!1 &1817696595
 GameObject:
   m_ObjectHideFlags: 0
@@ -13334,6 +13490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Boxes
     read: 0
@@ -13724,6 +13881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_WeirdBox
     read: 0
@@ -14175,6 +14333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_StickNote
     read: 0
@@ -14275,6 +14434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Fridge
     read: 0
@@ -14463,6 +14623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Flowers
     read: 0
@@ -14619,6 +14780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: Item_Calendar
     read: 0
