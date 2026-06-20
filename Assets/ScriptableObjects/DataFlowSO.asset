@@ -594,7 +594,7 @@ MonoBehaviour:
     - NZD
     - NZMa_dnz
     - Epilog_NooneWillEverBelieveYou
-- NZK
+    - NZK
     - NZMz_1XX
     - NZMz_cont
     - Enter_Bathroom
@@ -612,7 +612,7 @@ MonoBehaviour:
   - id: EndingCheckpoint
     isAdditive: 0
     checkpointField: 0
-- id: EndingID
+  - id: EndingID
     isAdditive: 0
     checkpointField: 0
   - id: FA_Checked
@@ -639,7 +639,7 @@ MonoBehaviour:
   - id: Puddle_Checked
     isAdditive: 0
     checkpointField: 0
-- id: RozczarowanieMateusza
+  - id: RozczarowanieMateusza
     isAdditive: 1
     checkpointField: 0
   - id: Slippers_Checked
@@ -2992,7 +2992,7 @@ MonoBehaviour:
       changeLocationId: 
     identifier: NZMa_dnz
     runnedAlready: 0
-- lines:
+  - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Co.
