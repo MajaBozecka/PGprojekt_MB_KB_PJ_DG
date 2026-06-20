@@ -20,6 +20,8 @@ public class DataFlowController : MonoBehaviour
     public GameObject dialogueCanvas;
 
     public static System.Action<string> OnSequenceEnded;
+    public static System.Action OnSequenceStarted;
+    public static System.Action OnConversationFinished;
 
     private bool SKIP
     {
@@ -46,14 +48,24 @@ public class DataFlowController : MonoBehaviour
         confirm.canceled += OnSubmitCancel;
         InputAction history = InputSystem.actions.FindAction("History");
         history.started += OnHistoryLookUp;
+
         data.LoadFromJSON();
+
+        for (int i = 0; i < data.listPlotCheckpoints.Count; i++)
+        {
+            PlotCheckpoint tempCheckpoint = data.listPlotCheckpoints[i];
+            tempCheckpoint.checkpointField = 0;
+            data.listPlotCheckpoints[i] = tempCheckpoint;
+        }
+
         canvasCtrl.dialogueHistoryRewrite();
-        populateCanvasWithButtons();
+
         foreach (var item in data.dialogueSequenceHashSet)
         {
             item.runnedAlready = false;
         }
     }
+
     private void OnDestroy()
     {
         InputAction skip = InputSystem.actions.FindAction("SKIP");
@@ -64,6 +76,7 @@ public class DataFlowController : MonoBehaviour
         InputAction history = InputSystem.actions.FindAction("History");
         history.started -= OnHistoryLookUp;
     }
+
     void Update()
     {
         SkippingVisibility();
@@ -145,8 +158,20 @@ public class DataFlowController : MonoBehaviour
         background.sprite = Resources.Load<Sprite>("Sprites/" + $"{data.backgroundImagePath}");
     }
 
+    public void InteractWithObject(ObjectWithDialogueInteraction interactedObject)
+    {
+        testedObjectWithDialogueInteraction = interactedObject;
+        DialogueOptionData validOption = interactedObject.getDOD;
+
+        if (validOption != null)
+        {
+            StartDialogueSequence(validOption);
+        }
+    }
+
     public void StartDialogueSequence(DialogueOptionData DOD)
     {
+        OnSequenceStarted?.Invoke();
         if (locationManager != null) locationManager.SetDialogueState(true);
         StopAllCoroutines();
         if (dialogueCanvas != null) dialogueCanvas.SetActive(true);
@@ -213,7 +238,7 @@ public class DataFlowController : MonoBehaviour
                 }
                 confirmNextLine = false;
             }
-            Debug.Log("<color=cyan>[DIALOG]</color> Czy dialog by³ ju¿ wczeœniej odczytany? runnedAlready = " + TestedDialogueSequence.runnedAlready);
+            Debug.Log("<color=cyan>[DIALOG]</color> Czy dialog byl juz wczesniej odczytany? runnedAlready = " + TestedDialogueSequence.runnedAlready);
 
             if (!TestedDialogueSequence.runnedAlready)
             {
@@ -227,15 +252,18 @@ public class DataFlowController : MonoBehaviour
             if (locationManager != null) locationManager.SetDialogueState(false);
 
             if (testedObjectWithDialogueInteraction != null &&
+                testedObjectWithDialogueInteraction.hasChoicesMenu &&
                 testedObjectWithDialogueInteraction.listOfDialogueOptions != null &&
                 testedObjectWithDialogueInteraction.listOfDialogueOptions.Count > 0)
             {
+                populateCanvasWithButtons();
                 canvasCtrl.UIMode = EUIMode.BUTTONS;
             }
             else
             {
                 if (dialogueCanvas != null) dialogueCanvas.SetActive(false);
-                canvasCtrl.UIMode = EUIMode.NOTHING; 
+                canvasCtrl.UIMode = EUIMode.NOTHING;
+                OnConversationFinished?.Invoke();
             }
 
             SKIP = false;
@@ -248,7 +276,7 @@ public class DataFlowController : MonoBehaviour
 
         bool isItTimeForNextLine(DialogueLine line, float lingerIterator)
         {
-            return confirmNextLine || (line.lingering > 0 && lingerIterator >= line.lingering);
+            return confirmNextLine || (line.lingering >= 0 && lingerIterator >= line.lingering);
         }
 
         bool canSkipNow(float timeLineIterator, float tillWhat)

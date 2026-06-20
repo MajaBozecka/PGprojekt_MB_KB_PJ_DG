@@ -15,7 +15,7 @@ MonoBehaviour:
   speakerList:
   - speakerId: O
     speakerName: Oktawian
-    fontSize: 16
+    fontSize: 20
     styles: 0
     color: {r: 0.57169807, g: 0.5880228, b: 1, a: 1}
     timePerCharacterTalking: 0.05
@@ -25,7 +25,7 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: 0}
   - speakerId: A
     speakerName: Antonina
-    fontSize: 16
+    fontSize: 20
     styles: 0
     color: {r: 1, g: 0.54905653, b: 0.87783605, a: 1}
     timePerCharacterTalking: 0.03
@@ -159,7 +159,7 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: 0}
   - speakerId: Mz
     speakerName: Mateusz
-    fontSize: 16
+    fontSize: 20
     styles: 0
     color: {r: 1, g: 0.29399306, b: 0.26981127, a: 1}
     timePerCharacterTalking: 0.05
@@ -245,7 +245,7 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: 0}
   - speakerId: Ma
     speakerName: Matylda
-    fontSize: 16
+    fontSize: 20
     styles: 0
     color: {r: 0.7050018, g: 0.17466003, b: 0.83396226, a: 1}
     timePerCharacterTalking: 0.05
@@ -329,7 +329,7 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: 0}
   - speakerId: I
     speakerName: Krystian
-    fontSize: 16
+    fontSize: 20
     styles: 0
     color: {r: 1, g: 0.99378765, b: 0.6622641, a: 1}
     timePerCharacterTalking: 0.05
@@ -461,7 +461,7 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: 0}
   - speakerId: R
     speakerName: "Rafa\u0142"
-    fontSize: 16
+    fontSize: 20
     styles: 0
     color: {r: 0.4604995, g: 0.8490566, b: 0.2995728, a: 1}
     timePerCharacterTalking: 0.05
@@ -531,7 +531,7 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: 0}
   - speakerId: Ad
     speakerName: Adam
-    fontSize: 16
+    fontSize: 20
     styles: 0
     color: {r: 0.13460304, g: 0.16481456, b: 0.3584906, a: 1}
     timePerCharacterTalking: 0.05
@@ -541,7 +541,7 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: 0}
   - speakerId: Gracz
     speakerName: Ania
-    fontSize: 16
+    fontSize: 20
     styles: 0
     color: {r: 1, g: 0.584222, b: 0.20188677, a: 1}
     timePerCharacterTalking: 0.05
@@ -549,7 +549,7 @@ MonoBehaviour:
     customTextboxGraphic: {fileID: 0}
   - speakerId: Narrator
     speakerName: ---
-    fontSize: 16
+    fontSize: 20
     styles: 0
     color: {r: 0.11698109, g: 0.11698109, b: 0.11698109, a: 1}
     timePerCharacterTalking: 0.05
@@ -594,35 +594,36 @@ MonoBehaviour:
     - NZD
     - NZMa_dnz
     - Epilog_NooneWillEverBelieveYou
-    - NZK
+- NZK
     - NZMz_1XX
     - NZMz_cont
-    progressInLastRead: 37
+    - Enter_Bathroom
+    progressInLastRead: 0
   listPlotCheckpoints:
   - id: Cameras1
     isAdditive: 0
     checkpointField: 0
   - id: Dirt_Checked
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: DuchyNieZabily
     isAdditive: 0
     checkpointField: 0
   - id: EndingCheckpoint
     isAdditive: 0
     checkpointField: 0
-  - id: EndingID
+- id: EndingID
     isAdditive: 0
     checkpointField: 0
   - id: FA_Checked
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: InfoOWychodzeniuZSypialni
     isAdditive: 0
     checkpointField: 0
   - id: Intro_finished
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: Iron_Checked
     isAdditive: 0
     checkpointField: 0
@@ -638,9 +639,12 @@ MonoBehaviour:
   - id: Puddle_Checked
     isAdditive: 0
     checkpointField: 0
-  - id: RozczarowanieMateusza
+- id: RozczarowanieMateusza
     isAdditive: 1
-    checkpointField: 10
+    checkpointField: 0
+  - id: Slippers_Checked
+    isAdditive: 0
+    checkpointField: 0
   - id: SN_Checked
     isAdditive: 0
     checkpointField: 0
@@ -2988,7 +2992,7 @@ MonoBehaviour:
       changeLocationId: 
     identifier: NZMa_dnz
     runnedAlready: 0
-  - lines:
+- lines:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Co.
@@ -3036,8 +3040,7 @@ MonoBehaviour:
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "Matylda wysz\u0142a w \u015Brodku burzy do Ogrodu i z kim\u015B
-          rozmawia\u0142a, ale TO JA jestem winny?!"
+        subline: "Matylda wysz\u0142a w \u015Brodku burzy do Ogrodu i z kim\u015B rozmawia\u0142a, ale TO JA jestem winny?!"
       lingering: 0
       speakerID: Mz
       speakerMod: 
@@ -3162,8 +3165,7 @@ MonoBehaviour:
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "Nagle przesta\u0142a\u015B by\u0107 w stanie utrzyma\u0107 g\u0142owy
-          w g\xF3rze. Zakr\u0119ci\u0142o ci si\u0119 w g\u0142owie."
+        subline: "Nagle przesta\u0142a\u015B by\u0107 w stanie utrzyma\u0107 g\u0142owy w g\xF3rze. Zakr\u0119ci\u0142o ci si\u0119 w g\u0142owie."
       lingering: 0
       speakerID: Narrator
       speakerMod: 
@@ -3209,7 +3211,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: NZMz_bad
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
