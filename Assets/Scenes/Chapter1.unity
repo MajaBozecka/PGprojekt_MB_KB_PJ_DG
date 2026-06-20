@@ -10047,7 +10047,10 @@ MonoBehaviour:
     - id: Puddle_Checked
       isAdditive: 0
       checkpointField: 1
-    updatedCheckpointValues: []
+    updatedCheckpointValues:
+    - id: Dirt_Checked
+      isAdditive: 0
+      checkpointField: 1
   - identifier: DirtOnCarpet
     read: 0
     buttonText: 

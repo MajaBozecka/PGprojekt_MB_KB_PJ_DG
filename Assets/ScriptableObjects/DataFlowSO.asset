@@ -599,7 +599,7 @@ MonoBehaviour:
     - Ch1AW1
     - Ch1AW2
     - Item_Pergola
-    progressInLastRead: 137
+    progressInLastRead: 256
   listPlotCheckpoints:
   - id: Cameras1
     isAdditive: 0
@@ -633,7 +633,7 @@ MonoBehaviour:
     checkpointField: 0
   - id: Ch1AQAv
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: Ch1AW1Asked
     isAdditive: 0
     checkpointField: 0
@@ -669,16 +669,303 @@ MonoBehaviour:
     runnedAlready: 0
   - lines:
     - subLines:
-      - timeForSingleCharDisplay: 0.1
+      - timeForSingleCharDisplay: 0.25
         subline: ...
       - timeForSingleCharDisplay: 0
-        subline: "...Spa\u0142am?"
+        subline: "Spa\u0142am?"
       lingering: -1
       speakerID: A
       speakerMod: A3
       changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Akurat bardzo dobrze mi si\u0119 spa\u0142o, ale Matylda mnie obudzi\u0142a
+          jak znale\u017Ali cia\u0142o."
+      lingering: -1
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: Masakra!
+      lingering: -1
+      speakerID: A
+      speakerMod: G4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Mam nadziej\u0119, \u017Ce rozwi\u0105\u017C\u0105 pa\u0144stwo
+          t\u0119 spraw\u0119 jak najszybciej."
+      lingering: -1
+      speakerID: A
+      speakerMod: G1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Leki mi si\u0119 ko\u0144cz\u0105..."
+      lingering: -1
+      speakerID: A
+      speakerMod: E3
+      changeLocationId: 
     identifier: Ch1AW1
-    runnedAlready: 1
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: ...
+      lingering: -1
+      speakerID: A
+      speakerMod: A4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: To ma sens.
+      lingering: -1
+      speakerID: A
+      speakerMod: A5
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: ...
+      - timeForSingleCharDisplay: 0
+        subline: "Spa\u0142am?"
+      lingering: -1
+      speakerID: A
+      speakerMod: A3
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Akurat bardzo dobrze mi si\u0119 spa\u0142o, ale Matylda mnie obudzi\u0142a
+          jak znale\u017Ali cia\u0142o."
+      lingering: -1
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: Masakra!
+      lingering: -1
+      speakerID: A
+      speakerMod: G4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Mam nadziej\u0119, \u017Ce rozwi\u0105\u017C\u0105 pa\u0144stwo
+          t\u0119 spraw\u0119 jak najszybciej."
+      lingering: -1
+      speakerID: A
+      speakerMod: G1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Leki mi si\u0119 ko\u0144cz\u0105..."
+      lingering: -1
+      speakerID: A
+      speakerMod: E3
+      changeLocationId: 
+    identifier: "Ch1AW1Oskar\u017CenieA1"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Brrr...
+      - timeForSingleCharDisplay: 0
+        subline: Okej.
+      lingering: -1
+      speakerID: A
+      speakerMod: E3
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: ...
+      - timeForSingleCharDisplay: 0
+        subline: "Spa\u0142am?"
+      lingering: -1
+      speakerID: A
+      speakerMod: A3
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Akurat bardzo dobrze mi si\u0119 spa\u0142o, ale Matylda mnie obudzi\u0142a
+          jak znale\u017Ali cia\u0142o."
+      lingering: -1
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: Masakra!
+      lingering: -1
+      speakerID: A
+      speakerMod: G4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Mam nadziej\u0119, \u017Ce rozwi\u0105\u017C\u0105 pa\u0144stwo
+          t\u0119 spraw\u0119 jak najszybciej."
+      lingering: -1
+      speakerID: A
+      speakerMod: G1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Leki mi si\u0119 ko\u0144cz\u0105..."
+      lingering: -1
+      speakerID: A
+      speakerMod: E3
+      changeLocationId: 
+    identifier: "Ch1AW1Oskar\u017CenieA2"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: O kurde.
+      - timeForSingleCharDisplay: 0
+        subline: "Dzi\u0119ki, \u017Ce m\xF3wisz."
+      lingering: -1
+      speakerID: A
+      speakerMod: A4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: ...
+      - timeForSingleCharDisplay: 0
+        subline: "Spa\u0142am?"
+      lingering: -1
+      speakerID: A
+      speakerMod: A3
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Akurat bardzo dobrze mi si\u0119 spa\u0142o, ale Matylda mnie obudzi\u0142a
+          jak znale\u017Ali cia\u0142o."
+      lingering: -1
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: Masakra!
+      lingering: -1
+      speakerID: A
+      speakerMod: G4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Mam nadziej\u0119, \u017Ce rozwi\u0105\u017C\u0105 pa\u0144stwo
+          t\u0119 spraw\u0119 jak najszybciej."
+      lingering: -1
+      speakerID: A
+      speakerMod: G1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Leki mi si\u0119 ko\u0144cz\u0105..."
+      lingering: -1
+      speakerID: A
+      speakerMod: E3
+      changeLocationId: 
+    identifier: "Ch1AW1Oskar\u017CenieA3"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Och.
+      - timeForSingleCharDisplay: 0
+        subline: W takim razie przepraszam.
+      lingering: -1
+      speakerID: A
+      speakerMod: A4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: ...
+      - timeForSingleCharDisplay: 0
+        subline: "Spa\u0142am?"
+      lingering: -1
+      speakerID: A
+      speakerMod: A3
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Akurat bardzo dobrze mi si\u0119 spa\u0142o, ale Matylda mnie obudzi\u0142a
+          jak znale\u017Ali cia\u0142o."
+      lingering: -1
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: Masakra!
+      lingering: -1
+      speakerID: A
+      speakerMod: G4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Mam nadziej\u0119, \u017Ce rozwi\u0105\u017C\u0105 pa\u0144stwo
+          t\u0119 spraw\u0119 jak najszybciej."
+      lingering: -1
+      speakerID: A
+      speakerMod: G1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Leki mi si\u0119 ko\u0144cz\u0105..."
+      lingering: -1
+      speakerID: A
+      speakerMod: E3
+      changeLocationId: 
+    identifier: "Ch1AW1Oskar\u017CenieB"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: A wie pani...!
+      lingering: -1
+      speakerID: A
+      speakerMod: A2
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.02
+        subline: .
+      - timeForSingleCharDisplay: 0.02
+        subline: .
+      - timeForSingleCharDisplay: 0.02
+        subline: .
+      lingering: -1
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.02
+        subline: .
+      - timeForSingleCharDisplay: 0.02
+        subline: .
+      - timeForSingleCharDisplay: 0.02
+        subline: .
+      lingering: -1
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.02
+        subline: "Nie pami\u0119tam jak si\u0119 nazywaj\u0105."
+      lingering: -1
+      speakerID: A
+      speakerMod: J3
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.02
+        subline: Ale takie no.
+      - timeForSingleCharDisplay: 0.02
+        subline: ' Psychiczne.'
+      lingering: -1
+      speakerID: A
+      speakerMod: A1
+      changeLocationId: 
+    identifier: Ch1AW1kontynuacja
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -688,7 +975,30 @@ MonoBehaviour:
       speakerMod: E4
       changeLocationId: 
     identifier: Ch1AW2
-    runnedAlready: 1
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Heej... Czy pani my\u015Bli, \u017Ce to ja go zabi\u0142am?"
+      lingering: -1
+      speakerID: A
+      speakerMod: C2
+      changeLocationId: 
+    identifier: "Ch1AWOskar\u017Cenie"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Co??? Dlaczego???
+      lingering: 0
+      speakerID: A
+      speakerMod: F2
+      changeLocationId: 
+    identifier: "Ch1AWOskar\u017CenieA"
+    runnedAlready: 0
+  - lines: []
+    identifier: "Ch1AWOskar\u017CenieA1"
+    runnedAlready: 0
   - lines:
     - subLines: []
       lingering: 0
@@ -724,7 +1034,7 @@ MonoBehaviour:
       speakerMod: A7
       changeLocationId: 
     identifier: Ch1AWstepA
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines: []
       lingering: 0
@@ -864,7 +1174,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: DirtOnCarpet
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1662,7 +1972,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Puddles2
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1817,17 +2127,35 @@ MonoBehaviour:
     runnedAlready: 0
   serializedAnalisedSequence:
     lines: []
-    identifier: 
+    identifier: "Ch1AWOskar\u017CenieA1"
     runnedAlready: 0
   serializedPlaceholderSequence:
-    lines: []
+    lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0
+      speakerID: A
+      speakerMod: A4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: To ma sens.
+      lingering: 0
+      speakerID: A
+      speakerMod: A5
+      changeLocationId: 
     identifier: 
     runnedAlready: 0
   seqIdTab:
   - Blood_Floor
   - Cameras1
   - Ch1AW1
+  - Ch1AW1kontynuacja
   - Ch1AW2
+  - "Ch1AWOskar\u017Cenie"
+  - "Ch1AWOskar\u017CenieA"
+  - "Ch1AWOskar\u017CenieA1"
   - Ch1AWstepA
   - Ch1AWstepB
   - Chapter1_intro
@@ -1876,7 +2204,7 @@ MonoBehaviour:
   - Item_WeirdBox
   - Item_Window
   - LockedBathroom
-  analisedIdentifier: 
-  analisedIndex: -1
+  analisedIdentifier: "Ch1AWOskar\u017CenieA1"
+  analisedIndex: 7
   placeholdIdentifier: 
   chapter: 
