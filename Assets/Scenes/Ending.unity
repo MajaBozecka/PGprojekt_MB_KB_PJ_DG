@@ -1249,7 +1249,7 @@ MonoBehaviour:
       checkpointField: 1
   - identifier: NZA
     read: 0
-    buttonText: Antonina
+    buttonText: Antonina!
     requirements:
     - id: EndingCheckpoint
       isAdditive: 0
@@ -1314,6 +1314,82 @@ MonoBehaviour:
     - id: EpilogID
       isAdditive: 0
       checkpointField: 1
+  - identifier: NZI
+    read: 0
+    buttonText: Ignacy!
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 4
+    - id: EpilogID
+      isAdditive: 0
+      checkpointField: 2
+  - identifier: NZR
+    read: 0
+    buttonText: "Rafa\u0142!"
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 4
+    - id: EpilogID
+      isAdditive: 0
+      checkpointField: 3
+  - identifier: NZMa
+    read: 0
+    buttonText: Matylda!
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: DuchyNieZabily
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 4
+    - id: EpilogID
+      isAdditive: 0
+      checkpointField: 3
+  - identifier: NZMa_dnz
+    read: 0
+    buttonText: Matylda?
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: DuchyNieZabily
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 4
+    - id: EpilogID
+      isAdditive: 0
+      checkpointField: 3
+  - identifier: NZD
+    read: 0
+    buttonText: DUCHY!
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: DuchyNieZabily
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DuchyNieZabily
+      isAdditive: 0
+      checkpointField: 1
   - identifier: Epilog_TrustMeBro
     read: 0
     buttonText: Epilog
@@ -1338,6 +1414,34 @@ MonoBehaviour:
     - id: EpilogID
       isAdditive: 0
       checkpointField: 2
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 5
+  - identifier: Epilog_NooneWillEverBelieveYou
+    read: 0
+    buttonText: Epilog
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 4
+    - id: EpilogID
+      isAdditive: 0
+      checkpointField: 3
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 5
+  - identifier: Epilog_HowCouldYou
+    read: 0
+    buttonText: Epilog
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 4
+    - id: EpilogID
+      isAdditive: 0
+      checkpointField: 4
     updatedCheckpointValues:
     - id: EndingCheckpoint
       isAdditive: 0
