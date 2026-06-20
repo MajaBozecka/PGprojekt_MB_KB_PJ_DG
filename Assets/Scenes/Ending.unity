@@ -1261,6 +1261,9 @@ MonoBehaviour:
     - id: EndingCheckpoint
       isAdditive: 0
       checkpointField: 2
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 1
   - identifier: NZAcont1
     read: 0
     buttonText: ...
@@ -1271,6 +1274,9 @@ MonoBehaviour:
     - id: "\u017BelazkoNarz\u0119dzieZbrodni"
       isAdditive: 0
       checkpointField: 0
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 1
     updatedCheckpointValues:
     - id: EndingCheckpoint
       isAdditive: 0
@@ -1285,6 +1291,9 @@ MonoBehaviour:
     - id: "\u017BelazkoNarz\u0119dzieZbrodni"
       isAdditive: 0
       checkpointField: 1
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 1
     updatedCheckpointValues:
     - id: EndingCheckpoint
       isAdditive: 0
@@ -1296,11 +1305,14 @@ MonoBehaviour:
     - id: EndingCheckpoint
       isAdditive: 0
       checkpointField: 3
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 1
     updatedCheckpointValues:
     - id: EndingCheckpoint
       isAdditive: 0
       checkpointField: 4
-    - id: EpilogID
+    - id: EndingID
       isAdditive: 0
       checkpointField: 2
   - identifier: NZAdisagree
@@ -1310,11 +1322,14 @@ MonoBehaviour:
     - id: EndingCheckpoint
       isAdditive: 0
       checkpointField: 3
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 1
     updatedCheckpointValues:
     - id: EndingCheckpoint
       isAdditive: 0
       checkpointField: 4
-    - id: EpilogID
+    - id: EndingID
       isAdditive: 0
       checkpointField: 1
   - identifier: NZI
@@ -1328,7 +1343,7 @@ MonoBehaviour:
     - id: EndingCheckpoint
       isAdditive: 0
       checkpointField: 4
-    - id: EpilogID
+    - id: EndingID
       isAdditive: 0
       checkpointField: 2
   - identifier: NZR
@@ -1342,7 +1357,7 @@ MonoBehaviour:
     - id: EndingCheckpoint
       isAdditive: 0
       checkpointField: 4
-    - id: EpilogID
+    - id: EndingID
       isAdditive: 0
       checkpointField: 4
   - identifier: NZMa
@@ -1359,7 +1374,7 @@ MonoBehaviour:
     - id: EndingCheckpoint
       isAdditive: 0
       checkpointField: 4
-    - id: EpilogID
+    - id: EndingID
       isAdditive: 0
       checkpointField: 3
   - identifier: NZMa_dnz
@@ -1379,6 +1394,63 @@ MonoBehaviour:
     - id: EpilogID
       isAdditive: 0
       checkpointField: 3
+  - identifier: NZMz_bad
+    read: 0
+    buttonText: Mateusz!(0 rozczarowania)
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: RozczarowanieMateusza
+      isAdditive: 0
+      checkpointField: 10
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 4
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 0
+  - identifier: NZMz_0XX
+    read: 0
+    buttonText: Mateusz!
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: RozczarowanieMateusza
+      isAdditive: 1
+      checkpointField: 10
+    - id: MateuszRoztrzesiony
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 5
+  - identifier: NZMz_1XX
+    read: 0
+    buttonText: Mateusz!
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: RozczarowanieMateusza
+      isAdditive: 1
+      checkpointField: 10
+    - id: MateuszRoztrzesiony
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 5
   - identifier: NZK
     read: 0
     buttonText: "KA\u017BDY!"
@@ -1414,7 +1486,7 @@ MonoBehaviour:
     - id: EndingCheckpoint
       isAdditive: 0
       checkpointField: 4
-    - id: EpilogID
+    - id: EndingID
       isAdditive: 0
       checkpointField: 1
     updatedCheckpointValues:
@@ -1428,7 +1500,7 @@ MonoBehaviour:
     - id: EndingCheckpoint
       isAdditive: 0
       checkpointField: 4
-    - id: EpilogID
+    - id: EndingID
       isAdditive: 0
       checkpointField: 2
     updatedCheckpointValues:
@@ -1442,7 +1514,7 @@ MonoBehaviour:
     - id: EndingCheckpoint
       isAdditive: 0
       checkpointField: 4
-    - id: EpilogID
+    - id: EndingID
       isAdditive: 0
       checkpointField: 3
     updatedCheckpointValues:
@@ -1456,9 +1528,103 @@ MonoBehaviour:
     - id: EndingCheckpoint
       isAdditive: 0
       checkpointField: 4
-    - id: EpilogID
+    - id: EndingID
       isAdditive: 0
       checkpointField: 4
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 5
+  - identifier: NZMz_X00
+    read: 0
+    buttonText: Tak.
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 5
+    - id: InfoOWychodzeniuZSypialni
+      isAdditive: 0
+      checkpointField: 0
+    - id: "\u017BelazkoNarz\u0119dzieZbrodni"
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+  - identifier: NZMz_X01
+    read: 0
+    buttonText: Tak.
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 5
+    - id: InfoOWychodzeniuZSypialni
+      isAdditive: 0
+      checkpointField: 0
+    - id: "\u017BelazkoNarz\u0119dzieZbrodni"
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+  - identifier: NZMz_X10
+    read: 0
+    buttonText: Tak.
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 5
+    - id: InfoOWychodzeniuZSypialni
+      isAdditive: 0
+      checkpointField: 1
+    - id: "\u017BelazkoNarz\u0119dzieZbrodni"
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+  - identifier: NZMz_X11
+    read: 0
+    buttonText: Tak.
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 5
+    - id: InfoOWychodzeniuZSypialni
+      isAdditive: 0
+      checkpointField: 1
+    - id: "\u017BelazkoNarz\u0119dzieZbrodni"
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+  - identifier: NZMz_cont
+    read: 0
+    buttonText: Proste.
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+    - id: EndingID
+      isAdditive: 0
+      checkpointField: 5
     updatedCheckpointValues:
     - id: EndingCheckpoint
       isAdditive: 0

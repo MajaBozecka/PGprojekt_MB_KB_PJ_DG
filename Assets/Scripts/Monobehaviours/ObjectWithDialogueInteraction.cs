@@ -40,12 +40,23 @@ public class ObjectWithDialogueInteraction : MonoBehaviour
                     int indexOfMatchedCheckpointFromControl = listPlotCheckpointControl.BinarySearch(plotCheckpointOfCollection);
                     if (indexOfMatchedCheckpointFromControl < 0)
                         continue;
-                    if(plotCheckpointOfCollection.isAdditive)
+                    if(listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].isAdditive)
                     {
-                        if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField < plotCheckpointOfCollection.checkpointField)
+                        if(plotCheckpointOfCollection.isAdditive)
                         {
-                            test = false;
-                            break;
+                            if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField < plotCheckpointOfCollection.checkpointField)
+                            {
+                                test = false;
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField >= plotCheckpointOfCollection.checkpointField)
+                            {
+                                test = false;
+                                break;
+                            }
                         }
                     }
                     else

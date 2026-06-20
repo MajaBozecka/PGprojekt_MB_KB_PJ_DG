@@ -56,20 +56,30 @@ public class PanelDialogueOptions : MonoBehaviour
     {
         foreach (ButtonDialogueOption but in buttonList)
         {
+            but.gameObject.SetActive(true);
             foreach (PlotCheckpoint plotCheckpointOfCollection in but.dialogueOptionData.requirements)
             {
                 int indexOfMatchedCheckpointFromControl = listPlotCheckpointControl.BinarySearch(plotCheckpointOfCollection);
                 if (indexOfMatchedCheckpointFromControl < 0)
                     continue;
-                if(plotCheckpointOfCollection.isAdditive)
+                if(listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].isAdditive)
                 {
-                    if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField < plotCheckpointOfCollection.checkpointField)
+                    if (plotCheckpointOfCollection.isAdditive)
                     {
-                        but.gameObject.SetActive(false);
-                        break;
+                        if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField < plotCheckpointOfCollection.checkpointField)
+                        {
+                            but.gameObject.SetActive(false);
+                            break;
+                        }
                     }
                     else
-                        but.gameObject.SetActive(true);
+                    {
+                        if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField >= plotCheckpointOfCollection.checkpointField)
+                        {
+                            but.gameObject.SetActive(false);
+                            break;
+                        }
+                    }
                 }
                 else
                 {
@@ -77,10 +87,6 @@ public class PanelDialogueOptions : MonoBehaviour
                     {
                         but.gameObject.SetActive(false);
                         break;
-                    }
-                    else
-                    {
-                        but.gameObject.SetActive(true);
                     }
                 }
             }
