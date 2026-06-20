@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class ObjectWithDialogueInteraction : MonoBehaviour
 {
+    [Header("Czy po przeczytaniu wyœwietliæ opcje wyboru?")]
+    public bool hasChoicesMenu;
+
     public List<DialogueOptionData> listOfDialogueOptions;
     private byte lastUsedOptionIndex;
     public bool read

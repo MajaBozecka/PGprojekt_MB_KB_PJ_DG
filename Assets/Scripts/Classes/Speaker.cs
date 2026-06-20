@@ -20,6 +20,8 @@ public class Speaker : IComparable<string>, IComparer<Speaker>
     public Color color;
     public float timePerCharacterTalking;
     public List<SpeakerSprite> sprites = new List<SpeakerSprite>();
+    [Header("Wygl¹d UI")]
+    public Sprite customTextboxGraphic;
     public int CompareTo(string other)
     {
         if (other == null)

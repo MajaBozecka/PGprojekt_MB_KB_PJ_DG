@@ -4,41 +4,61 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour
 {
     [Header("Ustawienia Scen")]
-    [Tooltip("Wpisz dok³adn¹ nazwê sceny intro")]
     public string startingSceneName = "Intro";
+    public string firstChapterSceneName = "Chapter1";
+    [Header("ZnajdŸki")]
+    public CollectiblesDatabaseSO collectiblesDatabase;
+
+    // NOWA ZMIENNA: Referencja do panelu z galeri¹
+    public GameObject collectiblesPanel;
 
     public void ContinueGame()
     {
-        Debug.Log("Klikniêto: Kontynuuj (System zapisów w budowie)");
-        // W przysz³oœci dodasz tu logikê wczytywania najnowszego pliku zapisu
+        Debug.Log("Klikniêto: Kontynuuj. £adowanie sceny: " + firstChapterSceneName);
+        SceneManager.LoadScene(firstChapterSceneName);
     }
 
     public void NewGame()
     {
         Debug.Log("Klikniêto: Nowa Gra! £adowanie sceny: " + startingSceneName);
+
+        if (collectiblesDatabase != null)
+        {
+            collectiblesDatabase.ResetProgress();
+        }
+
         SceneManager.LoadScene(startingSceneName);
     }
 
     public void OpenSavesMenu()
     {
         Debug.Log("Klikniêto: Zapisy (Panel zapisów w budowie)");
-        // W przysz³oœci uaktywnisz tu np. panel UI z list¹ slotów (saveSlotsPanel.SetActive(true))
     }
 
+    // ZAKTUALIZOWANA METODA
     public void OpenCollectiblesMenu()
     {
-        Debug.Log("Klikniêto: ZnajdŸki (Galeria znajdziek w budowie)");
-        // Podobnie, w przysz³oœci w³¹czysz tu odpowiedni panel UI
+        Debug.Log("Otwieranie galerii znajdziek!");
+        if (collectiblesPanel != null)
+        {
+            collectiblesPanel.SetActive(true); // W³¹czamy panel
+        }
+    }
+
+    // NOWA METODA: Do zamykania galerii
+    public void CloseCollectiblesMenu()
+    {
+        if (collectiblesPanel != null)
+        {
+            collectiblesPanel.SetActive(false); // Wy³¹czamy panel
+        }
     }
 
     public void QuitGame()
     {
         Debug.Log("Klikniêto: WyjdŸ! Zamykanie aplikacji...");
-
-        // Zamyka fizycznie zbudowan¹ grê (.exe, .apk itp.)
         Application.Quit();
 
-        // Opcjonalnie: Poni¿szy kod zatrzymuje grê równie¿ w edytorze Unity
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif

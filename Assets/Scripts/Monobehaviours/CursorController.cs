@@ -39,38 +39,44 @@ public class CursorController : MonoBehaviour
 
     private void attemptedInteraction(InputAction.CallbackContext obj)
     {
-        // 1. Wracamy do 'performed', bo wiemy, ¿e u Ciebie dzia³a
         if (!obj.performed) return;
 
-        // 2. NOWOŒÆ: Blokada czasowa (Cooldown)
-        // Jeœli od ostatniego klikniêcia minê³o mniej ni¿ 0.3 sekundy, ignorujemy akcjê
         if (Time.time - lastInteractionTime < interactionCooldown) return;
 
-
-        if (dataFlow.canvasCtrl.UIMode == EUIMode.DIALOGUE) return;
+        if (dataFlow.canvasCtrl.UIMode != EUIMode.NOTHING) return;
 
         if (raycastHit2D)
         {
             Debug.Log("Zarejestrowano klikniêcie w obiekt o nazwie: " + raycastHit2D.collider.gameObject.name);
         }
 
+     
         LocationChanger clickedDoor = raycastHit2D ? raycastHit2D.collider.GetComponent<LocationChanger>() : null;
         if (clickedDoor != null)
         {
-            // Rejestrujemy udane klikniêcie w czasie
             lastInteractionTime = Time.time;
 
             FindFirstObjectByType<LocationManager>().ChangeLocation(clickedDoor.targetLocationId);
             return;
         }
 
+        CollectibleItem clickedCollectible = raycastHit2D ? raycastHit2D.collider.GetComponent<CollectibleItem>() : null;
+        if (clickedCollectible != null)
+        {
+            lastInteractionTime = Time.time;
+
+            clickedCollectible.Collect();
+            return; 
+        }
+
+        // --- SPRAWDZANIE DIALOGÓW ---
         if (spriteDialogue)
         {
             DialogueOptionData dod = spriteDialogue.getDOD;
             if (dod is not null)
             {
-                // Rejestrujemy udane klikniêcie w czasie
                 lastInteractionTime = Time.time;
+                dataFlow.testedObjectWithDialogueInteraction = spriteDialogue;
 
                 dataFlow.StartDialogueSequence(dod);
                 spriteDialogue.read = true;
@@ -84,6 +90,11 @@ public class CursorController : MonoBehaviour
 
     void Update()
     {
+        if (dataFlow.canvasCtrl.UIMode != EUIMode.NOTHING)
+        {
+            SetCursor(ECursorMode.DEFAULT);
+            return;
+        }
         mousePosition = point.ReadValue<Vector2>();
         mouseray = Camera.main.ScreenPointToRay(mousePosition);
         raycastHit2D = Physics2D.Raycast(mouseray.origin, mouseray.direction);
