@@ -85,7 +85,7 @@ public class DataFlowSO : ScriptableObject
     }
     public float getTimeForSingleCharDisplayCorrected(DialogueLine line, SubDialogueLine sub)
     {
-        return sub.timeForSingleCharDisplay != 0 ? sub.timeForSingleCharDisplay : getSpeakerUsusalYappingTime(line);
+        return sub.timeForSingleCharDisplay > 0 ? sub.timeForSingleCharDisplay : getSpeakerUsusalYappingTime(line);
     }
     #endregion
     #region SAVEDATA

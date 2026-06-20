@@ -548,7 +548,6 @@ MonoBehaviour:
     sprites: []
   history:
     dialogueSequenceIdentifiersList:
-    - seq1
     - Intro
     - Chapter1_intro
     - Item_Lockers
@@ -574,17 +573,24 @@ MonoBehaviour:
     - Item_CabinetInCorridor
     - Item_Picture
     - Item_Window
-    progressInLastRead: 0
+    - PKN
+    - NeutralEnding
+    - NZA
+    - NZAcont1
+    - NZAcont2
+    - NZAdisagree
+    - Epilog_TrustMeBro
+    progressInLastRead: 4
   listPlotCheckpoints:
-  - id: 
-    isAdditive: 0
-    checkpointField: 1
   - id: Cameras1
     isAdditive: 0
     checkpointField: 0
   - id: Dirt_Checked
     isAdditive: 0
     checkpointField: 1
+  - id: EndingCheckpoint
+    isAdditive: 0
+    checkpointField: 5
   - id: FA_Checked
     isAdditive: 0
     checkpointField: 1
@@ -606,6 +612,15 @@ MonoBehaviour:
   - id: TreeBlood_Checked
     isAdditive: 0
     checkpointField: 0
+  - id: "\u017BelazkoNarz\u0119dzieZbrodni"
+    isAdditive: 0
+    checkpointField: 1
+  - id: EndingCheckpoint
+    isAdditive: 0
+    checkpointField: 0
+  - id: EpilogID
+    isAdditive: 0
+    checkpointField: 0
   listPlotChekpointsEndChapter: []
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
@@ -622,7 +637,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Blood_Floor
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -719,7 +734,7 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 
     identifier: Chapter1_intro
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -729,7 +744,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: DirtOnCarpet
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -770,13 +785,128 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
+        subline: VIVA LA REVOLUTION!
+      lingering: 0
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Trzymajcie si\u0119 przyjaciele! "
+      - timeForSingleCharDisplay: 0.1
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Nie dajcie si\u0119 oszuka\u0107!"
+      lingering: 0
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Krystian wyskoczy\u0142 przez okno i pobieg\u0142 w sin\u0105 dal."
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...Aha.
+      lingering: 2
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      - timeForSingleCharDisplay: 1
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: No to co dalej?
+      lingering: 2
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "\u0141apiemy go. Albo popadamy w d\u0142ugi."
+      lingering: 2
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Echh...
+      lingering: 2
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Koniec
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Zako\u0144czenie: No i cze\u015B\u0107."
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    identifier: Epilog_Byebye
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Ania wr\xF3ci\u0142a do swojego domu. Kilka tygodni p\xF3\u017Aniej,
+          dosta\u0142a pozew od Antoniny."
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Krystianowi uda\u0142o si\u0119 dowie\u015B\u0107 jej niewinno\u015Bci.
+          Kr\xF3tko potem rodzina \u0141askawc\xF3w r\xF3wnie\u017C pozwa\u0142a
+          Ani\u0119 i Adama za b\u0142\u0119dne okre\u015Blenie mordercy."
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Teraz Ania i Adam \u017Cebraj\u0105 pod osiedlowym sklepem."
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Koniec
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Zako\u0144czenie: Trust me bro."
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    identifier: Epilog_TrustMeBro
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
         subline: "Zamkni\u0119te na klucz."
       lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     identifier: GirlsRoom
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0.05
@@ -1249,7 +1379,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Apteczka
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1259,7 +1389,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Bin
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1289,7 +1419,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_CabinetInCorridor
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1299,7 +1429,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Calendar
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1319,7 +1449,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Cupboard
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1361,7 +1491,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Fridge
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1371,7 +1501,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Hanger
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1401,7 +1531,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Lockers
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1413,7 +1543,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Mirror
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1433,7 +1563,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Oven
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1443,7 +1573,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_PaperTowel
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1463,7 +1593,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Picture
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1533,7 +1663,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Sculpture
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1543,7 +1673,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Sink
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1553,7 +1683,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Slippers
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1563,7 +1693,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Stall
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1597,7 +1727,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Szuflada
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1626,7 +1756,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Water
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1655,7 +1785,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Window
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1665,6 +1795,497 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: LockedBathroom
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: 'Przed drzwiamy stoi Adam z dwoma policjantami. '
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: 'Ania! '
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Jak \u015Bledztwo?"
+      - timeForSingleCharDisplay: 0.2
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " Wiesz ju\u017C kto zabi\u0142?"
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Tak.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 1
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: Kto?
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    identifier: NeutralEnding
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: -1
+        subline: 'CO?! '
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0.005
+        subline: Jestem niewinna!
+      lingering: -1
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie no, to szale\u0144stwo!"
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " Ona na pewno nie jest morderc\u0105!"
+      lingering: -1
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pani detektyw Anna Nowak dosz\u0142a do wniosku, \u017Ce to ona
+          jest winna. "
+      - timeForSingleCharDisplay: 0.5
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Prosz\u0119 za mn\u0105, pani Wiercipi\u0119ta."
+      lingering: -1
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie, to nie jest mo\u017Cliwe."
+      lingering: -1
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Ale dlaczego ona, nie rozumiem.
+      lingering: -1
+      speakerID: Mz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Prosz\u0119 pana, "
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " to jest niemo\u017Cliwe, \u017Ce to ona zabi\u0142a Oktawiana. "
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Przepraszam, ale czy pan j\u0105 w og\xF3le widzi?"
+      lingering: -1
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pozory cz\u0119sto myl\u0105."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pan si\u0119 myli. "
+      - timeForSingleCharDisplay: 0.2
+        subline: 
+      - timeForSingleCharDisplay: 0.08
+        subline: 'To JA '
+      - timeForSingleCharDisplay: 0.4
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "zabi\u0142em Oktawiana."
+      lingering: -1
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Dun! Dun! DUN!
+      lingering: 1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Co...?
+      lingering: 1
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...Tak?
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    identifier: NZA
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Tak, tak naprawd\u0119 chodzi\u0142o mi o to, \u017Ceby sam si\u0119
+          przyzna\u0142."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Ale dlaczego teraz si\u0119 przyznajesz? Przecie\u017C mog\u0142by\u015B
+          unikn\u0105\u0107 kary."
+      lingering: 0
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Kto powiedzia\u0142, \u017Ce teraz jej nie unikn\u0119?"
+      lingering: 0
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "C\xF3\u017C, "
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " nie unikniesz, bo ci\u0119 aresztujemy."
+      lingering: 0
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Najpierw musicie mnie z\u0142apa\u0107!"
+      lingering: 0.5
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Krystian wystrzeli\u0142 w stron\u0119 przestrzeni mieszkalnej.
+          Adam, Mateusz i policjanci stali chwil\u0119, zanim dosz\u0142o do nich
+          to, co si\u0119 wydarzy\u0142o."
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.01
+        subline: EJ, CZEKAJ!
+      lingering: 0
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    identifier: NZAagree
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: 'Owszem. '
+      - timeForSingleCharDisplay: 0.5
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Wyszed\u0142em z pokoju w \u015Brodku nocy, kiedy nikt mnie nie
+          s\u0142ysza\u0142. "
+      - timeForSingleCharDisplay: 0.5
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Oktawian przebywa\u0142 w damskiej toalecie-"
+      lingering: -1
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "chcia\u0142 zamontowa\u0107 tam ukryte kamery, \u017Ceby podgl\u0105da\u0107
+          dziewczyny."
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " Uzna\u0142em to za obrzydliwe i niegodne cz\u0142owieka,"
+      - timeForSingleCharDisplay: 0.1
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " wi\u0119c wzi\u0105\u0142em \u017Celazko z szafki przy sypialniach
+          i poszed\u0142em jego tropem."
+      lingering: -1
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: " Kiedy tam by\u0142em, zamachn\u0105\u0142em si\u0119 i uderzy\u0142em
+          Oktawiana w ty\u0142 g\u0142owy."
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " Potem szybko pobieg\u0142em do m\u0119skiej toalety aby zmy\u0107
+          z \u017Celazka \u015Blady krwii i od\u0142o\u017Cy\u0142em je na stoliku
+          w pokoju dziennym."
+      lingering: -1
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Uzna\u0142em, \u017Ce je\u015Bli po\u0142o\u017C\u0119 je w g\u0142upim
+          miejscu podejrzenie spadnie na kogo\u015B innego,"
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " bo jestem znany z dok\u0142adno\u015Bci."
+      lingering: -1
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Czy ta historia brzmi prawdopodobnie, Ania?
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    identifier: NZAcont1
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: 'Owszem. '
+      - timeForSingleCharDisplay: 0.5
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Wyszed\u0142em z pokoju w \u015Brodku nocy, kiedy nikt mnie nie
+          s\u0142ysza\u0142."
+      - timeForSingleCharDisplay: 0.5
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " Oktawian przebywa\u0142 w damskiej toalecie-"
+      lingering: 0
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: " chcia\u0142 zamontowa\u0107 tam ukryte kamery, \u017Ceby podgl\u0105da\u0107
+          dziewczyny. "
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Uzna\u0142em to za obrzydliwe i niegodne cz\u0142owieka, wi\u0119c
+          poszed\u0142em jego tropem. "
+      - timeForSingleCharDisplay: 0.1
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Kiedy tam by\u0142em, zamachn\u0105\u0142em si\u0119 i uderzy\u0142em
+          Oktawiana w ty\u0142 g\u0142owy ozdobn\u0105 rze\u017Ab\u0105 i wr\xF3ci\u0142em
+          spa\u0107."
+      lingering: 0
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Czy ta historia brzmi prawdopodobnie, Ania?
+      lingering: 0
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    identifier: NZAcont2
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: 'Nie! '
+      - timeForSingleCharDisplay: 0.1
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: Jestem niewinna!
+      - timeForSingleCharDisplay: 0.1
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " On te\u017C, ale naprawd\u0119! "
+      - timeForSingleCharDisplay: 0.1
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Nie my zabili\u015Bmy!"
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Prosz\u0119 za mn\u0105."
+      lingering: 0
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pope\u0142niacie du\u017Cy b\u0142\u0105d. "
+      - timeForSingleCharDisplay: 0.5
+        subline: 
+      - timeForSingleCharDisplay: 0.1
+        subline: "To nie by\u0142a ona."
+      lingering: 0
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Ona ca\u0142\u0105 noc spa\u0142a. To pomy\u0142ka."
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Skoro Ania m\xF3wi, \u017Ce to ona, to jej wierz\u0119."
+      lingering: 0
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Tosia, nie martw si\u0119!"
+      - timeForSingleCharDisplay: 0.4
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " Udowodni\u0119, \u017Ce to nie ty!"
+      lingering: 0
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Antonina zosta\u0142a wzi\u0119ta do radiowozu"
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Naprawd\u0119 my\u015Bl\u0119, \u017Ce si\u0119 mylisz."
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Brawo, Ania. Dzi\u0119kuj\u0119."
+      lingering: 0
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Nie ma problemu.
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: NZAdisagree
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Ania,
+      - timeForSingleCharDisplay: 1
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " prosz\u0119,"
+      - timeForSingleCharDisplay: 1
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: ' wybierz dobrze...'
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 0
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Za kilka minut mia\u0142 by\u0107 wsch\xF3d s\u0142o\u0144ca. "
+      - timeForSingleCharDisplay: 0
+        subline: "Ania i uczestnicy programu zebrali si\u0119 przy wej\u015Bciu,
+          czekaj\u0105c na Adama."
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 1
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Rozumiem, \u017Ce nie zmieni\u0142a\u015B zdania."
+      lingering: -1
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie. Ale wiem ju\u017C, co powiem."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Ufam twojej decyzji.
+      lingering: -1
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Jeju,
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: " ale napi\u0119ta atmosfera!"
+      lingering: -1
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: 'PUK PUK PUK '
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: To Adam!
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: PKN
     runnedAlready: 1
   - lines:
     - subLines:
@@ -1679,33 +2300,50 @@ MonoBehaviour:
     identifier: Storage
     runnedAlready: 0
   serializedAnalisedSequence:
-    lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: To bardzo smutna kanapka.
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    identifier: Item_Sandwitch
+    lines: []
+    identifier: 
     runnedAlready: 0
   serializedPlaceholderSequence:
     lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: AAH!
-      lingering: -1
-      speakerID: Gracz
+        subline: "Ania wr\xF3ci\u0142a do swojego domu. Kilka tygodni p\xF3\u017Aniej,
+          dosta\u0142a pozew od Antoniny."
+      lingering: 0
+      speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "Prawie zabi\u0142am si\u0119 o ten dywan!"
-      lingering: -1
-      speakerID: Gracz
+        subline: "Krystianowi uda\u0142o si\u0119 dowie\u015B\u0107 jej niewinno\u015Bci.
+          Kr\xF3tko potem rodzina \u0141askawc\xF3w r\xF3wnie\u017C pozwa\u0142a
+          Ani\u0119 i Adama za b\u0142\u0119dne okre\u015Blenie mordercy."
+      lingering: 0
+      speakerID: Narrator
       speakerMod: 
       changeLocationId: 
-    identifier: Enter_Corridor
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Teraz Ania i Adam \u017Cebraj\u0105 pod osiedlowym sklepem."
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Koniec
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Zako\u0144czenie: Trust me bro."
+      lingering: 0
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    identifier: Epilog_TrustMeBro
     runnedAlready: 0
   seqIdTab:
   - Blood_Floor
@@ -1715,6 +2353,8 @@ MonoBehaviour:
   - DirtOnCarpet2
   - Enter_Bathroom
   - Enter_Corridor
+  - Epilog_Byebye
+  - Epilog_TrustMeBro
   - GirlsRoom
   - Intro
   - Item_Apteczka
@@ -1744,7 +2384,7 @@ MonoBehaviour:
   - Item_Pillow
   - Item_Puddles
   - Item_Puddles2
-  - Item_Sandwich
+  - Item_Sandwitch
   - Item_Sculpture
   - Item_Sink
   - Item_Slippers
@@ -1756,8 +2396,15 @@ MonoBehaviour:
   - Item_WeirdBox
   - Item_Window
   - LockedBathroom
+  - NeutralEnding
+  - NZA
+  - NZAagree
+  - NZAcont1
+  - NZAcont2
+  - NZAdisagree
+  - PKN
   - Storage
-  analisedIdentifier: Item_Sandwich
-  analisedIndex: 36
-  placeholdIdentifier: Enter_Corridor
+  analisedIdentifier: 
+  analisedIndex: -1
+  placeholdIdentifier: Epilog_TrustMeBro
   chapter: 0

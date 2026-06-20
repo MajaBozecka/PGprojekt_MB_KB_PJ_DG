@@ -46,16 +46,24 @@ public class DataFlowController : MonoBehaviour
         confirm.canceled += OnSubmitCancel;
         InputAction history = InputSystem.actions.FindAction("History");
         history.started += OnHistoryLookUp;
-
         data.LoadFromJSON();
         canvasCtrl.dialogueHistoryRewrite();
-
+        populateCanvasWithButtons();
         foreach (var item in data.dialogueSequenceHashSet)
         {
             item.runnedAlready = false;
         }
     }
-
+    private void OnDestroy()
+    {
+        InputAction skip = InputSystem.actions.FindAction("SKIP");
+        skip.performed -= OnSkipPerformed;
+        skip.canceled -= OnSkipCanceled;
+        InputAction confirm = InputSystem.actions.FindAction("Submit");
+        confirm.canceled -= OnSubmitCancel;
+        InputAction history = InputSystem.actions.FindAction("History");
+        history.started -= OnHistoryLookUp;
+    }
     void Update()
     {
         SkippingVisibility();
@@ -240,7 +248,7 @@ public class DataFlowController : MonoBehaviour
 
         bool isItTimeForNextLine(DialogueLine line, float lingerIterator)
         {
-            return confirmNextLine || (line.lingering >= 0 && lingerIterator >= line.lingering);
+            return confirmNextLine || (line.lingering > 0 && lingerIterator >= line.lingering);
         }
 
         bool canSkipNow(float timeLineIterator, float tillWhat)
