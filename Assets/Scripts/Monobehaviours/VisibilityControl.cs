@@ -11,17 +11,17 @@ public class VisibilityControl : MonoBehaviour
         characterCollider = GetComponent<Collider2D>();
     }
 
-    private void OnEnable()
-    {
-        DataFlowController.OnSequenceStarted += HideCharacter;
-        DataFlowController.OnConversationFinished += ShowCharacter;
-    }
+    //private void OnEnable()
+    //{
+    //    DataFlowController.OnSequenceStarted += HideCharacter;
+    //    DataFlowController.OnConversationFinished += ShowCharacter;
+    //}
 
-    private void OnDisable()
-    {
-        DataFlowController.OnSequenceStarted -= HideCharacter;
-        DataFlowController.OnConversationFinished -= ShowCharacter;
-    }
+    //private void OnDisable()
+    //{
+    //    DataFlowController.OnSequenceStarted -= HideCharacter;
+    //    DataFlowController.OnConversationFinished -= ShowCharacter;
+    //}
 
     private void HideCharacter()
     {

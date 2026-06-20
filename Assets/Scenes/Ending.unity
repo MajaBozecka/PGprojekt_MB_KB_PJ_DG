@@ -262,6 +262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   proceedIcon: {fileID: 110725708}
   dialogueText: {fileID: 2115709012}
+  textboxBackgroundImage: {fileID: 0}
+  defaultTextboxGraphic: {fileID: 0}
   characterSlots:
   - {fileID: 1178747630}
   - {fileID: 1462106116}
@@ -1235,6 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
   listOfDialogueOptions:
   - identifier: NeutralEnding
     read: 0
@@ -1341,7 +1344,7 @@ MonoBehaviour:
       checkpointField: 4
     - id: EpilogID
       isAdditive: 0
-      checkpointField: 3
+      checkpointField: 4
   - identifier: NZMa
     read: 0
     buttonText: Matylda!
@@ -1376,6 +1379,20 @@ MonoBehaviour:
     - id: EpilogID
       isAdditive: 0
       checkpointField: 3
+  - identifier: NZK
+    read: 0
+    buttonText: "KA\u017BDY!"
+    requirements:
+    - id: EndingCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: NotPoirot
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: NotPoirot
+      isAdditive: 0
+      checkpointField: 1
   - identifier: NZD
     read: 0
     buttonText: DUCHY!
@@ -1943,10 +1960,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 19.2, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!1 &660460527
 GameObject:
