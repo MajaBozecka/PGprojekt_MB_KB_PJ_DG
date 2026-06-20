@@ -21,6 +21,7 @@ public class DataFlowController : MonoBehaviour
 
     public static System.Action<string> OnSequenceEnded;
     public static System.Action OnSequenceStarted;
+    public static System.Action OnConversationFinished;
 
     private bool SKIP
     {
@@ -49,7 +50,17 @@ public class DataFlowController : MonoBehaviour
         history.started += OnHistoryLookUp;
 
         data.LoadFromJSON();
+
+        for (int i = 0; i < data.listPlotCheckpoints.Count; i++)
+        {
+            PlotCheckpoint tempCheckpoint = data.listPlotCheckpoints[i];
+            tempCheckpoint.checkpointField = 0;
+            data.listPlotCheckpoints[i] = tempCheckpoint;
+        }
+
         canvasCtrl.dialogueHistoryRewrite();
+
+
 
         foreach (var item in data.dialogueSequenceHashSet)
         {
@@ -231,7 +242,8 @@ public class DataFlowController : MonoBehaviour
             else
             {
                 if (dialogueCanvas != null) dialogueCanvas.SetActive(false);
-                canvasCtrl.UIMode = EUIMode.NOTHING; 
+                canvasCtrl.UIMode = EUIMode.NOTHING;
+                OnConversationFinished?.Invoke();
             }
 
             SKIP = false;

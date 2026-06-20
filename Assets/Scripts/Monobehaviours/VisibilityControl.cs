@@ -14,13 +14,13 @@ public class VisibilityControl : MonoBehaviour
     private void OnEnable()
     {
         DataFlowController.OnSequenceStarted += HideCharacter;
-        DataFlowController.OnSequenceEnded += ShowCharacter;
+        DataFlowController.OnConversationFinished += ShowCharacter;
     }
 
     private void OnDisable()
     {
         DataFlowController.OnSequenceStarted -= HideCharacter;
-        DataFlowController.OnSequenceEnded -= ShowCharacter;
+        DataFlowController.OnConversationFinished -= ShowCharacter;
     }
 
     private void HideCharacter()
@@ -29,7 +29,7 @@ public class VisibilityControl : MonoBehaviour
         if (characterCollider != null) characterCollider.enabled = false;
     }
 
-    private void ShowCharacter(string dialogueId)
+    private void ShowCharacter()
     {
         if (spriteRenderer != null) spriteRenderer.enabled = true;
         if (characterCollider != null) characterCollider.enabled = true;

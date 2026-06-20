@@ -595,38 +595,39 @@ MonoBehaviour:
     - Storage
     - Item_Carpet
     - Ch1AWstepB
-    progressInLastRead: 427
+    - Ch1AWstepA
+    - Ch1AW1
+    - Ch1AW2
+    - Item_Pergola
+    progressInLastRead: 137
   listPlotCheckpoints:
-  - id: 
-    isAdditive: 0
-    checkpointField: 1
   - id: Cameras1
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: Ch1AWstepDone
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: Dirt_Checked
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: FA_Checked
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: Intro_finished
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: Iron_Checked
     isAdditive: 0
     checkpointField: 0
   - id: Puddle_Checked
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: Slippers_Checked
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: SN_Checked
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: TreeBlood_Checked
     isAdditive: 0
     checkpointField: 0
@@ -677,7 +678,7 @@ MonoBehaviour:
       speakerMod: A3
       changeLocationId: 
     identifier: Ch1AW1
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -687,7 +688,7 @@ MonoBehaviour:
       speakerMod: E4
       changeLocationId: 
     identifier: Ch1AW2
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines: []
       lingering: 0
@@ -723,7 +724,7 @@ MonoBehaviour:
       speakerMod: A7
       changeLocationId: 
     identifier: Ch1AWstepA
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines: []
       lingering: 0
@@ -766,7 +767,7 @@ MonoBehaviour:
       speakerMod: A7
       changeLocationId: 
     identifier: Ch1AWstepB
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1815,17 +1816,8 @@ MonoBehaviour:
     identifier: LockedBathroom
     runnedAlready: 0
   serializedAnalisedSequence:
-    lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0.1
-        subline: ...
-      - timeForSingleCharDisplay: 0
-        subline: "...Spa\u0142am?"
-      lingering: -1
-      speakerID: A
-      speakerMod: A3
-      changeLocationId: 
-    identifier: Ch1AW1
+    lines: []
+    identifier: 
     runnedAlready: 0
   serializedPlaceholderSequence:
     lines: []
@@ -1884,7 +1876,7 @@ MonoBehaviour:
   - Item_WeirdBox
   - Item_Window
   - LockedBathroom
-  analisedIdentifier: Ch1AW1
-  analisedIndex: 2
+  analisedIdentifier: 
+  analisedIndex: -1
   placeholdIdentifier: 
   chapter: 
