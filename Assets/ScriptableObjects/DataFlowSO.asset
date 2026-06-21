@@ -16,7 +16,7 @@ MonoBehaviour:
   - speakerId: O
     speakerName: Oktawian
     fontSize: 20
-    styles: 0
+    styles: 1
     color: {r: 0.57169807, g: 0.5880228, b: 1, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
@@ -26,7 +26,7 @@ MonoBehaviour:
   - speakerId: A
     speakerName: Antonina
     fontSize: 20
-    styles: 0
+    styles: 1
     color: {r: 1, g: 0.54905653, b: 0.87783605, a: 1}
     timePerCharacterTalking: 0.03
     sprites:
@@ -160,7 +160,7 @@ MonoBehaviour:
   - speakerId: Mz
     speakerName: Mateusz
     fontSize: 20
-    styles: 0
+    styles: 1
     color: {r: 1, g: 0.29399306, b: 0.26981127, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
@@ -246,7 +246,7 @@ MonoBehaviour:
   - speakerId: Ma
     speakerName: Matylda
     fontSize: 20
-    styles: 0
+    styles: 1
     color: {r: 0.7050018, g: 0.17466003, b: 0.83396226, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
@@ -330,7 +330,7 @@ MonoBehaviour:
   - speakerId: I
     speakerName: Krystian
     fontSize: 20
-    styles: 0
+    styles: 1
     color: {r: 1, g: 0.99378765, b: 0.6622641, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
@@ -462,7 +462,7 @@ MonoBehaviour:
   - speakerId: R
     speakerName: "Rafa\u0142"
     fontSize: 20
-    styles: 0
+    styles: 1
     color: {r: 0.4604995, g: 0.8490566, b: 0.2995728, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
@@ -532,7 +532,7 @@ MonoBehaviour:
   - speakerId: Ad
     speakerName: Adam
     fontSize: 20
-    styles: 0
+    styles: 1
     color: {r: 0.13460304, g: 0.16481456, b: 0.3584906, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
@@ -542,7 +542,7 @@ MonoBehaviour:
   - speakerId: Gracz
     speakerName: Ania
     fontSize: 20
-    styles: 0
+    styles: 1
     color: {r: 1, g: 0.584222, b: 0.20188677, a: 1}
     timePerCharacterTalking: 0.05
     sprites: []
@@ -550,8 +550,32 @@ MonoBehaviour:
   - speakerId: Narrator
     speakerName: ---
     fontSize: 20
-    styles: 0
+    styles: 1
     color: {r: 0.11698109, g: 0.11698109, b: 0.11698109, a: 1}
+    timePerCharacterTalking: 0.05
+    sprites: []
+    customTextboxGraphic: {fileID: 0}
+  - speakerId: nAr
+    speakerName: ---
+    fontSize: 20
+    styles: 1
+    color: {r: 0.7056604, g: 0.2969099, b: 0.59547555, a: 1}
+    timePerCharacterTalking: 0.05
+    sprites: []
+    customTextboxGraphic: {fileID: 0}
+  - speakerId: nArrat
+    speakerName: ---
+    fontSize: 20
+    styles: 1
+    color: {r: 0.5924529, g: 0.21350661, b: 0.4903022, a: 1}
+    timePerCharacterTalking: 0.05
+    sprites: []
+    customTextboxGraphic: {fileID: 0}
+  - speakerId: nArrator
+    speakerName: ---
+    fontSize: 20
+    styles: 1
+    color: {r: 0.23773581, g: 0.09105728, b: 0.1981964, a: 1}
     timePerCharacterTalking: 0.05
     sprites: []
     customTextboxGraphic: {fileID: 0}
@@ -598,7 +622,16 @@ MonoBehaviour:
     - NZMz_1XX
     - NZMz_cont
     - Enter_Bathroom
-    progressInLastRead: 0
+    - NZAagree
+    - Item_Pillow
+    - Item_Boxes
+    - Enter_Corridor
+    - Item_Carpet
+    - NZR
+    - Epilog_HowCouldYou
+    - NZMa
+    - NZMz_bad
+    progressInLastRead: 189
   listPlotCheckpoints:
   - id: Cameras1
     isAdditive: 0
@@ -611,10 +644,10 @@ MonoBehaviour:
     checkpointField: 0
   - id: EndingCheckpoint
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 5
   - id: EndingID
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
   - id: FA_Checked
     isAdditive: 0
     checkpointField: 0
@@ -632,7 +665,7 @@ MonoBehaviour:
     checkpointField: 0
   - id: MateuszRoztrzesiony
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: NotPoirot
     isAdditive: 0
     checkpointField: 0
@@ -818,11 +851,11 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: VIVA LA REVOLUTION!
-      lingering: 0
+        subline: "NIE PODDAMY SI\u0118!"
+      lingering: -1
       speakerID: I
-      speakerMod: 
-      changeLocationId: 
+      speakerMod: G1
+      changeLocationId: 7
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Trzymajcie si\u0119 przyjaciele! "
@@ -830,21 +863,26 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: "Nie dajcie si\u0119 oszuka\u0107!"
+      lingering: -1
+      speakerID: I
+      speakerMod: H1
+      changeLocationId: 
+    - subLines: []
       lingering: 0
       speakerID: I
-      speakerMod: 
+      speakerMod: Exit
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Krystian wyskoczy\u0142 przez okno i pobieg\u0142 w sin\u0105 dal."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: ...Aha.
-      lingering: 2
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
@@ -855,7 +893,7 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: No to co dalej?
-      lingering: 2
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -864,26 +902,26 @@ MonoBehaviour:
         subline: "\u0141apiemy go. Albo popadamy w d\u0142ugi."
       lingering: 2
       speakerID: Ad
-      speakerMod: 
+      speakerMod: A1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Echh...
-      lingering: 2
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Koniec
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Zako\u0144czenie: No i cze\u015B\u0107."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
@@ -897,17 +935,17 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: Przez dwa lata.
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
-      changeLocationId: 
+      changeLocationId: 0
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Po tym czasie Krystianowi uda\u0142o si\u0119 udowodni\u0107, \u017Ce
           to nie Rafa\u0142 zamordowa\u0142 Oktawiana.  Rafa\u0142 zosta\u0142 oczyszczony
           z zarzut\xF3w i z pomoc\u0105 Krystiana bardzo szybko pozwa\u0142 Ani\u0119
           i Adama. "
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
@@ -918,8 +956,8 @@ MonoBehaviour:
           rodzinie \u0141askawc\xF3w, musia\u0142a przeprowadzi\u0107 si\u0119 do
           kawalerki w Piekoszowie, gdzie zaprzyja\u017Ani\u0142a si\u0119 ze szczurem
           Rur\u0105 Okr\u0105g\u0142\u0105 Aluminium oraz staruszk\u0105 z s\u0105siedztwa. "
-      lingering: 0
-      speakerID: Narrator
+      lingering: -1
+      speakerID: nArrator
       speakerMod: 
       changeLocationId: 
     - subLines:
@@ -928,16 +966,16 @@ MonoBehaviour:
           Ksi\u0119cia, kt\xF3ry poprosi\u0142 j\u0105 o pomoc. Nie maj\u0105c nic
           do stracenia, Ania zabra\u0142a ze sob\u0105 swoich towarzyszy i ruszy\u0142a
           w dziesi\u0119cioletni\u0105 podr\xF3\u017C."
-      lingering: 0
-      speakerID: Narrator
+      lingering: -1
+      speakerID: nArrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Wyprawa trwa\u0142a tak d\u0142ugo, poniewa\u017C przez odbywaj\u0105ce
           si\u0119 Izraelu Euro ulice by\u0142y bardzo zakorkowane. "
-      lingering: 0
-      speakerID: Narrator
+      lingering: -1
+      speakerID: nArrator
       speakerMod: 
       changeLocationId: 
     - subLines:
@@ -947,16 +985,16 @@ MonoBehaviour:
           kt\xF3ry umiera\u0142 na tyfusa. Ania, wzruszona jego histori\u0105, kt\xF3ra
           nie zmie\u015Bci\u0142aby si\u0119 w tym oknie dialogowym, postanowi\u0142a
           odnale\u017A\u0107 dla niego antidotum."
-      lingering: 0
-      speakerID: Narrator
+      lingering: -1
+      speakerID: nArrat
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Okaza\u0142o si\u0119 to niezbyt wymagaj\u0105ce, poniewa\u017C
           staruszka mia\u0142a akurat leki na tyfus w swojej torebce."
-      lingering: 0
-      speakerID: Narrator
+      lingering: -1
+      speakerID: nArrat
       speakerMod: 
       changeLocationId: 
     - subLines:
@@ -966,8 +1004,8 @@ MonoBehaviour:
           im wesele, ale nie uda\u0142o si\u0119 przekona\u0107 \u017Cadnego japo\u0144skiego
           katolickiego ksi\u0119dza, \u017Ceby udzieli\u0142 im \u015Blubu, wi\u0119c
           uroczysto\u015B\u0107 musia\u0142a zosta\u0107 anulowana."
-      lingering: 0
-      speakerID: Narrator
+      lingering: -1
+      speakerID: nArrat
       speakerMod: 
       changeLocationId: 
     - subLines:
@@ -978,8 +1016,8 @@ MonoBehaviour:
           dlatego nikt nie chcia\u0142 udzieli\u0107 mu \u015Blubu, ale domniemane
           ukrywanie to\u017Csamo\u015Bci w\u0142a\u015Bciciela Yakuzy nie zosta\u0142l
           nikomu udowodnione."
-      lingering: 0
-      speakerID: Narrator
+      lingering: -1
+      speakerID: nAr
       speakerMod: 
       changeLocationId: 
     - subLines:
@@ -989,92 +1027,137 @@ MonoBehaviour:
           tam dotrze\u0107. Euro ju\u017C dawno dobieg\u0142o ko\u0144ca (z pucharem
           zwyci\u0119stwa Izrael opu\u015Bci\u0142y W\u0119gry), wi\u0119c droga
           nie trwa\u0142a zbyt d\u0142ugo. "
-      lingering: 0
-      speakerID: Narrator
+      lingering: -1
+      speakerID: nAr
       speakerMod: 
       changeLocationId: 
     - subLines:
-      - timeForSingleCharDisplay: 0
+      - timeForSingleCharDisplay: -1
         subline: "Kuwejski Ksi\u0105\u017C\u0119 ucieszy\u0142 si\u0119 widokiem
           Ani. Jego problem co prawda zd\u0105\u017Cy\u0142 sam si\u0119 rozwi\u0105za\u0107,
           ale w ramach podzi\u0119kowa\u0144 za dobre intencje kupi\u0142 Ani dzia\u0142k\u0119
           w Przeworsku, gdzie si\u0119 od razu wprowadzi\u0142a."
-      lingering: 0
-      speakerID: Narrator
+      lingering: -1
+      speakerID: A
       speakerMod: 
       changeLocationId: 
     - subLines:
-      - timeForSingleCharDisplay: 0
+      - timeForSingleCharDisplay: -1
         subline: "Odlecia\u0142a\u015B, To\u015Bka."
+      lingering: -1
+      speakerID: I
+      speakerMod: H17
+      changeLocationId: 
+    - subLines: []
       lingering: 0
       speakerID: I
-      speakerMod: 
+      speakerMod: H18
       changeLocationId: 
     - subLines:
-      - timeForSingleCharDisplay: 0
+      - timeForSingleCharDisplay: -1
         subline: "Mnie si\u0119 podoba\u0142o."
-      lingering: 0
+      lingering: -1
       speakerID: R
-      speakerMod: 
+      speakerMod: D3
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: H16
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Tsk, tak my\u015Bla\u0142am, \u017Ce nie kupisz tego Przeworska."
-      lingering: 0
+      lingering: -1
       speakerID: A
-      speakerMod: 
+      speakerMod: D1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Ale swoj\u0105 drog\u0105 jestem ciekawa, co u Ani. Czy wygodnie
           jej w tej kawalerce."
-      lingering: 0
+      lingering: -1
       speakerID: A
-      speakerMod: 
+      speakerMod: I4
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: F2
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Nie obchodzi mnie to. Zamkn\u0119\u0142a mnie na dwa lata za niewinno\u015B\u0107."
-      lingering: 0
+      lingering: -1
       speakerID: R
-      speakerMod: 
+      speakerMod: C5
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: B10
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "By\u0142e\u015B do\u015B\u0107 podejrzany."
+      lingering: -1
+      speakerID: I
+      speakerMod: I1
+      changeLocationId: 
+    - subLines: []
       lingering: 0
       speakerID: I
-      speakerMod: 
+      speakerMod: H13
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: A6
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: 'Ej, '
       - timeForSingleCharDisplay: 0.2
         subline: 
-      - timeForSingleCharDisplay: 0
-        subline: "to w sumie kto zabi\u0142?"
       lingering: 0
       speakerID: A
-      speakerMod: 
+      speakerMod: A4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "To w sumie kto zabi\u0142?"
+      lingering: -1
+      speakerID: A
+      speakerMod: B1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: B10
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: H7
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Pewnie Ania.
-      lingering: 0
+      lingering: -1
       speakerID: R
-      speakerMod: 
+      speakerMod: E1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Koniec
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Zako\u0144czenie: Jak mog\u0142a\u015B?"
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
@@ -1088,28 +1171,28 @@ MonoBehaviour:
           o duchach i pozwali Adama oraz Ani\u0119. Ania straci\u0142a prac\u0119
           i zatrudni\u0142a si\u0119 w sieci fastfoodowej, aby jako\u015B wi\u0105za\u0107
           koniec z ko\u0144cem. "
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Z \u017Calu popad\u0142a w alkoholizm."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Koniec.
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Zako\u0144czenie: Nikt wam nie uwierzy."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
@@ -1120,7 +1203,7 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "Ania wr\xF3ci\u0142a do swojego domu. Kilka tygodni p\xF3\u017Aniej,
           dosta\u0142a pozew od Antoniny."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
@@ -1129,33 +1212,33 @@ MonoBehaviour:
         subline: "Krystianowi uda\u0142o si\u0119 dowie\u015B\u0107 jej niewinno\u015Bci.
           Kr\xF3tko potem rodzina \u0141askawc\xF3w r\xF3wnie\u017C pozwa\u0142a
           Ani\u0119 i Adama za b\u0142\u0119dne okre\u015Blenie mordercy."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Teraz Ania i Adam \u017Cebraj\u0105 pod osiedlowym sklepem."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Koniec
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Zako\u0144czenie: Trust me bro."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     identifier: Epilog_TrustMeBro
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2076,7 +2159,7 @@ MonoBehaviour:
         subline: " Wiesz ju\u017C kto zabi\u0142?"
       lingering: -1
       speakerID: Ad
-      speakerMod: 
+      speakerMod: A1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2094,30 +2177,40 @@ MonoBehaviour:
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ad
+      speakerMod: Exit
+      changeLocationId: 
     identifier: NeutralEnding
     runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: -1
         subline: 'CO?! '
-      - timeForSingleCharDisplay: 0.3
+      - timeForSingleCharDisplay: 0.1
         subline: 
       - timeForSingleCharDisplay: 0.005
         subline: Jestem niewinna!
       lingering: -1
       speakerID: A
-      speakerMod: 
+      speakerMod: F2
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Nie no, to szale\u0144stwo!"
-      - timeForSingleCharDisplay: 0.3
+      - timeForSingleCharDisplay: 0.1
         subline: 
       - timeForSingleCharDisplay: 0
         subline: " Ona na pewno nie jest morderc\u0105!"
       lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H9
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: M1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2128,49 +2221,61 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "Prosz\u0119 za mn\u0105, pani Wiercipi\u0119ta."
       lingering: -1
-      speakerID: A
+      speakerID: Ad
       speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: H8
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Nie, to nie jest mo\u017Cliwe."
       lingering: -1
       speakerID: Ma
-      speakerMod: 
+      speakerMod: A5
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Ale dlaczego ona, nie rozumiem.
       lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: F1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...Tak?
+      lingering: -1
+      speakerID: A
+      speakerMod: E2
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Prosz\u0119 pana, "
-      - timeForSingleCharDisplay: 0.3
+      - timeForSingleCharDisplay: 0.1
         subline: 
       - timeForSingleCharDisplay: 0
         subline: " to jest niemo\u017Cliwe, \u017Ce to ona zabi\u0142a Oktawiana. "
-      - timeForSingleCharDisplay: 0.3
+      - timeForSingleCharDisplay: 0.1
         subline: 
       - timeForSingleCharDisplay: 0
         subline: "Przepraszam, ale czy pan j\u0105 w og\xF3le widzi?"
       lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: K1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Pozory cz\u0119sto myl\u0105."
       lingering: -1
-      speakerID: Gracz
+      speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Pan si\u0119 myli. "
-      - timeForSingleCharDisplay: 0.2
+      - timeForSingleCharDisplay: 0.1
         subline: 
       - timeForSingleCharDisplay: 0.08
         subline: 'To JA '
@@ -2180,7 +2285,22 @@ MonoBehaviour:
         subline: "zabi\u0142em Oktawiana."
       lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: N1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: H3
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: B5
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ma
+      speakerMod: A4
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2194,7 +2314,7 @@ MonoBehaviour:
         subline: Co...?
       lingering: 1
       speakerID: A
-      speakerMod: 
+      speakerMod: H4
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2204,13 +2324,13 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: NZA
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Tak, tak naprawd\u0119 chodzi\u0142o mi o to, \u017Ceby sam si\u0119
           przyzna\u0142."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -2218,16 +2338,31 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "Ale dlaczego teraz si\u0119 przyznajesz? Przecie\u017C mog\u0142by\u015B
           unikn\u0105\u0107 kary."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Kto powiedzia\u0142, \u017Ce teraz jej nie unikn\u0119?"
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: D1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ma
+      speakerMod: D4
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: G1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: B13
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2236,32 +2371,52 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: " nie unikniesz, bo ci\u0119 aresztujemy."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Najpierw musicie mnie z\u0142apa\u0107!"
-      lingering: 0.5
-      speakerID: Ad
-      speakerMod: 
+      lingering: 1
+      speakerID: I
+      speakerMod: D2
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: Exit
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Krystian wystrzeli\u0142 w stron\u0119 przestrzeni mieszkalnej.
           Adam, Mateusz i policjanci stali chwil\u0119, zanim dosz\u0142o do nich
           to, co si\u0119 wydarzy\u0142o."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0.01
         subline: EJ, CZEKAJ!
-      lingering: 0
+      lingering: 1
       speakerID: Ad
       speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ma
+      speakerMod: Exit
       changeLocationId: 
     identifier: NZAagree
     runnedAlready: 0
@@ -2269,18 +2424,18 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: 'Owszem. '
-      - timeForSingleCharDisplay: 0.5
+      - timeForSingleCharDisplay: 0.2
         subline: 
       - timeForSingleCharDisplay: 0
         subline: "Wyszed\u0142em z pokoju w \u015Brodku nocy, kiedy nikt mnie nie
           s\u0142ysza\u0142. "
-      - timeForSingleCharDisplay: 0.5
+      - timeForSingleCharDisplay: 0.3
         subline: 
       - timeForSingleCharDisplay: 0
         subline: "Oktawian przebywa\u0142 w damskiej toalecie-"
       lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H11
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2297,7 +2452,7 @@ MonoBehaviour:
           i poszed\u0142em jego tropem."
       lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: K1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2311,7 +2466,7 @@ MonoBehaviour:
           w pokoju dziennym."
       lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: O2
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2323,7 +2478,7 @@ MonoBehaviour:
         subline: " bo jestem znany z dok\u0142adno\u015Bci."
       lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: N1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2333,7 +2488,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: NZAcont1
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2349,7 +2504,7 @@ MonoBehaviour:
         subline: " Oktawian przebywa\u0142 w damskiej toalecie-"
       lingering: 0
       speakerID: I
-      speakerMod: 
+      speakerMod: A1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2368,7 +2523,7 @@ MonoBehaviour:
           spa\u0107."
       lingering: 0
       speakerID: I
-      speakerMod: 
+      speakerMod: N1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2380,6 +2535,13 @@ MonoBehaviour:
     identifier: NZAcont2
     runnedAlready: 0
   - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Nie ma problemu.
+      lingering: -1
+      speakerID: I
+      speakerMod: H8
+      changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: 'Nie! '
@@ -2395,37 +2557,42 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: "Nie my zabili\u015Bmy!"
-      lingering: 0
+      - timeForSingleCharDisplay: 0.1
+        subline: 
+      lingering: -1
       speakerID: A
-      speakerMod: 
+      speakerMod: F2
       changeLocationId: 
     - subLines:
-      - timeForSingleCharDisplay: 0
+      - timeForSingleCharDisplay: -1
         subline: "Prosz\u0119 za mn\u0105."
       lingering: 0
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: G2
+      changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Pope\u0142niacie du\u017Cy b\u0142\u0105d. "
-      - timeForSingleCharDisplay: 0.5
-        subline: 
       - timeForSingleCharDisplay: 0.1
         subline: "To nie by\u0142a ona."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H9
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Ona ca\u0142\u0105 noc spa\u0142a. To pomy\u0142ka."
-      lingering: 0
+      lingering: -1
       speakerID: Ma
-      speakerMod: 
+      speakerMod: A5
       changeLocationId: 
     - subLines:
-      - timeForSingleCharDisplay: 0
+      - timeForSingleCharDisplay: -1
         subline: "Skoro Ania m\xF3wi, \u017Ce to ona, to jej wierz\u0119."
       lingering: 0
       speakerID: Ad
@@ -2434,32 +2601,52 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Tosia, nie martw si\u0119!"
-      - timeForSingleCharDisplay: 0.4
+      - timeForSingleCharDisplay: 0.2
         subline: 
       - timeForSingleCharDisplay: 0
         subline: " Udowodni\u0119, \u017Ce to nie ty!"
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: M1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: Exit
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Antonina zosta\u0142a wzi\u0119ta do radiowozu"
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Naprawd\u0119 my\u015Bl\u0119, \u017Ce si\u0119 mylisz."
-      lingering: 0
+      lingering: -1
       speakerID: Ma
       speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ma
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: Exit
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Brawo, Ania. Dzi\u0119kuj\u0119."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
@@ -2471,7 +2658,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: NZAdisagree
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2480,14 +2667,14 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0.1
         subline: Duchy?
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Duchy.
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -2496,7 +2683,7 @@ MonoBehaviour:
         subline: HY!
       lingering: 0
       speakerID: A
-      speakerMod: 
+      speakerMod: A9
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2505,14 +2692,14 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: "Nie Ania, to nie by\u0142y duchy."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Prosz\u0119, wska\u017C prawdziwego morderc\u0119."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
@@ -2522,9 +2709,9 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Tak my\u015Bla\u0142em."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: N1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2533,64 +2720,74 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: "On nie zabi\u0142!"
-      lingering: 0
+      lingering: -1
       speakerID: A
-      speakerMod: 
+      speakerMod: G3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Panie bez nazwiska, prosz\u0119 za mn\u0105."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Nie martw si\u0119, Tosia, "
-      - timeForSingleCharDisplay: 0.2
+      - timeForSingleCharDisplay: 0.1
         subline: 
       - timeForSingleCharDisplay: 0
         subline: "znajd\u0119 prawdziwego morderc\u0119."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H15
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Niby gdzie, w wi\u0119zieniu?!"
-      lingering: 0
+      lingering: -1
       speakerID: A
-      speakerMod: 
+      speakerMod: H5
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Nie.
-      lingering: 1
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: '?'
       lingering: 1
       speakerID: A
-      speakerMod: 
+      speakerMod: H4
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: Exit
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Krystian wystrzeli\u0142 w stron\u0119 przestrzeni mieszkalnej.
           Adam, Mateusz i policjanci stali chwil\u0119, zanim dosz\u0142o do nich
           to, co si\u0119 wydarzy\u0142o."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0.01
         subline: EJ, CZEKAJ!
-      lingering: 0
+      lingering: 1
       speakerID: Ad
       speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: Exit
       changeLocationId: 
     identifier: NZI
     runnedAlready: 0
@@ -2598,42 +2795,45 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: DAM-DAM-DAAAAAM!
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Tego si\u0119 nie spodziewa\u0142em."
-      lingering: 0
+      lingering: -1
       speakerID: R
-      speakerMod: 
+      speakerMod: C3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "To by\u0142by MEGA plot twist!"
+      lingering: -1
+      speakerID: A
+      speakerMod: H3
+      changeLocationId: 
+    - subLines: []
       lingering: 0
       speakerID: A
-      speakerMod: 
+      speakerMod: A4
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Interesuj\u0105ca teoria."
-      lingering: 0
+      lingering: -1
       speakerID: Ma
-      speakerMod: 
+      speakerMod: D2
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Gdyby\u015Bmy byli tak zgrani, "
-      - timeForSingleCharDisplay: 0.1
-        subline: 
       - timeForSingleCharDisplay: 0
         subline: "uda\u0142oby nam si\u0119 osi\u0105gn\u0105\u0107 du\u017Co wi\u0119cej
           ni\u017C jedno morderstwo."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: F2
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2643,9 +2843,9 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "ale w \u017Cyciu nie wsp\xF3\u0142pracowa\u0142bym z Antonin\u0105
           w czymkolwiek, co wymaga bycia dyskretnym."
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: C2
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2656,16 +2856,31 @@ MonoBehaviour:
         subline: "Czy to znaczy, \u017Ce zabiliby\u015Bcie kogo\u015B "
       - timeForSingleCharDisplay: 0.2
         subline: 
+      lingering: -1
+      speakerID: A
+      speakerMod: F2
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: F2
+      changeLocationId: 
+    - subLines:
       - timeForSingleCharDisplay: 0
-        subline: 'BEZE MNIE? '
-      - timeForSingleCharDisplay: 0.5
-        subline: 
-      - timeForSingleCharDisplay: 0.007
+        subline: BEZE MNIE?
+      - timeForSingleCharDisplay: 0.2
+        subline: ...
+      lingering: -1
+      speakerID: A
+      speakerMod: B4
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
         subline: "Nie \u017Cebym chcia\u0142a kogo\u015B zabi\u0107, ale troch\u0119
           mi przykro, \u017Ce mnie wykluczacie."
-      lingering: 0
+      lingering: -1
       speakerID: A
-      speakerMod: 
+      speakerMod: E5
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2676,67 +2891,78 @@ MonoBehaviour:
         subline: "Nie planowali\u015Bmy zab\xF3jstwa, ale w jakim\u015B bardzo popsutym
           \u015Bwiecie, w kt\xF3rym by\u015Bmy planowali, by\u0142aby\u015B pierwsz\u0105
           osob\u0105, kt\xF3ra by o tym us\u0142ysza\u0142a."
+      lingering: -1
+      speakerID: I
+      speakerMod: M1
+      changeLocationId: 
+    - subLines: []
       lingering: 0
       speakerID: I
-      speakerMod: 
+      speakerMod: H16
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Aww, dzi\u0119kuj\u0119!"
-      lingering: 0
+      lingering: -1
       speakerID: A
-      speakerMod: 
+      speakerMod: I1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ma
+      speakerMod: F12
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "G\u0142\xF3wnie dlatego, \u017Ce popsu\u0142oby to nasze plany,
           a ja JESTEM PRZECIWNY zab\xF3jstwom, ale r\xF3wnie\u017C dlatego, \u017Ce
           z tob\u0105 by\u0142oby to du\u017Co zabawniejsze."
+      lingering: -1
+      speakerID: I
+      speakerMod: H3
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: A14
+      changeLocationId: 
+    - subLines: []
       lingering: 0
       speakerID: I
-      speakerMod: 
+      speakerMod: H17
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Czyli nie wsp\xF3\u0142pracowali\u015Bmy, \u017Ceby zabi\u0107
           Oktawiana?"
-      lingering: 0
+      lingering: -1
       speakerID: R
-      speakerMod: 
+      speakerMod: C1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Nie.
       lingering: 0.5
       speakerID: A
-      speakerMod: 
+      speakerMod: A10
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Nie.
       lingering: 0.5
       speakerID: Mz
-      speakerMod: 
+      speakerMod: B1
       changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Nie.
-      lingering: 0.5
-      speakerID: Ma
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Nie.
-      lingering: 0.5
-      speakerID: I
-      speakerMod: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: C3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Mimo tego, \u017Ce ta teoria wydaje si\u0119 bardzo ekscytuj\u0105ca
           i kusz\u0105ca, nie ma szans, \u017Ce zrobili to oni wszyscy."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
@@ -2751,14 +2977,14 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Ania, masz dowody?
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Um, c\xF3\u017C, nie do-"
-      lingering: 0.5
+      lingering: 0
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -2780,47 +3006,72 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: " Ani nie masz poka\u017Anego w\u0105sa."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "A wi\u0119c, Ania, kto zabi\u0142?"
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ma
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: Exit
       changeLocationId: 
     identifier: NZK
     runnedAlready: 0
   - lines:
     - subLines:
-      - timeForSingleCharDisplay: -1
+      - timeForSingleCharDisplay: 0
         subline: 'CO?! '
-      lingering: 0
+      lingering: -1
       speakerID: A
-      speakerMod: 
+      speakerMod: G2
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0.01
         subline: To nie jest prawda.
-      lingering: 0
+      lingering: -1
       speakerID: Ma
-      speakerMod: 
+      speakerMod: A5
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Co ci\u0119 do tego przekona\u0142o, Ania?"
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H10
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Gotka nie zabi\u0142a."
-      lingering: 0
+      lingering: -1
       speakerID: R
-      speakerMod: 
+      speakerMod: A4
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2829,37 +3080,37 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: "Po tym, co robi\u0142a w burz\u0119?"
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: C4
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Pani Mr\xF3z, prosz\u0119 za mn\u0105."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Ale to nie ja zabi\u0142am."
-      lingering: 0
+      lingering: -1
       speakerID: Ma
-      speakerMod: 
+      speakerMod: C5
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Prosz\u0119 za mn\u0105."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "To nie tak mia\u0142o by\u0107."
-      lingering: 0
+      lingering: -1
       speakerID: Ma
-      speakerMod: 
+      speakerMod: F7
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2868,13 +3119,38 @@ MonoBehaviour:
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ma
+      speakerMod: Exit
+      changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Podczas kiedy Adam m\xF3wi\u0142, Matylda rozp\u0142yn\u0119\u0142a
           si\u0119 w powietrzu."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: B5
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: B1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: B1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: A9
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2883,9 +3159,29 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: co?
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: Exit
       changeLocationId: 
     identifier: NZMa
     runnedAlready: 0
@@ -2893,30 +3189,30 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: -1
         subline: 'CO?! '
-      lingering: 0
+      lingering: -1
       speakerID: A
-      speakerMod: 
+      speakerMod: G2
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0.01
         subline: To nie jest prawda.
-      lingering: 0
+      lingering: -1
       speakerID: Ma
-      speakerMod: 
+      speakerMod: A5
       changeLocationId: 
     - subLines:
-      - timeForSingleCharDisplay: 0
+      - timeForSingleCharDisplay: -1
         subline: "Co ci\u0119 do tego przekona\u0142o, Ania?"
       lingering: 0
       speakerID: I
-      speakerMod: 
+      speakerMod: H10
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Gotka nie zabi\u0142a."
-      lingering: 0
+      lingering: -1
       speakerID: R
-      speakerMod: 
+      speakerMod: A4
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2925,37 +3221,37 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: "Po tym, co robi\u0142a w burz\u0119?"
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: F1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Pani Mr\xF3z, prosz\u0119 za mn\u0105."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Ale to nie ja zabi\u0142am."
-      lingering: 0
+      lingering: -1
       speakerID: Ma
-      speakerMod: 
+      speakerMod: C5
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Prosz\u0119 za mn\u0105."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "To nie tak mia\u0142o by\u0107."
-      lingering: 0
+      lingering: -1
       speakerID: Ma
-      speakerMod: 
+      speakerMod: F7
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2963,6 +3259,31 @@ MonoBehaviour:
       lingering: 0
       speakerID: Ad
       speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ma
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: B1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: B1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: A9
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: D3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2979,16 +3300,36 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: ' co?'
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "A wi\u0119c jednak to mog\u0142y by\u0107 duchy."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: Exit
       changeLocationId: 
     identifier: NZMa_dnz
     runnedAlready: 0
@@ -2996,23 +3337,23 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Co.
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: B3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Prosz\u0119 za mn\u0105, panie Pomara\u0144cza."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Naprawd\u0119 to mnie oskar\u017Cy\u0142a\u015B?"
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: B6
       changeLocationId: 
     identifier: NZMz_0XX
     runnedAlready: 0
@@ -3020,55 +3361,71 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Co.
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: B3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Prosz\u0119 za mn\u0105, panie Pomara\u0144cza."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Naprawd\u0119 to mnie oskar\u017Cy\u0142a\u015B?"
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: B6
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "Matylda wysz\u0142a w \u015Brodku burzy do Ogrodu i z kim\u015B rozmawia\u0142a, ale TO JA jestem winny?!"
-      lingering: 0
+        subline: "Matylda wysz\u0142a w \u015Brodku burzy do Ogrodu i z kim\u015B
+          rozmawia\u0142a, ale TO JA jestem winny?!"
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: B9
       changeLocationId: 
     identifier: NZMz_1XX
     runnedAlready: 0
   - lines:
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: I1
+      changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Prosz\u0119 za mn\u0105 panie Pomara\u0144cza."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: I2
+      changeLocationId: 
     - subLines:
-      - timeForSingleCharDisplay: 0
+      - timeForSingleCharDisplay: 0.01
         subline: "Nagle Mateusz wyci\u0105gn\u0105\u0142 n\xF3\u017C."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: Exit
       changeLocationId: 
     - subLines:
-      - timeForSingleCharDisplay: 0
+      - timeForSingleCharDisplay: 0.01
         subline: "Mateusz d\u017Agn\u0105\u0142 Ani\u0119 i uciek\u0142."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
-      changeLocationId: 
+      changeLocationId: 0
     - subLines:
       - timeForSingleCharDisplay: 0.005
         subline: AAAAAAAAAAAAAAAAAAAaAAAACH!
@@ -3079,7 +3436,7 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Krystian, Rafa\u0142 i Adam ruszyli za Mateuszem"
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
@@ -3090,7 +3447,7 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0.08
         subline: ' wszystko dobrze?'
-      lingering: 0
+      lingering: -1
       speakerID: Ma
       speakerMod: 
       changeLocationId: 
@@ -3101,21 +3458,21 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: "g\u0142upie pytanie..."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Czujesz jak ubywa ci krwii
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0.009
         subline: "Zadzwoni\u0119 po karetk\u0119!"
-      lingering: 1
+      lingering: -1
       speakerID: A
       speakerMod: 
       changeLocationId: 
@@ -3124,21 +3481,21 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0.005
         subline: Nie mam telefonu!
-      lingering: 0
+      lingering: -1
       speakerID: A
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0.05
         subline: "We\u017A telefon Ani."
-      lingering: 0
+      lingering: -1
       speakerID: Ma
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Okej, okej!
-      lingering: 1
+      lingering: -1
       speakerID: A
       speakerMod: 
       changeLocationId: 
@@ -3159,21 +3516,22 @@ MonoBehaviour:
         subline: "W-I-E-R-C-I-P-I-\u0118-T-A! "
       - timeForSingleCharDisplay: 0
         subline: "Ju\u017C m\xF3wi\u0142am!"
-      lingering: 0
+      lingering: -1
       speakerID: A
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "Nagle przesta\u0142a\u015B by\u0107 w stanie utrzyma\u0107 g\u0142owy w g\xF3rze. Zakr\u0119ci\u0142o ci si\u0119 w g\u0142owie."
-      lingering: 0
+        subline: "Nagle przesta\u0142a\u015B by\u0107 w stanie utrzyma\u0107 g\u0142owy
+          w g\xF3rze. Zakr\u0119ci\u0142o ci si\u0119 w g\u0142owie."
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Zrobi\u0142o ci si\u0119 przyjemnie ch\u0142odno..."
-      lingering: 1
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
@@ -3192,21 +3550,21 @@ MonoBehaviour:
         subline: ...
       - timeForSingleCharDisplay: 0
         subline: " Ani pocz\u0105tku."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Koniec.
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Zako\u0144czenie: \u015Amier\u0107 w\u015Br\xF3d przyjaci\xF3\u0142."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
@@ -3216,65 +3574,65 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Poniewa\u017C nie lubi\u0142e\u015B Oktawiana."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "To jaki\u015B \u017Cart!"
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: D3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "O jak dobrze, ju\u017C my\u015Bla\u0142em, \u017Ce to ja jestem
           morderc\u0105."
-      lingering: 0
+      lingering: -1
       speakerID: R
-      speakerMod: 
+      speakerMod: C3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Mateusz, je\u017Celi jeste\u015B niewinny, nie przejmuj si\u0119.
           Spr\xF3buj\u0119 odkry\u0107 dok\u0142adnie kto zabi\u0142."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: M1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Was wszystkich chyba por\u0105ba\u0142o!!!"
       lingering: 0
       speakerID: Mz
-      speakerMod: 
+      speakerMod: D3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Brawo, Ania. Dzi\u0119kuj\u0119."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Nie ma problemu.
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Koniec
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Zako\u0144czenie: Och, wow, mia\u0142a\u015B racj\u0119"
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
@@ -3284,16 +3642,16 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: 'Tak. '
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Ale dlaczego niby mia\u0142bym to zrobi\u0107?"
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: B8
       changeLocationId: 
     identifier: NZMz_X00
     runnedAlready: 0
@@ -3301,16 +3659,16 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: 'Tak. '
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Ale dlaczego niby mia\u0142bym to zrobi\u0107?"
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: B8
       changeLocationId: 
     identifier: NZMz_X00
     runnedAlready: 0
@@ -3318,7 +3676,7 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: 'Tak. '
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -3326,16 +3684,16 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "Uderzy\u0142e\u015B Oktawiana \u017Celazkiem w ty\u0142 g\u0142owy
           i potem wyczy\u015Bci\u0142e\u015B \u017Celazko wybielaczem."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Ale dlaczego niby mia\u0142bym to zrobi\u0107?"
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: B8
       changeLocationId: 
     identifier: NZMz_X01
     runnedAlready: 0
@@ -3343,7 +3701,7 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: 'Tak. '
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -3351,16 +3709,16 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "W \u015Brodku nocy wyszed\u0142e\u015B z sypialni i ruszy\u0142e\u015B
           za Oktawianem do \u0142azienki damskiej."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Ale dlaczego niby mia\u0142bym to zrobi\u0107?"
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: B8
       changeLocationId: 
     identifier: NZMz_X10
     runnedAlready: 0
@@ -3368,7 +3726,7 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: 'Tak. '
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -3376,16 +3734,16 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "W \u015Brodku nocy wyszed\u0142e\u015B z sypialni i ruszy\u0142e\u015B
           za Oktawianem do \u0142azienki damskiej."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Ale dlaczego niby mia\u0142bym to zrobi\u0107?"
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: B8
       changeLocationId: 
     identifier: NZMz_X10
     runnedAlready: 0
@@ -3393,7 +3751,7 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: 'Tak. '
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -3401,7 +3759,7 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "W \u015Brodku nocy wyszed\u0142e\u015B z sypialni i ruszy\u0142e\u015B
           za Oktawianem do \u0142azienki damskiej."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -3409,16 +3767,16 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "Uderzy\u0142e\u015B Oktawiana \u017Celazkiem w ty\u0142 g\u0142owy
           i potem wyczy\u015Bci\u0142e\u015B \u017Celazko wybielaczem."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Ale dlaczego niby mia\u0142bym to zrobi\u0107?"
-      lingering: 0
+      lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: B8
       changeLocationId: 
     identifier: NZMz_X11
     runnedAlready: 0
@@ -3426,28 +3784,28 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: O nie.
-      lingering: 0
+      lingering: -1
       speakerID: R
-      speakerMod: 
+      speakerMod: A3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Panie Drobi\u0144ski, prosz\u0119 za mn\u0105."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Nie chc\u0119."
-      lingering: 0
+      lingering: -1
       speakerID: R
-      speakerMod: 
+      speakerMod: A7
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Jest pan oskar\u017Cony o zab\xF3jstwo Oktawiana \u0141askawcy."
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
@@ -3458,10 +3816,15 @@ MonoBehaviour:
       speakerID: R
       speakerMod: 
       changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: Exit
+      changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Rafa\u0142 poszed\u0142 z policj\u0105."
-      lingering: 0
+      lingering: -1
       speakerID: Narrator
       speakerMod: 
       changeLocationId: 
@@ -3472,21 +3835,26 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: "Upewni\u0119 si\u0119 chyba, czy to na pewno by\u0142 on."
+      lingering: -1
+      speakerID: I
+      speakerMod: H6
+      changeLocationId: 
+    - subLines: []
       lingering: 0
       speakerID: I
-      speakerMod: 
+      speakerMod: Exit
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Gratulacje, Ania! Spisa\u0142a\u015B si\u0119 \u015Bwietnie!"
-      lingering: 0
+      lingering: -1
       speakerID: Ad
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Dzi\u0119kuj\u0119."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -3523,7 +3891,7 @@ MonoBehaviour:
         subline: "Rozumiem, \u017Ce nie zmieni\u0142a\u015B zdania."
       lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: N2
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -3532,12 +3900,22 @@ MonoBehaviour:
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: C3
+      changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Ufam twojej decyzji.
       lingering: -1
       speakerID: Ma
-      speakerMod: 
+      speakerMod: F7
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: C3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -3547,8 +3925,33 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: " ale napi\u0119ta atmosfera!"
       lingering: -1
+      speakerID: A
+      speakerMod: E3
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: B1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: H8
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: A7
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
       speakerID: Ma
-      speakerMod: 
+      speakerMod: D1
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: B3
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -3558,11 +3961,36 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     - subLines:
-      - timeForSingleCharDisplay: 0
+      - timeForSingleCharDisplay: -1
         subline: To Adam!
       lingering: -1
       speakerID: Gracz
       speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Ma
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: Exit
       changeLocationId: 
     identifier: PKN
     runnedAlready: 1
