@@ -690,6 +690,15 @@ MonoBehaviour:
   - id: BathroomChecked2
     isAdditive: 0
     checkpointField: 0
+  - id: Iron_Checked2
+    isAdditive: 0
+    checkpointField: 0
+  - id: Backpack_Checked
+    isAdditive: 0
+    checkpointField: 0
+  - id: Backpack_Checked2
+    isAdditive: 0
+    checkpointField: 0
   listPlotChekpointsEndChapter: []
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
@@ -4033,12 +4042,96 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "Co ja zrobi\u0119 bez Adama?"
+        subline: Palipupa Kebab.
       lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
-    identifier: LockedBathroomCh2B
+    identifier: Item_Kebab
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Palipupa Kebab.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: "S\u0105 na nich \u015Blady jedzenia. I mo\u017Ce \u015Blady trucizny."
+      changeLocationId: 
+    identifier: Item_Dishes
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Palipupa Kebab.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: "Jest do po\u0142owy pusta."
+      changeLocationId: 
+    identifier: Item_Waterch2A
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Palipupa Kebab.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: "Hmm... S\u0105 na nim dziwne \u015Blady."
+      changeLocationId: 
+    identifier: Item_Iron2
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Och! To plecak Adama!
+      - timeForSingleCharDisplay: 0.1
+        subline: "Pewnie s\u0105 w nim dokumenty uczestnik\xF3w!"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: ' '
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: .
+      - timeForSingleCharDisplay: 0.25
+        subline: .
+      - timeForSingleCharDisplay: 0.25
+        subline: .
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: ' '
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.25
+        subline: "Zamkni\u0119ty na k\u0142\xF3dk\u0119 z kodem.s"
+      - timeForSingleCharDisplay: 0.25
+        subline: "Ale jaki on mo\u017Ce by\u0107?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: ' '
+      changeLocationId: 
+    identifier: Item_Backpack
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie znam kodu. Poznam go jak zadzwoni\u0119 do Adama."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: ' '
+      changeLocationId: 
+    identifier: Item_Backpack2
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Hm. Kamery nie wychwyci\u0142y nic przydatnego."
+      - timeForSingleCharDisplay: 0
+        subline: "Wydaj\u0105 mi si\u0119 absurdalnie niepotrzebne."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: ' '
+      changeLocationId: 
+    identifier: Cameras2
     runnedAlready: 0
   serializedAnalisedSequence:
     lines: []

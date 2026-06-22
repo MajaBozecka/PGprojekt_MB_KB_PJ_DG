@@ -554,11 +554,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
   hasChoicesMenu: 0
   listOfDialogueOptions:
-  - identifier: Item_Boxes
+  - identifier: Item_Backpack
     read: 0
     buttonText: 
     requirements: []
-    updatedCheckpointValues: []
+    updatedCheckpointValues:
+    - id: Backpack_Checked
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Item_Backpack2
+    read: 0
+    buttonText: 
+    requirements:
+    - id: Backpack_Checked2
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: Backpack_Checked2
+      isAdditive: 0
+      checkpointField: 1
 --- !u!61 &56771927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4130,7 +4144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
   hasChoicesMenu: 0
   listOfDialogueOptions:
-  - identifier: Item_Water
+  - identifier: Item_Waterch2A
     read: 0
     buttonText: 
     requirements: []
@@ -5918,7 +5932,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &679665941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8332,7 +8346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
   hasChoicesMenu: 0
   listOfDialogueOptions:
-  - identifier: Item_Water
+  - identifier: Item_Dishes
     read: 0
     buttonText: 
     requirements: []
@@ -8588,7 +8602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
   hasChoicesMenu: 0
   listOfDialogueOptions:
-  - identifier: Item_Water
+  - identifier: Item_Kebab
     read: 0
     buttonText: 
     requirements: []
@@ -9655,12 +9669,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
   hasChoicesMenu: 0
   listOfDialogueOptions:
-  - identifier: Item_Iron
+  - identifier: Item_Iron2
     read: 0
     buttonText: 
-    requirements: []
-    updatedCheckpointValues:
+    requirements:
     - id: Iron_Checked
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: Iron_Checked2
       isAdditive: 0
       checkpointField: 1
 --- !u!1 &1105934434
@@ -12267,7 +12284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1433319340
 Transform:
   m_ObjectHideFlags: 0
