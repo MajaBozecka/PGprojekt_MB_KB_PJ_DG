@@ -3,7 +3,7 @@
 using UnityEditor;
 using UnityEngine;
 
-//[CustomPropertyDrawer(typeof(DialogueLine), true)]
+[CustomPropertyDrawer(typeof(DialogueLine), true)]
 public class DialogueLinePropertyDrawer : PropertyDrawer
 {
     private SerializedProperty l_sublines;
