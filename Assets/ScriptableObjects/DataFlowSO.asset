@@ -163,7 +163,7 @@ MonoBehaviour:
     speakerName: Mateusz
     fontSize: 20
     styles: 1
-    color: {r: 1, g: 0.29399306, b: 0.26981127, a: 1}
+    color: {r: 0.5169811, g: 0.11012984, b: 0.09656813, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
     - modName: F4
@@ -250,7 +250,7 @@ MonoBehaviour:
     speakerName: Matylda
     fontSize: 20
     styles: 1
-    color: {r: 0.7050018, g: 0.17466003, b: 0.83396226, a: 1}
+    color: {r: 0.37590268, g: 0.0712353, b: 0.4339623, a: 1}
     timePerCharacterTalking: 0.05
     sprites:
     - modName: E1
@@ -658,7 +658,9 @@ MonoBehaviour:
     - Item_Waterch2A
     - Item_Dishes
     - Item_Kebab
-    progressInLastRead: 70
+    - "Ch1_Antonina_Wst\u0119p00"
+    - CuttingShort
+    progressInLastRead: 321
   listPlotCheckpoints:
   - id: Backpack_Checked
     isAdditive: 0
@@ -692,7 +694,7 @@ MonoBehaviour:
     checkpointField: 0
   - id: FirstCharacterInteraction_Antonina
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: FirstCharacterInteraction_Krystian
     isAdditive: 0
     checkpointField: 0
@@ -710,7 +712,7 @@ MonoBehaviour:
     checkpointField: 0
   - id: Intro_finished
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
   - id: Iron_Checked
     isAdditive: 0
     checkpointField: 0
@@ -1039,7 +1041,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: "Ch1_Antonina_Wst\u0119p00"
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2598,13 +2600,6 @@ MonoBehaviour:
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "Czy ma pan jakie\u015B dodatkowe akta uczestnik\xF3w?"
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
         subline: Uuh...
       - timeForSingleCharDisplay: 0.3
         subline: 
@@ -2696,21 +2691,21 @@ MonoBehaviour:
         subline: "O rany co si\u0119 sta\u0142o, kolejna ofiara?!"
       lingering: -1
       speakerID: A
-      speakerMod: 
+      speakerMod: G2
       changeLocationId: 1
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Tak jak podejrzewa\u0142em..."
       lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H8
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: To co dalej?
       lingering: -1
       speakerID: Mz
-      speakerMod: 
+      speakerMod: E1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2725,7 +2720,7 @@ MonoBehaviour:
         subline: OTRUTO ICH?!
       lingering: -1
       speakerID: A
-      speakerMod: 
+      speakerMod: H4
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2750,7 +2745,7 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 6
     identifier: Chap2_introA
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -3101,7 +3096,7 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 
     identifier: Chapter1_intro
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -3170,6 +3165,18 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Chapter2_intro
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: 'Ups! '
+      - timeForSingleCharDisplay: 0
+        subline: "Trzeba troch\u0119 przyspieszy\u0107, bo goni nas deadline!"
+      lingering: -1
+      speakerID: Narrator
+      speakerMod: 
+      changeLocationId: 
+    identifier: CuttingShort
     runnedAlready: 0
   - lines:
     - subLines:
@@ -4081,7 +4088,7 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 0
     identifier: Intro
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -4253,7 +4260,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Dishes
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -4315,7 +4322,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Kebab
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -4597,7 +4604,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Waterch2A
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -6527,22 +6534,8 @@ MonoBehaviour:
     identifier: Storage
     runnedAlready: 0
   serializedAnalisedSequence:
-    lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "O prosz\u0119! Leki przeczyszczaj\u0105ce!"
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Czy kto\u015B doda\u0142 ich do kolacji?"
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    identifier: Item_Lax
+    lines: []
+    identifier: 
     runnedAlready: 0
   serializedPlaceholderSequence:
     lines: []
@@ -6611,6 +6604,7 @@ MonoBehaviour:
   - Chap2_introB
   - Chapter1_intro
   - Chapter2_intro
+  - CuttingShort
   - DirtOnCarpet
   - DirtOnCarpet2
   - Enter_Bathroom
@@ -6695,7 +6689,7 @@ MonoBehaviour:
   - NZR
   - PKN
   - Storage
-  analisedIdentifier: Item_Lax
-  analisedIndex: 92
+  analisedIdentifier: 
+  analisedIndex: -1
   placeholdIdentifier: 
   chapter: 0
