@@ -762,8 +762,25 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
+        subline: "Okej. Wreszcie sko\u0144czy\u0142am."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 0
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pora podsumowa\u0107 zdobyte informacje."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
         subline: "Nie powiem dop\xF3ki ty nie powiesz."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -771,14 +788,14 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "Heh. Przysz\u0142a\u015B pewnie \u017Ceby odnale\u017A\u0107 w\u015Br\xF3d
           nas morderc\u0119. To na nic."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H2
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Dlaczego?
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -790,14 +807,14 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: To wszystko jest zaplanowane.
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: C1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: To znaczy?
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -810,7 +827,7 @@ MonoBehaviour:
         subline: "Nie ufam nikomu kto pracuje dla rz\u0105du."
       lingering: 0
       speakerID: I
-      speakerMod: 
+      speakerMod: H2
       changeLocationId: 
     identifier: Ch1_Krystian_ConvincingToTalk
     runnedAlready: 0
@@ -818,7 +835,7 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Ja te\u017C im nie ufam"
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -829,23 +846,23 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: " Nie nabior\u0119 si\u0119."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: A5
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Czy mog\u0119 jako\u015B zdoby\u0107 twoje zaufanie?"
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Mo\u017Cliwe. Ale nie nastawiaj si\u0119 na to."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: J1
       changeLocationId: 
     identifier: Ch1_Krystian_ConvincingToTalk1
     runnedAlready: 0
@@ -853,36 +870,36 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "W takim razie spr\xF3buj\u0119."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Powodzenia.
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Wci\u0105\u017C musz\u0119 zada\u0107 ci kilka pyta\u0144. Takie
           s\u0105 procedury."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Skoro musisz. Ale nie obiecuj\u0119, \u017Ce udziel\u0119 odpowiedzi."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: C1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Rozumiem.
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -896,7 +913,7 @@ MonoBehaviour:
         subline: 
       - timeForSingleCharDisplay: 0
         subline: szkoda
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -904,9 +921,9 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "Mo\u017Ce uda ci si\u0119 zdoby\u0107 moje zaufanie. Wtedy powiem
           ci wszystko, czego si\u0119 dowiedzia\u0142em."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: D1
       changeLocationId: 
     identifier: Ch1_Krystian_ConvinvingToTalk1S
     runnedAlready: 0
@@ -914,35 +931,35 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Co robi\u0142 pan dzisiaj w nocy?"
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Co, to prywatno\u015B\u0107 ju\u017C nie istnieje?"
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H4
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "W nocy dosz\u0142o do morderstwa."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Ta. Wiem. Ale ja ca\u0142\u0105 noc by\u0142em w sypialni."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: N2
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Czy jest kto\u015B kto m\xF3g\u0142by to potwierdzi\u0107?"
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -958,14 +975,14 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "**Wszyscy inni z mojego pokoju z jakiego\u015B powodu wyszli w
           \u015Brodku nocy**"
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: M1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "To ciekawe. Dzi\u0119kuj\u0119."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
@@ -974,56 +991,120 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: Detektyw Anna Nowak. A pan to Krystian P.?
+        subline: "Czy zna\u0142 pan Oktawiana?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Mia\u0142em nieszcz\u0119\u015Bcie pozna\u0107 tego jegomo\u015Bcia
+          podczas tego realityshow. "
+      - timeForSingleCharDisplay: 0.4
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "**\u017Ba\u0142uj\u0119.**"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: H8
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Dlaczego?
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: 'Jest... '
+      - timeForSingleCharDisplay: 0.4
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "BY\u0141 zadufanym w sobie bur\u017Cujem."
+      lingering: -1
+      speakerID: I
+      speakerMod: N1
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Co o nim wiesz?
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "\u017Be by\u0142 **strasznie denerwuj\u0105cy**"
+      lingering: -1
+      speakerID: I
+      speakerMod: H6
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Rozumiem
       lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Krystian_Q2
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Detektyw Anna Nowak. A pan to Krystian P.?
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Owszem. I nie mam zamiaru udziela\u0107 odpowiedzi."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: C1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Musi Pan.
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Bo co mi zrobisz?
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: N1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: ...W sumie nic
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: 'W takim razie '
-      - timeForSingleCharDisplay: 0.6
-        subline: 
       - timeForSingleCharDisplay: 0
         subline: do widzenia
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: Do widzenia.
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: -1
+      speakerID: I
+      speakerMod: Exit
       changeLocationId: 
     identifier: Ch1_Krystian_VowOfSilence-2S
     runnedAlready: 0
@@ -1031,26 +1112,31 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: A ty to kto?
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H4
       changeLocationId: 
     identifier: "Ch1_Krystian_Wst\u0119p00"
     runnedAlready: 0
   - lines:
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: H4
+      changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "(Jego kapcie nie s\u0105 z tego studia...)"
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: A ty to kto?
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: H4
       changeLocationId: 
     identifier: "Ch1_Krystian_Wst\u0119p01"
     runnedAlready: 0
@@ -1058,9 +1144,9 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Miejmy to ju\u017C za sob\u0105."
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: A3
       changeLocationId: 
     identifier: "Ch1_Krystian_Wst\u0119p1X"
     runnedAlready: 0
@@ -1068,18 +1154,82 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Co\u015B jeszcze?"
-      lingering: 0
+      lingering: -1
       speakerID: I
-      speakerMod: 
+      speakerMod: A4
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Nie, dzi\u0119kuj\u0119."
-      lingering: 0
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: Exit
+      changeLocationId: 
     identifier: "Ch1_Krystian_Wst\u0119pNoTalk"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Wszyscy s\u0105 podejrzani."
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0.3
+        subline: ' Nawet ja.'
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dobra. Pora i\u015B\u0107 na obiadokolacj\u0119."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1SumA
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Wow, nie ma podejrzanych!
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Ale super!
+      - timeForSingleCharDisplay: 0.2
+        subline: 
+      - timeForSingleCharDisplay: 0.2
+        subline: Brawo Ania!
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dobra. Pora i\u015B\u0107 na obiadokolacj\u0119."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1SumB
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dobra. Pora i\u015Bc na obiadokolacj\u0119."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1SumC
     runnedAlready: 0
   - lines:
     - subLines:
@@ -4480,140 +4630,47 @@ MonoBehaviour:
     lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "Co robi\u0142 pan dzisiaj w nocy?"
-      lingering: 0
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Co, to prywatno\u015B\u0107 ju\u017C nie istnieje?"
-      lingering: 0
-      speakerID: I
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "W nocy dosz\u0142o do morderstwa."
-      lingering: 0
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Ta. Wiem. Ale ja ca\u0142\u0105 noc by\u0142em w sypialni."
-      lingering: 0
-      speakerID: I
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Czy jest kto\u015B kto m\xF3g\u0142by to potwierdzi\u0107?"
-      lingering: 0
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0.1
-        subline: 'Ech... '
-      - timeForSingleCharDisplay: 1
+        subline: "Wszyscy s\u0105 podejrzani."
+      - timeForSingleCharDisplay: 0.3
         subline: 
-      - timeForSingleCharDisplay: 0
-        subline: "W\u0142a\u015Bciwie to nie."
-      - timeForSingleCharDisplay: 1
-        subline: 
-      - timeForSingleCharDisplay: 0
-        subline: "**Wszyscy inni z mojego pokoju z jakiego\u015B powodu wyszli w
-          \u015Brodku nocy**"
-      lingering: 0
-      speakerID: I
+      - timeForSingleCharDisplay: 0.3
+        subline: ' Nawet ja.'
+      lingering: -1
+      speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "To ciekawe. Dzi\u0119kuj\u0119."
-      lingering: 0
+        subline: "Dobra. Pora i\u015B\u0107 na obiadokolacj\u0119."
+      lingering: -1
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
-    identifier: Ch1_Krystian_Q1
+    identifier: Ch1SumA
     runnedAlready: 0
   serializedPlaceholderSequence:
-    lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Czy zna\u0142 pan Oktawiana?"
-      lingering: 0
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Mia\u0142em nieszcz\u0119\u015Bcie pozna\u0107 tego jegomo\u015Bcia
-          podczas tego realityshow. "
-      - timeForSingleCharDisplay: 0.8
-        subline: 
-      - timeForSingleCharDisplay: 0
-        subline: "**\u017Ba\u0142uj\u0119.**"
-      lingering: 0
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Dlaczego?
-      lingering: 0
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: 'Jest... '
-      - timeForSingleCharDisplay: 0.8
-        subline: 
-      - timeForSingleCharDisplay: 0
-        subline: "BY\u0141 zadufanym w sobie bur\u017Cujem."
-      lingering: 0
-      speakerID: I
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Co o nim wiesz?
-      lingering: 0
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "\u017Be by\u0142 **strasznie denerwuj\u0105cy**"
-      lingering: 0
-      speakerID: I
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Rozumiem
-      lingering: 0
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    identifier: Ch1_Krystian_Q2
+    lines: []
+    identifier: 
     runnedAlready: 0
   seqIdTab:
   - Blood_Floor
   - Cameras1
   - Cameras2
+  - Ch1_
   - Ch1_Krystian_ConvincingToTalk
   - Ch1_Krystian_ConvincingToTalk1
   - Ch1_Krystian_ConvincingToTalk2
   - Ch1_Krystian_ConvinvingToTalk1S
   - Ch1_Krystian_Q1
+  - Ch1_Krystian_Q2
   - Ch1_Krystian_VowOfSilence-2S
   - "Ch1_Krystian_Wst\u0119p00"
   - "Ch1_Krystian_Wst\u0119p01"
   - "Ch1_Krystian_Wst\u0119p1X"
   - "Ch1_Krystian_Wst\u0119pNoTalk"
+  - Ch1SumA
+  - Ch1SumB
+  - Ch1SumC
   - Chapter1_intro
   - DirtOnCarpet
   - DirtOnCarpet2
@@ -4695,7 +4752,7 @@ MonoBehaviour:
   - NZR
   - PKN
   - Storage
-  analisedIdentifier: Ch1_Krystian_Q1
-  analisedIndex: 7
+  analisedIdentifier: Ch1SumA
+  analisedIndex: 15
   placeholdIdentifier: 
   chapter: 0
