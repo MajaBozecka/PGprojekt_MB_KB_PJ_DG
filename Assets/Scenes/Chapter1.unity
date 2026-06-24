@@ -5219,17 +5219,20 @@ MonoBehaviour:
     - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 1
-  - identifier: 0EXIT_Dialogue
+  - identifier: "Ch1_Antonina_Wst\u0119p1X"
     read: 0
     buttonText: 
     requirements:
-    - id: DialogueDepthControllCheckpoint
+    - id: FirstCharacterInteraction_Antonina
       isAdditive: 0
       checkpointField: 1
-    updatedCheckpointValues:
     - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
 --- !u!114 &586129997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13408,11 +13411,11 @@ MonoBehaviour:
   testedObjectWithDialogueInteraction: {fileID: 0}
   pause: 0
   dialogueCanvas: {fileID: 127889335}
-  sfxSource: {fileID: 1607564802}
-  clickSound: {fileID: 8300000, guid: 66cc4f8c29725174583459fe8ab29f3d, type: 3}
-  hoverSound: {fileID: 8300000, guid: ac8417995238e8b4b9a9775a20b9fb0c, type: 3}
-  musicSource: {fileID: 1607564803}
-  backgroundMusic: {fileID: 8300000, guid: ca93a8e939b3d0147b4573e626323430, type: 3}
+  sfxSource: {fileID: 0}
+  clickSound: {fileID: 0}
+  hoverSound: {fileID: 0}
+  musicSource: {fileID: 0}
+  backgroundMusic: {fileID: 0}
 --- !u!4 &1607564801
 Transform:
   m_ObjectHideFlags: 0
