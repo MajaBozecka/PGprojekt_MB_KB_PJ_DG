@@ -26,10 +26,9 @@ public class CursorController : MonoBehaviour
     [SerializeField]
     private Vector2 readHotSpot;
     public ECursorMode cursorMode;
-    // Zmienne blokuj¹ce podwójne klikniêcie
+
     private float lastInteractionTime = 0f;
-    private float interactionCooldown = 0.3f; // Pó³ sekundy blokady po klikniêciu
-    // Start is called once before the first execution of UpdateCkeckpointFields after the MonoBehaviour is created
+    private float interactionCooldown = 0.3f; 
     void Start()
     {
         click=InputSystem.actions.FindAction("Click");
@@ -48,6 +47,7 @@ public class CursorController : MonoBehaviour
         if (raycastHit2D)
         {
             Debug.Log("Zarejestrowano klikniêcie w obiekt o nazwie: " + raycastHit2D.collider.gameObject.name);
+            dataFlow.PlayClickSound();
         }
 
      
@@ -122,6 +122,11 @@ public class CursorController : MonoBehaviour
     {
         if (mode != cursorMode)
         {
+            if (cursorMode == ECursorMode.DEFAULT && (mode == ECursorMode.NEWINTERACTION || mode == ECursorMode.READINTERACTION))
+            {
+                dataFlow.PlayHoverSound();
+            }
+
             cursorMode = mode;
             switch(mode)
             {

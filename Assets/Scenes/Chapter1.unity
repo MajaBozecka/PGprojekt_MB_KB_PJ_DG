@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 33250958}
   - component: {fileID: 33250959}
   - component: {fileID: 33250960}
+  - component: {fileID: 33250961}
   m_Layer: 0
   m_Name: "Item Rze\u017Aba"
   m_TagString: Untagged
@@ -394,6 +395,18 @@ MonoBehaviour:
     buttonText: 
     requirements: []
     updatedCheckpointValues: []
+--- !u!114 &33250961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33250955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &71657899
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +418,7 @@ GameObject:
   - component: {fileID: 71657900}
   - component: {fileID: 71657902}
   - component: {fileID: 71657901}
+  - component: {fileID: 71657903}
   m_Layer: 0
   m_Name: Cabinet
   m_TagString: Untagged
@@ -492,6 +506,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &71657903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71657899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &84344285
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +575,7 @@ GameObject:
   - component: {fileID: 85590809}
   - component: {fileID: 85590811}
   - component: {fileID: 85590810}
+  - component: {fileID: 85590812}
   m_Layer: 0
   m_Name: Drzwi Sypialnie
   m_TagString: Untagged
@@ -630,6 +657,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.2081985, y: 6.1884675}
   m_EdgeRadius: 0
+--- !u!114 &85590812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85590808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &91346187
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +680,7 @@ GameObject:
   - component: {fileID: 91346190}
   - component: {fileID: 91346189}
   - component: {fileID: 91346188}
+  - component: {fileID: 91346191}
   m_Layer: 0
   m_Name: Drzwi Scena
   m_TagString: Untagged
@@ -722,6 +762,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2121499448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &91346191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91346187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &101630973
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,6 +785,7 @@ GameObject:
   - component: {fileID: 101630974}
   - component: {fileID: 101630976}
   - component: {fileID: 101630975}
+  - component: {fileID: 101630977}
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Untagged
@@ -820,6 +873,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &101630977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101630973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &127889335
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,6 +1052,7 @@ GameObject:
   - component: {fileID: 152333805}
   - component: {fileID: 152333807}
   - component: {fileID: 152333806}
+  - component: {fileID: 152333808}
   m_Layer: 0
   m_Name: Item Papier
   m_TagString: Untagged
@@ -1074,6 +1140,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &152333808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152333804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &158346665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,6 +1309,7 @@ GameObject:
   - component: {fileID: 179781878}
   - component: {fileID: 179781880}
   - component: {fileID: 179781879}
+  - component: {fileID: 179781881}
   m_Layer: 0
   m_Name: Item Cupboard 3
   m_TagString: Untagged
@@ -1318,6 +1397,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &179781881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179781877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &181001410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1420,7 @@ GameObject:
   - component: {fileID: 181001411}
   - component: {fileID: 181001413}
   - component: {fileID: 181001412}
+  - component: {fileID: 181001414}
   m_Layer: 0
   m_Name: Window1
   m_TagString: Untagged
@@ -1416,6 +1508,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &181001414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181001410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &189848987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,6 +1567,7 @@ GameObject:
   - component: {fileID: 194720129}
   - component: {fileID: 194720131}
   - component: {fileID: 194720130}
+  - component: {fileID: 194720132}
   m_Layer: 0
   m_Name: Item Zlew
   m_TagString: Untagged
@@ -1550,6 +1655,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &194720132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194720128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &202187284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,6 +1678,7 @@ GameObject:
   - component: {fileID: 202187285}
   - component: {fileID: 202187287}
   - component: {fileID: 202187286}
+  - component: {fileID: 202187288}
   m_Layer: 0
   m_Name: Item TV
   m_TagString: Untagged
@@ -1648,6 +1766,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.28, y: 1.72}
   m_EdgeRadius: 0
+--- !u!114 &202187288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202187284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &209672345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,6 +1938,7 @@ GameObject:
   - component: {fileID: 234874601}
   - component: {fileID: 234874603}
   - component: {fileID: 234874602}
+  - component: {fileID: 234874604}
   m_Layer: 0
   m_Name: Item Stall
   m_TagString: Untagged
@@ -1895,6 +2026,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &234874604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234874600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &243413583
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,6 +2232,7 @@ GameObject:
   - component: {fileID: 264333582}
   - component: {fileID: 264333584}
   - component: {fileID: 264333583}
+  - component: {fileID: 264333585}
   m_Layer: 0
   m_Name: Item Oven
   m_TagString: Untagged
@@ -2176,6 +2320,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &264333585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264333581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &275642256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,6 +2400,7 @@ GameObject:
   - component: {fileID: 275720603}
   - component: {fileID: 275720605}
   - component: {fileID: 275720604}
+  - component: {fileID: 275720606}
   m_Layer: 0
   m_Name: Item Pillow 1
   m_TagString: Untagged
@@ -2331,6 +2488,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.28, y: 1.72}
   m_EdgeRadius: 0
+--- !u!114 &275720606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275720602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &287052386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,6 +2511,7 @@ GameObject:
   - component: {fileID: 287052387}
   - component: {fileID: 287052389}
   - component: {fileID: 287052388}
+  - component: {fileID: 287052390}
   m_Layer: 0
   m_Name: Cameras
   m_TagString: Untagged
@@ -2432,6 +2602,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &287052390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287052386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &303057246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,6 +2829,7 @@ GameObject:
   - component: {fileID: 326836245}
   - component: {fileID: 326836247}
   - component: {fileID: 326836246}
+  - component: {fileID: 326836248}
   m_Layer: 0
   m_Name: Flowers 4
   m_TagString: Untagged
@@ -2734,6 +2917,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &326836248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326836244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &337373462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,6 +2940,7 @@ GameObject:
   - component: {fileID: 337373463}
   - component: {fileID: 337373465}
   - component: {fileID: 337373464}
+  - component: {fileID: 337373466}
   m_Layer: 0
   m_Name: GirlsRoom
   m_TagString: Untagged
@@ -2832,6 +3028,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &337373466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337373462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &339698724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,6 +3051,7 @@ GameObject:
   - component: {fileID: 339698725}
   - component: {fileID: 339698727}
   - component: {fileID: 339698726}
+  - component: {fileID: 339698728}
   m_Layer: 0
   m_Name: Flowers 5
   m_TagString: Untagged
@@ -2930,6 +3139,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &339698728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339698724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &362814063
 GameObject:
   m_ObjectHideFlags: 0
@@ -2941,6 +3162,7 @@ GameObject:
   - component: {fileID: 362814064}
   - component: {fileID: 362814066}
   - component: {fileID: 362814065}
+  - component: {fileID: 362814067}
   m_Layer: 0
   m_Name: Flowers 6
   m_TagString: Untagged
@@ -3028,6 +3250,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &362814067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362814063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &388556614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3039,6 +3273,7 @@ GameObject:
   - component: {fileID: 388556615}
   - component: {fileID: 388556617}
   - component: {fileID: 388556616}
+  - component: {fileID: 388556618}
   m_Layer: 0
   m_Name: Puddle
   m_TagString: Untagged
@@ -3137,6 +3372,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &388556618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388556614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &395612625
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3558,7 @@ GameObject:
   - component: {fileID: 402420175}
   - component: {fileID: 402420177}
   - component: {fileID: 402420176}
+  - component: {fileID: 402420178}
   m_Layer: 0
   m_Name: Item Pergola
   m_TagString: Untagged
@@ -3398,6 +3646,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &402420178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402420174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &410795738
 GameObject:
   m_ObjectHideFlags: 0
@@ -3410,6 +3670,7 @@ GameObject:
   - component: {fileID: 410795741}
   - component: {fileID: 410795742}
   - component: {fileID: 410795743}
+  - component: {fileID: 410795744}
   m_Layer: 0
   m_Name: Item Szklanka
   m_TagString: Untagged
@@ -3556,6 +3817,18 @@ MonoBehaviour:
     buttonText: 
     requirements: []
     updatedCheckpointValues: []
+--- !u!114 &410795744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410795738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &417715605
 GameObject:
   m_ObjectHideFlags: 0
@@ -3567,6 +3840,7 @@ GameObject:
   - component: {fileID: 417715606}
   - component: {fileID: 417715608}
   - component: {fileID: 417715607}
+  - component: {fileID: 417715609}
   m_Layer: 0
   m_Name: Boxes2
   m_TagString: Untagged
@@ -3654,6 +3928,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &417715609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417715605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &444342700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3742,6 +4028,7 @@ GameObject:
   - component: {fileID: 471014956}
   - component: {fileID: 471014958}
   - component: {fileID: 471014957}
+  - component: {fileID: 471014959}
   m_Layer: 0
   m_Name: Item Pillow 2
   m_TagString: Untagged
@@ -3829,6 +4116,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.28, y: 1.72}
   m_EdgeRadius: 0
+--- !u!114 &471014959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471014955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &476957860
 GameObject:
   m_ObjectHideFlags: 0
@@ -4010,6 +4309,7 @@ GameObject:
   - component: {fileID: 483216395}
   - component: {fileID: 483216397}
   - component: {fileID: 483216396}
+  - component: {fileID: 483216398}
   m_Layer: 0
   m_Name: Item Szafka
   m_TagString: Untagged
@@ -4097,6 +4397,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &483216398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483216394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &483836979
 GameObject:
   m_ObjectHideFlags: 0
@@ -4108,6 +4420,7 @@ GameObject:
   - component: {fileID: 483836980}
   - component: {fileID: 483836982}
   - component: {fileID: 483836981}
+  - component: {fileID: 483836983}
   m_Layer: 0
   m_Name: Item Cupboard 2
   m_TagString: Untagged
@@ -4195,6 +4508,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &483836983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483836979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &492102993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4206,6 +4531,7 @@ GameObject:
   - component: {fileID: 492102994}
   - component: {fileID: 492102996}
   - component: {fileID: 492102995}
+  - component: {fileID: 492102997}
   m_Layer: 0
   m_Name: Item Pillow 4
   m_TagString: Untagged
@@ -4293,6 +4619,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.28, y: 1.72}
   m_EdgeRadius: 1
+--- !u!114 &492102997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492102993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4441,6 +4779,7 @@ GameObject:
   - component: {fileID: 555338447}
   - component: {fileID: 555338449}
   - component: {fileID: 555338448}
+  - component: {fileID: 555338450}
   m_Layer: 0
   m_Name: "Drzwi Pok\xF3j dzienny"
   m_TagString: Untagged
@@ -4522,6 +4861,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.3056598, y: 5.577257}
   m_EdgeRadius: 0
+--- !u!114 &555338450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555338446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &569103432
 GameObject:
   m_ObjectHideFlags: 0
@@ -4678,6 +5029,7 @@ GameObject:
   - component: {fileID: 586129994}
   - component: {fileID: 586129996}
   - component: {fileID: 586129997}
+  - component: {fileID: 586129998}
   m_Layer: 0
   m_Name: Antonina
   m_TagString: Untagged
@@ -4890,6 +5242,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5c189bf9374d4418bc12b3ebe43643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VisibilityControl
+--- !u!114 &586129998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586129992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &597034451
 GameObject:
   m_ObjectHideFlags: 0
@@ -5512,6 +5876,7 @@ GameObject:
   - component: {fileID: 705961418}
   - component: {fileID: 705961417}
   - component: {fileID: 705961419}
+  - component: {fileID: 705961420}
   m_Layer: 0
   m_Name: "Rafa\u0142"
   m_TagString: Untagged
@@ -5651,6 +6016,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5c189bf9374d4418bc12b3ebe43643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VisibilityControl
+--- !u!114 &705961420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705961415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &714028632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5662,6 +6039,7 @@ GameObject:
   - component: {fileID: 714028633}
   - component: {fileID: 714028635}
   - component: {fileID: 714028634}
+  - component: {fileID: 714028636}
   m_Layer: 0
   m_Name: Item Drawer
   m_TagString: Untagged
@@ -5749,6 +6127,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &714028636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714028632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &715209358
 GameObject:
   m_ObjectHideFlags: 0
@@ -5760,6 +6150,7 @@ GameObject:
   - component: {fileID: 715209359}
   - component: {fileID: 715209361}
   - component: {fileID: 715209360}
+  - component: {fileID: 715209362}
   m_Layer: 0
   m_Name: Puddle 3
   m_TagString: Untagged
@@ -5858,6 +6249,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &715209362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715209358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &724564445
 GameObject:
   m_ObjectHideFlags: 0
@@ -6112,6 +6515,7 @@ GameObject:
   - component: {fileID: 773305490}
   - component: {fileID: 773305492}
   - component: {fileID: 773305491}
+  - component: {fileID: 773305493}
   m_Layer: 0
   m_Name: BoysRoom
   m_TagString: Untagged
@@ -6199,6 +6603,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &773305493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773305489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &794535346
 GameObject:
   m_ObjectHideFlags: 0
@@ -6484,6 +6900,7 @@ GameObject:
   - component: {fileID: 814588705}
   - component: {fileID: 814588707}
   - component: {fileID: 814588706}
+  - component: {fileID: 814588708}
   m_Layer: 0
   m_Name: Carpet
   m_TagString: Untagged
@@ -6571,6 +6988,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &814588708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814588704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &843267397
 GameObject:
   m_ObjectHideFlags: 0
@@ -6674,6 +7103,7 @@ GameObject:
   - component: {fileID: 869312576}
   - component: {fileID: 869312578}
   - component: {fileID: 869312577}
+  - component: {fileID: 869312579}
   m_Layer: 0
   m_Name: Storage
   m_TagString: Untagged
@@ -6761,6 +7191,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &869312579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869312575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &884306023
 GameObject:
   m_ObjectHideFlags: 0
@@ -6772,6 +7214,7 @@ GameObject:
   - component: {fileID: 884306024}
   - component: {fileID: 884306026}
   - component: {fileID: 884306025}
+  - component: {fileID: 884306027}
   m_Layer: 0
   m_Name: Puddle 4
   m_TagString: Untagged
@@ -6870,6 +7313,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &884306027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884306023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &886382238
 GameObject:
   m_ObjectHideFlags: 0
@@ -7068,6 +7523,7 @@ GameObject:
   - component: {fileID: 895235009}
   - component: {fileID: 895235011}
   - component: {fileID: 895235010}
+  - component: {fileID: 895235012}
   m_Layer: 0
   m_Name: Window2
   m_TagString: Untagged
@@ -7155,6 +7611,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &895235012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895235008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &913358963
 GameObject:
   m_ObjectHideFlags: 0
@@ -7167,6 +7635,7 @@ GameObject:
   - component: {fileID: 913358966}
   - component: {fileID: 913358967}
   - component: {fileID: 913358968}
+  - component: {fileID: 913358969}
   m_Layer: 0
   m_Name: Item Kubek
   m_TagString: Untagged
@@ -7313,6 +7782,18 @@ MonoBehaviour:
     buttonText: 
     requirements: []
     updatedCheckpointValues: []
+--- !u!114 &913358969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913358963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &934472044
 GameObject:
   m_ObjectHideFlags: 0
@@ -7507,6 +7988,7 @@ GameObject:
   - component: {fileID: 940642077}
   - component: {fileID: 940642078}
   - component: {fileID: 940642079}
+  - component: {fileID: 940642080}
   m_Layer: 0
   m_Name: Item Kanapka
   m_TagString: Untagged
@@ -7653,6 +8135,18 @@ MonoBehaviour:
     buttonText: 
     requirements: []
     updatedCheckpointValues: []
+--- !u!114 &940642080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940642074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &945618715
 GameObject:
   m_ObjectHideFlags: 0
@@ -7664,6 +8158,7 @@ GameObject:
   - component: {fileID: 945618716}
   - component: {fileID: 945618718}
   - component: {fileID: 945618717}
+  - component: {fileID: 945618719}
   m_Layer: 0
   m_Name: Puddle 2
   m_TagString: Untagged
@@ -7762,6 +8257,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &945618719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945618715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &976214254
 GameObject:
   m_ObjectHideFlags: 0
@@ -7773,6 +8280,7 @@ GameObject:
   - component: {fileID: 976214255}
   - component: {fileID: 976214257}
   - component: {fileID: 976214256}
+  - component: {fileID: 976214258}
   m_Layer: 0
   m_Name: Drzwi Kuchnia
   m_TagString: Untagged
@@ -7854,6 +8362,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.3688908, y: 6.29385}
   m_EdgeRadius: 0
+--- !u!114 &976214258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976214254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &980208457
 GameObject:
   m_ObjectHideFlags: 0
@@ -7865,6 +8385,7 @@ GameObject:
   - component: {fileID: 980208458}
   - component: {fileID: 980208460}
   - component: {fileID: 980208459}
+  - component: {fileID: 980208461}
   m_Layer: 0
   m_Name: "Drzwi \u0141azienka Damska"
   m_TagString: Untagged
@@ -7946,6 +8467,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8209093, y: 6.1884675}
   m_EdgeRadius: 0
+--- !u!114 &980208461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980208457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &997751282
 GameObject:
   m_ObjectHideFlags: 0
@@ -7957,6 +8490,7 @@ GameObject:
   - component: {fileID: 997751283}
   - component: {fileID: 997751285}
   - component: {fileID: 997751284}
+  - component: {fileID: 997751286}
   m_Layer: 0
   m_Name: Boxes4
   m_TagString: Untagged
@@ -8044,6 +8578,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &997751286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997751282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1003277329
 GameObject:
   m_ObjectHideFlags: 0
@@ -8056,6 +8602,7 @@ GameObject:
   - component: {fileID: 1003277333}
   - component: {fileID: 1003277332}
   - component: {fileID: 1003277331}
+  - component: {fileID: 1003277334}
   m_Layer: 0
   m_Name: Krew
   m_TagString: Untagged
@@ -8202,6 +8749,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1003277334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003277329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1008375963
 GameObject:
   m_ObjectHideFlags: 0
@@ -8446,6 +9005,7 @@ GameObject:
   - component: {fileID: 1036789760}
   - component: {fileID: 1036789759}
   - component: {fileID: 1036789758}
+  - component: {fileID: 1036789761}
   m_Layer: 0
   m_Name: Drzwi Taras
   m_TagString: Untagged
@@ -8527,6 +9087,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1919262939}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1036789761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036789757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1037579229
 GameObject:
   m_ObjectHideFlags: 0
@@ -8766,6 +9338,7 @@ GameObject:
   - component: {fileID: 1092038983}
   - component: {fileID: 1092038982}
   - component: {fileID: 1092038981}
+  - component: {fileID: 1092038984}
   m_Layer: 0
   m_Name: Drzwi Korytarz
   m_TagString: Untagged
@@ -8847,6 +9420,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2121499448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1092038984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092038980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1104254571
 GameObject:
   m_ObjectHideFlags: 0
@@ -8859,6 +9444,7 @@ GameObject:
   - component: {fileID: 1104254574}
   - component: {fileID: 1104254575}
   - component: {fileID: 1104254576}
+  - component: {fileID: 1104254577}
   m_Layer: 0
   m_Name: "Item \u017Belazko"
   m_TagString: Untagged
@@ -9008,6 +9594,18 @@ MonoBehaviour:
     - id: Iron_Checked
       isAdditive: 0
       checkpointField: 1
+--- !u!114 &1104254577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104254571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1105934434
 GameObject:
   m_ObjectHideFlags: 0
@@ -9264,6 +9862,7 @@ GameObject:
   - component: {fileID: 1125522808}
   - component: {fileID: 1125522810}
   - component: {fileID: 1125522809}
+  - component: {fileID: 1125522811}
   m_Layer: 0
   m_Name: Boxes3
   m_TagString: Untagged
@@ -9351,6 +9950,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &1125522811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125522807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1139537748
 GameObject:
   m_ObjectHideFlags: 0
@@ -9363,6 +9974,7 @@ GameObject:
   - component: {fileID: 1139537751}
   - component: {fileID: 1139537750}
   - component: {fileID: 1139537752}
+  - component: {fileID: 1139537753}
   m_Layer: 0
   m_Name: Mateusz
   m_TagString: Untagged
@@ -9502,6 +10114,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5c189bf9374d4418bc12b3ebe43643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VisibilityControl
+--- !u!114 &1139537753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139537748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1160356621
 GameObject:
   m_ObjectHideFlags: 0
@@ -9513,6 +10137,7 @@ GameObject:
   - component: {fileID: 1160356624}
   - component: {fileID: 1160356623}
   - component: {fileID: 1160356622}
+  - component: {fileID: 1160356625}
   m_Layer: 0
   m_Name: Drzwi Backstage
   m_TagString: Untagged
@@ -9594,6 +10219,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1919262939}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1160356625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160356621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1169581101
 GameObject:
   m_ObjectHideFlags: 0
@@ -9605,6 +10242,7 @@ GameObject:
   - component: {fileID: 1169581102}
   - component: {fileID: 1169581104}
   - component: {fileID: 1169581103}
+  - component: {fileID: 1169581105}
   m_Layer: 0
   m_Name: Item Pillow 3
   m_TagString: Untagged
@@ -9692,6 +10330,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.28, y: 1.72}
   m_EdgeRadius: 0
+--- !u!114 &1169581105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169581101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1195970075
 GameObject:
   m_ObjectHideFlags: 0
@@ -9828,6 +10478,7 @@ GameObject:
   - component: {fileID: 1206754365}
   - component: {fileID: 1206754364}
   - component: {fileID: 1206754363}
+  - component: {fileID: 1206754366}
   m_Layer: 0
   m_Name: Drzwi Kamery
   m_TagString: Untagged
@@ -9909,6 +10560,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1280035730}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1206754366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206754362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1219279188
 GameObject:
   m_ObjectHideFlags: 0
@@ -10178,6 +10841,7 @@ GameObject:
   - component: {fileID: 1221763820}
   - component: {fileID: 1221763822}
   - component: {fileID: 1221763821}
+  - component: {fileID: 1221763823}
   m_Layer: 0
   m_Name: BloodOnTree
   m_TagString: Untagged
@@ -10268,6 +10932,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &1221763823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221763819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1223814805
 GameObject:
   m_ObjectHideFlags: 0
@@ -10280,6 +10956,7 @@ GameObject:
   - component: {fileID: 1223814809}
   - component: {fileID: 1223814808}
   - component: {fileID: 1223814807}
+  - component: {fileID: 1223814810}
   m_Layer: 0
   m_Name: Dirt
   m_TagString: Untagged
@@ -10440,6 +11117,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1223814810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223814805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1231333132
 GameObject:
   m_ObjectHideFlags: 0
@@ -10451,6 +11140,7 @@ GameObject:
   - component: {fileID: 1231333133}
   - component: {fileID: 1231333135}
   - component: {fileID: 1231333134}
+  - component: {fileID: 1231333136}
   m_Layer: 0
   m_Name: MaleBathroom
   m_TagString: Untagged
@@ -10538,6 +11228,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1231333136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231333132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1268060015
 GameObject:
   m_ObjectHideFlags: 0
@@ -10818,6 +11520,7 @@ GameObject:
   - component: {fileID: 1311850276}
   - component: {fileID: 1311850278}
   - component: {fileID: 1311850277}
+  - component: {fileID: 1311850279}
   m_Layer: 0
   m_Name: Window
   m_TagString: Untagged
@@ -10905,6 +11608,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &1311850279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311850275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1316550765
 GameObject:
   m_ObjectHideFlags: 0
@@ -10916,6 +11631,7 @@ GameObject:
   - component: {fileID: 1316550766}
   - component: {fileID: 1316550768}
   - component: {fileID: 1316550767}
+  - component: {fileID: 1316550769}
   m_Layer: 0
   m_Name: Item Wieszak
   m_TagString: Untagged
@@ -11003,6 +11719,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1316550769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316550765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1324108718
 GameObject:
   m_ObjectHideFlags: 0
@@ -11015,6 +11743,7 @@ GameObject:
   - component: {fileID: 1324108721}
   - component: {fileID: 1324108722}
   - component: {fileID: 1324108723}
+  - component: {fileID: 1324108724}
   m_Layer: 0
   m_Name: Item Apteczka
   m_TagString: Untagged
@@ -11164,6 +11893,18 @@ MonoBehaviour:
     - id: FA_Checked
       isAdditive: 0
       checkpointField: 1
+--- !u!114 &1324108724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324108718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1324948153
 GameObject:
   m_ObjectHideFlags: 0
@@ -11176,6 +11917,7 @@ GameObject:
   - component: {fileID: 1324948156}
   - component: {fileID: 1324948157}
   - component: {fileID: 1324948158}
+  - component: {fileID: 1324948159}
   m_Layer: 0
   m_Name: Item Lampka
   m_TagString: Untagged
@@ -11322,6 +12064,18 @@ MonoBehaviour:
     buttonText: 
     requirements: []
     updatedCheckpointValues: []
+--- !u!114 &1324948159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324948153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1352867490
 GameObject:
   m_ObjectHideFlags: 0
@@ -11333,6 +12087,7 @@ GameObject:
   - component: {fileID: 1352867491}
   - component: {fileID: 1352867493}
   - component: {fileID: 1352867492}
+  - component: {fileID: 1352867494}
   m_Layer: 0
   m_Name: Item Cupboard
   m_TagString: Untagged
@@ -11420,6 +12175,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1352867494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352867490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1366695509
 GameObject:
   m_ObjectHideFlags: 0
@@ -11431,6 +12198,7 @@ GameObject:
   - component: {fileID: 1366695510}
   - component: {fileID: 1366695512}
   - component: {fileID: 1366695511}
+  - component: {fileID: 1366695513}
   m_Layer: 0
   m_Name: Flowers 2
   m_TagString: Untagged
@@ -11518,6 +12286,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &1366695513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366695509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1384585288
 GameObject:
   m_ObjectHideFlags: 0
@@ -11531,6 +12311,7 @@ GameObject:
   - component: {fileID: 1384585290}
   - component: {fileID: 1384585292}
   - component: {fileID: 1384585293}
+  - component: {fileID: 1384585294}
   m_Layer: 0
   m_Name: Item Obraz
   m_TagString: Untagged
@@ -11693,6 +12474,18 @@ MonoBehaviour:
     buttonText: 
     requirements: []
     updatedCheckpointValues: []
+--- !u!114 &1384585294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384585288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1385273691
 GameObject:
   m_ObjectHideFlags: 0
@@ -11704,6 +12497,7 @@ GameObject:
   - component: {fileID: 1385273692}
   - component: {fileID: 1385273694}
   - component: {fileID: 1385273693}
+  - component: {fileID: 1385273695}
   m_Layer: 0
   m_Name: Flowers 3
   m_TagString: Untagged
@@ -11791,6 +12585,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &1385273695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385273691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1399159654
 GameObject:
   m_ObjectHideFlags: 0
@@ -12231,6 +13037,7 @@ GameObject:
   - component: {fileID: 1545400574}
   - component: {fileID: 1545400573}
   - component: {fileID: 1545400572}
+  - component: {fileID: 1545400575}
   m_Layer: 0
   m_Name: Drzwi Szatnia
   m_TagString: Untagged
@@ -12312,6 +13119,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1905632677}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1545400575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545400571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1563181731
 GameObject:
   m_ObjectHideFlags: 0
@@ -12399,6 +13218,7 @@ GameObject:
   - component: {fileID: 1568010191}
   - component: {fileID: 1568010190}
   - component: {fileID: 1568010192}
+  - component: {fileID: 1568010193}
   m_Layer: 0
   m_Name: Item Klapki
   m_TagString: Untagged
@@ -12538,6 +13358,18 @@ MonoBehaviour:
     - id: Slippers_Checked
       isAdditive: 0
       checkpointField: 1
+--- !u!114 &1568010193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568010188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1607564799
 GameObject:
   m_ObjectHideFlags: 0
@@ -12548,6 +13380,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1607564801}
   - component: {fileID: 1607564800}
+  - component: {fileID: 1607564802}
+  - component: {fileID: 1607564803}
   m_Layer: 0
   m_Name: DataFlowController
   m_TagString: Untagged
@@ -12574,6 +13408,11 @@ MonoBehaviour:
   testedObjectWithDialogueInteraction: {fileID: 0}
   pause: 0
   dialogueCanvas: {fileID: 127889335}
+  sfxSource: {fileID: 1607564802}
+  clickSound: {fileID: 8300000, guid: 66cc4f8c29725174583459fe8ab29f3d, type: 3}
+  hoverSound: {fileID: 8300000, guid: ac8417995238e8b4b9a9775a20b9fb0c, type: 3}
+  musicSource: {fileID: 1607564803}
+  backgroundMusic: {fileID: 8300000, guid: ca93a8e939b3d0147b4573e626323430, type: 3}
 --- !u!4 &1607564801
 Transform:
   m_ObjectHideFlags: 0
@@ -12589,6 +13428,200 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1607564802
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607564799}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1607564803
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607564799}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1619322168
 GameObject:
   m_ObjectHideFlags: 0
@@ -12600,6 +13633,7 @@ GameObject:
   - component: {fileID: 1619322169}
   - component: {fileID: 1619322171}
   - component: {fileID: 1619322170}
+  - component: {fileID: 1619322172}
   m_Layer: 0
   m_Name: Item Lustro
   m_TagString: Untagged
@@ -12687,6 +13721,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1619322172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619322168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1628619328
 GameObject:
   m_ObjectHideFlags: 0
@@ -12789,6 +13835,7 @@ GameObject:
   - component: {fileID: 1642873456}
   - component: {fileID: 1642873458}
   - component: {fileID: 1642873457}
+  - component: {fileID: 1642873459}
   m_Layer: 0
   m_Name: Item Kosz
   m_TagString: Untagged
@@ -12876,6 +13923,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1642873459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642873455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1668206854
 GameObject:
   m_ObjectHideFlags: 0
@@ -12888,6 +13947,7 @@ GameObject:
   - component: {fileID: 1668206857}
   - component: {fileID: 1668206856}
   - component: {fileID: 1668206858}
+  - component: {fileID: 1668206859}
   m_Layer: 0
   m_Name: Matylda
   m_TagString: Untagged
@@ -13027,6 +14087,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5c189bf9374d4418bc12b3ebe43643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VisibilityControl
+--- !u!114 &1668206859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668206854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1696352540
 GameObject:
   m_ObjectHideFlags: 0
@@ -13038,6 +14110,7 @@ GameObject:
   - component: {fileID: 1696352541}
   - component: {fileID: 1696352543}
   - component: {fileID: 1696352542}
+  - component: {fileID: 1696352544}
   m_Layer: 0
   m_Name: "Drzwi Przestrze\u0144 Mieszkalna"
   m_TagString: Untagged
@@ -13119,6 +14192,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.0527496, y: 3.7646987}
   m_EdgeRadius: 0
+--- !u!114 &1696352544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696352540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1696569672
 GameObject:
   m_ObjectHideFlags: 0
@@ -13131,6 +14216,7 @@ GameObject:
   - component: {fileID: 1696569676}
   - component: {fileID: 1696569675}
   - component: {fileID: 1696569674}
+  - component: {fileID: 1696569677}
   m_Layer: 0
   m_Name: Kaczucha
   m_TagString: Untagged
@@ -13262,6 +14348,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1696569677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696569672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1763128019
 GameObject:
   m_ObjectHideFlags: 0
@@ -13273,6 +14371,7 @@ GameObject:
   - component: {fileID: 1763128020}
   - component: {fileID: 1763128022}
   - component: {fileID: 1763128021}
+  - component: {fileID: 1763128023}
   m_Layer: 0
   m_Name: Boxes1
   m_TagString: Untagged
@@ -13360,6 +14459,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &1763128023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763128019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1782510712
 GameObject:
   m_ObjectHideFlags: 0
@@ -13374,6 +14485,7 @@ GameObject:
   - component: {fileID: 1782510714}
   - component: {fileID: 1782510718}
   - component: {fileID: 1782510717}
+  - component: {fileID: 1782510719}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -13528,6 +14640,18 @@ MonoBehaviour:
     buttonText: 
     requirements: []
     updatedCheckpointValues: []
+--- !u!114 &1782510719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782510712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9205346a7bd004441a2bd9b37cb00d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISoundTrigger
 --- !u!1 &1804707033
 GameObject:
   m_ObjectHideFlags: 0
@@ -13540,6 +14664,7 @@ GameObject:
   - component: {fileID: 1804707036}
   - component: {fileID: 1804707035}
   - component: {fileID: 1804707037}
+  - component: {fileID: 1804707038}
   m_Layer: 0
   m_Name: Krystian
   m_TagString: Untagged
@@ -13679,6 +14804,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5c189bf9374d4418bc12b3ebe43643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VisibilityControl
+--- !u!114 &1804707038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804707033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1817696595
 GameObject:
   m_ObjectHideFlags: 0
@@ -13817,6 +14954,7 @@ GameObject:
   - component: {fileID: 1854865069}
   - component: {fileID: 1854865068}
   - component: {fileID: 1854865067}
+  - component: {fileID: 1854865070}
   m_Layer: 0
   m_Name: "Drzwi Ogr\xF3d"
   m_TagString: Untagged
@@ -13898,6 +15036,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 642794721}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1854865070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854865066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1880306091
 GameObject:
   m_ObjectHideFlags: 0
@@ -13909,6 +15059,7 @@ GameObject:
   - component: {fileID: 1880306092}
   - component: {fileID: 1880306094}
   - component: {fileID: 1880306093}
+  - component: {fileID: 1880306095}
   m_Layer: 0
   m_Name: Boxes5
   m_TagString: Untagged
@@ -13996,6 +15147,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &1880306095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880306091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &1905632675
 GameObject:
   m_ObjectHideFlags: 0
@@ -14300,6 +15463,7 @@ GameObject:
   - component: {fileID: 2003882760}
   - component: {fileID: 2003882762}
   - component: {fileID: 2003882761}
+  - component: {fileID: 2003882763}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -14387,6 +15551,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &2003882763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003882759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &2004699485
 GameObject:
   m_ObjectHideFlags: 0
@@ -14752,6 +15928,7 @@ GameObject:
   - component: {fileID: 2069332740}
   - component: {fileID: 2069332742}
   - component: {fileID: 2069332741}
+  - component: {fileID: 2069332743}
   m_Layer: 0
   m_Name: StickyNote
   m_TagString: Untagged
@@ -14842,6 +16019,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &2069332743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069332739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &2072814356
 GameObject:
   m_ObjectHideFlags: 0
@@ -14853,6 +16042,7 @@ GameObject:
   - component: {fileID: 2072814357}
   - component: {fileID: 2072814359}
   - component: {fileID: 2072814358}
+  - component: {fileID: 2072814360}
   m_Layer: 0
   m_Name: Item Fridge
   m_TagString: Untagged
@@ -14940,6 +16130,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2072814360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072814356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &2073592440
 GameObject:
   m_ObjectHideFlags: 0
@@ -15042,6 +16244,7 @@ GameObject:
   - component: {fileID: 2076156487}
   - component: {fileID: 2076156489}
   - component: {fileID: 2076156488}
+  - component: {fileID: 2076156490}
   m_Layer: 0
   m_Name: Flowers
   m_TagString: Untagged
@@ -15129,6 +16332,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.03, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &2076156490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076156486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1 &2121499446
 GameObject:
   m_ObjectHideFlags: 0
@@ -15199,6 +16414,7 @@ GameObject:
   - component: {fileID: 2142914942}
   - component: {fileID: 2142914944}
   - component: {fileID: 2142914943}
+  - component: {fileID: 2142914945}
   m_Layer: 0
   m_Name: Item Kalendarz
   m_TagString: Untagged
@@ -15286,6 +16502,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2142914945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142914941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
