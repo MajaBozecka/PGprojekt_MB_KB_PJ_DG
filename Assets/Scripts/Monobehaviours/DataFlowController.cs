@@ -23,6 +23,14 @@ public class DataFlowController : MonoBehaviour
     public static System.Action OnSequenceStarted;
     public static System.Action OnConversationFinished;
 
+    [Header("System Audio")]
+    public AudioSource sfxSource;
+    public AudioClip clickSound;
+    public AudioClip hoverSound;
+
+    public AudioSource musicSource;
+    public AudioClip backgroundMusic;
+
     private bool SKIP
     {
         get { return data.skipping; }
@@ -41,6 +49,7 @@ public class DataFlowController : MonoBehaviour
 
     void Start()
     {
+        PlayBackgroundMusic();
         InputAction skip = InputSystem.actions.FindAction("SKIP");
         skip.performed += OnSkipPerformed;
         skip.canceled += OnSkipCanceled;
@@ -156,6 +165,7 @@ public class DataFlowController : MonoBehaviour
 
     public void InteractWithObject(ObjectWithDialogueInteraction interactedObject)
     {
+        PlayClickSound();
         testedObjectWithDialogueInteraction = interactedObject;
         DialogueOptionData validOption = interactedObject.getDOD;
 
@@ -192,7 +202,8 @@ public class DataFlowController : MonoBehaviour
                 float timeLineIterator = 0;
                 int compoundLength = 0;
 
-                canvasCtrl.setDialogueSequence(fullDialogueLine.dumpWholeLine(), data.getSpeaker(fullDialogueLine.speakerID), fullDialogueLine.speakerMod);
+                Speaker currentSpeaker = data.getSpeaker(fullDialogueLine.speakerID);
+                canvasCtrl.setDialogueSequence(fullDialogueLine.dumpWholeLine(), currentSpeaker, fullDialogueLine.speakerMod);
                 canvasCtrl.showDialogueText(0);
                 canvasCtrl.setProceedIconVisibility(false);
 
@@ -212,10 +223,24 @@ public class DataFlowController : MonoBehaviour
 
                         if (updateDisplay && (partLineDisplayedLength > 0 && partLineDisplayedLength <= partLine.subline.Length))
                         {
+                            if (sfxSource != null && currentSpeaker != null && currentSpeaker.characterVoiceBlip != null)
+                            {
+
+                                if (!sfxSource.isPlaying)
+                                {
+                                    sfxSource.PlayOneShot(currentSpeaker.characterVoiceBlip);
+                                }
+                            }
+
                             canvasCtrl.showDialogueText(compoundLength + partLineDisplayedLength);
                         }
                         yield return null;
                     } while (!(canSkipNow(timePartLineIterator, tillSubDialogueLineSkippable) || isItTimeForNextSubLine(partLine, partLineDisplayedLength)));
+
+                    if (sfxSource != null && sfxSource.isPlaying)
+                    {
+                        sfxSource.Stop();
+                    }
 
                     compoundLength += partLine.subline.Length;
                     confirmNextLine = false;
@@ -326,4 +351,27 @@ public class DataFlowController : MonoBehaviour
             canvasCtrl.dialogueHistoryUpdate(dialSeq, dialLine);
         }
     }
+
+    public void PlayClickSound()
+    {
+        if (sfxSource != null && clickSound != null)
+        {
+            sfxSource.PlayOneShot(clickSound);
+        }
+    }
+    public void PlayHoverSound()
+    {
+        if (sfxSource != null && hoverSound != null) sfxSource.PlayOneShot(hoverSound);
+    }
+
+    public void PlayBackgroundMusic()
+    {
+        if (musicSource != null && backgroundMusic != null)
+        {
+            musicSource.clip = backgroundMusic;
+            musicSource.loop = true; 
+            musicSource.Play();
+        }
+    }
+
 }
