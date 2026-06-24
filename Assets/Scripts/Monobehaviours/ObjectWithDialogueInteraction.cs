@@ -34,12 +34,9 @@ public class ObjectWithDialogueInteraction : MonoBehaviour
             List<PlotCheckpoint> listPlotCheckpointControl = DataFlowSO.get.listPlotCheckpoints;
             for (lastUsedOptionIndex = 0; lastUsedOptionIndex < listOfDialogueOptions.Count; lastUsedOptionIndex++)
             {
-                if(listOfDialogueOptions[lastUsedOptionIndex].requirements.Contains(DataFlowSO.get.pc_CheckpointForDialogueDepth))
+                if (iterateThroughObjectListOfReq(listPlotCheckpointControl))
                 {
-                    if (iterateThroughObjectListOfReq(listPlotCheckpointControl))
-                    {
-                        return true;
-                    }
+                    return true;
                 }
             }
             return false;
