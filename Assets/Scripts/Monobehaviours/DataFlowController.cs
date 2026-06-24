@@ -206,7 +206,8 @@ public class DataFlowController : MonoBehaviour
                 float timeLineIterator = 0;
                 int compoundLength = 0;
 
-                canvasCtrl.setDialogueSequence(fullDialogueLine.dumpWholeLine(), data.getSpeaker(fullDialogueLine.speakerID), fullDialogueLine.speakerMod);
+                Speaker currentSpeaker = data.getSpeaker(fullDialogueLine.speakerID);
+                canvasCtrl.setDialogueSequence(fullDialogueLine.dumpWholeLine(), currentSpeaker, fullDialogueLine.speakerMod);
                 canvasCtrl.showDialogueText(0);
                 canvasCtrl.setProceedIconVisibility(false);
 
@@ -226,6 +227,15 @@ public class DataFlowController : MonoBehaviour
 
                         if (updateDisplay && (partLineDisplayedLength > 0 && partLineDisplayedLength <= partLine.subline.Length))
                         {
+                            if (sfxSource != null && currentSpeaker != null && currentSpeaker.characterVoiceBlip != null)
+                            {
+
+                                if (!sfxSource.isPlaying)
+                                {
+                                    sfxSource.PlayOneShot(currentSpeaker.characterVoiceBlip);
+                                }
+                            }
+
                             canvasCtrl.showDialogueText(compoundLength + partLineDisplayedLength);
                         }
                         yield return null;
