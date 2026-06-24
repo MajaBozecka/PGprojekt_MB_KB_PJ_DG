@@ -147,16 +147,12 @@ public class DataFlowController : MonoBehaviour
         }
     }
 
-    private void populateCanvasWithButtons()
+    private int populateCanvasWithButtons()
     {
         canvasCtrl.setDialogueOptions(testedObjectWithDialogueInteraction.listOfDialogueOptions, StartDialogueSequence);
-        canvasCtrl.updateDialogueOptions(data.listPlotCheckpoints);
+        return canvasCtrl.updateDialogueOptions(data.listPlotCheckpoints);
     }
 
-    private void setBackgroundImage()
-    {
-        background.sprite = Resources.Load<Sprite>("Sprites/" + $"{data.backgroundImagePath}");
-    }
 
     public void InteractWithObject(ObjectWithDialogueInteraction interactedObject)
     {
@@ -239,12 +235,13 @@ public class DataFlowController : MonoBehaviour
                 confirmNextLine = false;
             }
             Debug.Log("<color=cyan>[DIALOG]</color> Czy dialog byl juz wczesniej odczytany? runnedAlready = " + TestedDialogueSequence.runnedAlready);
-
             if (!TestedDialogueSequence.runnedAlready)
             {
+                byte check = data.pc_CheckpointForDialogueDepth.checkpointField;
                 updatePlotCheckpoints();
-                canvasCtrl.updateDialogueOptions(data.listPlotCheckpoints);
-                TestedDialogueSequence.runnedAlready = true;
+                byte check2 = data.pc_CheckpointForDialogueDepth.checkpointField;
+                if (!((check != 0 && check2 == 0) || (check==0 && check2 == 1)))
+                    TestedDialogueSequence.runnedAlready = true;
             }
 
             OnSequenceEnded?.Invoke(TestedDialogueSequence.identifier);
@@ -253,14 +250,14 @@ public class DataFlowController : MonoBehaviour
 
             if (testedObjectWithDialogueInteraction != null &&
                 testedObjectWithDialogueInteraction.hasChoicesMenu &&
-                testedObjectWithDialogueInteraction.listOfDialogueOptions != null &&
-                testedObjectWithDialogueInteraction.listOfDialogueOptions.Count > 0)
+                testedObjectWithDialogueInteraction.listOfDialogueOptions != null && populateCanvasWithButtons() > 0 &&
+                data.pc_CheckpointForDialogueDepth.checkpointField > 0)
             {
-                populateCanvasWithButtons();
                 canvasCtrl.UIMode = EUIMode.BUTTONS;
             }
             else
             {
+                testedObjectWithDialogueInteraction = null;
                 if (dialogueCanvas != null) dialogueCanvas.SetActive(false);
                 canvasCtrl.UIMode = EUIMode.NOTHING;
                 OnConversationFinished?.Invoke();

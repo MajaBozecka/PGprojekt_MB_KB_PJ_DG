@@ -135,9 +135,9 @@ public class CanvasController : MonoBehaviour
     {
         dialogueOptionsPanel.SetButtons(dod,onClickHandler);
     }
-    public void updateDialogueOptions(List<PlotCheckpoint> listPlotCheckpointControl)
+    public int updateDialogueOptions(List<PlotCheckpoint> listPlotCheckpointControl)
     {
-        dialogueOptionsPanel.UpdateDialogueOptionVisibilityBasedOncheckPointControl(listPlotCheckpointControl);
+        return dialogueOptionsPanel.UpdateDialogueOptionVisibilityBasedOncheckPointControl(listPlotCheckpointControl);
     }
 }
 public enum EUIMode : byte

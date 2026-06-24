@@ -631,11 +631,24 @@ MonoBehaviour:
     - Epilog_HowCouldYou
     - NZMa
     - NZMz_bad
-    progressInLastRead: 189
+    - "Ch1_Antonina_Wst\u0119p00"
+    progressInLastRead: 1
   listPlotCheckpoints:
+  - id: Backpack_Checked
+    isAdditive: 0
+    checkpointField: 0
+  - id: Backpack_Checked2
+    isAdditive: 0
+    checkpointField: 0
+  - id: BathroomChecked2
+    isAdditive: 0
+    checkpointField: 0
   - id: Cameras1
     isAdditive: 0
     checkpointField: 0
+  - id: DialogueDepthControllCheckpoint
+    isAdditive: 0
+    checkpointField: 1
   - id: Dirt_Checked
     isAdditive: 0
     checkpointField: 0
@@ -644,11 +657,26 @@ MonoBehaviour:
     checkpointField: 0
   - id: EndingCheckpoint
     isAdditive: 0
-    checkpointField: 5
+    checkpointField: 0
   - id: EndingID
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: FA_Checked
+    isAdditive: 0
+    checkpointField: 0
+  - id: FirstCharacterInteraction_Antonina
+    isAdditive: 0
+    checkpointField: 1
+  - id: FirstCharacterInteraction_Krystian
+    isAdditive: 0
+    checkpointField: 0
+  - id: FirstCharacterInteraction_Mateusz
+    isAdditive: 0
+    checkpointField: 0
+  - id: FirstCharacterInteraction_Matylda
+    isAdditive: 0
+    checkpointField: 0
+  - id: "FirstCharacterInteraction_Rafa\u0142"
     isAdditive: 0
     checkpointField: 0
   - id: InfoOWychodzeniuZSypialni
@@ -660,7 +688,13 @@ MonoBehaviour:
   - id: Iron_Checked
     isAdditive: 0
     checkpointField: 0
+  - id: Iron_Checked2
+    isAdditive: 0
+    checkpointField: 0
   - id: Item_Slippers
+    isAdditive: 0
+    checkpointField: 0
+  - id: KrystianRefusingToTalk
     isAdditive: 0
     checkpointField: 0
   - id: MateuszRoztrzesiony
@@ -681,52 +715,25 @@ MonoBehaviour:
   - id: SN_Checked
     isAdditive: 0
     checkpointField: 0
+  - id: SN_Checked
+    isAdditive: 0
+    checkpointField: 0
   - id: TreeBlood_Checked
     isAdditive: 0
     checkpointField: 0
   - id: "\u017BelazkoNarz\u0119dzieZbrodni"
     isAdditive: 0
     checkpointField: 0
-  - id: BathroomChecked2
-    isAdditive: 0
-    checkpointField: 0
-  - id: Iron_Checked2
-    isAdditive: 0
-    checkpointField: 0
-  - id: Backpack_Checked
-    isAdditive: 0
-    checkpointField: 0
-  - id: Backpack_Checked2
-    isAdditive: 0
-    checkpointField: 0
-  - id: DialogueDepthControllCheckpoint
-    isAdditive: 0
-    checkpointField: 0
-  - id: FirstCharacterInteraction_Krystian
-    isAdditive: 0
-    checkpointField: 0
-  - id: FirstCharacterInteraction_Matylda
-    isAdditive: 0
-    checkpointField: 0
-  - id: FirstCharacterInteraction_Antonina
-    isAdditive: 0
-    checkpointField: 0
-  - id: "FirstCharacterInteraction_Rafa\u0142"
-    isAdditive: 0
-    checkpointField: 0
-  - id: FirstCharacterInteraction_Mateusz
-    isAdditive: 0
-    checkpointField: 0
-  - id: KrystianRefusingToTalk
-    isAdditive: 0
-    checkpointField: 0
   listPlotChekpointsEndChapter: []
+  s_CheckpointForDialogueDepth: DialogueDepthControllCheckpoint
   skipping: 0
   defaultTimeTillTextSkippable: 0.7
   defaultTimeTillSubTextSkippable: 0.2
   defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection: 0
-  backgroundImagePath: "FF_wej\u015Bcie"
   dialogueSequenceList:
+  - lines: []
+    identifier: 0EXIT_Dialogue
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -974,7 +981,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: "Ch1_Antonina_Wst\u0119p00"
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2321,7 +2328,7 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 
     identifier: Chapter1_intro
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2759,7 +2766,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Epilog_TrustMeBro
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -3807,7 +3814,7 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 
     identifier: NeutralEnding
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: -1
@@ -3948,7 +3955,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: NZA
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -4112,7 +4119,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: NZAcont1
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -4282,7 +4289,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: NZAdisagree
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -5617,7 +5624,7 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 
     identifier: PKN
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -5631,28 +5638,15 @@ MonoBehaviour:
     identifier: Storage
     runnedAlready: 0
   serializedAnalisedSequence:
-    lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Damskiej?
-      lingering: 0
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Heh... Oczywi\u015Bcie, \u017Ce nie."
-      lingering: 0
-      speakerID: Mz
-      speakerMod: 
-      changeLocationId: 
-    identifier: Ch1_Mateusz_WentToWomansToilet-R
+    lines: []
+    identifier: 0EXIT_Dialogue
     runnedAlready: 0
   serializedPlaceholderSequence:
     lines: []
     identifier: 
     runnedAlready: 0
   seqIdTab:
+  - 0EXIT_Dialogue
   - Blood_Floor
   - Cameras1
   - Cameras2
@@ -5790,7 +5784,7 @@ MonoBehaviour:
   - NZR
   - PKN
   - Storage
-  analisedIdentifier: Ch1_Mateusz_WentToWomansToilet-R
-  analisedIndex: 29
+  analisedIdentifier: 0EXIT_Dialogue
+  analisedIndex: 0
   placeholdIdentifier: 
   chapter: 0

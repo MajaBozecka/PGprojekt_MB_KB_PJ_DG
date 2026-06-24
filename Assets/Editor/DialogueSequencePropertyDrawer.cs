@@ -1,7 +1,7 @@
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
-//[CustomPropertyDrawer(typeof(DialogueSequence), true)]
+[CustomPropertyDrawer(typeof(DialogueSequence), true)]
 public class DialogueSequencePropertyDrawer : PropertyDrawer
 {
     private SerializedProperty l_lines;

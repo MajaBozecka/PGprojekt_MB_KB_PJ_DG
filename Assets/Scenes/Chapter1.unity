@@ -4819,65 +4819,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
   hasChoicesMenu: 1
   listOfDialogueOptions:
-  - identifier: Ch1AWstepB
+  - identifier: "Ch1_Antonina_Wst\u0119p00"
     read: 0
     buttonText: 
     requirements:
-    - id: Slippers_Checked
+    - id: FirstCharacterInteraction_Antonina
       isAdditive: 0
-      checkpointField: 1
-    - id: Ch1AWstepDone
+      checkpointField: 0
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 0
     updatedCheckpointValues:
-    - id: Ch1AWstepDone
+    - id: FirstCharacterInteraction_Antonina
       isAdditive: 0
       checkpointField: 1
-    - id: Ch1AQAv
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 1
-  - identifier: Ch1AWstepA
+  - identifier: "Ch1_Antonina_Wst\u0119p01"
     read: 0
     buttonText: 
     requirements:
-    - id: Ch1AWstepDone
+    - id: FirstCharacterInteraction_Antonina
+      isAdditive: 0
+      checkpointField: 0
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 0
     updatedCheckpointValues:
-    - id: Ch1AQAv
+    - id: FirstCharacterInteraction_Antonina
       isAdditive: 0
       checkpointField: 1
-    - id: Ch1AWstepDone
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 1
-  - identifier: Ch1AW1
+  - identifier: "Ch1_Antonina_Wst\u0119p1X"
     read: 0
-    buttonText: "Co robi\u0142a pani dzisiaj w nocy?"
+    buttonText: 
     requirements:
-    - id: Ch1AQAv
+    - id: FirstCharacterInteraction_Antonina
       isAdditive: 0
       checkpointField: 1
-    - id: Ch1AW1Asked
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 0
     updatedCheckpointValues:
-    - id: Ch1AW1Asked
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 1
-  - identifier: Ch1AW2
+  - identifier: 0EXIT_Dialogue
     read: 0
-    buttonText: "Czy zna\u0142a pani Oktawiana?"
+    buttonText: 
     requirements:
-    - id: Ch1AQAv
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 1
-    - id: Ch1AW2Asked
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 0
-    updatedCheckpointValues:
-    - id: Ch1AQAv
-      isAdditive: 0
-      checkpointField: 1
 --- !u!114 &586129997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5240,7 +5240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &642794720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9062,7 +9062,7 @@ MonoBehaviour:
   defaultHotSpot: {x: 0, y: 0}
   NewItemCursor: {fileID: 2800000, guid: 51380f55877a26a4788c47672ad563d9, type: 3}
   NewHotSpot: {x: 0, y: 0}
-  readItemCursor: {fileID: 2800000, guid: aaea8acb53fb93c4a88e624dea8381ab, type: 3}
+  readItemCursor: {fileID: 2800000, guid: fce05ccc99cea1643b0894213fc24761, type: 3}
   readHotSpot: {x: 0, y: 0}
   cursorMode: 0
 --- !u!4 &1105934436

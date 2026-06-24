@@ -37,7 +37,7 @@ public class DataFlowSOEditor : Editor
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("history"));
                 DefaultDataSection();
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("listPlotCheckpoints"));
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("backgroundImagePath"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("s_CheckpointForDialogueDepth"));
                 EditorGUI.indentLevel--;
             }
             DialogueSequenceSection();

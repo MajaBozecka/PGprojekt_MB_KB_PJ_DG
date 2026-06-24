@@ -1,4 +1,3 @@
-using NUnit.Framework.Internal;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -52,11 +51,12 @@ public class PanelDialogueOptions : MonoBehaviour
             buttonList[ind].setRead(true);
         }
     }
-    public void UpdateDialogueOptionVisibilityBasedOncheckPointControl(List<PlotCheckpoint> listPlotCheckpointControl)
+    public int UpdateDialogueOptionVisibilityBasedOncheckPointControl(List<PlotCheckpoint> listPlotCheckpointControl)
     {
+        int ret = 0;
         foreach (ButtonDialogueOption but in buttonList)
         {
-            but.gameObject.SetActive(true);
+            bool active = true;
             foreach (PlotCheckpoint plotCheckpointOfCollection in but.dialogueOptionData.requirements)
             {
                 int indexOfMatchedCheckpointFromControl = listPlotCheckpointControl.BinarySearch(plotCheckpointOfCollection);
@@ -68,7 +68,7 @@ public class PanelDialogueOptions : MonoBehaviour
                     {
                         if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField < plotCheckpointOfCollection.checkpointField)
                         {
-                            but.gameObject.SetActive(false);
+                            active = false;
                             break;
                         }
                     }
@@ -76,7 +76,7 @@ public class PanelDialogueOptions : MonoBehaviour
                     {
                         if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField >= plotCheckpointOfCollection.checkpointField)
                         {
-                            but.gameObject.SetActive(false);
+                            active = false;
                             break;
                         }
                     }
@@ -85,12 +85,15 @@ public class PanelDialogueOptions : MonoBehaviour
                 {
                     if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField != plotCheckpointOfCollection.checkpointField)
                     {
-                        but.gameObject.SetActive(false);
+                        active = false;
                         break;
                     }
                 }
             }
+            if (active) ret++;
+            but.gameObject.SetActive(active);
         }
+        return ret;
     }
 
 }

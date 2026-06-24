@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,47 +31,15 @@ public class ObjectWithDialogueInteraction : MonoBehaviour
     {
         if (listOfDialogueOptions.Count > lastUsedOptionIndex)
         {
-            bool test;
             List<PlotCheckpoint> listPlotCheckpointControl = DataFlowSO.get.listPlotCheckpoints;
-            for (; lastUsedOptionIndex < listOfDialogueOptions.Count; lastUsedOptionIndex++)
+            for (lastUsedOptionIndex = 0; lastUsedOptionIndex < listOfDialogueOptions.Count; lastUsedOptionIndex++)
             {
-                test = true;
-                foreach (PlotCheckpoint plotCheckpointOfCollection in listOfDialogueOptions[lastUsedOptionIndex].requirements)
+                if(listOfDialogueOptions[lastUsedOptionIndex].requirements.Contains(DataFlowSO.get.pc_CheckpointForDialogueDepth))
                 {
-                    int indexOfMatchedCheckpointFromControl = listPlotCheckpointControl.BinarySearch(plotCheckpointOfCollection);
-                    if (indexOfMatchedCheckpointFromControl < 0)
-                        continue;
-                    if(listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].isAdditive)
+                    if (iterateThroughObjectListOfReq(listPlotCheckpointControl))
                     {
-                        if(plotCheckpointOfCollection.isAdditive)
-                        {
-                            if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField < plotCheckpointOfCollection.checkpointField)
-                            {
-                                test = false;
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField >= plotCheckpointOfCollection.checkpointField)
-                            {
-                                test = false;
-                                break;
-                            }
-                        }
+                        return true;
                     }
-                    else
-                    {
-                        if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField != plotCheckpointOfCollection.checkpointField)
-                        {
-                            test = false;
-                            break;
-                        }
-                    }
-                }
-                if (test)
-                {
-                    return true;
                 }
             }
             return false;
@@ -78,6 +47,40 @@ public class ObjectWithDialogueInteraction : MonoBehaviour
         else
         {
             return false;
+        }
+        bool iterateThroughObjectListOfReq(List<PlotCheckpoint> listPlotCheckpointControl)
+        {
+            foreach (PlotCheckpoint plotCheckpointOfCollection in listOfDialogueOptions[lastUsedOptionIndex].requirements)
+            {
+                int indexOfMatchedCheckpointFromControl = listPlotCheckpointControl.BinarySearch(plotCheckpointOfCollection);
+                if (indexOfMatchedCheckpointFromControl < 0)
+                    continue;
+                if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].isAdditive)
+                {
+                    if (plotCheckpointOfCollection.isAdditive)
+                    {
+                        if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField < plotCheckpointOfCollection.checkpointField)
+                        {
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField >= plotCheckpointOfCollection.checkpointField)
+                        {
+                            return false;
+                        }
+                    }
+                }
+                else
+                {
+                    if (listPlotCheckpointControl[indexOfMatchedCheckpointFromControl].checkpointField != plotCheckpointOfCollection.checkpointField)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
     }
 }

@@ -108,6 +108,20 @@ public class DataFlowSO : ScriptableObject
     #region PLOTCHECKPOINTS
     public List<PlotCheckpoint> listPlotCheckpoints;
     public List<PlotCheckpoint> listPlotChekpointsEndChapter;
+    public string s_CheckpointForDialogueDepth = "DialogueDepthControllCheckpoint";
+    public PlotCheckpoint pc_CheckpointForDialogueDepth
+    {
+        get
+        {
+            PlotCheckpoint temp = new PlotCheckpoint(0, s_CheckpointForDialogueDepth, false);
+            int i = listPlotCheckpoints.BinarySearch(temp);
+            if (i>=0)
+            {
+                return listPlotCheckpoints[i];
+            }
+            return temp;
+        }
+    }
     private class SerializatorPlotCheckpoint
     {
         public List<PlotCheckpoint> listPlotCheckpoints;
@@ -167,8 +181,6 @@ public class DataFlowSO : ScriptableObject
         }
     }
     #endregion
-    [Header("TBD")]
-    public string backgroundImagePath = "FF_wejœcie";
     #region DIALOGUESEQUENCECONTROL
     public HashSet<DialogueSequence> dialogueSequenceHashSet = new();//still dont know if hash or sorted
     //[HideInInspector]
@@ -309,7 +321,7 @@ public class DataFlowSO : ScriptableObject
             JsonUtility.FromJsonOverwrite(json, sr);
 
             this.history = sr.history;
-
+            this.listPlotCheckpoints.Sort();
             foreach (PlotCheckpoint item in sr.listPlotCheckpoints)
             {
                 int i = this.listPlotCheckpoints.BinarySearch(item);
