@@ -1988,6 +1988,7 @@ GameObject:
   - component: {fileID: 225922151}
   - component: {fileID: 225922153}
   - component: {fileID: 225922152}
+  - component: {fileID: 225922154}
   m_Layer: 0
   m_Name: Abab
   m_TagString: Untagged
@@ -2115,6 +2116,25 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &225922154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225922150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
+  listOfDialogueOptions:
+  - identifier: Item_ABAB
+    read: 0
+    buttonText: 
+    requirements: []
+    updatedCheckpointValues: []
 --- !u!1 &234874600
 GameObject:
   m_ObjectHideFlags: 0
@@ -2892,6 +2912,7 @@ GameObject:
   - component: {fileID: 319662366}
   - component: {fileID: 319662368}
   - component: {fileID: 319662367}
+  - component: {fileID: 319662369}
   m_Layer: 0
   m_Name: Syrop
   m_TagString: Untagged
@@ -3019,6 +3040,25 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &319662369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319662365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
+  listOfDialogueOptions:
+  - identifier: Item_Syrup
+    read: 0
+    buttonText: 
+    requirements: []
+    updatedCheckpointValues: []
 --- !u!1 &321168842
 GameObject:
   m_ObjectHideFlags: 0
@@ -3396,6 +3436,7 @@ GameObject:
   - component: {fileID: 349305875}
   - component: {fileID: 349305877}
   - component: {fileID: 349305876}
+  - component: {fileID: 349305878}
   m_Layer: 0
   m_Name: Przeczyszczenie
   m_TagString: Untagged
@@ -3523,6 +3564,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &349305878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349305874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
+  listOfDialogueOptions:
+  - identifier: Item_Lax
+    read: 0
+    buttonText: 
+    requirements: []
+    updatedCheckpointValues:
+    - id: Lax_Checked
+      isAdditive: 0
+      checkpointField: 1
 --- !u!1 &362814063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4897,6 +4960,7 @@ GameObject:
   - component: {fileID: 512833461}
   - component: {fileID: 512833463}
   - component: {fileID: 512833462}
+  - component: {fileID: 512833464}
   m_Layer: 0
   m_Name: "W\u0119giel"
   m_TagString: Untagged
@@ -5024,6 +5088,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &512833464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512833460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 0
+  listOfDialogueOptions:
+  - identifier: Item_Coal
+    read: 0
+    buttonText: 
+    requirements: []
+    updatedCheckpointValues:
+    - id: Coal_Checked
+      isAdditive: 0
+      checkpointField: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
