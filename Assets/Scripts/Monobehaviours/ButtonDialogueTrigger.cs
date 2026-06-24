@@ -12,6 +12,7 @@ public class ButtonDialogueTrigger : MonoBehaviour
     {
         if (dataFlow != null && dialogueContainer != null)
         {
+            dialogueContainer.ResetIndexManual();
             dataFlow.InteractWithObject(dialogueContainer);
         }
         else

@@ -5954,7 +5954,13 @@ MonoBehaviour:
   - identifier: CuttingShort
     read: 0
     buttonText: 
-    requirements: []
+    requirements:
+    - id: Dishes_Checked
+      isAdditive: 0
+      checkpointField: 1
+    - id: Palipupa_Checked
+      isAdditive: 0
+      checkpointField: 1
     updatedCheckpointValues: []
 --- !u!114 &618814800
 MonoBehaviour:
@@ -7812,6 +7818,7 @@ MonoBehaviour:
   dialogueSequencePanel: {fileID: 127889339}
   dialogueOptionsPanel: {fileID: 1195970080}
   historyPanel: {fileID: 738252622}
+  explorationButton: {fileID: 1284501189}
   skippingIcon: {fileID: 321168842}
   m_UIMode: 0
 --- !u!1 &895235008
@@ -8755,7 +8762,10 @@ MonoBehaviour:
     read: 0
     buttonText: 
     requirements: []
-    updatedCheckpointValues: []
+    updatedCheckpointValues:
+    - id: Dishes_Checked
+      isAdditive: 0
+      checkpointField: 1
 --- !u!61 &993571695
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9011,7 +9021,10 @@ MonoBehaviour:
     read: 0
     buttonText: 
     requirements: []
-    updatedCheckpointValues: []
+    updatedCheckpointValues:
+    - id: Palipupa_Checked
+      isAdditive: 0
+      checkpointField: 1
 --- !u!61 &999973850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11625,7 +11638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1284501190
 RectTransform:
   m_ObjectHideFlags: 0

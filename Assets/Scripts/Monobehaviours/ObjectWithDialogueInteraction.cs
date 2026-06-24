@@ -80,4 +80,8 @@ public class ObjectWithDialogueInteraction : MonoBehaviour
             return true;
         }
     }
+    public void ResetIndexManual()
+    {
+        lastUsedOptionIndex = 0;
+    }
 }

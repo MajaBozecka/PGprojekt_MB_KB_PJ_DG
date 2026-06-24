@@ -10,6 +10,10 @@ public class CanvasController : MonoBehaviour
     [SerializeField]
     PanelHistoryController historyPanel;
     [SerializeField]
+    public GameObject explorationButton;
+
+
+    [SerializeField]
     GameObject skippingIcon;
     [SerializeField]
     private EUIMode m_UIMode;
@@ -23,10 +27,12 @@ public class CanvasController : MonoBehaviour
             dialogueOptionsPanel.gameObject.SetActive(false);
             dialogueSequencePanel.gameObject.SetActive(false);
             historyPanel.gameObject.SetActive(false);
+            if (explorationButton != null) explorationButton.SetActive(false);
             switch (m_UIMode)
             {
                 case EUIMode.NOTHING:
                     {
+                        if (explorationButton != null) explorationButton.SetActive(true);
                         break;
                     }
                 case EUIMode.BUTTONS:

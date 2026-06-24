@@ -660,7 +660,7 @@ MonoBehaviour:
     - Item_Kebab
     - "Ch1_Antonina_Wst\u0119p00"
     - CuttingShort
-    progressInLastRead: 321
+    progressInLastRead: 576
   listPlotCheckpoints:
   - id: Backpack_Checked
     isAdditive: 0
@@ -712,7 +712,7 @@ MonoBehaviour:
     checkpointField: 0
   - id: Intro_finished
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: Iron_Checked
     isAdditive: 0
     checkpointField: 0
@@ -789,6 +789,12 @@ MonoBehaviour:
     isAdditive: 0
     checkpointField: 0
   - id: Lax_Checked
+    isAdditive: 0
+    checkpointField: 0
+  - id: Dishes_Checked
+    isAdditive: 0
+    checkpointField: 0
+  - id: Palipupa_Checked
     isAdditive: 0
     checkpointField: 0
   listPlotChekpointsEndChapter: []
@@ -4088,7 +4094,7 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 0
     identifier: Intro
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
