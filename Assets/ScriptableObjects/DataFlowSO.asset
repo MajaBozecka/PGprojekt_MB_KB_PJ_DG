@@ -779,6 +779,240 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
+        subline: "To podstawowe pytania podczas przes\u0142uchiwania \u015Bwiadk\xF3w"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Och. W takim razie przepraszam.
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Antonina_Panic_Procedure
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nale\u017Cy pani do grupy podejrzanych."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Co??? Dlaczego???
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Antonina_Panic_Witness
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "...Poniewa\u017C znajdowa\u0142a si\u0119 pani w pobli\u017Cu miejsca
+          zbrodni kiedy do niej dosz\u0142o?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...To ma sens.
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Antonina_Panic_Witness1+0S
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Ka\u017Cdy jest podejrzany."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "O kurde. Dzi\u0119ki, \u017Ce m\xF3wisz."
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Antonina_Panic_Witness1+1S
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Prosz\u0119 odpowiedzie\u0107 na pytanie."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Brrr... Okej.
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Antonina_Panic_Witness1-1S
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Co robi\u0142a pani dzisiaj w nocy?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "...Spa\u0142am? Akurat bardzo dobrze mi si\u0119 spa\u0142o, ale
+          Matylda mnie obudzi\u0142a jak znale\u017Ali cia\u0142o. Masakra! Mam nadziej\u0119,
+          \u017Ce rozwi\u0105\u017C\u0105 pa\u0144stwo t\u0119 spraw\u0119 jak najszybciej."
+      - timeForSingleCharDisplay: 0.7
+        subline: ' '
+      - timeForSingleCharDisplay: 0
+        subline: "**Leki mi si\u0119 ko\u0144cz\u0105**..."
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Antonina_Q1
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Jakie leki?
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: A wie pani...!
+      lingering: 1
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.3
+        subline: ...
+      lingering: 0.5
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie pami\u0119tam jak si\u0119 nazywaj\u0105. Ale takie no. **Psychiczne.**"
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Antonina_Q1_Leki
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Co robi\u0142a pani dzisiaj w nocy?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Heej... Czy pani my\u015Bli, \u017Ce to ja go zabi\u0142am?"
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Antonina_Q1Panic
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Czy zna\u0142a pani Oktawiana?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Heej... Czy pani my\u015Bli, \u017Ce to ja go zabi\u0142am?"
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Antonina_Q2_Panic
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry, nazywam si\u0119 Anna Nowak, jestem detektywem.
+          Pani Antonina Wiercipi\u0119ta, mam racj\u0119?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Tak. To by\u0142o straszne, nadal nie mog\u0119 si\u0119 otrz\u0105sn\u0105\u0107."
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Antonina_Wst\u0119p00"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: (Ma na sobie kapcie...)
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry, nazywam si\u0119 Anna Nowak, jestem detektywem.
+          Pani Antonina Wiercipi\u0119ta, mam racj\u0119?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Tak. To by\u0142o straszne, nadal nie mog\u0119 si\u0119 otrz\u0105sn\u0105\u0107."
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Antonina_Wst\u0119p01"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Co\u015B jeszcze?"
+      lingering: 0
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Antonina_Wst\u0119p1X"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
         subline: "Nie powiem dop\xF3ki ty nie powiesz."
       lingering: -1
       speakerID: Gracz
@@ -1119,28 +1353,6 @@ MonoBehaviour:
     identifier: "Ch1_Krystian_Wst\u0119p00"
     runnedAlready: 0
   - lines:
-    - subLines: []
-      lingering: 0
-      speakerID: I
-      speakerMod: H4
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "(Jego kapcie nie s\u0105 z tego studia...)"
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: A ty to kto?
-      lingering: -1
-      speakerID: I
-      speakerMod: H4
-      changeLocationId: 
-    identifier: "Ch1_Krystian_Wst\u0119p01"
-    runnedAlready: 0
-  - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Miejmy to ju\u017C za sob\u0105."
@@ -1171,6 +1383,798 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 
     identifier: "Ch1_Krystian_Wst\u0119pNoTalk"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Krystian m\xF3wi\u0142, \u017Ce wszyscy poza nim opu\u015Bcili
+          sypialni\u0119 w \u015Brodku nocy."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Naprawd\u0119?"
+      lingering: 0
+      speakerID: Mz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: Mz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Chyba wyszed\u0142em do toalety."
+      lingering: 0
+      speakerID: Mz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Mateusz_KrystianInfo-R
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Co robi\u0142 pan dzisiaj w nocy?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Zanim dosz\u0142o do zab\xF3jstwa, **spa\u0142em**. Potem by\u0142
+          chaos."
+      lingering: 0
+      speakerID: Mz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Jest kto\u015B, kto m\xF3g\u0142by to potwierdzi\u0107?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pewnie tak. **Rafa\u0142 i Krystian**. Oktawian niestety ju\u017C
+          nie."
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Mateusz_Q1_0
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Co robi\u0142 pan dzisiaj w nocy?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Zanim dosz\u0142o do zab\xF3jstwa, **spa\u0142em**. Potem by\u0142
+          chaos."
+      lingering: 0
+      speakerID: Mz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "I nie wychodzi\u0142 pan z sypialni przed tym?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Po co mia\u0142bym?"
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Mateusz_Q1_1
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Damskiej?
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Heh... Oczywi\u015Bcie, \u017Ce nie."
+      lingering: 0
+      speakerID: Mz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Mateusz_WentToWomansToilet-R
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry, Anna Nowak, detektyw."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry! Mateusz Pomara\u0144cza, podejrzany."
+      lingering: 0
+      speakerID: Mz
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Mateusz_Wst\u0119p00"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: (Kapcie - obecne)
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry, Anna Nowak, detektyw."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry! Mateusz Pomara\u0144cza, podejrzany."
+      lingering: 0
+      speakerID: Mz
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Mateusz_Wst\u0119p01"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0
+      speakerID: Mz
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Mateusz_Wst\u0119p1X"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Co robi\u0142a pani dzisiaj w nocy?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Czyta\u0142am ksi\u0105\u017Ck\u0119, kiedy nagle us\u0142ysza\u0142am
+          wrzaw\u0119. "
+      - timeForSingleCharDisplay: 0.5
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "**To by\u0142o oko\u0142o 4 nad ranem**. "
+      - timeForSingleCharDisplay: 0.5
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "**Obudzi\u0142am To\u015Bk\u0119** i wysz\u0142y\u015Bmy sprawdzi\u0107
+          co si\u0119 dzieje. "
+      - timeForSingleCharDisplay: 0.5
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "**I w\u0142a\u015Bnie tak dowiedzia\u0142y\u015Bmy si\u0119 o \u015Bmierci
+          Oktawiana.**"
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Matylda_Q1
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Kto zauwa\u017Cy\u0142 ofiar\u0119 pierwszy?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Morderca. A tak na powa\u017Cnie, to z tego co wiem by\u0142a to
+          **sprz\u0105taczka**."
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: 'Dobrze. '
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Matylda_Q1_REPORTBODY!
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie spa\u0142a\u015B ca\u0142\u0105 noc???"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie potrzebuj\u0119 snu."
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "\u017Be co?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Cisza w zupe\u0142no\u015Bci mi wystarcza na odnowienie energii."
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Matylda_Q1_Sleep
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Bazuj\u0105c na zapowiedzi programu, to musi by\u0107 ci\u0119\u017Ckie
+          do osi\u0105gni\u0119cia, kiedy twoja wsp\xF3\u0142lokatorka to Antonina."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Bazuj\u0105c na zapowiedzi programu, to musi by\u0107 ci\u0119\u017Ckie
+          do osi\u0105gni\u0119cia, kiedy twoja wsp\xF3\u0142lokatorka to Antonina."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie jest a\u017C tak \u017Ale."
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Matylda_Q1_Sleep1+1S
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "...to bardzo dziwna wym\xF3wka, panno Mr\xF3z."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "To nie jest wym\xF3wka."
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Matylda_Q1_Sleep1-1S
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Czy zna\u0142a pani Oktawiana?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Zna\u0142am go tyle, co ka\u017Cdy inny uczestnik programu. Nie
+          rozmawiali\u015Bmy zbyt du\u017Co."
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Mo\u017Ce pani co\u015B o nim powiedzie\u0107?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Nie bardzo.
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Rozumiem.
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Matylda_Q2
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry pani detektyw."
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry, Matylda Mr\xF3z?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Tak. Mog\u0119 jako\u015B pom\xF3c?"
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Potrzebuj\u0119 pani odpowiedzi na kilka pyta\u0144"
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Matylda_Wst\u0119p00"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry pani detektyw."
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry, Matylda Mr\xF3z?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Tak. Mog\u0119 jako\u015B pom\xF3c?"
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Potrzebuj\u0119 pani odpowiedzi na kilka pyta\u0144"
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Matylda_Wst\u0119p00"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: (Ma na sobie kapcie.)
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry pani detektyw."
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry, Matylda Mr\xF3z?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Tak. Mog\u0119 jako\u015B pom\xF3c?"
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Potrzebuj\u0119 pani odpowiedzi na kilka pyta\u0144"
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Matylda_Wst\u0119p01"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Tak?
+      lingering: 0
+      speakerID: Ma
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Matylda_Wst\u0119p1X"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Co robi\u0142 pan dzisiaj w nocy?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Spa\u0142em."
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Rafa\u0142_Q1_0"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Co robi\u0142 pan dzisiaj w nocy?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Spa\u0142em."
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Na pewno nigdzie pan nie wychodzi\u0142?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Tak.
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Rafa\u0142_Q1_1"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Gdzie pan by\u0142, panie Rafale?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Po wod\u0119."
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Po wod\u0119 do picia?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Tak.
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Whatever
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Rafa\u0142_Q1_Liar+T"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "To ciekawe. Krystian m\xF3wi\u0142, \u017Ce wszyscy poza nim opu\u015Bcili
+          sypialni\u0119 w \u015Brodku nocy. "
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "\u0141\u017Ce."
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Rafa\u0142_Q1_LiarDetected"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Czy zna\u0142 pan Oktawiana?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Nie.
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Rafa\u0142_Q2"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "S\u0142ucham? \"Nie\"? Ani troch\u0119?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Ani troch\u0119."
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Przecie\u017C spali\u015Bcie w tym samym pomieszczeniu?"
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Serio?
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Tak???
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie wiedzia\u0142em."
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Jak wygl\u0105da\u0142?"
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Rafa\u0142_Q2_cont"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Blondyn z zaczesan\u0105 czupryn\u0105. Nie za wysoki, ale nie
+          niski. Z b\u0142\u0119kitnymi oczami."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: W okularach?
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nope. To Krystian. I Krystian jest wysoki. I ma br\u0105zowe oczy."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Chyba ju\u017C wiem o kim m\xF3wisz. Dzi\u0119kuj\u0119."
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Nie ma problemu.
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "To ten co zgin\u0105\u0142."
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dok\u0142adnie."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Rafa\u0142_Q2_cont1"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry, Anna Nowak, detektyw."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Tak?
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Rafa\u0142_Wst\u0119p00"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: (Hyy! On nie ma kapci!)
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Dzie\u0144 dobry, Anna Nowak, detektyw."
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Tak?
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Rafa\u0142_Wst\u0119p01"
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0
+      speakerID: R
+      speakerMod: 
+      changeLocationId: 
+    identifier: "Ch1_Rafa\u0142_Wst\u0119p1X"
     runnedAlready: 0
   - lines:
     - subLines:
@@ -4630,23 +5634,19 @@ MonoBehaviour:
     lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "Wszyscy s\u0105 podejrzani."
-      - timeForSingleCharDisplay: 0.3
-        subline: 
-      - timeForSingleCharDisplay: 0.3
-        subline: ' Nawet ja.'
-      lingering: -1
+        subline: Damskiej?
+      lingering: 0
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "Dobra. Pora i\u015B\u0107 na obiadokolacj\u0119."
-      lingering: -1
-      speakerID: Gracz
+        subline: "Heh... Oczywi\u015Bcie, \u017Ce nie."
+      lingering: 0
+      speakerID: Mz
       speakerMod: 
       changeLocationId: 
-    identifier: Ch1SumA
+    identifier: Ch1_Mateusz_WentToWomansToilet-R
     runnedAlready: 0
   serializedPlaceholderSequence:
     lines: []
@@ -4657,6 +5657,18 @@ MonoBehaviour:
   - Cameras1
   - Cameras2
   - Ch1_
+  - Ch1_Antonina_Panic_Procedure
+  - Ch1_Antonina_Panic_Witness
+  - Ch1_Antonina_Panic_Witness1+0S
+  - Ch1_Antonina_Panic_Witness1+1S
+  - Ch1_Antonina_Panic_Witness1-1S
+  - Ch1_Antonina_Q1
+  - Ch1_Antonina_Q1_Leki
+  - Ch1_Antonina_Q1Panic
+  - Ch1_Antonina_Q2_Panic
+  - "Ch1_Antonina_Wst\u0119p00"
+  - "Ch1_Antonina_Wst\u0119p01"
+  - "Ch1_Antonina_Wst\u0119p1X"
   - Ch1_Krystian_ConvincingToTalk
   - Ch1_Krystian_ConvincingToTalk1
   - Ch1_Krystian_ConvincingToTalk2
@@ -4665,9 +5677,35 @@ MonoBehaviour:
   - Ch1_Krystian_Q2
   - Ch1_Krystian_VowOfSilence-2S
   - "Ch1_Krystian_Wst\u0119p00"
-  - "Ch1_Krystian_Wst\u0119p01"
   - "Ch1_Krystian_Wst\u0119p1X"
   - "Ch1_Krystian_Wst\u0119pNoTalk"
+  - Ch1_Mateusz_KrystianInfo-R
+  - Ch1_Mateusz_Q1_0
+  - Ch1_Mateusz_Q1_1
+  - Ch1_Mateusz_WentToWomansToilet-R
+  - "Ch1_Mateusz_Wst\u0119p00"
+  - "Ch1_Mateusz_Wst\u0119p01"
+  - "Ch1_Mateusz_Wst\u0119p1X"
+  - Ch1_Matylda_Q1
+  - Ch1_Matylda_Q1_REPORTBODY!
+  - Ch1_Matylda_Q1_Sleep
+  - Ch1_Matylda_Q1_Sleep1+1S
+  - Ch1_Matylda_Q1_Sleep1-1S
+  - Ch1_Matylda_Q2
+  - "Ch1_Matylda_Wst\u0119p00"
+  - "Ch1_Matylda_Wst\u0119p00"
+  - "Ch1_Matylda_Wst\u0119p01"
+  - "Ch1_Matylda_Wst\u0119p1X"
+  - "Ch1_Rafa\u0142_Q1_0"
+  - "Ch1_Rafa\u0142_Q1_1"
+  - "Ch1_Rafa\u0142_Q1_Liar+T"
+  - "Ch1_Rafa\u0142_Q1_LiarDetected"
+  - "Ch1_Rafa\u0142_Q2"
+  - "Ch1_Rafa\u0142_Q2_cont"
+  - "Ch1_Rafa\u0142_Q2_cont1"
+  - "Ch1_Rafa\u0142_Wst\u0119p00"
+  - "Ch1_Rafa\u0142_Wst\u0119p01"
+  - "Ch1_Rafa\u0142_Wst\u0119p1X"
   - Ch1SumA
   - Ch1SumB
   - Ch1SumC
@@ -4752,7 +5790,7 @@ MonoBehaviour:
   - NZR
   - PKN
   - Storage
-  analisedIdentifier: Ch1SumA
-  analisedIndex: 15
+  analisedIdentifier: Ch1_Mateusz_WentToWomansToilet-R
+  analisedIndex: 29
   placeholdIdentifier: 
   chapter: 0
