@@ -241,6 +241,11 @@ public class DataFlowController : MonoBehaviour
                         yield return null;
                     } while (!(canSkipNow(timePartLineIterator, tillSubDialogueLineSkippable) || isItTimeForNextSubLine(partLine, partLineDisplayedLength)));
 
+                    if (sfxSource != null && sfxSource.isPlaying)
+                    {
+                        sfxSource.Stop();
+                    }
+
                     compoundLength += partLine.subline.Length;
                     confirmNextLine = false;
                 }
