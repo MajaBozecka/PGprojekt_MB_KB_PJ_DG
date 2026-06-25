@@ -177,6 +177,11 @@ public class DataFlowController : MonoBehaviour
 
     public void StartDialogueSequence(DialogueOptionData DOD)
     {
+        if (UnityEngine.EventSystems.EventSystem.current != null)
+        {
+            UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+        }
+
         OnSequenceStarted?.Invoke();
         if (locationManager != null) locationManager.SetDialogueState(true);
         StopAllCoroutines();
@@ -308,6 +313,7 @@ public class DataFlowController : MonoBehaviour
 
         void updatePlotCheckpoints()
         {
+            if (DOD.updatedCheckpointValues == null) return;
             foreach (PlotCheckpoint check in DOD.updatedCheckpointValues)
             {
                 int indexOfMatchedCheckpointFromControl = data.listPlotCheckpoints.BinarySearch(check);

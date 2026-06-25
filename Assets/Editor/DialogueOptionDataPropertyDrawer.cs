@@ -3,7 +3,7 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomPropertyDrawer(typeof(DialogueOptionData), true)]
+//[CustomPropertyDrawer(typeof(DialogueOptionData), true)]
 public class DialogueOptionDataPropertyDrawer : PropertyDrawer
 {
     private SerializedProperty s_identifier;

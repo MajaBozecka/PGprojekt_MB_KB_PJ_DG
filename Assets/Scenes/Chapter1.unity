@@ -7474,7 +7474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &843267398
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7966,6 +7966,7 @@ MonoBehaviour:
   dialogueSequencePanel: {fileID: 127889339}
   dialogueOptionsPanel: {fileID: 1195970080}
   historyPanel: {fileID: 738252622}
+  explorationButton: {fileID: 843267397}
   skippingIcon: {fileID: 321168842}
   m_UIMode: 0
 --- !u!1 &895235008

@@ -15,7 +15,11 @@ public class ChangingScenes : MonoBehaviour
     public string nextSceneName = "Chapter1";
 
     [Header("Co ma wywo³aæ przejœcie?")]
-    public string endingDialogueIdentifier = "Intro_finished"; 
+    public string endingDialogueIdentifier = "Intro_finished";
+
+    [Header("Efekty DŸwiêkowe Przejœcia")]
+    public AudioSource transitionAudioSource;
+    public AudioClip ambulanceSound;
 
     private void OnEnable()
     {
@@ -49,6 +53,14 @@ public class ChangingScenes : MonoBehaviour
             dialogueCanvas.SetActive(false);
         }
 
+        yield return new WaitForSeconds(waitBeforeImage);
+
+        if (transitionAudioSource != null && ambulanceSound != null)
+        {
+            transitionAudioSource.PlayOneShot(ambulanceSound);
+        }
+
+        yield return new WaitForSeconds(waitBeforeImage);
         yield return new WaitForSeconds(waitBeforeImage);
 
         if (endingSpriteRenderer != null)
