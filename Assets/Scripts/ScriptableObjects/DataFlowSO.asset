@@ -660,7 +660,33 @@ MonoBehaviour:
     - Item_Kebab
     - "Ch1_Antonina_Wst\u0119p00"
     - CuttingShort
-    progressInLastRead: 904
+    - "Ch1_Matylda_Wst\u0119p00"
+    - Item_Light
+    - Item_Iron
+    - "Ch1_Mateusz_Wst\u0119p00"
+    - Ch1_Matylda_Q1
+    - Ch1_Matylda_Q1_Sleep
+    - Ch1_Matylda_Q1_Sleep1+1S
+    - Ch1_Matylda_Q1_REPORTBODY!
+    - Ch1_Matylda_Q2
+    - "Ch1_Krystian_Wst\u0119p00"
+    - Ch1_Krystian_ConvincingToTalk
+    - Ch1_Krystian_ConvinvingToTalk1S
+    - Ch1_Krystian_ConvincingToTalk2
+    - 0EXIT_Dialogue
+    - Ch1_Krystian_Q1
+    - "Ch1_Krystian_Wst\u0119p1X"
+    - Ch1_Krystian_Q2
+    - Ch1_Krystian_VowOfSilence-2S
+    - "Ch1_Krystian_Wst\u0119pNoTalk"
+    - Ch1_Mateusz_Q1_0
+    - "Ch1_Mateusz_Wst\u0119p1X"
+    - Ch1_Antonina_Q1
+    - Ch1_Antonina_Q1_Leki
+    - Ch1_Antonina_Q2_Panic
+    - Ch1_Antonina_Panic_Procedure
+    - "Ch1_Rafa\u0142_Wst\u0119p00"
+    progressInLastRead: 1
   listPlotCheckpoints:
   - id: Backpack_Checked
     isAdditive: 0
@@ -688,16 +714,16 @@ MonoBehaviour:
     checkpointField: 0
   - id: Ch1_Mateusz_Q1
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: Ch1_Mateusz_Q2
     isAdditive: 0
     checkpointField: 0
   - id: Ch1_Matylda_Q1
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: Ch1_Matylda_Q2
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: "Ch1_Rafa\u0142_Q1"
     isAdditive: 0
     checkpointField: 0
@@ -709,19 +735,19 @@ MonoBehaviour:
     checkpointField: 0
   - id: CharacterSympathy_Antonina
     isAdditive: 1
-    checkpointField: 1
+    checkpointField: 0
   - id: CharacterSympathy_Krystian
     isAdditive: 1
     checkpointField: 0
   - id: CharacterSympathy_Matylda
     isAdditive: 1
-    checkpointField: 1
+    checkpointField: 0
   - id: "CharacterSympathy_Rafa\u0142"
     isAdditive: 1
     checkpointField: 0
   - id: DialogueDepthControllCheckpoint
     isAdditive: 0
-    checkpointField: 2
+    checkpointField: 0
   - id: Dirt_Checked
     isAdditive: 0
     checkpointField: 0
@@ -739,16 +765,16 @@ MonoBehaviour:
     checkpointField: 0
   - id: FirstCharacterInteraction_Antonina
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
   - id: FirstCharacterInteraction_Krystian
     isAdditive: 0
     checkpointField: 0
   - id: FirstCharacterInteraction_Mateusz
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: FirstCharacterInteraction_Matylda
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: "FirstCharacterInteraction_Rafa\u0142"
     isAdditive: 0
     checkpointField: 0
@@ -849,7 +875,32 @@ MonoBehaviour:
   defaultTimeTillSubTextSkippable: 0.2
   defaultTimePerCharacterInCaseOfNoMatchWithSpeakerCollection: 0
   dialogueSequenceList:
-  - lines: []
+  - lines:
+    - subLines: []
+      lingering: 0
+      speakerID: Ma
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: A
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: R
+      speakerMod: Exit
+      changeLocationId: 
     identifier: 0EXIT_Dialogue
     runnedAlready: 0
   - lines:
@@ -910,7 +961,7 @@ MonoBehaviour:
       speakerMod: B1
       changeLocationId: 
     identifier: Ch1_Antonina_Panic_Procedure
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -927,7 +978,7 @@ MonoBehaviour:
       speakerMod: F2
       changeLocationId: 
     identifier: Ch1_Antonina_Panic_Witness
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -962,7 +1013,7 @@ MonoBehaviour:
       speakerMod: A4
       changeLocationId: 
     identifier: Ch1_Antonina_Panic_Witness1+1S
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1019,7 +1070,7 @@ MonoBehaviour:
       speakerMod: E5
       changeLocationId: 
     identifier: Ch1_Antonina_Q1
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1057,7 +1108,7 @@ MonoBehaviour:
       speakerMod: E5
       changeLocationId: 
     identifier: Ch1_Antonina_Q1_Leki
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1074,7 +1125,7 @@ MonoBehaviour:
       speakerMod: H3
       changeLocationId: 
     identifier: Ch1_Antonina_Q1Panic
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1114,7 +1165,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Ch1_Antonina_Q2
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1131,7 +1182,7 @@ MonoBehaviour:
       speakerMod: H3
       changeLocationId: 
     identifier: Ch1_Antonina_Q2_Panic
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines: []
       lingering: 0
@@ -1424,7 +1475,7 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "**\u017Ba\u0142uj\u0119.**"
       lingering: -1
-      speakerID: Gracz
+      speakerID: I
       speakerMod: H8
       changeLocationId: 
     - subLines:
@@ -1632,7 +1683,7 @@ MonoBehaviour:
       speakerMod: E3
       changeLocationId: 
     identifier: Ch1_Mateusz_Q1_0
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1685,8 +1736,8 @@ MonoBehaviour:
   - lines:
     - subLines: []
       lingering: 0
-      speakerID: A1
-      speakerMod: 
+      speakerID: Mz
+      speakerMod: A1
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1699,8 +1750,8 @@ MonoBehaviour:
       - timeForSingleCharDisplay: 0
         subline: "Dzie\u0144 dobry! Mateusz Pomara\u0144cza, podejrzany."
       lingering: -1
-      speakerID: A1
-      speakerMod: 
+      speakerID: Mz
+      speakerMod: A1
       changeLocationId: 
     identifier: "Ch1_Mateusz_Wst\u0119p00"
     runnedAlready: 0
@@ -1781,7 +1832,7 @@ MonoBehaviour:
       speakerMod: F3
       changeLocationId: 
     identifier: Ch1_Matylda_Q1
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1806,7 +1857,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Ch1_Matylda_Q1_REPORTBODY!
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1837,7 +1888,7 @@ MonoBehaviour:
       speakerMod: F3
       changeLocationId: 
     identifier: Ch1_Matylda_Q1_Sleep
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1855,7 +1906,7 @@ MonoBehaviour:
       speakerMod: E1
       changeLocationId: 
     identifier: Ch1_Matylda_Q1_Sleep1+1S
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1911,7 +1962,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Ch1_Matylda_Q2
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -3232,7 +3283,7 @@ MonoBehaviour:
       speakerMod: Exit
       changeLocationId: 
     identifier: Chapter1_intro
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -3343,7 +3394,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Enter_Bathroom
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -4316,7 +4367,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Boxes
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0

@@ -4165,7 +4165,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.00003215834}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -0.00012207, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &476957862
 MonoBehaviour:
@@ -4908,10 +4908,10 @@ RectTransform:
   - {fileID: 1106150762}
   m_Father: {fileID: 476957861}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 141.5, y: -5}
-  m_SizeDelta: {x: 283, y: 10}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &569103434
 MonoBehaviour:
@@ -5584,9 +5584,9 @@ RectTransform:
   m_Father: {fileID: 1195970076}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &602651858
 MonoBehaviour:
@@ -6162,7 +6162,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 815c679fa79daae42806c29ffd9688ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7937,12 +7937,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 243413587}
   - {fileID: 843267398}
   - {fileID: 1195970076}
   - {fileID: 127889336}
   - {fileID: 321168845}
   - {fileID: 738252619}
-  - {fileID: 243413587}
   - {fileID: 444342703}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10974,7 +10974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1195970076
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10993,8 +10993,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: -40}
+  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_SizeDelta: {x: 392.9673, y: 0.000030518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1195970077
 MonoBehaviour:
@@ -13777,7 +13777,7 @@ RectTransform:
   m_Father: {fileID: 1111801927}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14021,11 +14021,11 @@ MonoBehaviour:
   testedObjectWithDialogueInteraction: {fileID: 0}
   pause: 0
   dialogueCanvas: {fileID: 127889335}
-  sfxSource: {fileID: 0}
-  clickSound: {fileID: 0}
-  hoverSound: {fileID: 0}
-  musicSource: {fileID: 0}
-  backgroundMusic: {fileID: 0}
+  sfxSource: {fileID: 1607564802}
+  clickSound: {fileID: 8300000, guid: 66cc4f8c29725174583459fe8ab29f3d, type: 3}
+  hoverSound: {fileID: 8300000, guid: ac8417995238e8b4b9a9775a20b9fb0c, type: 3}
+  musicSource: {fileID: 1607564803}
+  backgroundMusic: {fileID: 8300000, guid: ca93a8e939b3d0147b4573e626323430, type: 3}
 --- !u!4 &1607564801
 Transform:
   m_ObjectHideFlags: 0
@@ -14858,7 +14858,7 @@ MonoBehaviour:
     updatedCheckpointValues:
     - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 2
+      checkpointField: 1
     - id: Ch1_Matylda_Q2
       isAdditive: 0
       checkpointField: 1
@@ -16684,10 +16684,10 @@ RectTransform:
   - {fileID: 2004699486}
   m_Father: {fileID: 476957861}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 141.5, y: -5}
-  m_SizeDelta: {x: 283, y: 10}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2016423824
 MonoBehaviour:
