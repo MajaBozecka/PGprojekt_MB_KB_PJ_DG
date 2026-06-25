@@ -652,41 +652,14 @@ MonoBehaviour:
     - Epilog_HowCouldYou
     - NZMa
     - NZMz_bad
-    - Chapter2_intro
-    - Chap2_introA
-    - Ch1_
-    - Item_Waterch2A
-    - Item_Dishes
-    - Item_Kebab
-    - "Ch1_Antonina_Wst\u0119p00"
-    - CuttingShort
-    - "Ch1_Matylda_Wst\u0119p00"
-    - Item_Light
-    - Item_Iron
-    - "Ch1_Mateusz_Wst\u0119p00"
-    - Ch1_Matylda_Q1
-    - Ch1_Matylda_Q1_Sleep
-    - Ch1_Matylda_Q1_Sleep1+1S
-    - Ch1_Matylda_Q1_REPORTBODY!
-    - Ch1_Matylda_Q2
-    - "Ch1_Krystian_Wst\u0119p00"
-    - Ch1_Krystian_ConvincingToTalk
-    - Ch1_Krystian_ConvinvingToTalk1S
-    - Ch1_Krystian_ConvincingToTalk2
-    - 0EXIT_Dialogue
-    - Ch1_Krystian_Q1
-    - "Ch1_Krystian_Wst\u0119p1X"
-    - Ch1_Krystian_Q2
-    - Ch1_Krystian_VowOfSilence-2S
-    - "Ch1_Krystian_Wst\u0119pNoTalk"
-    - Ch1_Mateusz_Q1_0
-    - "Ch1_Mateusz_Wst\u0119p1X"
-    - Ch1_Antonina_Q1
-    - Ch1_Antonina_Q1_Leki
-    - Ch1_Antonina_Q2_Panic
-    - Ch1_Antonina_Panic_Procedure
     - "Ch1_Rafa\u0142_Wst\u0119p00"
-    progressInLastRead: 1
+    - "Ch1_Rafa\u0142_Q1_0"
+    - "Ch1_Rafa\u0142_Q2"
+    - "Ch1_Rafa\u0142_Q1_LiarDetected"
+    - 0EXIT_Dialogue
+    - "Ch1_Rafa\u0142_Wst\u0119p1X"
+    - "Ch1_Rafa\u0142_Q2_cont"
+    progressInLastRead: 20
   listPlotCheckpoints:
   - id: Backpack_Checked
     isAdditive: 0
@@ -702,10 +675,10 @@ MonoBehaviour:
     checkpointField: 0
   - id: Ch1_Antonina_Q1
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: Ch1_Antonina_Q2
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: Ch1_Krystian_Q1
     isAdditive: 0
     checkpointField: 0
@@ -726,10 +699,10 @@ MonoBehaviour:
     checkpointField: 0
   - id: "Ch1_Rafa\u0142_Q1"
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
   - id: "Ch1_Rafa\u0142_Q2"
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
   - id: CharacterRefusingToTalk_Krystian
     isAdditive: 0
     checkpointField: 0
@@ -745,10 +718,16 @@ MonoBehaviour:
   - id: "CharacterSympathy_Rafa\u0142"
     isAdditive: 1
     checkpointField: 0
+  - id: Coal_Checked
+    isAdditive: 0
+    checkpointField: 0
   - id: DialogueDepthControllCheckpoint
     isAdditive: 0
     checkpointField: 0
   - id: Dirt_Checked
+    isAdditive: 0
+    checkpointField: 0
+  - id: Dishes_Checked
     isAdditive: 0
     checkpointField: 0
   - id: DuchyNieZabily
@@ -765,7 +744,7 @@ MonoBehaviour:
     checkpointField: 0
   - id: FirstCharacterInteraction_Antonina
     isAdditive: 0
-    checkpointField: 1
+    checkpointField: 0
   - id: FirstCharacterInteraction_Krystian
     isAdditive: 0
     checkpointField: 0
@@ -777,7 +756,7 @@ MonoBehaviour:
     checkpointField: 0
   - id: "FirstCharacterInteraction_Rafa\u0142"
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
   - id: InfoOWychodzeniuZSypialni
     isAdditive: 0
     checkpointField: 0
@@ -793,10 +772,19 @@ MonoBehaviour:
   - id: Item_Slippers
     isAdditive: 0
     checkpointField: 0
+  - id: KrystianRefusingToTalk
+    isAdditive: 0
+    checkpointField: 0
+  - id: Lax_Checked
+    isAdditive: 0
+    checkpointField: 0
   - id: MateuszRoztrzesiony
     isAdditive: 0
     checkpointField: 0
   - id: NotPoirot
+    isAdditive: 0
+    checkpointField: 0
+  - id: Palipupa_Checked
     isAdditive: 0
     checkpointField: 0
   - id: Puddle_Checked
@@ -804,7 +792,7 @@ MonoBehaviour:
     checkpointField: 0
   - id: RafalNieZnaOktawiana
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
   - id: RozczarowanieMateusza
     isAdditive: 1
     checkpointField: 0
@@ -819,53 +807,8 @@ MonoBehaviour:
     checkpointField: 0
   - id: "TrudnyRafa\u0142"
     isAdditive: 1
-    checkpointField: 0
+    checkpointField: 1
   - id: "\u017BelazkoNarz\u0119dzieZbrodni"
-    isAdditive: 0
-    checkpointField: 0
-  - id: BathroomChecked2
-    isAdditive: 0
-    checkpointField: 0
-  - id: Iron_Checked2
-    isAdditive: 0
-    checkpointField: 0
-  - id: Backpack_Checked
-    isAdditive: 0
-    checkpointField: 0
-  - id: Backpack_Checked2
-    isAdditive: 0
-    checkpointField: 0
-  - id: DialogueDepthControllCheckpoint
-    isAdditive: 0
-    checkpointField: 0
-  - id: FirstCharacterInteraction_Krystian
-    isAdditive: 0
-    checkpointField: 0
-  - id: FirstCharacterInteraction_Matylda
-    isAdditive: 0
-    checkpointField: 0
-  - id: FirstCharacterInteraction_Antonina
-    isAdditive: 0
-    checkpointField: 0
-  - id: "FirstCharacterInteraction_Rafa\u0142"
-    isAdditive: 0
-    checkpointField: 0
-  - id: FirstCharacterInteraction_Mateusz
-    isAdditive: 0
-    checkpointField: 0
-  - id: KrystianRefusingToTalk
-    isAdditive: 0
-    checkpointField: 0
-  - id: Coal_Checked
-    isAdditive: 0
-    checkpointField: 0
-  - id: Lax_Checked
-    isAdditive: 0
-    checkpointField: 0
-  - id: Dishes_Checked
-    isAdditive: 0
-    checkpointField: 0
-  - id: Palipupa_Checked
     isAdditive: 0
     checkpointField: 0
   listPlotChekpointsEndChapter: []
@@ -961,7 +904,7 @@ MonoBehaviour:
       speakerMod: B1
       changeLocationId: 
     identifier: Ch1_Antonina_Panic_Procedure
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1070,7 +1013,7 @@ MonoBehaviour:
       speakerMod: E5
       changeLocationId: 
     identifier: Ch1_Antonina_Q1
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1108,7 +1051,7 @@ MonoBehaviour:
       speakerMod: E5
       changeLocationId: 
     identifier: Ch1_Antonina_Q1_Leki
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1182,7 +1125,7 @@ MonoBehaviour:
       speakerMod: H3
       changeLocationId: 
     identifier: Ch1_Antonina_Q2_Panic
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines: []
       lingering: 0
@@ -2089,7 +2032,7 @@ MonoBehaviour:
       speakerMod: A1
       changeLocationId: 
     identifier: "Ch1_Rafa\u0142_Q1_0"
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2235,7 +2178,7 @@ MonoBehaviour:
       speakerMod: A1
       changeLocationId: 
     identifier: "Ch1_Rafa\u0142_Q2"
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2308,7 +2251,7 @@ MonoBehaviour:
       speakerMod: B1
       changeLocationId: 
     identifier: "Ch1_Rafa\u0142_Q2_cont"
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2424,9 +2367,9 @@ MonoBehaviour:
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: ...
-      lingering: 0
+      lingering: 0.5
       speakerID: R
-      speakerMod: 
+      speakerMod: A1
       changeLocationId: 
     identifier: "Ch1_Rafa\u0142_Wst\u0119p1X"
     runnedAlready: 0
@@ -6721,8 +6664,15 @@ MonoBehaviour:
     identifier: Storage
     runnedAlready: 0
   serializedAnalisedSequence:
-    lines: []
-    identifier: 
+    lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ...
+      lingering: 0.5
+      speakerID: R
+      speakerMod: A1
+      changeLocationId: 
+    identifier: "Ch1_Rafa\u0142_Wst\u0119p1X"
     runnedAlready: 0
   serializedPlaceholderSequence:
     lines: []
@@ -6877,7 +6827,7 @@ MonoBehaviour:
   - NZR
   - PKN
   - Storage
-  analisedIdentifier: 
-  analisedIndex: -1
+  analisedIdentifier: "Ch1_Rafa\u0142_Wst\u0119p1X"
+  analisedIndex: 54
   placeholdIdentifier: 
   chapter: 0

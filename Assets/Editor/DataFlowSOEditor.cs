@@ -4,7 +4,7 @@ using UnityEngine;
 /// <summary>
 /// Custom Editor for DataFlowSODebugger to save sth in JSON file.
 /// </summary>
-//[CustomEditor(typeof(DataFlowSO))]
+[CustomEditor(typeof(DataFlowSO))]
 public class DataFlowSOEditor : Editor
 {
     DataFlowSO dataSO;

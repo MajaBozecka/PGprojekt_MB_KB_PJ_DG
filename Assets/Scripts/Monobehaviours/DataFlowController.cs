@@ -270,8 +270,8 @@ public class DataFlowController : MonoBehaviour
                 sbyte check = data.pc_CheckpointForDialogueDepth.checkpointField;
                 updatePlotCheckpoints();
                 sbyte check2 = data.pc_CheckpointForDialogueDepth.checkpointField;
-                if (!((check != 0 && check2 == 0) || (check==0 && check2 == 1)))
-                    TestedDialogueSequence.runnedAlready = true;
+                //if (!((check != 0 && check2 == 0) || (check==0 && check2 == 1)))
+                //    TestedDialogueSequence.runnedAlready = true;//sth broke
             }
 
             OnSequenceEnded?.Invoke(TestedDialogueSequence.identifier);
