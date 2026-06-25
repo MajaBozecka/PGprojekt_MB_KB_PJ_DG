@@ -945,6 +945,7 @@ MonoBehaviour:
   dialogueSequencePanel: {fileID: 93005928}
   dialogueOptionsPanel: {fileID: 1424546707}
   historyPanel: {fileID: 1510291849}
+  explorationButton: {fileID: 0}
   skippingIcon: {fileID: 1775134673}
   m_UIMode: 0
 --- !u!114 &273177367
@@ -1243,24 +1244,24 @@ MonoBehaviour:
     read: 0
     buttonText: "Otw\xF3rz drzwi"
     requirements:
-    - id: EndingCheckpoint
-      isAdditive: 0
-      checkpointField: 0
-    updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
   - identifier: NZA
     read: 0
     buttonText: Antonina!
     requirements:
-    - id: EndingCheckpoint
-      isAdditive: 0
-      checkpointField: 1
-    updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 2
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
     - id: EndingID
       isAdditive: 0
       checkpointField: 1
@@ -1268,9 +1269,9 @@ MonoBehaviour:
     read: 0
     buttonText: ...
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 2
+      checkpointField: 3
     - id: "\u017BelazkoNarz\u0119dzieZbrodni"
       isAdditive: 0
       checkpointField: 0
@@ -1278,16 +1279,16 @@ MonoBehaviour:
       isAdditive: 0
       checkpointField: 1
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 3
+      checkpointField: 4
   - identifier: NZAcont2
     read: 0
     buttonText: ...
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 2
+      checkpointField: 3
     - id: "\u017BelazkoNarz\u0119dzieZbrodni"
       isAdditive: 0
       checkpointField: 1
@@ -1295,23 +1296,23 @@ MonoBehaviour:
       isAdditive: 0
       checkpointField: 1
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 3
+      checkpointField: 4
   - identifier: NZAagree
     read: 0
     buttonText: "Przyzna\u0142 si\u0119."
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 3
+      checkpointField: 4
     - id: EndingID
       isAdditive: 0
       checkpointField: 1
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 4
+      checkpointField: 5
     - id: EndingID
       isAdditive: 0
       checkpointField: 2
@@ -1319,16 +1320,16 @@ MonoBehaviour:
     read: 0
     buttonText: "Bebch rzecze \u017Ce Tosia"
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 3
+      checkpointField: 4
     - id: EndingID
       isAdditive: 0
       checkpointField: 1
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 4
+      checkpointField: 5
     - id: EndingID
       isAdditive: 0
       checkpointField: 1
@@ -1336,13 +1337,13 @@ MonoBehaviour:
     read: 0
     buttonText: Ignacy!
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 1
+      checkpointField: 2
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 4
+      checkpointField: 5
     - id: EndingID
       isAdditive: 0
       checkpointField: 2
@@ -1350,13 +1351,13 @@ MonoBehaviour:
     read: 0
     buttonText: "Rafa\u0142!"
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 1
+      checkpointField: 2
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 4
+      checkpointField: 5
     - id: EndingID
       isAdditive: 0
       checkpointField: 4
@@ -1364,16 +1365,16 @@ MonoBehaviour:
     read: 0
     buttonText: Matylda!
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 1
+      checkpointField: 2
     - id: DuchyNieZabily
       isAdditive: 0
       checkpointField: 0
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 4
+      checkpointField: 5
     - id: EndingID
       isAdditive: 0
       checkpointField: 3
@@ -1381,16 +1382,16 @@ MonoBehaviour:
     read: 0
     buttonText: Matylda?
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 1
+      checkpointField: 2
     - id: DuchyNieZabily
       isAdditive: 0
       checkpointField: 1
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 4
+      checkpointField: 5
     - id: EpilogID
       isAdditive: 0
       checkpointField: 3
@@ -1398,16 +1399,16 @@ MonoBehaviour:
     read: 0
     buttonText: Mateusz!(0 rozczarowania)
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 1
+      checkpointField: 2
     - id: RozczarowanieMateusza
       isAdditive: 0
       checkpointField: 10
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 4
+      checkpointField: 5
     - id: EndingID
       isAdditive: 0
       checkpointField: 0
@@ -1415,9 +1416,9 @@ MonoBehaviour:
     read: 0
     buttonText: Mateusz!
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 1
+      checkpointField: 2
     - id: RozczarowanieMateusza
       isAdditive: 1
       checkpointField: 10
@@ -1425,9 +1426,9 @@ MonoBehaviour:
       isAdditive: 0
       checkpointField: 0
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 2
+      checkpointField: 3
     - id: EndingID
       isAdditive: 0
       checkpointField: 5
@@ -1435,9 +1436,9 @@ MonoBehaviour:
     read: 0
     buttonText: Mateusz!
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 1
+      checkpointField: 2
     - id: RozczarowanieMateusza
       isAdditive: 1
       checkpointField: 10
@@ -1445,9 +1446,9 @@ MonoBehaviour:
       isAdditive: 0
       checkpointField: 1
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 2
+      checkpointField: 3
     - id: EndingID
       isAdditive: 0
       checkpointField: 5
@@ -1455,9 +1456,9 @@ MonoBehaviour:
     read: 0
     buttonText: "KA\u017BDY!"
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 1
+      checkpointField: 2
     - id: NotPoirot
       isAdditive: 0
       checkpointField: 0
@@ -1469,9 +1470,9 @@ MonoBehaviour:
     read: 0
     buttonText: DUCHY!
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 1
+      checkpointField: 2
     - id: DuchyNieZabily
       isAdditive: 0
       checkpointField: 0
@@ -1483,65 +1484,65 @@ MonoBehaviour:
     read: 0
     buttonText: Epilog
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 4
+      checkpointField: 5
     - id: EndingID
       isAdditive: 0
       checkpointField: 1
     updatedCheckpointValues:
     - id: EndingCheckpoint
       isAdditive: 0
-      checkpointField: 5
+      checkpointField: 6
   - identifier: Epilog_Byebye
     read: 0
     buttonText: Epilog
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 4
+      checkpointField: 5
     - id: EndingID
       isAdditive: 0
       checkpointField: 2
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 5
+      checkpointField: 6
   - identifier: Epilog_NooneWillEverBelieveYou
     read: 0
     buttonText: Epilog
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 4
+      checkpointField: 5
     - id: EndingID
       isAdditive: 0
       checkpointField: 3
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 5
+      checkpointField: 6
   - identifier: Epilog_HowCouldYou
     read: 0
     buttonText: Epilog
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 4
+      checkpointField: 5
     - id: EndingID
       isAdditive: 0
       checkpointField: 4
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 5
+      checkpointField: 6
   - identifier: NZMz_X00
     read: 0
     buttonText: Tak.
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 2
+      checkpointField: 3
     - id: EndingID
       isAdditive: 0
       checkpointField: 5
@@ -1552,16 +1553,16 @@ MonoBehaviour:
       isAdditive: 0
       checkpointField: 0
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 3
+      checkpointField: 4
   - identifier: NZMz_X01
     read: 0
     buttonText: Tak.
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 2
+      checkpointField: 3
     - id: EndingID
       isAdditive: 0
       checkpointField: 5
@@ -1572,16 +1573,16 @@ MonoBehaviour:
       isAdditive: 0
       checkpointField: 1
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 3
+      checkpointField: 4
   - identifier: NZMz_X10
     read: 0
     buttonText: Tak.
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 2
+      checkpointField: 3
     - id: EndingID
       isAdditive: 0
       checkpointField: 5
@@ -1592,16 +1593,16 @@ MonoBehaviour:
       isAdditive: 0
       checkpointField: 0
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 3
+      checkpointField: 4
   - identifier: NZMz_X11
     read: 0
     buttonText: Tak.
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 2
+      checkpointField: 3
     - id: EndingID
       isAdditive: 0
       checkpointField: 5
@@ -1612,23 +1613,23 @@ MonoBehaviour:
       isAdditive: 0
       checkpointField: 1
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 3
+      checkpointField: 4
   - identifier: NZMz_cont
     read: 0
     buttonText: Proste.
     requirements:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 3
+      checkpointField: 4
     - id: EndingID
       isAdditive: 0
       checkpointField: 5
     updatedCheckpointValues:
-    - id: EndingCheckpoint
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
-      checkpointField: 5
+      checkpointField: 6
 --- !u!4 &396478976
 Transform:
   m_ObjectHideFlags: 0
@@ -2966,6 +2967,8 @@ MonoBehaviour:
   waitBeforeScene: 2
   nextSceneName: Chapter1
   endingDialogueIdentifier: Intro
+  transitionAudioSource: {fileID: 0}
+  ambulanceSound: {fileID: 0}
 --- !u!4 &1188603907
 Transform:
   m_ObjectHideFlags: 0
@@ -4047,6 +4050,11 @@ MonoBehaviour:
   testedObjectWithDialogueInteraction: {fileID: 396478975}
   pause: 0
   dialogueCanvas: {fileID: 273177365}
+  sfxSource: {fileID: 0}
+  clickSound: {fileID: 0}
+  hoverSound: {fileID: 0}
+  musicSource: {fileID: 0}
+  backgroundMusic: {fileID: 0}
 --- !u!4 &1778309248
 Transform:
   m_ObjectHideFlags: 0
@@ -4395,7 +4403,10 @@ MonoBehaviour:
     read: 0
     buttonText: 
     requirements: []
-    updatedCheckpointValues: []
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
 --- !u!4 &1887893334
 Transform:
   m_ObjectHideFlags: 0
