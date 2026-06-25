@@ -6,11 +6,11 @@ public struct PlotCheckpoint : IComparable<PlotCheckpoint>, IComparer<PlotCheckp
 {
     public string id;
     public bool isAdditive;
-    public byte checkpointField;
+    public sbyte checkpointField;
     public PlotCheckpoint(int val, string id, bool ad)
     {
         this.id = id;
-        checkpointField = (byte)val;
+        checkpointField = (sbyte)val;
         isAdditive = ad;
     }
     public int Compare(PlotCheckpoint x, PlotCheckpoint y)

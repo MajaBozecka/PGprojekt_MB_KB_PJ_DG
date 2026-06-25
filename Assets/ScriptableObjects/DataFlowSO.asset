@@ -652,13 +652,20 @@ MonoBehaviour:
     - Epilog_HowCouldYou
     - NZMa
     - NZMz_bad
-    - Chapter2_intro
-    - Chap2_introA
-    - Ch1_
-    - Item_Waterch2A
-    - Item_Dishes
-    - Item_Kebab
-    progressInLastRead: 70
+    - "Ch1_Mateusz_Wst\u0119p00"
+    - Ch1_Mateusz_Q1_0
+    - "Ch1_Antonina_Wst\u0119p00"
+    - Ch1_Antonina_Q2
+    - Ch1_Antonina_Q1Panic
+    - Ch1_Antonina_Panic_Witness
+    - Ch1_Antonina_Panic_Witness1+1S
+    - "Ch1_Matylda_Wst\u0119p00"
+    - Ch1_Matylda_Q2
+    - Ch1_Matylda_Q1_REPORTBODY!
+    - Ch1_Matylda_Q1
+    - Ch1_Matylda_Q1_Sleep
+    - Ch1_Matylda_Q1_Sleep1+1S
+    progressInLastRead: 2
   listPlotCheckpoints:
   - id: Backpack_Checked
     isAdditive: 0
@@ -672,10 +679,55 @@ MonoBehaviour:
   - id: Cameras1
     isAdditive: 0
     checkpointField: 0
-  - id: EndingID
+  - id: Ch1_Antonina_Q1
+    isAdditive: 0
+    checkpointField: 1
+  - id: Ch1_Antonina_Q2
+    isAdditive: 0
+    checkpointField: 1
+  - id: Ch1_Krystian_Q1
     isAdditive: 0
     checkpointField: 0
-  - id: FA_Checked
+  - id: Ch1_Krystian_Q2
+    isAdditive: 0
+    checkpointField: 0
+  - id: Ch1_Mateusz_Q1
+    isAdditive: 0
+    checkpointField: 1
+  - id: Ch1_Mateusz_Q2
+    isAdditive: 0
+    checkpointField: 0
+  - id: Ch1_Matylda_Q1
+    isAdditive: 0
+    checkpointField: 1
+  - id: Ch1_Matylda_Q2
+    isAdditive: 0
+    checkpointField: 1
+  - id: "Ch1_Rafa\u0142_Q1"
+    isAdditive: 0
+    checkpointField: 0
+  - id: "Ch1_Rafa\u0142_Q2"
+    isAdditive: 0
+    checkpointField: 0
+  - id: CharacterRefusingToTalk_Krystian
+    isAdditive: 0
+    checkpointField: 0
+  - id: CharacterSympathy_Antonina
+    isAdditive: 1
+    checkpointField: 1
+  - id: CharacterSympathy_Krystian
+    isAdditive: 1
+    checkpointField: 0
+  - id: CharacterSympathy_Matylda
+    isAdditive: 1
+    checkpointField: 1
+  - id: "CharacterSympathy_Rafa\u0142"
+    isAdditive: 1
+    checkpointField: 0
+  - id: DialogueDepthControllCheckpoint
+    isAdditive: 0
+    checkpointField: 2
+  - id: Dirt_Checked
     isAdditive: 0
     checkpointField: 0
   - id: DuchyNieZabily
@@ -698,10 +750,10 @@ MonoBehaviour:
     checkpointField: 0
   - id: FirstCharacterInteraction_Mateusz
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
   - id: FirstCharacterInteraction_Matylda
     isAdditive: 0
-    checkpointField: 0
+    checkpointField: 1
   - id: "FirstCharacterInteraction_Rafa\u0142"
     isAdditive: 0
     checkpointField: 0
@@ -720,9 +772,6 @@ MonoBehaviour:
   - id: Item_Slippers
     isAdditive: 0
     checkpointField: 0
-  - id: KrystianRefusingToTalk
-    isAdditive: 0
-    checkpointField: 0
   - id: MateuszRoztrzesiony
     isAdditive: 0
     checkpointField: 0
@@ -730,6 +779,9 @@ MonoBehaviour:
     isAdditive: 0
     checkpointField: 0
   - id: Puddle_Checked
+    isAdditive: 0
+    checkpointField: 0
+  - id: RafalNieZnaOktawiana
     isAdditive: 0
     checkpointField: 0
   - id: RozczarowanieMateusza
@@ -741,11 +793,11 @@ MonoBehaviour:
   - id: SN_Checked
     isAdditive: 0
     checkpointField: 0
-  - id: SN_Checked
-    isAdditive: 0
-    checkpointField: 0
   - id: TreeBlood_Checked
     isAdditive: 0
+    checkpointField: 0
+  - id: "TrudnyRafa\u0142"
+    isAdditive: 1
     checkpointField: 0
   - id: "\u017BelazkoNarz\u0119dzieZbrodni"
     isAdditive: 0
@@ -835,7 +887,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Ch1_Antonina_Panic_Witness
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -870,7 +922,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Ch1_Antonina_Panic_Witness1+1S
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -965,7 +1017,47 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Ch1_Antonina_Q1Panic
-    runnedAlready: 0
+    runnedAlready: 1
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Czy zna\u0142a pani Oktawiana?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie za dobrze. Znaczy, jeste\u015Bmy tu ju\u017C **tydzie\u0144**,
+          ale... **nie dogadywa\u0142am si\u0119 z nim**."
+      lingering: -1
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Dlaczego?
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "C\xF3\u017C... jakby to powiedzie\u0107... nie dopasowali\u015Bmy
+          si\u0119 charakterami."
+      lingering: -1
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Rozumiem.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    identifier: Ch1_Antonina_Q2
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1000,7 +1092,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: "Ch1_Antonina_Wst\u0119p00"
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1474,7 +1566,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Ch1_Mateusz_Q1_0
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1606,7 +1698,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Ch1_Matylda_Q1
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1631,7 +1723,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Ch1_Matylda_Q1_REPORTBODY!
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1662,16 +1754,8 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Ch1_Matylda_Q1_Sleep
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Bazuj\u0105c na zapowiedzi programu, to musi by\u0107 ci\u0119\u017Ckie
-          do osi\u0105gni\u0119cia, kiedy twoja wsp\xF3\u0142lokatorka to Antonina."
-      lingering: 0
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
         subline: "Bazuj\u0105c na zapowiedzi programu, to musi by\u0107 ci\u0119\u017Ckie
@@ -1688,7 +1772,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Ch1_Matylda_Q1_Sleep1+1S
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -1744,7 +1828,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Ch1_Matylda_Q2
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -2516,6 +2600,271 @@ MonoBehaviour:
       changeLocationId: 
     - subLines:
       - timeForSingleCharDisplay: 0
+        subline: "Tak. Nic na nich nie by\u0142o."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: To ciekawe...
+      - timeForSingleCharDisplay: 0.02
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Zastanawiam si\u0119 **kto z uczestnik\xF3w by\u0142by w stanie
+          usun\u0105\u0107 nagrania z kamer."
+      - timeForSingleCharDisplay: 0
+        subline: "To pierwsze co powinna pani sprawdzi\u0107..."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: No nic...
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Przejd\u0119 do pracy zaraz tylko..."
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0.3
+        subline: " co\u015B gorzej si\u0119 poczu\u0142em..."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Czy ma pan jakie\u015B dodatkowe akta uczestnik\xF3w?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Czy ma pan jakie\u015B dodatkowe akta uczestnik\xF3w?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Uuh...
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0.3
+        subline: "Przepraszam, mo\u017Ce pani powt\xF3rzy\u0107?"
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Czy ma pan jakie\u015B dodatkowe akta uczestnik\xF3w?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Um...
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: Tak...
+      - timeForSingleCharDisplay: 0.2
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "S\u0105..."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: BURRRRRRRR
+      lingering: -1
+      speakerID: BAd
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Uhmm...
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "Wezwij karetk\u0119..."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0.05
+        subline: "Wezwij karetk\u0119..."
+      lingering: 0
+      speakerID: Ad
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: ?!
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 0
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Detektyw Adam Mizeria i wszyscy pracownicy studia trafili do szpitala
+          przez jakie\u015B zatrucie pokarmowe."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "W budynku pozosta\u0142am tylko ja i uczestnicy programu."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "O rany co si\u0119 sta\u0142o, kolejna ofiara?!"
+      lingering: -1
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 1
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Tak jak podejrzewa\u0142em..."
+      lingering: -1
+      speakerID: I
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: To co dalej?
+      lingering: -1
+      speakerID: Mz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nikt nie umar\u0142. Wszyscy, kt\xF3rzy zjedli kolacj\u0119 trafili
+          do szpitala."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: OTRUTO ICH?!
+      lingering: -1
+      speakerID: A
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Nie wiem. Musz\u0119 to zbada\u0107."
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines: []
+      lingering: -1
+      speakerID: A
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: I
+      speakerMod: Exit
+      changeLocationId: 
+    - subLines: []
+      lingering: 0
+      speakerID: Mz
+      speakerMod: Exit
+      changeLocationId: 6
+    identifier: Chap2_introA
+    runnedAlready: 0
+  - lines:
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Och, jest pani wreszcie.
+      lingering: -1
+      speakerID: Ad
+      speakerMod: A1
+      changeLocationId: 1
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: Taka praca.
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "W mi\u0119dzyczasie my ju\u017C zjedli\u015Bmy kolacj\u0119. "
+      - timeForSingleCharDisplay: 0.2
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: 'Uff... '
+      - timeForSingleCharDisplay: 0.3
+        subline: 
+      - timeForSingleCharDisplay: 0
+        subline: "Strasznie ci\u0119\u017Cka."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Troch\u0119 to pani zaj\u0119\u0142o!"
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Pani te\u017C mo\u017Ce zaraz zje\u015B\u0107, ale chcia\u0142bym
+          najpierw porozmawia\u0107 o sprawie."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Co pan odkry\u0142?"
+      lingering: -1
+      speakerID: Gracz
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Jestem pewien, \u017Ce morderc\u0105 musi by\u0107 jeden z uczestnik\xF3w
+          programu. Tylko oni nocowali w budynku studio."
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
+        subline: "Sprawdza\u0142a pani kamery?"
+      lingering: -1
+      speakerID: Ad
+      speakerMod: 
+      changeLocationId: 
+    - subLines:
+      - timeForSingleCharDisplay: 0
         subline: Nie...
       lingering: -1
       speakerID: Gracz
@@ -2714,271 +3063,6 @@ MonoBehaviour:
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: Och, jest pani wreszcie.
-      lingering: -1
-      speakerID: Ad
-      speakerMod: A1
-      changeLocationId: 1
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Taka praca.
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "W mi\u0119dzyczasie my ju\u017C zjedli\u015Bmy kolacj\u0119. "
-      - timeForSingleCharDisplay: 0.2
-        subline: 
-      - timeForSingleCharDisplay: 0
-        subline: 'Uff... '
-      - timeForSingleCharDisplay: 0.3
-        subline: 
-      - timeForSingleCharDisplay: 0
-        subline: "Strasznie ci\u0119\u017Cka."
-      lingering: -1
-      speakerID: Ad
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Troch\u0119 to pani zaj\u0119\u0142o!"
-      lingering: -1
-      speakerID: Ad
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Pani te\u017C mo\u017Ce zaraz zje\u015B\u0107, ale chcia\u0142bym
-          najpierw porozmawia\u0107 o sprawie."
-      lingering: -1
-      speakerID: Ad
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Co pan odkry\u0142?"
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Jestem pewien, \u017Ce morderc\u0105 musi by\u0107 jeden z uczestnik\xF3w
-          programu. Tylko oni nocowali w budynku studio."
-      lingering: -1
-      speakerID: Ad
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Sprawdza\u0142a pani kamery?"
-      lingering: -1
-      speakerID: Ad
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Tak. Nic na nich nie by\u0142o."
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: To ciekawe...
-      - timeForSingleCharDisplay: 0.02
-        subline: 
-      - timeForSingleCharDisplay: 0
-        subline: "Zastanawiam si\u0119 **kto z uczestnik\xF3w by\u0142by w stanie
-          usun\u0105\u0107 nagrania z kamer."
-      - timeForSingleCharDisplay: 0
-        subline: "To pierwsze co powinna pani sprawdzi\u0107..."
-      lingering: -1
-      speakerID: Ad
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: No nic...
-      - timeForSingleCharDisplay: 0.3
-        subline: 
-      - timeForSingleCharDisplay: 0
-        subline: "Przejd\u0119 do pracy zaraz tylko..."
-      - timeForSingleCharDisplay: 0.3
-        subline: 
-      - timeForSingleCharDisplay: 0.3
-        subline: " co\u015B gorzej si\u0119 poczu\u0142em..."
-      lingering: -1
-      speakerID: Ad
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Czy ma pan jakie\u015B dodatkowe akta uczestnik\xF3w?"
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Czy ma pan jakie\u015B dodatkowe akta uczestnik\xF3w?"
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Uuh...
-      - timeForSingleCharDisplay: 0.3
-        subline: 
-      - timeForSingleCharDisplay: 0.3
-        subline: "Przepraszam, mo\u017Ce pani powt\xF3rzy\u0107?"
-      lingering: -1
-      speakerID: Ad
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Czy ma pan jakie\u015B dodatkowe akta uczestnik\xF3w?"
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Um...
-      - timeForSingleCharDisplay: 0.3
-        subline: 
-      - timeForSingleCharDisplay: 0
-        subline: Tak...
-      - timeForSingleCharDisplay: 0.2
-        subline: 
-      - timeForSingleCharDisplay: 0
-        subline: "S\u0105..."
-      lingering: -1
-      speakerID: Ad
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: BURRRRRRRR
-      lingering: -1
-      speakerID: BAd
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: Uhmm...
-      lingering: -1
-      speakerID: Ad
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0.05
-        subline: "Wezwij karetk\u0119..."
-      lingering: -1
-      speakerID: Ad
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0.05
-        subline: "Wezwij karetk\u0119..."
-      lingering: 0
-      speakerID: Ad
-      speakerMod: Exit
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: ?!
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines: []
-      lingering: 0
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 0
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Detektyw Adam Mizeria i wszyscy pracownicy studia trafili do szpitala
-          przez jakie\u015B zatrucie pokarmowe."
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "W budynku pozosta\u0142am tylko ja i uczestnicy programu."
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "O rany co si\u0119 sta\u0142o, kolejna ofiara?!"
-      lingering: -1
-      speakerID: A
-      speakerMod: 
-      changeLocationId: 1
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Tak jak podejrzewa\u0142em..."
-      lingering: -1
-      speakerID: I
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: To co dalej?
-      lingering: -1
-      speakerID: Mz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Nikt nie umar\u0142. Wszyscy, kt\xF3rzy zjedli kolacj\u0119 trafili
-          do szpitala."
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: OTRUTO ICH?!
-      lingering: -1
-      speakerID: A
-      speakerMod: 
-      changeLocationId: 
-    - subLines:
-      - timeForSingleCharDisplay: 0
-        subline: "Nie wiem. Musz\u0119 to zbada\u0107."
-      lingering: -1
-      speakerID: Gracz
-      speakerMod: 
-      changeLocationId: 
-    - subLines: []
-      lingering: -1
-      speakerID: A
-      speakerMod: Exit
-      changeLocationId: 
-    - subLines: []
-      lingering: 0
-      speakerID: I
-      speakerMod: Exit
-      changeLocationId: 
-    - subLines: []
-      lingering: 0
-      speakerID: Mz
-      speakerMod: Exit
-      changeLocationId: 6
-    identifier: Chap2_introA
-    runnedAlready: 1
-  - lines:
-    - subLines:
-      - timeForSingleCharDisplay: 0
         subline: "20 czerwca o godzinie 1:32 w studio reality show \"Friendly Fire\"
           jeden z uczestnik\xF3w, Oktawian \u0141askawca, zosta\u0142 zamordowany
           przez uderzenie t\u0119pym przedmiotem z wyra\u017An\u0105 kraw\u0119dzi\u0105
@@ -3161,7 +3245,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Enter_Bathroom
-    runnedAlready: 0
+    runnedAlready: 1
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -4194,7 +4278,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Dishes
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -4256,7 +4340,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Kebab
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -4511,7 +4595,7 @@ MonoBehaviour:
       speakerMod: 
       changeLocationId: 
     identifier: Item_Waterch2A
-    runnedAlready: 1
+    runnedAlready: 0
   - lines:
     - subLines:
       - timeForSingleCharDisplay: 0
@@ -6444,23 +6528,24 @@ MonoBehaviour:
     lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "S\u0105 na nich \u015Blady jedzenia. I mo\u017Ce \u015Blady trucizny."
-      lingering: -1
+        subline: "Bazuj\u0105c na zapowiedzi programu, to musi by\u0107 ci\u0119\u017Ckie
+          do osi\u0105gni\u0119cia, kiedy twoja wsp\xF3\u0142lokatorka to Antonina."
+      lingering: 0
       speakerID: Gracz
       speakerMod: 
       changeLocationId: 
-    identifier: Item_Dishes
-    runnedAlready: 1
-  serializedPlaceholderSequence:
-    lines:
     - subLines:
       - timeForSingleCharDisplay: 0
-        subline: "Jest do po\u0142owy pusta."
-      lingering: -1
-      speakerID: Gracz
+        subline: "Nie jest a\u017C tak \u017Ale."
+      lingering: 0
+      speakerID: Ma
       speakerMod: 
       changeLocationId: 
-    identifier: Item_Waterch2A
+    identifier: Ch1_Matylda_Q1_Sleep1+1S
+    runnedAlready: 1
+  serializedPlaceholderSequence:
+    lines: []
+    identifier: 
     runnedAlready: 0
   seqIdTab:
   - 0EXIT_Dialogue
@@ -6476,6 +6561,7 @@ MonoBehaviour:
   - Ch1_Antonina_Q1
   - Ch1_Antonina_Q1_Leki
   - Ch1_Antonina_Q1Panic
+  - Ch1_Antonina_Q2
   - Ch1_Antonina_Q2_Panic
   - "Ch1_Antonina_Wst\u0119p00"
   - "Ch1_Antonina_Wst\u0119p01"
@@ -6521,8 +6607,8 @@ MonoBehaviour:
   - Ch1SumB
   - Ch1SumC
   - Chap2_intro_conA
-  - Chap2_introB
   - Chap2_introA
+  - Chap2_introB
   - Chapter1_intro
   - Chapter2_intro
   - DirtOnCarpet
@@ -6605,7 +6691,7 @@ MonoBehaviour:
   - NZR
   - PKN
   - Storage
-  analisedIdentifier: Item_Dishes
-  analisedIndex: 83
-  placeholdIdentifier: Item_Waterch2A
+  analisedIdentifier: Ch1_Matylda_Q1_Sleep1+1S
+  analisedIndex: 38
+  placeholdIdentifier: 
   chapter: 0

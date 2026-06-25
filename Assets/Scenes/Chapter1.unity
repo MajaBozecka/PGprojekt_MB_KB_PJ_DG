@@ -5181,6 +5181,9 @@ MonoBehaviour:
     - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 0
+    - id: Slippers_Checked
+      isAdditive: 0
+      checkpointField: 0
     updatedCheckpointValues:
     - id: FirstCharacterInteraction_Antonina
       isAdditive: 0
@@ -5198,6 +5201,9 @@ MonoBehaviour:
     - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 0
+    - id: Slippers_Checked
+      isAdditive: 0
+      checkpointField: 0
     updatedCheckpointValues:
     - id: FirstCharacterInteraction_Antonina
       isAdditive: 0
@@ -5219,19 +5225,179 @@ MonoBehaviour:
     - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 1
-  - identifier: "Ch1_Antonina_Wst\u0119p1X"
+  - identifier: 0EXIT_Dialogue
     read: 0
-    buttonText: 
+    buttonText: To Tyle.
     requirements:
-    - id: FirstCharacterInteraction_Antonina
+    - id: DialogueDepthControllCheckpoint
       isAdditive: 0
       checkpointField: 1
+    updatedCheckpointValues:
     - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+  - identifier: Ch1_Antonina_Q1
+    read: 0
+    buttonText: "Co robi\u0142a pani dzisiaj w nocy?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1_Antonina_Q1
+      isAdditive: 0
+      checkpointField: 0
+    - id: Ch1_Antonina_Q2
       isAdditive: 0
       checkpointField: 0
     updatedCheckpointValues:
     - id: DialogueDepthControllCheckpoint
       isAdditive: 0
+      checkpointField: 2
+    - id: Ch1_Antonina_Q1
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: 0EXIT_Dialogue
+    read: 0
+    buttonText: Mhm.
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Antonina_Q1_Leki
+    read: 0
+    buttonText: Leki?
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Antonina_Q1Panic
+    read: 0
+    buttonText: "Co robi\u0142a pani dzisiaj w nocy?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1_Antonina_Q1
+      isAdditive: 0
+      checkpointField: 0
+    - id: Ch1_Antonina_Q2
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 10
+    - id: Ch1_Antonina_Q1
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Antonina_Q2
+    read: 0
+    buttonText: "Czy zna\u0142a pani Oktawiana?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1_Antonina_Q1
+      isAdditive: 0
+      checkpointField: 0
+    - id: Ch1_Antonina_Q2
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: Ch1_Antonina_Q2
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Antonina_Q2_Panic
+    read: 0
+    buttonText: "Czy zna\u0142a pani Oktawiana?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1_Antonina_Q1
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1_Antonina_Q2
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 10
+    - id: Ch1_Antonina_Q2
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Antonina_Panic_Procedure
+    read: 0
+    buttonText: Tylko procedury.
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 10
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Antonina_Panic_Witness
+    read: 0
+    buttonText: "Nale\u017Cy pani do grupy podejrzanych."
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 10
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 11
+  - identifier: Ch1_Antonina_Panic_Witness1+0S
+    read: 0
+    buttonText: "By\u0142a Pani w pobli\u017Cu."
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 11
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: CharacterSympathy_Antonina
+      isAdditive: 1
+      checkpointField: 0
+  - identifier: Ch1_Antonina_Panic_Witness1-1S
+    read: 0
+    buttonText: "Prosz\u0119 odpowiedzie\u0107 na pytanie."
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 11
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: CharacterSympathy_Antonina
+      isAdditive: 1
+      checkpointField: -1
+  - identifier: Ch1_Antonina_Panic_Witness1+1S
+    read: 0
+    buttonText: "Ka\u017Cdy jest podejrzany."
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 11
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: CharacterSympathy_Antonina
+      isAdditive: 1
       checkpointField: 1
 --- !u!114 &586129997
 MonoBehaviour:
@@ -5607,7 +5773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &642794720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5880,6 +6046,7 @@ GameObject:
   - component: {fileID: 705961417}
   - component: {fileID: 705961419}
   - component: {fileID: 705961420}
+  - component: {fileID: 705961421}
   m_Layer: 0
   m_Name: "Rafa\u0142"
   m_TagString: Untagged
@@ -6031,6 +6198,292 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
+--- !u!114 &705961421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705961415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 1
+  listOfDialogueOptions:
+  - identifier: "Ch1_Rafa\u0142_Wst\u0119p00"
+    read: 0
+    buttonText: 
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: "FirstCharacterInteraction_Rafa\u0142"
+      isAdditive: 0
+      checkpointField: 0
+    - id: Slippers_Checked
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: "FirstCharacterInteraction_Rafa\u0142"
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Rafa\u0142_Wst\u0119p01"
+    read: 0
+    buttonText: 
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: "FirstCharacterInteraction_Rafa\u0142"
+      isAdditive: 0
+      checkpointField: 0
+    - id: Slippers_Checked
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: "FirstCharacterInteraction_Rafa\u0142"
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Rafa\u0142_Wst\u0119p1X"
+    read: 0
+    buttonText: 
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: Slippers_Checked
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Rafa\u0142_Q1_0"
+    read: 0
+    buttonText: "Co robi\u0142 pan dzisiaj w nocy?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: "Ch1_Rafa\u0142_Q1"
+      isAdditive: 0
+      checkpointField: 0
+    - id: InfoOWychodzeniuZSypialni
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Rafa\u0142_Q1_1"
+    read: 0
+    buttonText: "Co robi\u0142 pan dzisiaj w nocy?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: "Ch1_Rafa\u0142_Q1"
+      isAdditive: 0
+      checkpointField: 0
+    - id: InfoOWychodzeniuZSypialni
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+  - identifier: 0EXIT_Dialogue
+    read: 0
+    buttonText: A to przepraszam
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: "Ch1_Rafa\u0142_Q1"
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: "Ch1_Rafa\u0142_Q1"
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Rafa\u0142_Q1_LiarDetected"
+    read: 0
+    buttonText: To ciekawe.
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: "Ch1_Rafa\u0142_Q1"
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+  - identifier: 0EXIT_Dialogue
+    read: 0
+    buttonText: Jasne.
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+    - id: "Ch1_Rafa\u0142_Q1"
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: "Ch1_Rafa\u0142_Q1"
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Rafa\u0142_Q1_Liar+T"
+    read: 0
+    buttonText: "Gdzie pan by\u0142, panie Rafale?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+    - id: "Ch1_Rafa\u0142_Q1"
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: "Ch1_Rafa\u0142_Q1"
+      isAdditive: 0
+      checkpointField: 1
+    - id: "TrudnyRafa\u0142"
+      isAdditive: 1
+      checkpointField: 1
+  - identifier: 0EXIT_Dialogue
+    read: 0
+    buttonText: "Na razie nie mam wi\u0119cej pyta\u0144"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: "TrudnyRafa\u0142"
+      isAdditive: 0
+      checkpointField: 4
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+  - identifier: 0EXIT_Dialogue
+    read: 0
+    buttonText: "Mam ci\u0119 do\u015B\u0107."
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: "TrudnyRafa\u0142"
+      isAdditive: 1
+      checkpointField: 4
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+  - identifier: "Ch1_Rafa\u0142_Q2"
+    read: 0
+    buttonText: "Czy zna\u0142 pan Oktawiana?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: "Ch1_Rafa\u0142_Q2"
+      isAdditive: 1
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+  - identifier: 0EXIT_Dialogue
+    read: 0
+    buttonText: Rozumiem.
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: "Ch1_Rafa\u0142_Q2"
+      isAdditive: 1
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: "Ch1_Rafa\u0142_Q2"
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Rafa\u0142_Q2_cont"
+    read: 0
+    buttonText: "S\u0142ucham?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: "Ch1_Rafa\u0142_Q2"
+      isAdditive: 1
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+    - id: "TrudnyRafa\u0142"
+      isAdditive: 1
+      checkpointField: 1
+    - id: RafalNieZnaOktawiana
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: 0EXIT_Dialogue
+    read: 0
+    buttonText: "A id\u017A\u017Ce!"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+    - id: "Ch1_Rafa\u0142_Q2"
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: "Ch1_Rafa\u0142_Q2"
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Rafa\u0142_Q2_cont1"
+    read: 0
+    buttonText: Blondyn...
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+    - id: "Ch1_Rafa\u0142_Q2"
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: "Ch1_Rafa\u0142_Q2"
+      isAdditive: 0
+      checkpointField: 1
+    - id: "CharacterSympathy_Rafa\u0142"
+      isAdditive: 0
+      checkpointField: 1
 --- !u!1 &714028632
 GameObject:
   m_ObjectHideFlags: 0
@@ -9978,6 +10431,7 @@ GameObject:
   - component: {fileID: 1139537750}
   - component: {fileID: 1139537752}
   - component: {fileID: 1139537753}
+  - component: {fileID: 1139537754}
   m_Layer: 0
   m_Name: Mateusz
   m_TagString: Untagged
@@ -10129,6 +10583,161 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
+--- !u!114 &1139537754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139537748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 1
+  listOfDialogueOptions:
+  - identifier: "Ch1_Mateusz_Wst\u0119p00"
+    read: 0
+    buttonText: 
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: FirstCharacterInteraction_Mateusz
+      isAdditive: 0
+      checkpointField: 0
+    - id: Slippers_Checked
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: FirstCharacterInteraction_Mateusz
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Mateusz_Wst\u0119p01"
+    read: 0
+    buttonText: 
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: FirstCharacterInteraction_Mateusz
+      isAdditive: 0
+      checkpointField: 0
+    - id: Slippers_Checked
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: FirstCharacterInteraction_Mateusz
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Mateusz_Wst\u0119p1X"
+    read: 0
+    buttonText: 
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: FirstCharacterInteraction_Mateusz
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Mateusz_Q1_0
+    read: 0
+    buttonText: "Co robi\u0142 pan dzisiaj w nocy?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1_Mateusz_Q1
+      isAdditive: 0
+      checkpointField: 0
+    - id: InfoOWychodzeniuZSypialni
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1_Mateusz_Q1
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Mateusz_Q1_1
+    read: 0
+    buttonText: "Co robi\u0142 pan dzisiaj w nocy?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1_Mateusz_Q1
+      isAdditive: 0
+      checkpointField: 0
+    - id: InfoOWychodzeniuZSypialni
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: Ch1_Mateusz_Q1
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Mateusz_KrystianInfo-R
+    read: 0
+    buttonText: "Co robi\u0142 pan dzisiaj w nocy?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+  - identifier: 0EXIT_Dialogue
+    read: 0
+    buttonText: Rozumiem.
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Mateusz_WentToWomansToilet-R
+    read: 0
+    buttonText: Rozumiem.
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: RozczarowanieMateusza
+      isAdditive: 1
+      checkpointField: -1
+  - identifier: 0EXIT_Dialogue
+    read: 0
+    buttonText: "Na razie nie mam wi\u0119cej pyta\u0144."
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
 --- !u!1 &1160356621
 GameObject:
   m_ObjectHideFlags: 0
@@ -13951,6 +14560,7 @@ GameObject:
   - component: {fileID: 1668206856}
   - component: {fileID: 1668206858}
   - component: {fileID: 1668206859}
+  - component: {fileID: 1668206860}
   m_Layer: 0
   m_Name: Matylda
   m_TagString: Untagged
@@ -14102,6 +14712,166 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
+--- !u!114 &1668206860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668206854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 1
+  listOfDialogueOptions:
+  - identifier: "Ch1_Matylda_Wst\u0119p00"
+    read: 0
+    buttonText: 
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: FirstCharacterInteraction_Matylda
+      isAdditive: 0
+      checkpointField: 0
+    - id: Slippers_Checked
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: FirstCharacterInteraction_Matylda
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Matylda_Wst\u0119p01"
+    read: 0
+    buttonText: 
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: FirstCharacterInteraction_Matylda
+      isAdditive: 0
+      checkpointField: 0
+    - id: Slippers_Checked
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: FirstCharacterInteraction_Matylda
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Matylda_Wst\u0119p1X"
+    read: 0
+    buttonText: 
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: FirstCharacterInteraction_Matylda
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Matylda_Q1
+    read: 0
+    buttonText: "Co robi\u0142a pani dzisiaj w nocy?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1_Matylda_Q1
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: Ch1_Matylda_Q1
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Matylda_Q1_REPORTBODY!
+    read: 0
+    buttonText: "Kto zauwa\u017Cy\u0142 ofiar\u0119 pierwszy?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Matylda_Q1_Sleep
+    read: 0
+    buttonText: "Nie spa\u0142a\u015B ca\u0142\u0105 noc???"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+  - identifier: Ch1_Matylda_Q1_Sleep1-1S
+    read: 0
+    buttonText: "Dziwna wym\xF3wka"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: CharacterSympathy_Matylda
+      isAdditive: 1
+      checkpointField: -1
+  - identifier: Ch1_Matylda_Q1_Sleep1+1S
+    read: 0
+    buttonText: "Interesuj\u0105ce"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: CharacterSympathy_Matylda
+      isAdditive: 1
+      checkpointField: 1
+  - identifier: Ch1_Matylda_Q2
+    read: 0
+    buttonText: "Czy zna\u0142a pani Oktawiana?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: Ch1_Matylda_Q2
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: 0EXIT_Dialogue
+    read: 0
+    buttonText: "Na razie nie mam wi\u0119cej pyta\u0144."
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
 --- !u!1 &1696352540
 GameObject:
   m_ObjectHideFlags: 0
@@ -14668,6 +15438,7 @@ GameObject:
   - component: {fileID: 1804707035}
   - component: {fileID: 1804707037}
   - component: {fileID: 1804707038}
+  - component: {fileID: 1804707039}
   m_Layer: 0
   m_Name: Krystian
   m_TagString: Untagged
@@ -14819,6 +15590,180 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cd9725ec2e45546b7c2485a04c9966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectSoundTrigger
+--- !u!114 &1804707039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804707033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942db1021b80e894f992f52aa0a1f32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectWithDialogueInteraction
+  hasChoicesMenu: 1
+  listOfDialogueOptions:
+  - identifier: "Ch1_Krystian_Wst\u0119p00"
+    read: 0
+    buttonText: 
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: FirstCharacterInteraction_Krystian
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    - id: FirstCharacterInteraction_Krystian
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Krystian_VowOfSilence-2S
+    read: 0
+    buttonText: Detektyw Anna Nowak.
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: CharacterSympathy_Krystian
+      isAdditive: 1
+      checkpointField: -2
+    - id: CharacterRefusingToTalk_Krystian
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Krystian_ConvincingToTalk
+    read: 0
+    buttonText: "Nie powiem dop\xF3ki ty nie powiesz."
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 2
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+  - identifier: Ch1_Krystian_ConvincingToTalk1
+    read: 0
+    buttonText: "Ja te\u017C im nie ufam."
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 4
+  - identifier: Ch1_Krystian_ConvinvingToTalk1S
+    read: 0
+    buttonText: Kurde, szkoda
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 3
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 4
+    - id: CharacterSympathy_Krystian
+      isAdditive: 1
+      checkpointField: 1
+  - identifier: Ch1_Krystian_ConvincingToTalk2
+    read: 0
+    buttonText: "W takim razie spr\xF3buj\u0119"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 4
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: "Ch1_Krystian_Wst\u0119pNoTalk"
+    read: 0
+    buttonText: 
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: CharacterRefusingToTalk_Krystian
+      isAdditive: 0
+      checkpointField: 1
+    - id: FirstCharacterInteraction_Krystian
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+  - identifier: "Ch1_Krystian_Wst\u0119p1X"
+    read: 0
+    buttonText: 
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
+    - id: CharacterRefusingToTalk_Krystian
+      isAdditive: 0
+      checkpointField: 0
+    - id: FirstCharacterInteraction_Krystian
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Krystian_Q1
+    read: 0
+    buttonText: "Co robi\u0142 pan dzisiaj w nocy?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1_Krystian_Q1
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1_Krystian_Q1
+      isAdditive: 0
+      checkpointField: 1
+    - id: InfoOWychodzeniuZSypialni
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: Ch1_Krystian_Q2
+    read: 0
+    buttonText: "Czy zna\u0142 pan Oktawiana?"
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    - id: Ch1_Krystian_Q2
+      isAdditive: 0
+      checkpointField: 0
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+  - identifier: 0EXIT_Dialogue
+    read: 0
+    buttonText: "Na razie nie mam wi\u0119cej pyta\u0144."
+    requirements:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 1
+    updatedCheckpointValues:
+    - id: DialogueDepthControllCheckpoint
+      isAdditive: 0
+      checkpointField: 0
 --- !u!1 &1817696595
 GameObject:
   m_ObjectHideFlags: 0

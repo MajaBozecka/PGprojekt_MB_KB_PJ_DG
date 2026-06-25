@@ -262,9 +262,9 @@ public class DataFlowController : MonoBehaviour
             Debug.Log("<color=cyan>[DIALOG]</color> Czy dialog byl juz wczesniej odczytany? runnedAlready = " + TestedDialogueSequence.runnedAlready);
             if (!TestedDialogueSequence.runnedAlready)
             {
-                byte check = data.pc_CheckpointForDialogueDepth.checkpointField;
+                sbyte check = data.pc_CheckpointForDialogueDepth.checkpointField;
                 updatePlotCheckpoints();
-                byte check2 = data.pc_CheckpointForDialogueDepth.checkpointField;
+                sbyte check2 = data.pc_CheckpointForDialogueDepth.checkpointField;
                 if (!((check != 0 && check2 == 0) || (check==0 && check2 == 1)))
                     TestedDialogueSequence.runnedAlready = true;
             }
@@ -310,7 +310,7 @@ public class DataFlowController : MonoBehaviour
         {
             foreach (PlotCheckpoint check in DOD.updatedCheckpointValues)
             {
-                int indexOfMatchedCheckpointFromControl = data.listPlotCheckpoints.FindIndex(x => x.id == check.id);
+                int indexOfMatchedCheckpointFromControl = data.listPlotCheckpoints.BinarySearch(check);
 
                 if (indexOfMatchedCheckpointFromControl < 0)
                 {
@@ -319,9 +319,9 @@ public class DataFlowController : MonoBehaviour
                     continue;
                 }
 
-                if (check.isAdditive)
+                if (data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].isAdditive)
                 {
-                    PlotCheckpoint tempDOD = new PlotCheckpoint(data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].checkpointField + 1, check.id, data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].isAdditive);
+                    PlotCheckpoint tempDOD = new PlotCheckpoint(data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].checkpointField + check.checkpointField, check.id, data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl].isAdditive);
                     data.listPlotCheckpoints[indexOfMatchedCheckpointFromControl] = tempDOD;
                 }
                 else
